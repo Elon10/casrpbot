@@ -277,7 +277,7 @@ async function setModerationStatus(settings, status) {
 
     const embed = new EmbedBuilder()
         .setTitle("Success")
-        .setDescription(`LOAS System is now **${enabled ? "enabled" : "disabled"}**.`)
+        .setDescription(`Moderation System is now **${enabled ? "enabled" : "disabled"}**.`)
         .setColor(EMBED_COLORS.SUCCESS)
 
     return { embeds: [embed] };
@@ -293,7 +293,7 @@ async function setModerationChannel(settings, channel) {
         return { embeds: [embed] };
     }
 
-    settings.moderation.channel_id = channel.id;
+    settings.moderations.channel_id = channel.id;
     await settings.save();
 
     const embed = new EmbedBuilder()
