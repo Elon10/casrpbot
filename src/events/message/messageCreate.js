@@ -12,10 +12,6 @@ module.exports = async (client, message) => {
 
     let isCommand = false;
     if (PREFIX_COMMANDS.ENABLED) {
-        if (message.content.match(new RegExp(`^<@!?${client.user.id}>( |)$`))) {
-            message.channel.safeSend(`Hey there! My prefix is \`${settings.prefix}\`.`);
-        }
-
         if (message.content && message.content.startsWith(settings.prefix)) {
             const invoke = message.content.replace(`${settings.prefix}`, "").split(/\s+/)[0];
             const cmd = client.getCommand(invoke);
