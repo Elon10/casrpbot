@@ -301,7 +301,7 @@ async function setModerationChannel(settings, channel) {
         .setDescription(`LOAS will will sent to ${channel}.`)
         .setColor(EMBED_COLORS.SUCCESS)
 
-    return { embed: [embed] };
+    return { embeds: [embed] };
 }
 
 async function setModerationRole(settings, roleadd) {
