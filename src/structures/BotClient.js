@@ -159,34 +159,6 @@ module.exports = class BotClient extends Client {
     }
 
     /**
-     * @param {string} directory
-     */
-    loadContexts(directory) {
-        this.logger.log("Loading Contexts...");
-        const files = recursiveReadDirSync(directory);
-        for (const file of files) {
-            try {
-                const ctx = require(file);
-                if (typeof ctx !== "object") continue;
-                if (!ctx.enabled) return this.logger.debug(`Skipping Context ${ctx.name}. Disabled`);
-                if (this.contextMenus.has(ctx.name)) throw new Error(`Context already exists with that name`);
-                this.contextMenus.set(ctx.name, ctx);
-            } catch (ex) {
-                this.logger.error(`Failed to load ${file}, reason ${ex.message}`);
-            }
-        }
-
-        const userContexts = this.contextMenus.filter((ctx) => ctx.type === "USER").size;
-        const messageContexts = this.contextMenus.filter((ctx) => ctx.type === "MESSAGE").size;
-
-        if (userContexts > 3) throw new Error("A maximum of 3 USER contexts can be enabled");
-        if (messageContexts > 3) throw new Error("A maximum of 3 MESSAGE contexts can be enabled");
-
-        this.logger.success(`Loaded ${userContexts} USER contexts`);
-        this.logger.success(`Loaded ${messageContexts} MESSAGE contexts`);
-    }
-
-    /**
      * @param {string} [guildId]
      */
     async registerInteractions(guildId) {
