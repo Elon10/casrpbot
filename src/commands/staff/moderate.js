@@ -325,7 +325,7 @@ async function logban(user, member, reason, settings) {
     }
 }
 
-async function logwarn(user, member, reason) {
+async function logwarn(user, member, reason, settings) {
     if (!user.roles.cache.find((r) => settings.moderations.role.includes(r.id))) {
         const embed = new EmbedBuilder()
             .setTitle("Error")
