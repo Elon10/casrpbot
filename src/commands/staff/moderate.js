@@ -1,4 +1,4 @@
-const { EmbedBuilder, ApplicationCommandOptionType, ButtonBuilder, ButtonStyle, ActionRowBuilder } = require("discord.js");
+const { EmbedBuilder, ApplicationCommandOptionType, ButtonBuilder, ButtonStyle, ActionRowBuilder, ComponentType } = require("discord.js");
 const { EMBED_COLORS } = require("@root/config.js");
 const { getUser } = require("@schemas/User");
 const { addModeration, addSearchModeration } = require("@schemas/Moderation");
@@ -127,6 +127,7 @@ module.exports = {
 /**
  * @param {import('discord.js').GuildMember} member
  * @param {object} settings
+ * @param {import('discord.js').ButtonInteraction} interaction
  * @param {string} reason
  */
 
@@ -139,7 +140,7 @@ async function logkick(user, member, reason, settings) {
 
         return { embeds: [embed] };
     }
-    
+
     const userDb = await getUser(user);
     if (!settings.moderations.enabled) {
         const embed = new EmbedBuilder()
@@ -218,7 +219,6 @@ async function logkick(user, member, reason, settings) {
         userDb.total += 1;
         userDb.kicks += 1;
         await userDb.save();
-
 
         await addModeration(sentMsg, user.id, reason);
         return true;

@@ -96,7 +96,7 @@ async function editModeration(member, channel, messageId, reason) {
 /**
  * @param {import('discord.js').ButtonInteraction} interaction
  */
-async function handleEditBtn(interaction) {
+async function handleEditBtn(interaction, user) {
     await interaction.showModal(
         new ModalBuilder({
             title: "Edit Moderation",

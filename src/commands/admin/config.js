@@ -188,7 +188,7 @@ async function setLoaStatus(settings, status) {
 
     const embed = new EmbedBuilder()
         .setTitle("Success")
-        .setDescription(`LOAS System is now **${enabled ? "enabled" : "disabled"}**.`)
+        .setDescription(`LOAS system **updated**.`)
         .setColor(EMBED_COLORS.SUCCESS)
 
     return { embeds: [embed] };
@@ -222,10 +222,10 @@ async function setLoaChannel(settings, channel) {
 
     const embed = new EmbedBuilder()
         .setTitle("Success")
-        .setDescription(`LOAS will will sent to ${channel}.`)
+        .setDescription(`LOAS system **updated**.`)
         .setColor(EMBED_COLORS.SUCCESS)
 
-    return { embed: [embed] };
+    return { embeds: [embed] };
 }
 
 async function loaStaffAdd(settings, staffroleadd) {
@@ -243,7 +243,7 @@ async function loaStaffAdd(settings, staffroleadd) {
 
     const embed = new EmbedBuilder()
         .setTitle("Success")
-        .setDescription(`\`${staffroleadd.name}\` is now a staff role.`)
+        .setDescription(`LOAS system **updated**.`)
         .setColor(EMBED_COLORS.SUCCESS)
 
     return { embeds: [embed] };
@@ -264,7 +264,7 @@ async function loaStaffRemove(settings, staffroleremove) {
 
     const embed = new EmbedBuilder()
         .setTitle("Success")
-        .setDescription(`\`${staffroleremove.name}\` is not anymore a staff role.`)
+        .setDescription(`LOAS system **updated**..`)
         .setColor(EMBED_COLORS.SUCCESS)
 
     return { embeds: [embed] };
@@ -277,7 +277,7 @@ async function setModerationStatus(settings, status) {
 
     const embed = new EmbedBuilder()
         .setTitle("Success")
-        .setDescription(`Moderation System is now **${enabled ? "enabled" : "disabled"}**.`)
+        .setDescription(`Moderation System **updated**.`)
         .setColor(EMBED_COLORS.SUCCESS)
 
     return { embeds: [embed] };
@@ -329,7 +329,7 @@ async function moderationRoleRemove(settings, roleremove) {
     if (!settings.moderations.role.includes(roleremove.id)) {
         const embed = new EmbedBuilder()
             .setTitle("Error")
-            .setDescription(`${role.name} is not a role that can use moderation commands.`)
+            .setDescription(`${roleremove.name} is not a role that can use moderation commands.`)
             .setColor(EMBED_COLORS.ERROR)
 
         return { embeds: [embed] };
@@ -361,7 +361,7 @@ async function loasRole(settings, role) {
 
     const embed = new EmbedBuilder()
         .setTitle("Success")
-        .setDescription(`\`${role.name}\` is now a role that can use loas commands.`)
+        .setDescription(`LOAS system **updated**..`)
         .setColor(EMBED_COLORS.SUCCESS)
 
     return { embeds: [embed] };
@@ -382,7 +382,7 @@ async function loasRoleRemove(settings, roleremove) {
 
     const embed = new EmbedBuilder()
         .setTitle("Success")
-        .setDescription(`\`${roleremove.name}\` can't now use loas commands.`)
+        .setDescription(`LOAS system **updated**..`)
         .setColor(EMBED_COLORS.SUCCESS)
 
     return { embeds: [embed] };
