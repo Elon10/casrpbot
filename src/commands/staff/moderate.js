@@ -117,7 +117,7 @@ module.exports = {
 
         else if (sub === "count") {
             const target = interaction.options.getUser("user") || interaction.user;
-            response = await viewLogs(target);
+            response = await viewLogs(interaction.member, target, data.settings);
         }
 
         await interaction.followUp(response);
@@ -519,8 +519,25 @@ async function logother(user, title, member, reason, settings) {
     }
 }
 
-async function viewLogs(target) {
+async function viewLogs(user, target, settings) {
     const userDb = await getUser(target);
+    if (!settings.moderations.enabled) {
+        const embed = new EmbedBuilder()
+            .setTitle("Error")
+            .setDescription("Moderation system is not enabled.")
+            .setColor(EMBED_COLORS.ERROR)
+
+        return { embeds: [embed] };
+    }
+
+    if (!user.roles.cache.find((r) => settings.moderations.role.includes(r.id))) {
+        const embed = new EmbedBuilder()
+            .setTitle("Error")
+            .setDescription("You can't use this command.")
+            .setColor(EMBED_COLORS.ERROR)
+
+        return { embeds: [embed] };
+    }
 
     const embed = new EmbedBuilder()
         .setAuthor({ name: `Logs Count for ${target.username}`, iconURL: target.displayAvatarURL() })
