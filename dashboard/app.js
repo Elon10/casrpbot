@@ -11,8 +11,7 @@ module.exports.launch = async (client) => {
 
     const mainRouter = require("./routes/index"),
         discordAPIRouter = require("./routes/discord"),
-        logoutRouter = require("./routes/logout"),
-        guildManagerRouter = require("./routes/guild-manager");
+        logoutRouter = require("./routes/logout");
 
     client.states = {};
     client.config = config;
@@ -28,8 +27,6 @@ module.exports.launch = async (client) => {
         .use(
             session({
                 secret: process.env.SESSION_PASSWORD,
-                cookie: { maxAge: 336 * 60 * 60 * 1000 },
-                name: "casrp_connection_cookie",
                 resave: true,
                 saveUninitialized: false,
                 store: MongoStore.create({
@@ -45,7 +42,6 @@ module.exports.launch = async (client) => {
         })
         .use("/api", discordAPIRouter)
         .use("/logout", logoutRouter)
-        .use("/staff", guildManagerRouter)
         .use("/", mainRouter)
         .use(CheckAuth, function (req, res) {
             res.status(404).render("404", {

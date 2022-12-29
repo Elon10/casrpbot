@@ -1361,6 +1361,10 @@ select {
   background-color: rgb(0 0 0 / 0.1);
 }
 
+.bg-blur {
+  background-color: rgb(0 0 0 / 0.1);
+}
+
 .border-black {
   --tw-border-opacity: 1;
   border-color: rgb(0 0 0 / var(--tw-border-opacity));
@@ -1376,8 +1380,7 @@ select {
 }
 
 .bg-bggray {
-  --tw-bg-opacity: 1;
-  background: url('https://cdn.discordapp.com/attachments/999354364193951818/1057789858627731576/image_121.jpg');
+  background: url('../images/bg.jpg');
   background-size: cover;
 }
 

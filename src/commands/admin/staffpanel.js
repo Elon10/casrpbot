@@ -9,7 +9,7 @@ module.exports = {
     name: "staffpanel",
     description: "Add a user to be available to use staff panel",
     category: "ADMIN",
-    ownerOnly: true,
+    userPermissions: ["Administrator"],
     command: {
         enabled: false,
     },
