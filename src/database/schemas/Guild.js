@@ -16,14 +16,6 @@ const Schema = new mongoose.Schema({
         bots: { type: Number, default: 0 },
     },
     prefix: { type: String, default: PREFIX_COMMANDS.DEFAULT_PREFIX },
-    stats: {
-        enabled: Boolean,
-        xp: {
-            message: { type: String, default: STATS.DEFAULT_LVL_UP_MSG },
-            channel: String,
-        },
-    },
-    autorole: String,
     loas: {
         enabled: Boolean,
         role: [String],
