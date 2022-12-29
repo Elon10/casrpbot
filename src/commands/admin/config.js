@@ -297,7 +297,7 @@ async function setModerationChannel(settings, channel) {
 
     const embed = new EmbedBuilder()
         .setTitle("Success")
-        .setDescription(`Moderations will will sent to ${channel}.`)
+        .setDescription(`Moderation System **updated**.`)
         .setColor(EMBED_COLORS.SUCCESS)
 
     return { embeds: [embed] };
@@ -360,7 +360,7 @@ async function loasRole(settings, role) {
 
     const embed = new EmbedBuilder()
         .setTitle("Success")
-        .setDescription(`LOAS system **updated**..`)
+        .setDescription(`LOAS system **updated**.`)
         .setColor(EMBED_COLORS.SUCCESS)
 
     return { embeds: [embed] };
@@ -381,7 +381,7 @@ async function loasRoleRemove(settings, roleremove) {
 
     const embed = new EmbedBuilder()
         .setTitle("Success")
-        .setDescription(`LOAS system **updated**..`)
+        .setDescription(`LOAS system **updated**.`)
         .setColor(EMBED_COLORS.SUCCESS)
 
     return { embeds: [embed] };
