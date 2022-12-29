@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<%- include('../includes/head') %>
+
+    <body class="bg-bggray text-gray-50 min-h-screen flex flex-col">
+        <div class="grid grid-cols-1 md:grid-cols-8 flex-1">
+            <%- include('../includes/sidebar') %>
+
+                <div class="flex flex-col col-span-6 container">
+                    <%- include('../includes/manageheader') %>
+                        <h2 class="text-3xl font-bold mx-8 mt-6 mb-2 underline">Loa Request</h2>
+                        <section class="grid grid-cols gap-4 my-4 mx-8">
+                            <div class="background-1">
+                                <div class="flex flex-col rounded-lg bg-darkerbbgray h-[fit-content]">
+                                    <form role="form" action="/staff/loaRequest" method="post"
+                                        class="flex flex-col px-4 pt-2 pb-4">
+                                        <div class="flex flex-col">
+                                            <label class="font-bold"><i class="fa fa-question-circle"></i>
+                                                Reason</label>
+                                            <input type="text" name="reason"
+                                                class="px-3 py-1 rounded-lg bg-gray-50 text-gray-900"
+                                                placeholder="Reason of the LOA" required />
+                                        </div>
+                                        <div class="flex flex-col">
+                                            <label class="font-bold"><i class="fa fa-clock-o"></i> Duration</label>
+                                            <input type="text" name="duration"
+                                                class="px-3 py-1 rounded-lg bg-gray-50 texy-gray-900"
+                                                placeholder="1w/1d/1h/1m/1s" required />
+                                        </div>
+                                        <div class="mt-4">
+                                            <button type="submit" name="loaSend"
+                                                class="px-3 py-1 rounded-lg bg-success transition-opacity duration-300 hover:opacity-70">
+                                                Send
+                                            </button>
+                                            <button type="reset"
+                                                class="px-3 py-1 rounded-lg bg-error transition-opacity duration-300 hover:opacity-70">
+                                                Clear
+                                            </button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </section>
+                </div>
+        </div>
+    </body>
+
+</html>

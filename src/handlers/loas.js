@@ -78,7 +78,6 @@ async function acceptLoa(member, channel, messageId, reason) {
     const approvedEmbed = new EmbedBuilder()
         .setTitle("LOA Accepted")
         .setColor(EMBED_COLORS.SUCCESS)
-        .setThumbnail(message.embeds[0].data.thumbnail.url)
         .setFooter({ text: `Approved By ${member.user.tag}`, iconURL: member.displayAvatarURL() })
 
     const fields = [];

@@ -28,6 +28,7 @@ async function editModeration(member, channel, messageId, reason) {
 
         return { embeds: [embed] };
     }
+
     if (doc.status === "APPROVED") {
         const embed = new EmbedBuilder()
             .setTitle("Error")
@@ -36,6 +37,15 @@ async function editModeration(member, channel, messageId, reason) {
 
         return { embeds: [embed] };
     }
+
+    if(doc.user_id !== member.id) {
+        const embed = new EmbedBuilder()
+            .setTitle("Error")
+            .setDescription("You can't edit another user log.")
+            .setColor(EMBED_COLORS.ERROR)
+
+        return { embeds: [embed] };
+    } 
 
     /**
      * @type {import('discord.js').Message}

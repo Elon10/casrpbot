@@ -1,0 +1,123 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* The switch - the box around the slider */
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+
+/* Hide default HTML checkbox */
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+
+/* The slider */
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked+.slider {
+  background-color: #2196f3;
+}
+
+input:focus+.slider {
+  box-shadow: 0 0 1px #2196f3;
+}
+
+input:checked+.slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+
+/* Rounded sliders */
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.vscomp-toggle-button {
+  height: 32px !important;
+  @apply rounded-md !important;
+}
+
+.custom-checkbox {
+  @apply appearance-none relative bg-neutral-400 h-4 w-4 cursor-pointer transition-all rounded inline-flex text-center justify-center items-center checked: bg-primary checked: after: border-b-[4px] checked: after: border-white checked: after: border-r-[4px] checked: after: rotate-45 checked: after: rounded-sm after: h-5 after: w-3 after: scale-50 after: absolute after: text-xl after: text-white;
+}
+
+.vscomp-ele {
+  @apply bg-transparent border-0 p-0;
+}
+
+.sc-hqMhxz::before {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  width: 21px;
+  height: 21px;
+  transform: translate(-50%, -50%) scale(1.5);
+  opacity: 0;
+  border: 1px solid rgb(99, 245, 140);
+  pointer-events: none;
+  transition-duration: 0.15s;
+  transition-timing-function: ease-out;
+  transition-delay: 0s;
+  transition-property: opacity, transform;
+}
+
+.sc-hqMhxz {
+  border: medium none;
+  outline: none;
+  background: rgb(99, 236, 219);
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  margin-inline-end: 8px;
+  position: relative;
+  cursor: pointer;
+  transition: transform 0.15s ease-out 0s;
+}
+
+.select-box {
+  display: flex;
+  width: 400px;
+  flex-direction: column;
+}

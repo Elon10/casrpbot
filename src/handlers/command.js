@@ -1,5 +1,5 @@
 const { EmbedBuilder, Embed } = require("discord.js");
-const { OWNER_IDS, PREFIX_COMMANDS, EMBED_COLORS } = require("@root/config");
+const { OWNER_IDS, DEV_IDS, PREFIX_COMMANDS, EMBED_COLORS } = require("@root/config");
 const { parsePermissions } = require("@helpers/Utils");
 const { timeformat } = require("@helpers/Utils");
 const { getSettings } = require("@schemas/Guild");
@@ -33,6 +33,7 @@ module.exports = {
         }
 
         if (cmd.ownerOnly && !OWNER_IDS.includes(message.author.id)) return;
+        if (cmd.devOnly && !DEV_IDS.includes(message.author.id)) return;
 
         if (cmd.userPermissions && cmd.userPermissions?.length > 0) {
             if (!message.channel.permissionsFor(message.member).has(cmd.userPermissions)) {
@@ -114,6 +115,7 @@ module.exports = {
         }
 
         if (cmd.ownerOnly === true && !OWNER_IDS.includes(interaction.user.id)) return;
+        if (cmd.devOnly === true && !DEV_IDS.includes(interaction.user.id)) return;
 
         if (interaction.member && cmd.userPermissions?.length > 0) {
             if (!interaction.member.permissions.has(cmd.userPermissions)) {

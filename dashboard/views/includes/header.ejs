@@ -1,0 +1,16 @@
+<header
+  class="bg-darkerbggray text-gray-50 flex flex-row items-center w-full justify-between px-4 md:px-24 lg:px-36 py-4">
+  <!-- Logo -->
+  <a href="/" class="text-xl font-bold"> <code>CASRP</code> </a>
+
+  <nav class="flex items-center justify-end">
+    <a href="/logout" class="flex items-center">
+      <img src="<%= user.displayAvatar %>" width="40" height="40" class="rounded-full" alt="User Image" /><span
+        class="text-lg ml-2">
+        <btn class="btn-two">
+          <%= user.username %>#<%= user.discriminator %> <i class="fa fa-sign-out" aria-hidden="true"></i>
+        </btn>
+      </span>
+    </a>
+  </nav>
+</header>

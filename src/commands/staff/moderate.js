@@ -1,7 +1,7 @@
 const { EmbedBuilder, ApplicationCommandOptionType, ButtonBuilder, ButtonStyle, ActionRowBuilder, ComponentType } = require("discord.js");
 const { EMBED_COLORS } = require("@root/config.js");
 const { getUser } = require("@schemas/User");
-const { addModeration, addSearchModeration } = require("@schemas/Moderation");
+const { addModeration } = require("@schemas/Moderation");
 const moment = require("moment");
 const roblox = require("noblox.js")
 
@@ -170,6 +170,8 @@ async function logkick(user, member, reason, settings) {
         'headshot'
     )
 
+    if (!id) return "n";
+
     const buttonRow = new ActionRowBuilder().addComponents(
         new ButtonBuilder().setLabel("Edit Case").setCustomId("MODERATE_EDIT").setStyle(ButtonStyle.Primary),
         new ButtonBuilder().setLabel("User Profile").setURL(`https://roblox.com/users/${id}/profile`).setStyle(ButtonStyle.Link),
@@ -216,8 +218,8 @@ async function logkick(user, member, reason, settings) {
             components: [buttonRow],
         });
 
-        userDb.total += 1;
-        userDb.kicks += 1;
+        userDb.logs.total += 1;
+        userDb.logs.kicks += 1;
         await userDb.save();
 
         await addModeration(sentMsg, user.id, reason);
@@ -313,8 +315,8 @@ async function logban(user, member, reason, settings) {
             components: [buttonRow],
         });
 
-        userDb.total += 1;
-        userDb.bans += 1;
+        userDb.logs.total += 1;
+        userDb.logs.bans += 1;
         await userDb.save();
 
 
@@ -410,8 +412,8 @@ async function logwarn(user, member, reason, settings) {
             components: [buttonRow],
         });
 
-        userDb.total += 1;
-        userDb.warns += 1;
+        userDb.logs.total += 1;
+        userDb.logs.warns += 1;
         await userDb.save();
 
 
@@ -507,8 +509,8 @@ async function logother(user, title, member, reason, settings) {
             components: [buttonRow],
         });
 
-        userDb.total += 1;
-        userDb.other += 1;
+        userDb.logs.total += 1;
+        userDb.logs.other += 1;
         await userDb.save();
 
 
@@ -545,27 +547,27 @@ async function viewLogs(user, target, settings) {
         .addFields(
             {
                 name: "Total Logs",
-                value: userDb.total?.toString(),
+                value: userDb.logs.total?.toString(),
                 inline: true
             },
             {
                 name: "Total Kicks",
-                value: userDb.kicks?.toString(),
+                value: userDb.logs.kicks?.toString(),
                 inline: true
             },
             {
                 name: "Total Bans",
-                value: userDb.bans?.toString(),
+                value: userDb.logs.bans?.toString(),
                 inline: true,
             },
             {
                 name: "Total Warns",
-                value: userDb.warns?.toString(),
+                value: userDb.logs.warns?.toString(),
                 inline: true
             },
             {
                 name: "Others",
-                value: userDb.other?.toString(),
+                value: userDb.logs.other?.toString(),
                 inline: true,
             }
         )

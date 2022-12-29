@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <%- include('../includes/head') %>
+
+    <body class="bg-bggray text-gray-50 min-h-screen flex flex-col">
+        <div class="grid grid-cols-1 md:grid-cols-8 flex-1">
+            <%- include('../includes/sidebar') %>
+
+            <div class="flex flex-col col-span-6 container">
+                <%- include('../includes/manageheader') %>
+                <h2 class="text-3xl font-bold mx-8 mt-6 mb-2 underline">Moderation Log</h2>
+                <section class="grid grid-cols gap-4 my-4 mx-8">
+                    <div class="background-1">
+                        <div class="flex flex-col rounded-lg bg-darkerbggray h-[fit-content]">
+                            <div class="p-4">
+                                <h3 class="font-semibold text-xl">Moderation Embed</h3>
+                            </div>
+                            <form role="form" action="/staff/moderateLog" method="post"
+                                class="flex flex-col px-4 pt-2 pb-4">
+                                <div class="flex flex-col">
+                                    <label class="font-bold"><i class="fa fa-user"></i> User</label>
+                                    <input type="text" name="violator" class="px-3 py-1 rounded-lg bg-gray-50 text-gray-900" placeholder="Violator Roblox Username" required/>
+                                </div>
+                                <div class="flex flex-col">
+                                    <label class="font-bold"><i class="fa fa-hammer"></i> Punishment</label>
+                                    <select class="px-3 py-1 rounded-lg bg-gray-50 text-gray-900" name="punishment" required>
+                                        <option required selected disabled>Select a punishment</option>
+                                        <option value="Kick">Kick</option>
+                                        <option value="Ban">Ban</option>
+                                        <option value="Warn">Warn</option>
+                                    </select>
+                                </div>
+                                <div class="flex flex-col">
+                                    <label class="font-bold"><i class="fa fa-question-circle"></i> Reason</label>
+                                    <input type="text" name="reason" class="px-3 py-1 rounded-lg bg-gray-50 text-gray-900" placeholder="Reason for punishment" required/>
+                                </div>
+                                <div class="mt-4">
+                                    <button type="submit" name="logSend"
+                                        class="px-3 py-1 rounded-lg bg-success transition-opacity duration-300 hover:opacity-70">
+                                        Log
+                                    </button>
+                                    <button type="reset" 
+                                        class="px-3 py-1 rounded-lg bg-error transition-opacity duration-300 hover:opacity-70">
+                                        Clear
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </body>
+</html>

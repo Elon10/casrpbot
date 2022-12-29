@@ -11,11 +11,10 @@ module.exports = {
     name: "config",
     description: "Configure the bot",
     category: "ADMIN",
-    userPermissions: ["ManageGuild"],
     command: {
         enabled: false,
     },
-    ownerOnly: false,
+    ownerOnly: true,
     slashCommand: {
         enabled: true,
         ephemeral: false,
@@ -298,7 +297,7 @@ async function setModerationChannel(settings, channel) {
 
     const embed = new EmbedBuilder()
         .setTitle("Success")
-        .setDescription(`LOAS will will sent to ${channel}.`)
+        .setDescription(`Moderations will will sent to ${channel}.`)
         .setColor(EMBED_COLORS.SUCCESS)
 
     return { embeds: [embed] };
@@ -319,7 +318,7 @@ async function setModerationRole(settings, roleadd) {
 
     const embed = new EmbedBuilder()
         .setTitle("Success")
-        .setDescription(`\`${roleadd.name}\` can now use moderation commands.`)
+        .setDescription(`Moderation System **updated**.`)
         .setColor(EMBED_COLORS.SUCCESS)
 
     return { embeds: [embed] };
@@ -340,7 +339,7 @@ async function moderationRoleRemove(settings, roleremove) {
 
     const embed = new EmbedBuilder()
         .setTitle("Success")
-        .setDescription(`\`${roleremove.name}\` can't now use moderation commands.`)
+        .setDescription(`Moderation System **updated**.`)
         .setColor(EMBED_COLORS.SUCCESS)
 
     return { embeds: [embed] };
