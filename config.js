@@ -1,17 +1,19 @@
 
 module.exports = {
     OWNER_IDS: ["710271395438788660", "737459216175857686"],
-    DEV_IDS: ["737459216175857686", "927200461377929246"], 
+    DEV_IDS: ["737459216175857686", "927200461377929246"],
     PREFIX_COMMANDS: {
-        ENABLED: true, 
-        DEFAULT_PREFIX: "!", 
+        ENABLED: true,
+        DEFAULT_PREFIX: "!",
     },
+    
     INTERACTIONS: {
-        SLASH: true, 
-        CONTEXT: true, 
-        GLOBAL: true, 
-        TEST_GUILD_ID: "xxxxxxxxxxx", 
+        SLASH: true,
+        CONTEXT: true,
+        GLOBAL: true,
+        TEST_GUILD_ID: "xxxxxxxxxxx",
     },
+
     EMBED_COLORS: {
         BOT_EMBED: "#5865F2",
         TRANSPARENT: "#36393F",
@@ -19,13 +21,28 @@ module.exports = {
         ERROR: "#ED4245",
         WARNING: "#FEE75C",
     },
+    
+    DASHBOARD: {
+        enabled: true, 
+        baseURL: "http://localhost:8080", 
+        failureURL: "http://localhost:8080", 
+        port: "8080", 
+    },
+
     CACHE_SIZE: {
         GUILDS: 100,
         USERS: 10000,
         MEMBERS: 10000,
     },
+
     MESSAGES: {
         API_ERROR: "Unexpected Backend Error! Try again later or contact support server",
+    },
+
+    STATS: {
+        ENABLED: false,
+        XP_COOLDOWN: 5, 
+        DEFAULT_LVL_UP_MSG: "{member:tag}, You just advanced to **Level {level}**",
     },
 
     IMAGE: {
@@ -33,9 +50,9 @@ module.exports = {
     },
 
     PRESENCE: {
-        ENABLED: false, 
-        STATUS: "online", 
-        TYPE: "WATCHING", 
-        MESSAGE: "{members} members in {servers} servers", 
+        ENABLED: false,
+        STATUS: "online",
+        TYPE: "WATCHING",
+        MESSAGE: "{members} members in {servers} servers",
     },
 };
