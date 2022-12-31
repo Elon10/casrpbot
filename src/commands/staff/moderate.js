@@ -233,6 +233,43 @@ async function logkick(user, member, reason, settings) {
         userDb.logs.kicks += 1;
         await userDb.save();
 
+        const newEmbed = new EmbedBuilder()
+            .setTitle(`Case - Kick`)
+            .setDescription(`Moderation action taken by ${user}\n\n:warning: **THIS USER IS CURRENTLY ON A BAN BOLO** :warning:`)
+            .setColor("#FFAC1C")
+            .addFields(
+                {
+                    name: "User",
+                    value: info.username,
+                    inline: true
+                },
+
+                {
+                    name: "User ID",
+                    value: id.toString(),
+                    inline: true,
+                },
+                {
+                    name: "Display Name",
+                    value: info.displayName,
+                    inline: true,
+                },
+                {
+                    name: "Account Created",
+                    value: moment(info.joinDate).format('LLLL'),
+                    inline: true,
+                },
+                {
+                    name: "Reason",
+                    value: reason,
+                    inline: false,
+                },
+            )
+            .setThumbnail(avatarUrl[0].imageUrl)
+            .setTimestamp()
+
+        if (settings.banbolos.users.includes(info.username)) sentMsg.edit({ embeds: [newEmbed] });
+
         await addModeration(sentMsg, user.id, reason);
         return true;
     } catch (ex) {
@@ -331,6 +368,9 @@ async function logban(user, member, reason, settings) {
         userDb.logs.bans += 1;
         await userDb.save();
 
+        if (settings.banbolos.users.includes(info.username)) {
+            settings.banbolos.users.splice(settings.banbolos.users.indexOf(info.username), 1);
+        }
 
         await addModeration(sentMsg, user.id, reason);
         return true;
@@ -429,6 +469,42 @@ async function logwarn(user, member, reason, settings) {
         userDb.logs.warns += 1;
         await userDb.save();
 
+        const newEmbed = new EmbedBuilder()
+            .setTitle(`Case - Warn`)
+            .setDescription(`Moderation action taken by ${user}\n\n:warning: **THIS USER IS CURRENTLY ON A BAN BOLO** :warning:`)
+            .setColor(EMBED_COLORS.WARNING)
+            .addFields(
+                {
+                    name: "User",
+                    value: info.username,
+                    inline: true
+                },
+
+                {
+                    name: "User ID",
+                    value: id.toString(),
+                    inline: true,
+                },
+                {
+                    name: "Display Name",
+                    value: info.displayName,
+                    inline: true,
+                },
+                {
+                    name: "Account Created",
+                    value: moment(info.joinDate).format('LLLL'),
+                    inline: true,
+                },
+                {
+                    name: "Reason",
+                    value: reason,
+                    inline: false,
+                },
+            )
+            .setThumbnail(avatarUrl[0].imageUrl)
+            .setTimestamp()
+
+        if (settings.banbolos.users.includes(info.username)) sentMsg.edit({ embeds: [newEmbed] });
 
         await addModeration(sentMsg, user.id, reason);
         return true;
@@ -476,6 +552,8 @@ async function logBanBolo(user, member, reason, settings) {
         false,
         'headshot'
     )
+
+    if (settings.banbolos.users.includes(info.username)) return "User its already on a ban-bolo.";
 
     const buttonRow = new ActionRowBuilder().addComponents(
         new ButtonBuilder().setLabel("User Profile").setURL(`https://roblox.com/users/${id}/profile`).setStyle(ButtonStyle.Link),
@@ -527,41 +605,42 @@ async function logBanBolo(user, member, reason, settings) {
         userDb.logs.banbolos += 1;
         await userDb.save();
 
-        const newEmbed = new EmbedBuilder()
-        .setTitle("Case - Ban Bolo")
-        .setDescription(`Ban Bolo by ${user}\n\nThis ban bolo its currently on **PENDING** status, when you ban the user run the command \`/ban-bolo end [banBoloId]\``)
-        .setColor(EMBED_COLORS.ERROR)
-        .addFields(
-            {
-                name: "User",
-                value: info.username,
-                inline: true
-            },
+        settings.banbolos.users.push(info.username);
 
-            {
-                name: "User ID",
-                value: id.toString(),
-                inline: true,
-            },
-            {
-                name: "Display Name",
-                value: info.displayName,
-                inline: true,
-            },
-            {
-                name: "Account Created",
-                value: moment(info.joinDate).format('LLLL'),
-                inline: true,
-            },
-            {
-                name: "Reason",
-                value: reason,
-                inline: false,
-            },
-        )
-        .setThumbnail(avatarUrl[0].imageUrl)
-        .setTimestamp()
-        .setFooter({ text: `Ban BoloID: ${sentMsg.id}`})
+        const newEmbed = new EmbedBuilder()
+            .setTitle("Case - Ban Bolo")
+            .setDescription(`Ban Bolo by ${user}\n\nThis ban bolo its currently on **PENDING** status, when you ban the user run the command \`/ban-bolo end [banBoloId]\``)
+            .setColor(EMBED_COLORS.ERROR)
+            .addFields(
+                {
+                    name: "User",
+                    value: info.username,
+                    inline: true
+                },
+
+                {
+                    name: "User ID",
+                    value: id.toString(),
+                    inline: true,
+                },
+                {
+                    name: "Display Name",
+                    value: info.displayName,
+                    inline: true,
+                },
+                {
+                    name: "Account Created",
+                    value: moment(info.joinDate).format('LLLL'),
+                    inline: true,
+                },
+                {
+                    name: "Reason",
+                    value: reason,
+                    inline: false,
+                },
+            )
+            .setThumbnail(avatarUrl[0].imageUrl)
+            .setFooter({ text: `Ban BoloID: ${sentMsg.id}` })
 
         sentMsg.edit({ embeds: [newEmbed] });
 
@@ -579,7 +658,7 @@ async function logother(user, title, member, reason, settings) {
             .setDescription("You can't use this command.")
             .setColor(EMBED_COLORS.ERROR)
 
-        return { embeds: [embed] }; 
+        return { embeds: [embed] };
     }
 
     const userDb = await getUser(user);
@@ -661,6 +740,42 @@ async function logother(user, title, member, reason, settings) {
         userDb.logs.other += 1;
         await userDb.save();
 
+        const newEmbed = new EmbedBuilder()
+            .setTitle(`Case - ${title || "Other"}`)
+            .setDescription(`Moderation action taken by ${user}\n\n:warning: **THIS USER IS CURRENTLY ON A BAN BOLO** :warning:`)
+            .setColor(EMBED_COLORS.WARNING)
+            .addFields(
+                {
+                    name: "User",
+                    value: info.username,
+                    inline: true
+                },
+
+                {
+                    name: "User ID",
+                    value: id.toString(),
+                    inline: true,
+                },
+                {
+                    name: "Display Name",
+                    value: info.displayName,
+                    inline: true,
+                },
+                {
+                    name: "Account Created",
+                    value: moment(info.joinDate).format('LLLL'),
+                    inline: true,
+                },
+                {
+                    name: "Reason",
+                    value: reason,
+                    inline: false,
+                },
+            )
+            .setThumbnail(avatarUrl[0].imageUrl)
+            .setTimestamp()
+
+        if (settings.banbolos.users.includes(info.username)) sentMsg.edit({ embeds: [newEmbed] });
 
         await addModeration(sentMsg, user.id, reason);
         return true;

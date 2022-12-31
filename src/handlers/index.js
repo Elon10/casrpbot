@@ -5,4 +5,5 @@ module.exports = {
     statsHandler: require("./stats"),
     moderateHandler: require("./moderate"),
     loasHandler: require("./loas"),
+    boloHandler: require("./banbolos"),
 };

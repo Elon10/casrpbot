@@ -8,7 +8,7 @@ const Schema = new mongoose.Schema(
         user_id: String,
         status: {
             type: String,
-            enum: ["PENDING", "APPROVED", "REJECTED", "DELETED"],
+            enum: ["PENDING", "ENDED", "REJECTED", "DELETED"],
             default: "PENDING",
         },
         stats: {
@@ -21,7 +21,7 @@ const Schema = new mongoose.Schema(
                 user_id: String,
                 status: {
                     type: String,
-                    enum: ["APPROVED", "REJECTED", "DELETED"],
+                    enum: ["ENDED", "REJECTED", "DELETED"],
                 },
                 reason: String,
                 timestamp: { type: Date, default: new Date() },

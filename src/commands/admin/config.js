@@ -1,4 +1,4 @@
-const { ApplicationCommandOptionType, EmbedBuilder, ChannelType } = require("discord.js");
+const { ApplicationCommandOptionType, EmbedBuilder, ChannelType, Application } = require("discord.js");
 const { parsePermissions } = require("@helpers/Utils");
 const { EMBED_COLORS } = require("@root/config");
 
@@ -20,7 +20,7 @@ module.exports = {
         ephemeral: false,
         options: [
             {
-                name: "moderation",
+                name: "moderations",
                 description: "Configure the moderation logs system",
                 type: ApplicationCommandOptionType.Subcommand,
                 options: [
@@ -81,7 +81,7 @@ module.exports = {
                 ],
             },
             {
-                name: "loa",
+                name: "loas",
                 description: "Configure the loa system",
                 type: ApplicationCommandOptionType.Subcommand,
                 options: [
@@ -135,6 +135,50 @@ module.exports = {
                 ],
             },
             {
+                name: "ban-bolos",
+                description: "Configure the ban bolos system",
+                type: ApplicationCommandOptionType.Subcommand,
+                options: [
+                    {
+                        name: "status",
+                        description: "Enabled or disabled",
+                        type: ApplicationCommandOptionType.String,
+                        required: false,
+                        choices: [
+                            {
+                                name: "ON",
+                                value: "ON",
+                            },
+                            {
+                                name: "OFF",
+                                value: "OFF",
+                            },
+                        ],
+                    },
+                    {
+                        name: "channel",
+                        description: "The channel where the ban-bolos will be sent",
+                        type: ApplicationCommandOptionType.Channel,
+                        channelTypes: [ChannelType.GuildText],
+                        required: false,
+                    },
+                    {
+                        name: "delete-channel",
+                        description: "The channel where the deleted ban bolos will be sent",
+                        type: ApplicationCommandOptionType.Channel,
+                        channelTypes: [ChannelType.GuildText],
+                        required: false,
+                    },
+                    {
+                        name: "ended-channel",
+                        description: "The channel where the ended ban bolso will be sent",
+                        type: ApplicationCommandOptionType.Channel,
+                        channelTypes: [ChannelType.GuildText],
+                        required: false,
+                    }
+                ],
+            },
+            {
                 name: "rank",
                 description: "Rank configuration",
                 type: ApplicationCommandOptionType.Subcommand,
@@ -164,7 +208,7 @@ module.exports = {
         const sub = interaction.options.getSubcommand();
         let response;
 
-        if (sub === "moderation") {
+        if (sub === "moderations") {
             const status = interaction.options.getString("status");
             const channel = interaction.options.getChannel("channel");
             const roleadd = interaction.options.getRole("role-add");
@@ -182,7 +226,7 @@ module.exports = {
             if (staffremove) response = await removeModerationStaff(data.settings, staffremove);
         }
 
-        else if (sub === "loa") {
+        else if (sub === "loas") {
             const status = interaction.options.getString("status");
             const channel = interaction.options.getChannel("channel");
             const staffroleadd = interaction.options.getRole("staffadd");
@@ -196,6 +240,18 @@ module.exports = {
             if (staffroleremove) response = await loaStaffRemove(data.settings, staffroleremove);
             if (role) response = await loasRole(data.settings, role);
             if (roleremove) response = await loasRoleRemove(data.settings, roleremove);
+        }
+
+        else if (sub == "ban-bolos") {
+            const status = interaction.options.getString("status");
+            const channel = interaction.options.getChannel("channel");
+            const deletedChannel = interaction.options.getChannel("delete-channel");
+            const endedChannel = interaction.options.getChannel("ended-channel");
+
+            if (status) response = await setBanBoloStatus(data.settings, status);
+            if (channel) response = await setBanBolosChannel(data.settings, channel);
+            if (deletedChannel) response = await setBanBolosDeletedChannel(data.settings, deletedChannel);
+            if (endedChannel) response = await setBanBolosEndedChannel(data.settings, endedChannel);
         }
 
         else if (sub === "rank") {
@@ -472,6 +528,82 @@ async function loasRoleRemove(settings, roleremove) {
     const embed = new EmbedBuilder()
         .setTitle("Success")
         .setDescription(`LOAS system **updated**.`)
+        .setColor(EMBED_COLORS.SUCCESS)
+
+    return { embeds: [embed] };
+}
+
+async function setBanBoloStatus(settings, status) {
+    const enabled = status.toUpperCase() === "ON" ? true : false;
+    settings.banbolos.enabled = enabled;
+    await settings.save();
+
+    const embed = new EmbedBuilder()
+        .setTitle("Success")
+        .setDescription(`Ban Bolos System **updated**.`)
+        .setColor(EMBED_COLORS.SUCCESS)
+
+    return { embeds: [embed] };
+}
+
+async function setBanBolosChannel(settings, channel) {
+    if (!channel.permissionsFor(channel.guild.members.me).has(CHANNEL_PERMS)) {
+        const embed = new EmbedBuilder()
+            .setTitle("Missing Permissions")
+            .setDescription(`I need the following permissions in ${channel}\n${parsePermissions(CHANNEL_PERMS)}.`)
+            .setColor(EMBED_COLORS.ERROR)
+
+        return { embeds: [embed] };
+    }
+
+    settings.banbolos.channel_id = channel.id;
+    await settings.save();
+
+    const embed = new EmbedBuilder()
+        .setTitle("Success")
+        .setDescription(`Ban Bolos system **updated**.`)
+        .setColor(EMBED_COLORS.SUCCESS)
+
+    return { embeds: [embed] };
+}
+
+async function setBanBolosDeletedChannel(settings, channel) {
+    if (!channel.permissionsFor(channel.guild.members.me).has(CHANNEL_PERMS)) {
+        const embed = new EmbedBuilder()
+            .setTitle("Missing Permissions")
+            .setDescription(`I need the following permissions in ${channel}\n${parsePermissions(CHANNEL_PERMS)}.`)
+            .setColor(EMBED_COLORS.ERROR)
+
+        return { embeds: [embed] };
+    }
+
+    settings.banbolos.delete_channel = channel.id;
+    await settings.save();
+
+    const embed = new EmbedBuilder()
+        .setTitle("Success")
+        .setDescription(`Ban Bolos system **updated**.`)
+        .setColor(EMBED_COLORS.SUCCESS)
+
+    return { embeds: [embed] };
+}
+
+async function setBanBolosEndedChannel(settings, channel) {
+    if (!channel.permissionsFor(channel.guild.members.me).has(CHANNEL_PERMS)) {
+        const embed = new EmbedBuilder()
+            .setTitle("Missing Permissions")
+            .setDescription(`I need the following permissions in ${channel}\n${parsePermissions(CHANNEL_PERMS)}.`)
+            .setColor(EMBED_COLORS.ERROR)
+
+        return { embeds: [embed] };
+    }
+
+    settings.banbolos.ended_channel = channel.id;
+    await settings.save();
+
+    const embed = new EmbedBuilder()
+        .setTitle("Success")
+        .setDescription(`Ban Bolos system **updated**.`)
         .setColor(EMBED_COLORS.SUCCESS)
 
     return { embeds: [embed] };

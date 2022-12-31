@@ -37,6 +37,13 @@ const Schema = new mongoose.Schema({
         staff_roles: [String],
         role: [String],
         enabled: Boolean,
+    },
+    banbolos: {
+        channel_id: String,
+        users: [String],
+        ended_channel: String,
+        delete_channel: String,
+        enabled: Boolean,
     }
 });
 

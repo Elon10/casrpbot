@@ -62,14 +62,14 @@ module.exports = async (client, interaction) => {
             case "LOA_DENY_MODAL":
                 return loasHandler.handleDenyModal(interaction);
 
-            case "LOA_DELETE_MODAL":
-                return loasHandler.handleDeleteModal(interaction);
-
             case "MODERATE_EDIT_MODAL":
                 return moderateHandler.handleEditModal(interaction);
 
             case "MODERATE_DELETE_MODAL":
                 return moderateHandler.handleDeleteModal(interaction);
+
+            case "BANBOLO_DELETE_MODAL":
+                return boloHandler.handleDeleteModal(interaction);
         }
     }
 
