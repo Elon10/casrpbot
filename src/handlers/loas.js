@@ -24,6 +24,7 @@ const hasPerms = (member, settings) => {
  * @param {import('discord.js').TextBasedChannel} channel
  * @param {string} messageId
  * @param {string} [reason]
+ * @param {import('discord.js').BaseGuildTextChannel} channel
  */
 async function acceptLoa(member, channel, messageId, reason) {
     const { guild } = member;
@@ -92,6 +93,17 @@ async function acceptLoa(member, channel, messageId, reason) {
     if (reason) fields.push({ name: "Note", value: reason });
     approvedEmbed.addFields(fields);
 
+    const user = await channel.client.users.fetch(doc.user_id, { cache: false }).catch(() => {});
+
+    const dmEmbed = new EmbedBuilder()
+        .setTitle("Loa Accepted")
+        .setDescription(`Hey **${user.username}**, your LOA request has been **accepted**.`)
+        .addFields(fields)
+        .setColor(EMBED_COLORS.SUCCESS)
+        .setFooter({ text: `Approved By ${member.user.tag}`, iconURL: member.displayAvatarURL() })
+
+    user.send({ embeds: [dmEmbed] });
+
     try {
         doc.status = "APPROVED";
         doc.status_updates.push({ user_id: member.id, status: "APPROVED", reason, timestamp: new Date() });
@@ -124,6 +136,7 @@ async function acceptLoa(member, channel, messageId, reason) {
  * @param {import('discord.js').TextBasedChannel} channel
  * @param {string} messageId
  * @param {string} [reason]
+ * @param {import('@src/structures').BotClient} client
  */
 async function denyLoa(member, channel, messageId, reason) {
     const { guild } = member;
@@ -174,7 +187,6 @@ async function denyLoa(member, channel, messageId, reason) {
     const rejectedEmbed = new EmbedBuilder()
         .setTitle("LOA Rejected")
         .setColor(EMBED_COLORS.ERROR)
-        .setThumbnail(message.embeds[0].data.thumbnail.url)
         .setFooter({ text: `Rejected By ${member.user.tag}`, iconURL: member.displayAvatarURL() })
 
     const fields = [];
@@ -188,6 +200,17 @@ async function denyLoa(member, channel, messageId, reason) {
 
     if (reason) fields.push({ name: "Note", value: reason });
     rejectedEmbed.addFields(fields);
+
+    const user = await channel.client.users.fetch(doc.user_id, { cache: false }).catch(() => {});
+
+    const dmEmbed = new EmbedBuilder()
+        .setTitle("Loa Denied")
+        .setDescription(`Hey **${user.username}**, your LOA request has been **denied**.`)
+        .addFields(fields)
+        .setColor(EMBED_COLORS.ERROR)
+        .setFooter({ text: `Denied By ${member.user.tag}`, iconURL: member.displayAvatarURL() })
+
+    user.send({ embeds: [dmEmbed] });
 
     try {
         doc.status = "REJECTED";

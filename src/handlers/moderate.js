@@ -1,6 +1,6 @@
 const { getSettings } = require("@schemas/Guild");
-const { findModeration } = require("@schemas/Moderation");
-const { EMBED_COLORS } = require("@root/config");
+const { findModeration, deleteModerationDb } = require("@schemas/Moderation");
+const { EMBED_COLORS, OWNER_IDS } = require("@root/config");
 const {
     ActionRowBuilder,
     ModalBuilder,
@@ -8,6 +8,13 @@ const {
     EmbedBuilder,
     TextInputStyle,
 } = require("discord.js");
+
+const hasPerms = (member, settings) => {
+    return (
+        member.permissions.has("ManageGuild") ||
+        member.roles.cache.find((r) => settings.moderations.staff_roles.includes(r.id))
+    );
+};
 
 /**
  * @param {import('discord.js').GuildMember} member
@@ -38,14 +45,14 @@ async function editModeration(member, channel, messageId, reason) {
         return { embeds: [embed] };
     }
 
-    if(doc.user_id !== member.id) {
+    if (doc.user_id !== member.id) {
         const embed = new EmbedBuilder()
             .setTitle("Error")
             .setDescription("You can't edit another user log.")
             .setColor(EMBED_COLORS.ERROR)
 
         return { embeds: [embed] };
-    } 
+    }
 
     /**
      * @type {import('discord.js').Message}
@@ -104,6 +111,55 @@ async function editModeration(member, channel, messageId, reason) {
 }
 
 /**
+ * @param {import('discord.js').GuildMember} member
+ * @param {import('discord.js').TextBasedChannel} channel
+ * @param {string} messageId
+ * @param {string} [reason]
+ */
+async function deleteModeration(member, channel, messageId, reason) {
+    const { guild } = member;
+    const settings = await getSettings(guild);
+
+    if (!OWNER_IDS.includes(member.id) || !hasPerms(member, settings)) return "You can't delete moderation logs."
+
+    try {
+        const message = await channel.messages.fetch({ message: messageId });
+
+        const deletedEmbed = new EmbedBuilder()
+            .setTitle(`Voided | ${message.embeds[0].data.title}`)
+            .setDescription(message.embeds[0].data.description)
+            .setThumbnail(message.embeds[0].data.thumbnail.url)
+            .setColor(EMBED_COLORS.ERROR)
+            .setFooter({ text: `Voided by ${member.user.tag}`, iconURL: member.displayAvatarURL() })
+    
+    
+        const fields = [];
+        const userField = message.embeds[0].data.fields.find((field) => field.name === "User")
+        const userIdField = message.embeds[0].data.fields.find((field) => field.name === "User ID");
+        const displayNameField = message.embeds[0].data.fields.find((field) => field.name === "Display Name");
+        const accountCreatedField = message.embeds[0].data.fields.find((field) => field.name === "Account Created");
+        fields.push(userField, userIdField, displayNameField, accountCreatedField);
+        if (reason) fields.push({ name: "Reason", value: reason, inline: false });
+
+        deletedEmbed.addFields(fields);
+
+        let deleteChannel;
+        if (settings.moderations.delete_channel) {
+            deleteChannel = guild.channels.cache.get(settings.moderations.delete_channel);
+        }
+
+        deleteChannel.send({ embeds: [deletedEmbed] });
+
+        await channel.messages.delete(messageId);
+        await deleteModerationDb(guild.id, messageId, member.id, reason);
+        return "Success";
+    } catch (ex) {
+        guild.client.logger.error("deleteModeration", ex);
+        return "Failed to delete moderation! Please delete manually.";
+    }
+}
+
+/**
  * @param {import('discord.js').ButtonInteraction} interaction
  */
 async function handleEditBtn(interaction, user) {
@@ -125,6 +181,38 @@ async function handleEditBtn(interaction, user) {
 }
 
 /**
+ * @param {import('discord.js').ButtonInteraction} interaction
+ */
+async function handleDeleteBtn(interaction) {
+    await interaction.showModal(
+        new ModalBuilder({
+            title: "Delete Moderation",
+            customId: "MODERATE_DELETE_MODAL",
+            components: [
+                new ActionRowBuilder().addComponents([
+                    new TextInputBuilder()
+                        .setCustomId("reason")
+                        .setLabel("reason")
+                        .setStyle(TextInputStyle.Paragraph)
+                        .setMinLength(4),
+                ]),
+            ],
+        })
+    );
+}
+
+/**
+ * @param {import('discord.js').ModalSubmitInteraction} modal
+ */
+async function handleDeleteModal(modal) {
+    await modal.deferReply({ ephemeral: true });
+    const reason = modal.fields.getTextInputValue("reason");
+    const response = await deleteModeration(modal.member, modal.channel, modal.message.id, reason);
+    await modal.followUp({ content: response, ephemeral: true });
+}
+
+
+/**
  * @param {import('discord.js').ModalSubmitInteraction} modal
  */
 async function handleEditModal(modal) {
@@ -138,4 +226,6 @@ module.exports = {
     handleEditBtn,
     handleEditModal,
     editModeration,
+    handleDeleteBtn,
+    handleDeleteModal,
 };

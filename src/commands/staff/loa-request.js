@@ -138,6 +138,26 @@ async function submitLoa(member, reason, duration, loaduration, settings) {
         )
         .setColor(EMBED_COLORS.BOT_EMBED)
 
+        const dmEmbed = new EmbedBuilder()
+            .setTitle("Loa Request")
+            .setDescription(`Hey <@${member.id}>, your LOA request its on proccess to be **accepted** or **denied** I will DM you when your loa its **accepted** or **denied**. Please be patient.`)
+            .setColor(EMBED_COLORS.WARNING)
+            .setThumbnail(member.displayAvatarURL())
+            .addFields(
+                {
+                    name: "Duration",
+                    value: loaduration,
+                    inline: false,
+                },
+                {
+                    name: "Reason",
+                    value: reason,
+                    inline: false,
+                },
+            )
+
+        member.send({ embeds: [dmEmbed] });
+
     try {
         const sentMsg = await channel.send({
             embeds: [embed],

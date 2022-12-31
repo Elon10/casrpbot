@@ -33,6 +33,8 @@ const Schema = new mongoose.Schema({
     },
     moderations: {
         channel_id: String,
+        delete_channel: String,
+        staff_roles: [String],
         role: [String],
         enabled: Boolean,
     }

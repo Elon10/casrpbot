@@ -1,5 +1,5 @@
 const { getSettings } = require("@schemas/Guild");
-const { commandHandler, contextHandler, statsHandler, loasHandler, moderateHandler } = require("@src/handlers");
+const { commandHandler, contextHandler, statsHandler, loasHandler, moderateHandler, boloHandler } = require("@src/handlers");
 const { InteractionType, EmbedBuilder } = require("discord.js");
 const { EMBED_COLORS } = require("@root/config");
 
@@ -45,6 +45,12 @@ module.exports = async (client, interaction) => {
 
             case "MODERATE_EDIT":
                 return moderateHandler.handleEditBtn(interaction);
+
+            case "MODERATE_DELETE":
+                return moderateHandler.handleDeleteBtn(interaction);
+
+            case "BOLO_DELETE":
+                return boloHandler.handleDeleteBtn(interaction);
         }
     }
 
@@ -61,6 +67,9 @@ module.exports = async (client, interaction) => {
 
             case "MODERATE_EDIT_MODAL":
                 return moderateHandler.handleEditModal(interaction);
+
+            case "MODERATE_DELETE_MODAL":
+                return moderateHandler.handleDeleteModal(interaction);
         }
     }
 

@@ -477,12 +477,26 @@ pre {
   /* 2 */
 }
 
+.code-2 {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-size: 1em;
+  background-color: #181A1D;
+  display: block; 
+	padding: 10px 10px 10px; 
+  width: 100%;
+  border-radius: 5px;
+}
+
 /*
 Add the correct font size in all browsers.
 */
 
 small {
   font-size: 80%;
+}
+
+.button-left {
+  margin-left: 53rem;
 }
 
 /*
@@ -1380,7 +1394,9 @@ select {
 }
 
 .bg-bggray {
-  background: url('../images/bg.jpg');
+  background-image: url('../images/bg.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   background-size: cover;
 }
 

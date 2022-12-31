@@ -48,6 +48,13 @@ module.exports = {
                         required: false,
                     },
                     {
+                        name: "delete-channel",
+                        description: "The channel where the deleted moderations will be send",
+                        type: ApplicationCommandOptionType.Channel,
+                        channelTypes: [ChannelType.GuildText],
+                        required: false,
+                    },
+                    {
                         name: "role-add",
                         description: "Role that can use moderation logs commands",
                         type: ApplicationCommandOptionType.Role,
@@ -56,6 +63,18 @@ module.exports = {
                     {
                         name: "role-remove",
                         description: "Remove a role from using moderation logs commands",
+                        type: ApplicationCommandOptionType.Role,
+                        required: false,
+                    },
+                    {
+                        name: "staff-add",
+                        description: "Role that can delete moderation logs",
+                        type: ApplicationCommandOptionType.Role,
+                        required: false,
+                    },
+                    {
+                        name: "staff-remove",
+                        description: "Remove a role from deleting moderation logs",
                         type: ApplicationCommandOptionType.Role,
                         required: false,
                     }
@@ -150,10 +169,17 @@ module.exports = {
             const channel = interaction.options.getChannel("channel");
             const roleadd = interaction.options.getRole("role-add");
             const roleremove = interaction.options.getRole("role-remove");
+            const deleteChannel = interaction.options.getChannel("delete-channel");
+            const staffadd = interaction.options.getRole("staff-add");
+            const staffremove = interaction.options.getRole("staff-remove");
+
             if (status) response = await setModerationStatus(data.settings, status);
             if (channel) response = await setModerationChannel(data.settings, channel);
             if (roleadd) response = await setModerationRole(data.settings, roleadd);
             if (roleremove) response = await moderationRoleRemove(data.settings, roleremove);
+            if (deleteChannel) response = await deleteChannelSet(data.settings, deleteChannel);
+            if (staffadd) response = await setModerationStaff(data.settings, staffadd);
+            if (staffremove) response = await removeModerationStaff(data.settings, staffremove);
         }
 
         else if (sub === "loa") {
@@ -163,6 +189,7 @@ module.exports = {
             const staffroleremove = interaction.options.getRole("staffremove");
             const role = interaction.options.getRole("role-add");
             const roleremove = interaction.options.getRole("role-remove");
+
             if (status) response = await setLoaStatus(data.settings, status);
             if (channel) response = await setLoaChannel(data.settings, channel);
             if (staffroleadd) response = await loaStaffAdd(data.settings, staffroleadd);
@@ -303,6 +330,27 @@ async function setModerationChannel(settings, channel) {
     return { embeds: [embed] };
 }
 
+async function deleteChannelSet(settings, channel) {
+    if (!channel.permissionsFor(channel.guild.members.me).has(CHANNEL_PERMS)) {
+        const embed = new EmbedBuilder()
+            .setTitle("Missing Permissions")
+            .setDescription(`I need the following permissions in ${channel}\n${parsePermissions(CHANNEL_PERMS)}.`)
+            .setColor(EMBED_COLORS.ERROR)
+
+        return { embeds: [embed] };
+    }
+
+    settings.moderations.delete_channel = channel.id;
+    await settings.save();
+
+    const embed = new EmbedBuilder()
+        .setTitle("Success")
+        .setDescription(`Moderation System **updated**.`)
+        .setColor(EMBED_COLORS.SUCCESS)
+
+    return { embeds: [embed] };
+}
+
 async function setModerationRole(settings, roleadd) {
     if (settings.moderations.role.includes(roleadd.id)) {
         const embed = new EmbedBuilder()
@@ -324,6 +372,27 @@ async function setModerationRole(settings, roleadd) {
     return { embeds: [embed] };
 }
 
+async function setModerationStaff(settings, staffadd) {
+    if (settings.moderations.role.includes(roleadd.id)) {
+        const embed = new EmbedBuilder()
+            .setTitle("Error")
+            .setDescription(`${staffadd.name} is already a role that can delete moderation logs.`)
+            .setColor(EMBED_COLORS.ERROR)
+
+        return { embeds: [embed] };
+    }
+
+    settings.moderations.staff_roles.push(staffadd.id);
+    await settings.save();
+
+    const embed = new EmbedBuilder()
+        .setTitle("Success")
+        .setDescription(`Moderation System **updated**.`)
+        .setColor(EMBED_COLORS.SUCCESS)
+
+    return { embeds: [embed] };
+}
+
 async function moderationRoleRemove(settings, roleremove) {
     if (!settings.moderations.role.includes(roleremove.id)) {
         const embed = new EmbedBuilder()
@@ -335,6 +404,27 @@ async function moderationRoleRemove(settings, roleremove) {
     }
 
     settings.moderations.role.splice(settings.moderations.role.indexOf(roleremove.id), 1);
+    await settings.save();
+
+    const embed = new EmbedBuilder()
+        .setTitle("Success")
+        .setDescription(`Moderation System **updated**.`)
+        .setColor(EMBED_COLORS.SUCCESS)
+
+    return { embeds: [embed] };
+}
+
+async function removeModerationStaff(settings, staffremove) {
+    if (!settings.moderations.role.includes(staffremove.id)) {
+        const embed = new EmbedBuilder()
+            .setTitle("Error")
+            .setDescription(`${staffremove.name} is not a role that can delete moderations.`)
+            .setColor(EMBED_COLORS.ERROR)
+
+        return { embeds: [embed] };
+    }
+
+    settings.moderations.staff_roles.splice(settings.moderations.staff_roles.indexOf(staffremove.id), 1);
     await settings.save();
 
     const embed = new EmbedBuilder()

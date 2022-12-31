@@ -32,11 +32,11 @@ router.get("/staff/homePage", CheckAuth, async (req, res) => {
     }
 })
 
-router.get("/staff/faq", CheckAuth, async (req, res) => {
+router.get("/staff/announcements", CheckAuth, async (req, res) => {
     const userDb = await getUser(req.userInfos);
 
     if (userDb.staffpanel) {
-        res.render("staff/faq", {
+        res.render("staff/announcements", {
             user: req.userInfos,
             currentURL: `${req.client.config.DASHBOARD.baseURL}/${req.originalUrl}`,
         });

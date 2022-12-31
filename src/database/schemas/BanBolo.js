@@ -11,6 +11,10 @@ const Schema = new mongoose.Schema(
             enum: ["PENDING", "APPROVED", "REJECTED", "DELETED"],
             default: "PENDING",
         },
+        stats: {
+            upvotes: { type: Number, default: 0 },
+            downvotes: { type: Number, default: 0 },
+        },
         status_updates: [
             {
                 _id: false,
@@ -32,12 +36,12 @@ const Schema = new mongoose.Schema(
     }
 );
 
-const Model = mongoose.model("moderations", Schema);
+const Model = mongoose.model("banbolo", Schema);
 
 module.exports = {
     model: Model,
 
-    addModeration: async (message, userId, reason) => {
+    addBanBolo: async (message, userId, reason) => {
         return new Model({
             guild_id: message.guildId,
             channel_id: message.channelId,
@@ -47,11 +51,11 @@ module.exports = {
         }).save();
     },
 
-    findModeration: async (guildId, messageId, userId) => {
+    findBanBolo: async (guildId, messageId, userId) => {
         return Model.findOne({ guild_id: guildId, message_id: messageId });
     },
 
-    deleteModerationDb: async (guildId, messageId, memberId, reason) => {
+    deleteBanBoloDb: async (guildId, messageId, memberId, reason) => {
         return Model.updateOne(
             { guild_id: guildId, message_id: messageId },
             {

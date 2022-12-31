@@ -23,5 +23,6 @@ module.exports = {
         User: require("./schemas/User"),
         Loas: require("./schemas/Loas").model,
         Moderation: require("./schemas/Moderation").model,
+        BanBolo: require("./schemas/BanBolo").model,
     },
 };

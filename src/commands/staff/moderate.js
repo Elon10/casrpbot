@@ -2,6 +2,7 @@ const { EmbedBuilder, ApplicationCommandOptionType, ButtonBuilder, ButtonStyle, 
 const { EMBED_COLORS } = require("@root/config.js");
 const { getUser } = require("@schemas/User");
 const { addModeration } = require("@schemas/Moderation");
+const { addBanBolo } = require("@schemas/BanBolo");
 const moment = require("moment");
 const roblox = require("noblox.js")
 
@@ -43,6 +44,10 @@ module.exports = {
                                 value: "Warn",
                             },
                             {
+                                name: "Ban Bolo",
+                                value: "Ban Bolo",
+                            },
+                            {
                                 name: "Other",
                                 value: "Other",
                             }
@@ -70,7 +75,7 @@ module.exports = {
             },
             {
                 name: "count",
-                description: "count",
+                description: "see logs count of a staff",
                 type: ApplicationCommandOptionType.Subcommand,
                 options: [
                     {
@@ -96,22 +101,27 @@ module.exports = {
 
             if (type === "Kick") {
                 response = await logkick(interaction.member, user, reason, data.settings);
-                if (typeof response === "boolean") return interaction.followUp("Logged");
+                if (typeof response === "boolean") return interaction.followUp("Moderation successfully logged.");
             }
 
             if (type === "Ban") {
                 response = await logban(interaction.member, user, reason, data.settings);
-                if (typeof response === "boolean") return interaction.followUp("Logged");
+                if (typeof response === "boolean") return interaction.followUp("Moderation successfully logged.");
             }
 
             if (type === "Warn") {
                 response = await logwarn(interaction.member, user, reason, data.settings);
-                if (typeof response === "boolean") return interaction.followUp("Logged");
+                if (typeof response === "boolean") return interaction.followUp("Moderation successfully logged.");
+            }
+
+            if (type === "Ban Bolo") {
+                response = await logBanBolo(interaction.member, user, reason, data.settings);
+                if (typeof response === "boolean") return interaction.followUp("Moderation successfully logged.")
             }
 
             if (type === "Other") {
                 response = await logother(interaction.member, title, user, reason, data.settings);
-                if (typeof response === "boolean") return interaction.followUp("Logged");
+                if (typeof response === "boolean") return interaction.followUp("Moderation successfully logged.");
             }
         }
 
@@ -175,6 +185,7 @@ async function logkick(user, member, reason, settings) {
     const buttonRow = new ActionRowBuilder().addComponents(
         new ButtonBuilder().setLabel("Edit Case").setCustomId("MODERATE_EDIT").setStyle(ButtonStyle.Primary),
         new ButtonBuilder().setLabel("User Profile").setURL(`https://roblox.com/users/${id}/profile`).setStyle(ButtonStyle.Link),
+        new ButtonBuilder().setCustomId("MODERATE_DELETE").setLabel("Void").setStyle(ButtonStyle.Secondary)
     );
 
     const embed = new EmbedBuilder()
@@ -271,7 +282,8 @@ async function logban(user, member, reason, settings) {
 
     const buttonRow = new ActionRowBuilder().addComponents(
         new ButtonBuilder().setLabel("Edit Case").setCustomId("MODERATE_EDIT").setStyle(ButtonStyle.Primary),
-        new ButtonBuilder().setLabel("User Profile").setURL(`https://roblox.com/users/${id}/profile`).setStyle(ButtonStyle.Link)
+        new ButtonBuilder().setLabel("User Profile").setURL(`https://roblox.com/users/${id}/profile`).setStyle(ButtonStyle.Link),
+        new ButtonBuilder().setCustomId("MODERATE_DELETE").setLabel("Void").setStyle(ButtonStyle.Secondary)
     );
 
     const embed = new EmbedBuilder()
@@ -368,7 +380,8 @@ async function logwarn(user, member, reason, settings) {
 
     const buttonRow = new ActionRowBuilder().addComponents(
         new ButtonBuilder().setLabel("Edit Case").setCustomId("MODERATE_EDIT").setStyle(ButtonStyle.Primary),
-        new ButtonBuilder().setLabel("User Profile").setURL(`https://roblox.com/users/${id}/profile`).setStyle(ButtonStyle.Link)
+        new ButtonBuilder().setLabel("User Profile").setURL(`https://roblox.com/users/${id}/profile`).setStyle(ButtonStyle.Link),
+        new ButtonBuilder().setCustomId("MODERATE_DELETE").setLabel("Void").setStyle(ButtonStyle.Secondary)
     );
 
     const embed = new EmbedBuilder()
@@ -424,7 +437,7 @@ async function logwarn(user, member, reason, settings) {
     }
 }
 
-async function logother(user, title, member, reason, settings) {
+async function logBanBolo(user, member, reason, settings) {
     if (!user.roles.cache.find((r) => settings.moderations.role.includes(r.id))) {
         const embed = new EmbedBuilder()
             .setTitle("Error")
@@ -432,6 +445,141 @@ async function logother(user, title, member, reason, settings) {
             .setColor(EMBED_COLORS.ERROR)
 
         return { embeds: [embed] };
+    }
+
+
+    const userDb = await getUser(user);
+    const id = await roblox.getIdFromUsername(member);
+    if (!settings.moderations.enabled) {
+        const embed = new EmbedBuilder()
+            .setTitle("Error")
+            .setDescription("Moderation system is not enabled.")
+            .setColor(EMBED_COLORS.ERROR)
+
+        return { embeds: [embed] };
+    }
+    const channel = user.guild.channels.cache.get(settings.moderations.channel_id);
+    if (!channel) {
+        const embed = new EmbedBuilder()
+            .setTitle("Error")
+            .setDescription("Moderation logs channel not configured.")
+            .setColor(EMBED_COLORS.ERROR)
+
+        return { embeds: [embed] };
+    }
+
+    const info = await roblox.getPlayerInfo(id);
+    const avatarUrl = await roblox.getPlayerThumbnail(
+        [id],
+        '720x720',
+        'png',
+        false,
+        'headshot'
+    )
+
+    const buttonRow = new ActionRowBuilder().addComponents(
+        new ButtonBuilder().setLabel("User Profile").setURL(`https://roblox.com/users/${id}/profile`).setStyle(ButtonStyle.Link),
+        new ButtonBuilder().setCustomId("BOLO_DELETE").setLabel("Void").setStyle(ButtonStyle.Secondary)
+    );
+
+    const embed = new EmbedBuilder()
+        .setTitle("Case - Ban Bolo")
+        .setDescription(`Ban Bolo by ${user}\nThis ban bolo its currently on **PENDING** status, when you ban the user run the command \`/ban-bolo end [banBoloId]\``)
+        .setColor(EMBED_COLORS.ERROR)
+        .addFields(
+            {
+                name: "User",
+                value: info.username,
+                inline: true
+            },
+
+            {
+                name: "User ID",
+                value: id.toString(),
+                inline: true,
+            },
+            {
+                name: "Display Name",
+                value: info.displayName,
+                inline: true,
+            },
+            {
+                name: "Account Created",
+                value: moment(info.joinDate).format('LLLL'),
+                inline: true,
+            },
+            {
+                name: "Reason",
+                value: reason,
+                inline: false,
+            },
+        )
+        .setThumbnail(avatarUrl[0].imageUrl)
+        .setTimestamp()
+
+    try {
+        const sentMsg = await channel.send({
+            embeds: [embed],
+            components: [buttonRow],
+        });
+
+        userDb.logs.total += 1;
+        userDb.logs.banbolos += 1;
+        await userDb.save();
+
+        const newEmbed = new EmbedBuilder()
+        .setTitle("Case - Ban Bolo")
+        .setDescription(`Ban Bolo by ${user}\n\nThis ban bolo its currently on **PENDING** status, when you ban the user run the command \`/ban-bolo end [banBoloId]\``)
+        .setColor(EMBED_COLORS.ERROR)
+        .addFields(
+            {
+                name: "User",
+                value: info.username,
+                inline: true
+            },
+
+            {
+                name: "User ID",
+                value: id.toString(),
+                inline: true,
+            },
+            {
+                name: "Display Name",
+                value: info.displayName,
+                inline: true,
+            },
+            {
+                name: "Account Created",
+                value: moment(info.joinDate).format('LLLL'),
+                inline: true,
+            },
+            {
+                name: "Reason",
+                value: reason,
+                inline: false,
+            },
+        )
+        .setThumbnail(avatarUrl[0].imageUrl)
+        .setTimestamp()
+        .setFooter({ text: `Ban BoloID: ${sentMsg.id}`})
+
+        sentMsg.edit({ embeds: [newEmbed] });
+
+        await addBanBolo(sentMsg, user.id, reason);
+        return true;
+    } catch (ex) {
+        return "Failed to send moderation log."
+    }
+}
+
+async function logother(user, title, member, reason, settings) {
+    if (!user.roles.cache.find((r) => settings.moderations.role.includes(r.id))) {
+        const embed = new EmbedBuilder()
+            .setTitle("Error")
+            .setDescription("You can't use this command.")
+            .setColor(EMBED_COLORS.ERROR)
+
+        return { embeds: [embed] }; 
     }
 
     const userDb = await getUser(user);

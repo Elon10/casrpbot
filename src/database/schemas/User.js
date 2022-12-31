@@ -21,6 +21,7 @@ const Schema = new mongoose.Schema(
             kicks: { type: Number, default: 0 },
             warns: { type: Number, default: 0 },
             bans: { type: Number, default: 0 },
+            banbolos: { type: Number, default: 0 },
             other: { type: Number, default: 0 },
         },
         daily: {
