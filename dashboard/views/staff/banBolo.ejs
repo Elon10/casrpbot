@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <%- include('../includes/head') %>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+
+    <body class="bg-bggray text-gray-50 min-h-screen flex flex-col">
+
+        <div class="alert hide" id="alert">
+            <span class="fa fa-exclamation-circle"></span>
+            <span class="msg">Success! Your log has been logged successfully.</span>
+            <span class="close-btn">
+                <span class="fa fa-times"></span>
+            </span>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-8 flex-1">
+            <%- include('../includes/sidebar') %>
+
+            <div class="flex flex-col col-span-6 container">
+                <%- include('../includes/manageheader') %>
+                <h2 class="text-3xl font-bold mx-8 mt-6 mb-2 underline">Ban Bolo</h2>
+                <section class="grid grid-cols gap-4 my-4 mx-8">
+                    <div class="background-1">
+                        <div class="flex flex-col rounded-lg bg-darkerbggray h-[fit-content]">
+                            <div class="p-4">
+                                <h3 class="font-semibold text-xl">Create a Ban Bolo</h3>
+                            </div>
+                            <form role="form" action="/staff/banBolo" method="post" id="bolosend"
+                                class="flex flex-col px-4 pt-2 pb-4">
+                                <div class="flex flex-col">
+                                    <label class="font-bold"><i class="fa fa-user"></i> User</label>
+                                    <input type="text" name="violator"class="px-3 py-1 rounded-lg bg-gray-50 text-gray-900" placeholder="Roblox Username" required autocomplete="off"/>
+                                </div>
+                                <div class="flex flex-col">
+                                    <label class="font-bold"><i class="fa fa-question-circle"></i> Reason</label>
+                                    <input type="text" name="reason" class="px-3 py-1 rounded-lg bg-gray-50 text-gray-900" placeholder="Reason for Ban Bolo" required autocomplete="off"/>
+                                </div>
+
+                                <div class="mt-4">
+                                    <button type="submit" name="boloSend"
+                                        class="px-4 py-1 rounded-lg bg-success transition-opacity duration-300 hover:opacity-70">
+                                        Log
+                                    </button>
+                                    <button type="reset" 
+                                        class="px-4 py-1 rounded-lg bg-error transition-opacity duration-300 hover:opacity-70">
+                                        Clear
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col">
+                        <div class="warning">
+                            <label class="text-2xl font-bold"><i class="fa fa-warning"></i> Warning</label>
+                            <p class="text-lg font-semibold">To end a ban bolo run the following command in the server.</b></p>
+                            <code class="code-2">/ban-bolo end [banBoloId]</code>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+        <script>
+            $('#bolosend').submit(function(e) {
+                $('.alert').removeClass("hide");    
+                $('.alert').addClass("show");
+                $('.alert').addClass("showAlert");
+                setTimeout(function() {
+                    $('.alert').addClass("hide");
+                    $('.alert').removeClass("show");
+                }, 5000)
+            })
+            $('.close-btn').click(function() {
+                $('.alert').addClass("hide");
+                $('.alert').removeClass("show");
+            })
+        </script>
+    </body>
+</html>

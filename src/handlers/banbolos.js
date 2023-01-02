@@ -11,7 +11,8 @@ const {
 
 const hasPerms = (member, settings) => {
     return (    
-        member.permissions.has("ManageGuild")
+        member.permissions.has("ManageGuild") ||
+        member.roles.cache.find((r) => r.id === "1058291703167066162")
     );
 };
 
@@ -101,10 +102,7 @@ async function endBolo(member, channel, messageId, reason) {
             await message.edit({ embeds: [endedEmbed] });
         }
 
-        if (settings.banbolos.users.includes(userField.value)) {
-            settings.banbolos.users.splice(settings.banbolos.users.indexOf(userField.value), 1);
-        }
-
+        
         else {
             const sent = await endedChannel.send({ embeds: [endedEmbed] });
             doc.channel_id = endedChannel.id;
@@ -112,8 +110,10 @@ async function endBolo(member, channel, messageId, reason) {
             await message.delete();
         }
 
+        settings.banbolos.users.splice(settings.banbolos.users.indexOf(userField.value), 1);
+
+        await settings.save();
         await doc.save();
-        return "Ban-Bolo successfully ended.";
     } catch (ex) {
         guild.client.logger.error("endBanBolo", ex);
         return "Failed to end ban-bolo.";
@@ -163,7 +163,10 @@ async function deleteBanBolo(member, channel, messageId, reason) {
 
         deleteChannel.send({ embeds: [deletedEmbed] });
 
+        settings.banbolos.users.splice(settings.banbolos.users.indexOf(userField.value), 1);
+
         await channel.messages.delete(messageId);
+        await settings.save();
         await deleteBanBoloDb(guild.id, messageId, member.id, reason);
         return "Success";
     } catch (ex) {

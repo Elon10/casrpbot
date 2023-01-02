@@ -2,7 +2,18 @@
 <html>
 <%- include('../includes/head') %>
 
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+
     <body class="bg-bggray text-gray-50 min-h-screen flex flex-col">
+
+        <div class="alert hide" id="alert">
+            <span class="fa fa-exclamation-circle"></span>
+            <span class="msg">Success! Your LOA request has been sent successfully.</span>
+            <span class="close-btn">
+                <span class="fa fa-times"></span>
+            </span>
+        </div>
+
         <div class="grid grid-cols-1 md:grid-cols-8 flex-1">
             <%- include('../includes/sidebar') %>
 
@@ -12,7 +23,7 @@
                         <section class="grid grid-cols gap-4 my-4 mx-8">
                             <div class="background-1">
                                 <div class="flex flex-col rounded-lg bg-darkerbbgray h-[fit-content]">
-                                    <form role="form" action="/staff/loaRequest" method="post"
+                                    <form role="form" action="/staff/loaRequest" method="post" id="loasend"
                                         class="flex flex-col px-4 pt-2 pb-4">
                                         <div class="flex flex-col">
                                             <label class="font-bold"><i class="fa fa-question-circle"></i>
@@ -44,5 +55,21 @@
                 </div>
         </div>
     </body>
+
+    <script>
+        $('#loasend').submit(function (e) {
+            $('.alert').removeClass("hide");
+            $('.alert').addClass("show");
+            $('.alert').addClass("showAlert");
+            setTimeout(function () {
+                $('.alert').addClass("hide");
+                $('.alert').removeClass("show");
+            }, 5000)
+        })
+        $('.close-btn').click(function () {
+            $('.alert').addClass("hide");
+            $('.alert').removeClass("show");
+        })
+    </script>
 
 </html>

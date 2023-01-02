@@ -1,185 +1,196 @@
 <!DOCTYPE html>
 <html>
-    <%- include('../includes/head') %>
+<%- include('../includes/head') %>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
 
     <body class="bg-bggray bg-image text-gray-50 min-h-screen flex flex-col">
+
+        <div class="alert hide" id="alert">
+            <span class="fa fa-exclamation-circle"></span>
+            <span class="msg">Successfully <b>copied!</b></span>
+            <span class="close-btn">
+                <span class="fa fa-times"></span>
+            </span>
+        </div>
+
         <div class="grid grid-cols-1 md:grid-cols-8 flex-1">
             <%- include('../includes/sidebar') %>
 
-            <div class="flex flex-col col-span-6 container">
-                <%- include('../includes/manageheader') %>
-                <h2 class="text-3xl font-bold mx-8 mt-6 mb-2 underline">Announcements</h2>
-                <section class="grid grid-cols gap-4 my-4 mx-8">
-                    <div class="flex flex-col">
-                        <code class="code-2">
+                <div class="flex flex-col col-span-6 container">
+                    <%- include('../includes/manageheader') %>
+                        <h2 class="text-3xl font-bold mx-8 mt-6 mb-2 underline">Announcements</h2>
+                        <section class="grid grid-cols gap-4 my-4 mx-8">
+                            <div class="flex flex-col">
+                                <code class="code-2">
                             <p id="text-1">
                                 :m 👋 Hello! Welcome to California State Roleplay, if you are interested in joining our comms here it is! Comms: casrp
                             </p>
                             <button class="button-left px-3 py-1 rounded-lg bg-success transition-opacity duration-300 hover:opacity-70" onclick="copy('text-1')"><i class="fa fa-clipboard"></i> Copy</button>
                         </code>
-                    </div>
-                    <div class="flex flex-col">
-                        <code class="code-2">
+                            </div>
+                            <div class="flex flex-col">
+                                <code class="code-2">
                             <p id="text-2">
                                 :m 😊 Having a good time? If you are come and join our comms! Comms: casrp
                             </p>
                             <button class="button-left px-3 py-1 rounded-lg bg-success transition-opacity duration-300 hover:opacity-70" onclick="copy('text-2')"><i class="fa fa-clipboard"></i> Copy</button>
                         </code>
-                    </div>
-                    <div class="flex flex-col">
-                        <code class="code-2">
+                            </div>
+                            <div class="flex flex-col">
+                                <code class="code-2">
                             <p id="text-3">
                                 :m 🛡️ Hey there! If you are looking to apply to become a staff member join our comms! Staff apps are open! Comms: casrp
                             </p>
                             <button class="button-left px-3 py-1 rounded-lg bg-success transition-opacity duration-300 hover:opacity-70" onclick="copy('text-3')"><i class="fa fa-clipboard"></i> Copy</button>
                         </code>
-                    </div>
-                    <div class="flex flex-col">
-                        <code class="code-2">
+                            </div>
+                            <div class="flex flex-col">
+                                <code class="code-2">
                             <p id="text-4">
                                 :h 🔴 Our staff liveries are marked! Make sure to pull over to them if they have their lights on!
                             </p>
                             <button class="button-left px-3 py-1 rounded-lg bg-success transition-opacity duration-300 hover:opacity-70" onclick="copy('text-4')"><i class="fa fa-clipboard"></i> Copy</button>
                         </code>
-                    </div>
-                    <div class="flex flex-col">
-                        <code class="code-2">
+                            </div>
+                            <div class="flex flex-col">
+                                <code class="code-2">
                             <p id="text-5">
                                 :m ❗Our server is going to shutdown! If you would like to join our other sessions join our comms! Comms: casrp
                             </p>
                             <button class="button-left px-3 py-1 rounded-lg bg-success transition-opacity duration-300 hover:opacity-70" onclick="copy('text-5')"><i class="fa fa-clipboard"></i> Copy</button>
                         </code>
-                    </div>
-                    <div class="flex flex-col">
-                        <code class="code-2">
+                            </div>
+                            <div class="flex flex-col">
+                                <code class="code-2">
                             <p id="text-6">
                                 :h ❓Need staff assistance? Be sure to say !mod or !help in chat if you need staff!
                             </p>
                             <button class="button-left px-3 py-1 rounded-lg bg-success transition-opacity duration-300 hover:opacity-70" onclick="copy('text-6')"><i class="fa fa-clipboard"></i> Copy</button>
                         </code>
-                    </div>
-                    <div class="flex flex-col">
-                        <code class="code-2">
+                            </div>
+                            <div class="flex flex-col">
+                                <code class="code-2">
                             <p id="text-7">
                                 :h 🦺 Hey there! Can we clear the scene at [Location]
                             </p>
                             <button class="button-left px-3 py-1 rounded-lg bg-success transition-opacity duration-300 hover:opacity-70" onclick="copy('text-7')"><i class="fa fa-clipboard"></i> Copy</button>
                         </code>
-                    </div>
-                    <div class="flex flex-col">
-                        <code class="code-2">
+                            </div>
+                            <div class="flex flex-col">
+                                <code class="code-2">
                             <p id="text-8">
                                 :h 🔫 Please do not use snipers, and heavy machine guns. Thanks!
                             </p>
                             <button class="button-left px-3 py-1 rounded-lg bg-success transition-opacity duration-300 hover:opacity-70" onclick="copy('text-8')"><i class="fa fa-clipboard"></i> Copy</button>
                         </code>
-                    </div>
-                    <div class="flex flex-col">
-                        <code class="code-2">
+                            </div>
+                            <div class="flex flex-col">
+                                <code class="code-2">
                             <p id="text-9">
                                 :h 🚀 Hello! Please don't cop bait, roleplay as if you would in real life.
                             </p>
                             <button class="button-left px-3 py-1 rounded-lg bg-success transition-opacity duration-300 hover:opacity-70" onclick="copy('text-9')"><i class="fa fa-clipboard"></i> Copy</button>
                         </code>
-                    </div>
-                    <div class="flex flex-col">
-                        <code class="code-2">
+                            </div>
+                            <div class="flex flex-col">
+                                <code class="code-2">
                             <p id="text-10">
                                 :h 🚓 Hey there! Please use the uniforms and liveries on the teams. If there is no livery please choose a car with one.
                             </p>
                             <button class="button-left px-3 py-1 rounded-lg bg-success transition-opacity duration-300 hover:opacity-70" onclick="copy('text-10')"><i class="fa fa-clipboard"></i> Copy</button>
                         </code>
-                    </div>
-                    <div class="flex flex-col">
-                        <code class="code-2">
+                            </div>
+                            <div class="flex flex-col">
+                                <code class="code-2">
                             <p id="text-11">
                                 :h 🚨 All Unmarked/Undercover police vehicles must stay at station, if you don't you WILL be moderated.
                             </p>
                             <button class="button-left px-3 py-1 rounded-lg bg-success transition-opacity duration-300 hover:opacity-70" onclick="copy('text-11')"><i class="fa fa-clipboard"></i> Copy</button>
                         </code>
-                    </div>
-                    <div class="flex flex-col">
-                        <code class="code-2">
+                            </div>
+                            <div class="flex flex-col">
+                                <code class="code-2">
                             <p id="text-12">
                                 :m 🔊 Hey there! The server is VC only. Join our comms to be in a vc with others! Comms: casrp - ONLY USED FOR VC ONLY SESSIONS
                             </p>
                             <button class="button-left px-3 py-1 rounded-lg bg-success transition-opacity duration-300 hover:opacity-70" onclick="copy('text-12')"><i class="fa fa-clipboard"></i> Copy</button>
                         </code>
-                    </div>
-                    <div class="flex flex-col">
-                        <code class="code-2">
+                            </div>
+                            <div class="flex flex-col">
+                                <code class="code-2">
                             <p id="text-13">
                                 :m 🔊 Hey there! The server is VC only. Join our comms to be in a vc with others! Comms: casrp - ONLY USED FOR VC ONLY SESSIONS
                             </p>
                             <button class="button-left px-3 py-1 rounded-lg bg-success transition-opacity duration-300 hover:opacity-70" onclick="copy('text-13')"><i class="fa fa-clipboard"></i> Copy</button>
                         </code>
-                    </div>
-                    <div class="flex flex-col">
-                        <code class="code-2">
+                            </div>
+                            <div class="flex flex-col">
+                                <code class="code-2">
                             <p id="text-14">
                                 :h ✨ Be sure to use our liveries and uniforms to enhance roleplay!
                             </p>
                             <button class="button-left px-3 py-1 rounded-lg bg-success transition-opacity duration-300 hover:opacity-70" onclick="copy('text-14')"><i class="fa fa-clipboard"></i> Copy</button>
                         </code>
-                    </div>
-                    <div class="flex flex-col">
-                        <code class="code-2">
+                            </div>
+                            <div class="flex flex-col">
+                                <code class="code-2">
                             <p id="text-15">
                                 :h 🚗 Try to keep F-RP down. Lets keep roleplays as realistic as possible!
                             </p>
                             <button class="button-left px-3 py-1 rounded-lg bg-success transition-opacity duration-300 hover:opacity-70" onclick="copy('text-14')"><i class="fa fa-clipboard"></i> Copy</button>
                         </code>
-                    </div>
-                    <div class="flex flex-col">
-                        <code class="code-2">
+                            </div>
+                            <div class="flex flex-col">
+                                <code class="code-2">
                             <p id="text-16">
                                 :h ⚖️ Please even out the teams! Thank you!
                             </p>
                             <button class="button-left px-3 py-1 rounded-lg bg-success transition-opacity duration-300 hover:opacity-70" onclick="copy('text-16')"><i class="fa fa-clipboard"></i> Copy</button>
                         </code>
-                    </div>
-                    <div class="flex flex-col">
-                        <code class="code-2">
+                            </div>
+                            <div class="flex flex-col">
+                                <code class="code-2">
                             <p id="text-17">
                                 :m 🔔 Lets get some roleplays and scenes going! As well as earn a full server!
                             </p>
                             <button class="button-left px-3 py-1 rounded-lg bg-success transition-opacity duration-300 hover:opacity-70" onclick="copy('text-17')"><i class="fa fa-clipboard"></i> Copy</button>
                         </code>
-                    </div>
-                    <div class="flex flex-col">
-                        <code class="code-2">
+                            </div>
+                            <div class="flex flex-col">
+                                <code class="code-2">
                             <p id="text-15">
                                 :h 🚗 Try to keep F-RP down. Lets keep roleplays as realistic as possible!
                             </p>
                             <button class="button-left px-3 py-1 rounded-lg bg-success transition-opacity duration-300 hover:opacity-70" onclick="copy('text-14')"><i class="fa fa-clipboard"></i> Copy</button>
                         </code>
-                    </div>
-                    <div class="flex flex-col">
-                        <code class="code-2">
+                            </div>
+                            <div class="flex flex-col">
+                                <code class="code-2">
                             <p id="text-18">
                                 :m 📌 A routine priority timer will begin in 5 minutes. Please stop all priorities and roleplay.
                             </p>
                             <button class="button-left px-3 py-1 rounded-lg bg-success transition-opacity duration-300 hover:opacity-70" onclick="copy('text-18')"><i class="fa fa-clipboard"></i> Copy</button>
                         </code>
-                    </div>
-                    <div class="flex flex-col">
-                        <code class="code-2">
+                            </div>
+                            <div class="flex flex-col">
+                                <code class="code-2">
                             <p id="text-19">
                                 :m ⏳ Priority timer is in effect! Please do not cause large scaled scenes or get wanted. Doing so will result in a kick.
                             </p>
                             <button class="button-left px-3 py-1 rounded-lg bg-success transition-opacity duration-300 hover:opacity-70" onclick="copy('text-19')"><i class="fa fa-clipboard"></i> Copy</button>
                         </code>
-                    </div>
-                    <div class="flex flex-col">
-                        <code class="code-2">
+                            </div>
+                            <div class="flex flex-col">
+                                <code class="code-2">
                             <p id="text-20">
                                 :m ⏳ Priority timer has ended! You may now return to what you were previously doing.
                             </p>
                             <button class="button-left px-3 py-1 rounded-lg bg-success transition-opacity duration-300 hover:opacity-70" onclick="copy('text-20')"><i class="fa fa-clipboard"></i> Copy</button>
                         </code>
-                    </div>
-                </section>
-            </div>
+                            </div>
+                        </section>
+                </div>
         </div>
     </body>
     <script>
@@ -187,7 +198,18 @@
             var str = document.getElementById(id);
             window.getSelection().selectAllChildren(str);
             document.execCommand("Copy")
-            alert("Copied!")
+            $('.alert').removeClass("hide");
+            $('.alert').addClass("show");
+            $('.alert').addClass("showAlert");
+            setTimeout(function () {
+                $('.alert').addClass("hide");
+                $('.alert').removeClass("show");
+            }, 5000)
+            $('.close-btn').click(function () {
+                $('.alert').addClass("hide");
+                $('.alert').removeClass("show");
+            })
         }
     </script>
+
 </html>

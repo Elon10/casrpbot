@@ -19,7 +19,7 @@
       <li class="p-1 flex w-full">
         <a href="/staff/moderateLog"
           class="<% if(currentURL.endsWith('moderateLog')) { %> bg-white/5 font-semibold <% } else { %> bg-white/10 <% } %> w-full px-4 py-3 rounded-lg font-sans">
-          <i class="fa fa-cog mr-1 w-6"></i> <span>Log Moderation</span>
+          <i class="fa fa-hammer mr-1 w-6"></i> <span>Log Moderation</span>
         </a>
       </li>
       <li class="p-1 flex w-full">
@@ -30,8 +30,14 @@
       </li>
       <hr style="margin-top: 20px;">
       <li class="p-1 flex w-full">
+        <a href="/staff/banBolo"
+          class="<% if (currentURL.endsWith('banBolo')) { %> bg-white/5 font-semibold <% } else { %> bg-white/10 <% } %> w-full px-4 py-3 rounded-lg font-sans" style="margin-top: 7px;">
+          <i class="fa fa-warning mr-1 w-6"></i> <span>Ban Bolo</span>
+        </a>
+      </li>
+      <li class="p-1 flex w-full">
         <a href="/staff/announcements"
-        class="<% if(currentURL.endsWith('announcements')) { %> bg-white/5 font-semibold <% } else { %> bg-white/10 <% } %> w-full px-4 py-3 rounded-lg font-sans" style="margin-top: 7px;">
+        class="<% if(currentURL.endsWith('announcements')) { %> bg-white/5 font-semibold <% } else { %> bg-white/10 <% } %> w-full px-4 py-3 rounded-lg font-sans">
         <i class="fa fa-bullhorn mr-1 w-6"></i> <span>Announcements</span>
       </a>
       </li>

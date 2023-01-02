@@ -185,7 +185,7 @@ async function logkick(user, member, reason, settings) {
     const buttonRow = new ActionRowBuilder().addComponents(
         new ButtonBuilder().setLabel("Edit Case").setCustomId("MODERATE_EDIT").setStyle(ButtonStyle.Primary),
         new ButtonBuilder().setLabel("User Profile").setURL(`https://roblox.com/users/${id}/profile`).setStyle(ButtonStyle.Link),
-        new ButtonBuilder().setCustomId("MODERATE_DELETE").setLabel("Void").setStyle(ButtonStyle.Secondary)
+        new ButtonBuilder().setCustomId("MODERATE_DELETE").setLabel("Void").setStyle(ButtonStyle.Danger)
     );
 
     const embed = new EmbedBuilder()
@@ -287,7 +287,6 @@ async function logban(user, member, reason, settings) {
         return { embeds: [embed] };
     }
 
-
     const userDb = await getUser(user);
     const id = await roblox.getIdFromUsername(member);
     if (!settings.moderations.enabled) {
@@ -320,8 +319,9 @@ async function logban(user, member, reason, settings) {
     const buttonRow = new ActionRowBuilder().addComponents(
         new ButtonBuilder().setLabel("Edit Case").setCustomId("MODERATE_EDIT").setStyle(ButtonStyle.Primary),
         new ButtonBuilder().setLabel("User Profile").setURL(`https://roblox.com/users/${id}/profile`).setStyle(ButtonStyle.Link),
-        new ButtonBuilder().setCustomId("MODERATE_DELETE").setLabel("Void").setStyle(ButtonStyle.Secondary)
+        new ButtonBuilder().setCustomId("MODERATE_DELETE").setLabel("Void").setStyle(ButtonStyle.Danger)
     );
+
 
     const embed = new EmbedBuilder()
         .setTitle("Case - Ban")
@@ -421,7 +421,7 @@ async function logwarn(user, member, reason, settings) {
     const buttonRow = new ActionRowBuilder().addComponents(
         new ButtonBuilder().setLabel("Edit Case").setCustomId("MODERATE_EDIT").setStyle(ButtonStyle.Primary),
         new ButtonBuilder().setLabel("User Profile").setURL(`https://roblox.com/users/${id}/profile`).setStyle(ButtonStyle.Link),
-        new ButtonBuilder().setCustomId("MODERATE_DELETE").setLabel("Void").setStyle(ButtonStyle.Secondary)
+        new ButtonBuilder().setCustomId("MODERATE_DELETE").setLabel("Void").setStyle(ButtonStyle.Danger)
     );
 
     const embed = new EmbedBuilder()
@@ -526,7 +526,7 @@ async function logBanBolo(user, member, reason, settings) {
 
     const userDb = await getUser(user);
     const id = await roblox.getIdFromUsername(member);
-    if (!settings.moderations.enabled) {
+    if (!settings.banbolos.enabled) {
         const embed = new EmbedBuilder()
             .setTitle("Error")
             .setDescription("Moderation system is not enabled.")
@@ -534,7 +534,7 @@ async function logBanBolo(user, member, reason, settings) {
 
         return { embeds: [embed] };
     }
-    const channel = user.guild.channels.cache.get(settings.moderations.channel_id);
+    const channel = user.guild.channels.cache.get(settings.banbolos.channel_id);
     if (!channel) {
         const embed = new EmbedBuilder()
             .setTitle("Error")
@@ -557,7 +557,7 @@ async function logBanBolo(user, member, reason, settings) {
 
     const buttonRow = new ActionRowBuilder().addComponents(
         new ButtonBuilder().setLabel("User Profile").setURL(`https://roblox.com/users/${id}/profile`).setStyle(ButtonStyle.Link),
-        new ButtonBuilder().setCustomId("BOLO_DELETE").setLabel("Void").setStyle(ButtonStyle.Secondary)
+        new ButtonBuilder().setCustomId("BOLO_DELETE").setLabel("Void").setStyle(ButtonStyle.Danger)
     );
 
     const embed = new EmbedBuilder()
@@ -606,6 +606,7 @@ async function logBanBolo(user, member, reason, settings) {
         await userDb.save();
 
         settings.banbolos.users.push(info.username);
+        await settings.save();
 
         const newEmbed = new EmbedBuilder()
             .setTitle("Case - Ban Bolo")
@@ -827,6 +828,11 @@ async function viewLogs(user, target, settings) {
                 name: "Total Warns",
                 value: userDb.logs.warns?.toString(),
                 inline: true
+            },
+            {
+                name: "Total Ban-Bolos",
+                value: userDb.logs.banbolos?.toString(),
+                inline: true,
             },
             {
                 name: "Others",
