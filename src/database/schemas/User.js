@@ -71,32 +71,38 @@ module.exports = {
     },
 
     getLogsLb: async (limit = 10) => {
-        return Model.find({ "total": { $gt: 0 }})
+        return Model.find({ "logs.total": { $gt: 0 }})
             .limit(limit)
             .lean();
     },
 
     getKicksLb: async (limit = 10) => {
-        return Model.find({ "kicks": { $gt: 0 }})
+        return Model.find({ "logs.kicks": { $gt: 0 }})
             .limit(limit)
             .lean();
     },  
 
     getWarnsLb: async (limit = 10) => {
-        return Model.find({ "warns": { $gt : 0 }})
+        return Model.find({ "logs.warns": { $gt : 0 }})
             .limit(limit)
             .lean();
     },
 
     getBansLb: async (limit = 10) => {
-        return Model.find({ "bans": { $gt: 0 }})
+        return Model.find({ "logs.bans": { $gt: 0 }})
             .limit(limit)
             .lean();
     },
 
     getOtherLb: async (limit = 10) => {
-        return Model.find({ "other": { $gt: 0 }})
-            .limit(10)
+        return Model.find({ "logs.other": { $gt: 0 }})
+            .limit(limit)
+            .lean();
+    },
+
+    getBanBolosLb: async (limit = 10) => {
+        return Model.find({ "logs.banbolos": { $gt: 0 }})
+            .limit(limit)
             .lean();
     }
 };

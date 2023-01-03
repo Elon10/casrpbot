@@ -8,6 +8,7 @@ const {
     EmbedBuilder,
     TextInputStyle,
 } = require("discord.js");
+const { getUser } = require("../database/schemas/User");
 
 const hasPerms = (member, settings) => {
     return (
@@ -120,6 +121,8 @@ async function deleteModeration(member, channel, messageId, reason) {
     const { guild } = member;
     const settings = await getSettings(guild);
 
+    const userDb = await getUser(member);
+
     if (!OWNER_IDS.includes(member.id) || !hasPerms(member, settings)) return "You can't delete moderation logs."
 
     try {
@@ -146,6 +149,24 @@ async function deleteModeration(member, channel, messageId, reason) {
         let deleteChannel;
         if (settings.moderations.delete_channel) {
             deleteChannel = guild.channels.cache.get(settings.moderations.delete_channel);
+        }
+
+        if (message.embeds[0].data.title.includes("Kick")) {
+            userDb.logs.total -= 1;
+            userDb.logs.kicks -= 1;
+            await userDb.save();
+        }
+
+        if (message.embeds[0].data.title.includes("Ban")) {
+            userDb.logs.total -= 1;
+            userDb.logs.bans -= 1;
+            await userDb.save();
+        }
+
+        if (message.embeds[0].data.title.includes("Warn")) {
+            userDb.logs.total -= 1;
+            userDb.logs.warns -= 1;
+            await userDb.save();
         }
 
         deleteChannel.send({ embeds: [deletedEmbed] });

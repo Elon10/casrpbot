@@ -8,6 +8,7 @@ const {
     EmbedBuilder,
     TextInputStyle,
 }  = require("discord.js");
+const { getUser } = require("../database/schemas/User");
 
 const hasPerms = (member, settings) => {
     return (    
@@ -130,6 +131,8 @@ async function deleteBanBolo(member, channel, messageId, reason) {
     const { guild } = member;
     const settings = await getSettings(guild);
 
+    const userDb = await getUser(member);
+
     const doc = await findBanBolo(guild.id, messageId);
 
     if (!OWNER_IDS.includes(member.id) || !hasPerms(member, settings)) return "You can't delete ban-bolos.";
@@ -164,9 +167,12 @@ async function deleteBanBolo(member, channel, messageId, reason) {
         deleteChannel.send({ embeds: [deletedEmbed] });
 
         settings.banbolos.users.splice(settings.banbolos.users.indexOf(userField.value), 1);
+        userDb.logs.total -= 1;
+        userDb.logs.banbolos -= 1;
 
         await channel.messages.delete(messageId);
         await settings.save();
+        await userDb.save();
         await deleteBanBoloDb(guild.id, messageId, member.id, reason);
         return "Success";
     } catch (ex) {
