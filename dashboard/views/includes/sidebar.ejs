@@ -23,6 +23,12 @@
         </a>
       </li>
       <li class="p-1 flex w-full">
+        <a href="/staff/shiftManagement"
+          class="<% if (currentURL.endsWith('shiftManagement')) { %> bg-white/5 font-semibold <% } else { %> bg-white/10 <% } %> w-full px-4 py-3 rounded-lg font-sans">
+          <i class="fa fa-clock mr-1 w-6"></i> <span>Shift Management</span>
+        </a>
+      </li>
+      <li class="p-1 flex w-full">
         <a href="/staff/loaRequest"
           class="<% if(currentURL.endsWith('loaRequest')) { %> bg-white/5 font-semibold <% } else { %> bg-white/10 <% } %> w-full px-4 py-3 rounded-lg font-sans">
           <i class="fa fa-calendar mr-1 w-6"></i> <span>Loa Request</span>
@@ -31,7 +37,7 @@
       <hr style="margin-top: 20px;">
       <li class="p-1 flex w-full">
         <a href="/staff/banBolo"
-          class="<% if (currentURL.endsWith('banBolo')) { %> bg-white/5 font-semibold <% } else { %> bg-white/10 <% } %> w-full px-4 py-3 rounded-lg font-sans" style="margin-top: 7px;">
+          class="<% if (currentURL.endsWith('banBolo')) { %> bg-white/5 font-semibold <% } else { %> bg-white/10 <% } %> w-full px-4 py-3 rounded-lg font-sans" style="margin-top: 10px;">
           <i class="fa fa-warning mr-1 w-6"></i> <span>Ban Bolo</span>
         </a>
       </li>

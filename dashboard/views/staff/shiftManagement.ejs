@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <%- include('../includes/head') %>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+
+    <body class="bg-bggray text-gray-50 min-h-screen flex flex-col">
+        <div class="alert hide" id="alert">
+            <span class="fa fa-exclamation-circle"></span>
+            <span class="msg">Success! Your shift has been started successfully.</span>
+            <span class="close-btn">
+                <span class="fa fa-times"></span>
+            </span>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-8 flex-1">
+            <%- include('../includes/sidebar') %>
+
+            <div class="flex flex-col col-span-6 container">
+                <%- include('../includes/manageheader') %>
+                <h2 class="text-3xl font-bold mx-8 mt-6 mb-2 underline">Shift Management</h2>
+                <section class="grid grid-cols gap-4 my-4 mx-8">
+                    <div class="background-1">
+                        <div class="flex flex-col rounded-lg bg-darkerbggray h-[fit-content]">
+                            <div class="flex flex-col px-4 pt-2 pb-4">
+                                <div class="flex flex-col">
+                                    <label class="font-bold text-lg"><i class="fa fa-clock"></i> Last shift</label>
+                                    <p><%= staffDb.shifts.endDate %></p>
+                                </div>
+                                <div class="flex flex-col">
+                                    <label class="font-bold text-lg"><i class="fa fa-receipt"></i> Current Status</label>
+                                    <p><%= staffDb.shifts.currentShift ? "On shift" : "Clocked out" %></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </body>
+</html>

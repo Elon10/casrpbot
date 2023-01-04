@@ -115,6 +115,7 @@ async function endBolo(member, channel, messageId, reason) {
 
         await settings.save();
         await doc.save();
+        return "Success";
     } catch (ex) {
         guild.client.logger.error("endBanBolo", ex);
         return "Failed to end ban-bolo.";

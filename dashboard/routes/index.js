@@ -26,6 +26,7 @@ router.get("/staff/homePage", CheckAuth, async (req, res) => {
     if (userDb.staffpanel) {
         res.render("homePage", {
             user: req.userInfos,
+            staffDb: await getUser(req.userInfos),
             currentURL: `${req.client.config.DASHBOARD.baseURL}/${req.originalUrl}`,
         });
     } else {
@@ -96,8 +97,27 @@ router.get("/staff/loaRequest", CheckAuth, async (req, res) => {
             currentURL: `${req.client.config.DASHBOARD.baseURL}/${req.originalUrl}`,
         });
     } else {
-        req.session.destroy();
-        res.redirect(req.client.config.DASHBOARD.failureURL);
+        res.render("notAllowed", {
+            user: req.userInfos,
+            currentURL: `${req.client.config.DASHBOARD.baseURL}/${req.originalUrl}`,
+        });
+    }
+})
+
+router.get("/staff/shiftManagement", CheckAuth, async (req, res) => {
+    const userDb = await getUser(req.userInfos);
+
+    if (userDb.staffpanel) {
+        res.render("staff/shiftManagement", {
+            user: req.userInfos,
+            staffDb: await getUser(req.userInfos),
+            currentURL: `${req.client.config.DASHBOARD.baseURL}/${req.originalUrl}`,
+        });
+    } else {
+        res.render("notAllowed", {
+            user: req.userInfos,
+            currentURL: `${req.client.config.DASHBOARD.baseURL}/${req.originalUrl}`,
+        });
     }
 })
 

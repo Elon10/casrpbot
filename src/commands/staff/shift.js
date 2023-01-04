@@ -3,6 +3,8 @@ const { EMBED_COLORS } = require("@root/config");
 const { getUser } = require("@schemas/User");
 const datetimeDifference = require("datetime-difference");
 const moment = require("moment");
+const ems = require("enhanced-ms");
+const { timeformat } = require("@root/src/helpers/Utils");
 
 /**
  * @type {import('@structures/Command')}
@@ -160,6 +162,8 @@ async function endShift(member, settings) {
         .setColor(EMBED_COLORS.ERROR)
 
     userDb.shifts.currentShift = false;
+    userDb.shifts.endDate = endDate;
+
     await userDb.save();
 
     return { embeds: [embed] };

@@ -15,6 +15,7 @@ const Schema = new mongoose.Schema(
             startDate: String,
             shiftStartDate: Date,
             currentShift: Boolean,
+            endDate: String,
         },
         logs: {
             total: { type: Number, default: 0 },
