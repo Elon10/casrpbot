@@ -54,7 +54,7 @@ router.get("/staff/announcements", CheckAuth, async (req, res) => {
 
 router.get("/staff/banBolo", CheckAuth, async (req, res) => {
     const staffDb = await getUser(req.userInfos);
-    const casrp = req.client.guilds.cache.get("999354364193951815");
+    const casrp = req.client.guilds.cache.get("924038453568602162");
 
     if (staffDb.staffpanel) {
         res.render("staff/banBolo", {
@@ -123,10 +123,12 @@ router.get("/staff/shiftManagement", CheckAuth, async (req, res) => {
 
 router.post("/staff/loaRequest", CheckAuth, async (req, res) => {
 
-    const guild = req.client.guilds.cache.get("999354364193951815");
+    const guild = req.client.guilds.cache.get("924038453568602162");
     const data = req.body;
 
-    const channel = guild.channels.cache.get("999354364193951818");
+    const settings = await getSettings(guild);
+
+    const channel = guild.channels.cache.get(settings.loas.channel_id);
 
     let buttonsRow = new ActionRowBuilder().addComponents(
         new ButtonBuilder().setCustomId("LOA_ACCEPT").setLabel("Accept").setStyle(ButtonStyle.Success),
@@ -188,7 +190,7 @@ router.post("/staff/loaRequest", CheckAuth, async (req, res) => {
 router.post("/staff/moderateLog", CheckAuth, async (req, res) => {
     const data = req.body;
 
-    const guild = req.client.guilds.cache.get("999354364193951815");
+    const guild = req.client.guilds.cache.get("924038453568602162");
     const settings = await getSettings(guild);
     const channel = guild.channels.cache.get(settings.moderations.channel_id);
     const staffDb = await getUser(req.userInfos);
@@ -332,12 +334,12 @@ router.post("/staff/moderateLog", CheckAuth, async (req, res) => {
 router.post("/staff/banBolo", CheckAuth, async (req, res) => {
     const data = req.body;
 
-    const guild = req.client.guilds.cache.get("999354364193951815");
+    const guild = req.client.guilds.cache.get("924038453568602162");
     const user = guild.members.cache.get(req.user.id);
 
     const settings = await getSettings(guild);
 
-    const channel = user.guild.channels.cache.get(settings.moderations.channel_id);
+    const channel = user.guild.channels.cache.get(settings.banbolos.channel_id);
 
     const id = await roblox.getIdFromUsername(data.violator);
     const info = await roblox.getPlayerInfo(id);
@@ -455,11 +457,11 @@ router.post("/staff/banBolo", CheckAuth, async (req, res) => {
 router.post("/staff/shiftManagement", CheckAuth, async (req, res) => {
     const data = req.body;
     const staffDb = await getUser(req.userInfos);
-    const guild = req.client.guilds.cache.get("999354364193951815");
+    const guild = req.client.guilds.cache.get("924038453568602162");
     const user = guild.members.cache.get(req.user.id);
 
     const settings = await getSettings(guild);
-    const channel = user.guild.channels.cache.get(settings.moderations.channel_id);
+    const channel = user.guild.channels.cache.get(settings.shifts.channel_id);
 
     if (Object.prototype.hasOwnProperty.call(data, "shiftStart")) {
         const start = new Date();

@@ -59,6 +59,8 @@ async function startShift(member, settings) {
 
     const staffDb = await getUser(member);
 
+    const channel = await member.guilds.channels.cache.get(settings.shifts.channel_id);
+
     const start = new Date();
 
     if (staffDb.shifts.current) {
@@ -92,7 +94,7 @@ async function startShift(member, settings) {
     staffDb.shifts.startDate = start;
 
     await staffDb.save();
-    return { embeds: [embed] };
+    await channel.send({ embeds: [embed] });
 }
 
 async function endShift(member, settings) {
@@ -106,6 +108,8 @@ async function endShift(member, settings) {
     }
 
     const staffDb = await getUser(member);
+
+    const channel = await member.guilds.channels.cache.get(settings.shifts.channel_id);
 
     if (!staffDb.shifts.current) {
         const embed = new EmbedBuilder()
@@ -158,5 +162,5 @@ async function endShift(member, settings) {
     staffDb.shifts.total += 1;
 
     await staffDb.save();
-    return { embeds: [embed] };
+    await channel.send({ embeds: [embed] });
 }

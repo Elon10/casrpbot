@@ -179,6 +179,20 @@ module.exports = {
                 ],
             },
             {
+                name: "shifts",
+                description: "Configure the shift system",
+                type: ApplicationCommandOptionType.Subcommand,
+                options: [
+                    {
+                        name: "channel",
+                        description: "Channel where the shifts will be sent",
+                        type: ApplicationCommandOptionType.Channel,
+                        channelTypes: [ChannelType.GuildText],
+                        required: false,
+                    },
+                ],
+            },
+            {
                 name: "rank",
                 description: "Rank configuration",
                 type: ApplicationCommandOptionType.Subcommand,
@@ -252,6 +266,11 @@ module.exports = {
             if (channel) response = await setBanBolosChannel(data.settings, channel);
             if (deletedChannel) response = await setBanBolosDeletedChannel(data.settings, deletedChannel);
             if (endedChannel) response = await setBanBolosEndedChannel(data.settings, endedChannel);
+        }
+
+        else if (sub === "shifts") {
+            const channel = interaction.options.getChannel("channel");
+            if (channel) response = await setShiftsChannel(data.settings, channel);
         }
 
         else if (sub === "rank") {
@@ -604,6 +623,27 @@ async function setBanBolosEndedChannel(settings, channel) {
     const embed = new EmbedBuilder()
         .setTitle("Success")
         .setDescription(`Ban Bolos system **updated**.`)
+        .setColor(EMBED_COLORS.SUCCESS)
+
+    return { embeds: [embed] };
+}
+
+async function setShiftsChannel(settings, channel) {
+    if (!channel.permissionsFor(channel.guild.members.me).has(CHANNEL_PERMS)) {
+        const embed = new EmbedBuilder()
+            .setTitle("Missing Permissions")
+            .setDescription(`I need the following permissions in ${channel}\n${parsePermissions(CHANNEL_PERMS)}.`)
+            .setColor(EMBED_COLORS.ERROR)
+
+        return { embeds: [embed] };
+    }
+
+    settings.shifts.channel_id = channel.id;
+    await settings.save();
+
+    const embed = new EmbedBuilder()
+        .setTitle("Success")
+        .setDescription(`Shift System system **updated**.`)
         .setColor(EMBED_COLORS.SUCCESS)
 
     return { embeds: [embed] };

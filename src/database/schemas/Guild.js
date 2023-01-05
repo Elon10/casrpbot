@@ -44,6 +44,9 @@ const Schema = new mongoose.Schema({
         ended_channel: String,
         delete_channel: String,
         enabled: Boolean,
+    },
+    shifts: {
+        channel_id: String,
     }
 });
 
