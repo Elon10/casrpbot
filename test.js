@@ -1,13 +1,16 @@
 const datetimeDifference = require("datetime-difference");
+const moment = require("moment");
 
-const date1 = new Date("Friday, December 23, 2022 11:48 AM");
-const date2 = new Date("Friday, December 23, 2022 1:32 PM");
+const a = moment(new Date()).format('l, hh:mm:ss a');
 
-const result = datetimeDifference(date1, date2);
+const start = new Date();
+const end = new Date(a);
 
-const readme = Object.keys(result)
-    .filter(k => !!result[k])
-    .map(k => `${ result[k] } ${ k }`)
+
+const among = datetimeDifference(start, end);
+const idk = Object.keys(among)
+    .filter(k => !!among[k])
+    .map(k => `${ among[k] } ${ k }`)
     .join(", ");
 
-console.log(readme);
+console.log(idk);

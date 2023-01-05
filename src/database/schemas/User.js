@@ -12,9 +12,9 @@ const Schema = new mongoose.Schema(
         logged: Boolean,
         staffpanel: Boolean,
         shifts: {
-            startDate: String,
-            shiftStartDate: Date,
-            currentShift: Boolean,
+            total: { type: Number, default: 0 },
+            current: Boolean,
+            startDate: Date,
             endDate: String,
         },
         logs: {
@@ -25,13 +25,6 @@ const Schema = new mongoose.Schema(
             banbolos: { type: Number, default: 0 },
             other: { type: Number, default: 0 },
         },
-        daily: {
-            streak: { type: Number, default: 0 },
-            timestamp: Date,
-        },
-        shifts: {
-            current: Boolean,
-        }
     },
     {
         timestamps: {

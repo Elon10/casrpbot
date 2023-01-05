@@ -151,7 +151,7 @@ async function logkick(user, member, reason, settings) {
         return { embeds: [embed] };
     }
 
-    const userDb = await getUser(user);
+    const staffDb = await getUser(user);
     if (!settings.moderations.enabled) {
         const embed = new EmbedBuilder()
             .setTitle("Error")
@@ -229,9 +229,9 @@ async function logkick(user, member, reason, settings) {
             components: [buttonRow],
         });
 
-        userDb.logs.total += 1;
-        userDb.logs.kicks += 1;
-        await userDb.save();
+        staffDb.logs.total += 1;
+        staffDb.logs.kicks += 1;
+        await staffDb.save();
 
         const newEmbed = new EmbedBuilder()
             .setTitle(`Case - Kick`)
@@ -287,7 +287,7 @@ async function logban(user, member, reason, settings) {
         return { embeds: [embed] };
     }
 
-    const userDb = await getUser(user);
+    const staffDb = await getUser(user);
     const id = await roblox.getIdFromUsername(member);
     if (!settings.moderations.enabled) {
         const embed = new EmbedBuilder()
@@ -364,9 +364,9 @@ async function logban(user, member, reason, settings) {
             components: [buttonRow],
         });
 
-        userDb.logs.total += 1;
-        userDb.logs.bans += 1;
-        await userDb.save();
+        staffDb.logs.total += 1;
+        staffDb.logs.bans += 1;
+        await staffDb.save();
 
         if (settings.banbolos.users.includes(info.username)) {
             settings.banbolos.users.splice(settings.banbolos.users.indexOf(info.username), 1);
@@ -389,7 +389,7 @@ async function logwarn(user, member, reason, settings) {
         return { embeds: [embed] };
     }
 
-    const userDb = await getUser(user);
+    const staffDb = await getUser(user);
     const id = await roblox.getIdFromUsername(member);
     if (!settings.moderations.enabled) {
         const embed = new EmbedBuilder()
@@ -465,9 +465,9 @@ async function logwarn(user, member, reason, settings) {
             components: [buttonRow],
         });
 
-        userDb.logs.total += 1;
-        userDb.logs.warns += 1;
-        await userDb.save();
+        staffDb.logs.total += 1;
+        staffDb.logs.warns += 1;
+        await staffDb.save();
 
         const newEmbed = new EmbedBuilder()
             .setTitle(`Case - Warn`)
@@ -524,12 +524,12 @@ async function logBanBolo(user, member, reason, settings) {
     }
 
 
-    const userDb = await getUser(user);
+    const staffDb = await getUser(user);
     const id = await roblox.getIdFromUsername(member);
     if (!settings.banbolos.enabled) {
         const embed = new EmbedBuilder()
             .setTitle("Error")
-            .setDescription("Moderation system is not enabled.")
+            .setDescription("Ban-Bolos system is not enabled.")
             .setColor(EMBED_COLORS.ERROR)
 
         return { embeds: [embed] };
@@ -601,9 +601,9 @@ async function logBanBolo(user, member, reason, settings) {
             components: [buttonRow],
         });
 
-        userDb.logs.total += 1;
-        userDb.logs.banbolos += 1;
-        await userDb.save();
+        staffDb.logs.total += 1;
+        staffDb.logs.banbolos += 1;
+        await staffDb.save();
 
         settings.banbolos.users.push(info.username);
         await settings.save();
@@ -662,7 +662,7 @@ async function logother(user, title, member, reason, settings) {
         return { embeds: [embed] };
     }
 
-    const userDb = await getUser(user);
+    const staffDb = await getUser(user);
     const id = await roblox.getIdFromUsername(member);
     if (!settings.moderations.enabled) {
         const embed = new EmbedBuilder()
@@ -737,9 +737,9 @@ async function logother(user, title, member, reason, settings) {
             components: [buttonRow],
         });
 
-        userDb.logs.total += 1;
-        userDb.logs.other += 1;
-        await userDb.save();
+        staffDb.logs.total += 1;
+        staffDb.logs.other += 1;
+        await staffDb.save();
 
         const newEmbed = new EmbedBuilder()
             .setTitle(`Case - ${title || "Other"}`)
@@ -786,7 +786,7 @@ async function logother(user, title, member, reason, settings) {
 }
 
 async function viewLogs(user, target, settings) {
-    const userDb = await getUser(target);
+    const staffDb = await getUser(target);
     if (!settings.moderations.enabled) {
         const embed = new EmbedBuilder()
             .setTitle("Error")
@@ -811,32 +811,32 @@ async function viewLogs(user, target, settings) {
         .addFields(
             {
                 name: "Total Logs",
-                value: userDb.logs.total?.toString(),
+                value: staffDb.logs.total?.toString(),
                 inline: true
             },
             {
                 name: "Total Kicks",
-                value: userDb.logs.kicks?.toString(),
+                value: staffDb.logs.kicks?.toString(),
                 inline: true
             },
             {
                 name: "Total Bans",
-                value: userDb.logs.bans?.toString(),
+                value: staffDb.logs.bans?.toString(),
                 inline: true,
             },
             {
                 name: "Total Warns",
-                value: userDb.logs.warns?.toString(),
+                value: staffDb.logs.warns?.toString(),
                 inline: true
             },
             {
                 name: "Total Ban-Bolos",
-                value: userDb.logs.banbolos?.toString(),
+                value: staffDb.logs.banbolos?.toString(),
                 inline: true,
             },
             {
                 name: "Others",
-                value: userDb.logs.other?.toString(),
+                value: staffDb.logs.other?.toString(),
                 inline: true,
             }
         )

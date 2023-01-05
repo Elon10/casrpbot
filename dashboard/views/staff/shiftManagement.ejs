@@ -25,17 +25,48 @@
                             <div class="flex flex-col px-4 pt-2 pb-4">
                                 <div class="flex flex-col">
                                     <label class="font-bold text-lg"><i class="fa fa-clock"></i> Last shift</label>
-                                    <p><%= staffDb.shifts.endDate %></p>
+                                    <p id="lastshift"><%= moment(staffDb.shifts.endDate || "None").format('LLLL') %></p>
                                 </div>
                                 <div class="flex flex-col">
-                                    <label class="font-bold text-lg"><i class="fa fa-receipt"></i> Current Status</label>
-                                    <p><%= staffDb.shifts.currentShift ? "On shift" : "Clocked out" %></p>
+                                    <label class="font-bold text-lg"><i class="fa fa-receipt"></i> Total Shifts</label>
+                                    <p><%= staffDb.shifts.total %></p>
                                 </div>
+
+                                <form role="form" action="/staff/shiftManagement" method="post" id="shifts"
+                                    class="">
+                                    <div class="flex flex-col">
+                                        <label class="font-bold text-lg">Current Status</label>
+                                        <% if (staffDb.shifts.current) { %> 
+                                            <p><i class="fa fa-toggle-on"></i> Clocked In</p>
+                                        <% } else { %>
+                                            <p><i class="fa fa-toggle-off"></i> Clocked Out</p>
+                                        <% } %>
+                                    </div>
+                                    <div class="mt-4">
+                                        <% if (staffDb.shifts.current) { %> 
+                                            <button type="submit" name="shiftEnd" class="px-4 py-1 rounded-lg bg-error transition-opacity duration-300 hover:opacity-70">End Shift</button>
+                                        <% } else { %>
+                                            <button type="submit" name="shiftStart" id="shiftStart" class="px-4 py-1 rounded-lg bg-success transition-opacity duration-300 hover:opacity-70">Start Shift</button>
+                                        <% } %>
+                                    </div>
+                                </form>
                             </div>
                         </div>
                     </div>
                 </section>
             </div>
         </div>
+
+        <script>
+            $('#shiftStart').click(function () {
+                $('.alert').removeClass("hide");
+                $('.alert').addClass("show");
+                $('.alert').addClass("showAlert");
+                setTimeout(function () {
+                    $('.alert').addClass("hide");
+                    $('.alert').removeClass("show");
+                }, 5000)
+            })
+        </script>
     </body>
 </html>

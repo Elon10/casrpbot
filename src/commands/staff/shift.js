@@ -1,17 +1,15 @@
-const { ApplicationCommandOptionType, EmbedBuilder  } = require("discord.js");
+const { ApplicationCommandOptionType, EmbedBuilder } = require("discord.js");
 const { EMBED_COLORS } = require("@root/config");
 const { getUser } = require("@schemas/User");
 const datetimeDifference = require("datetime-difference");
 const moment = require("moment");
-const ems = require("enhanced-ms");
-const { timeformat } = require("@root/src/helpers/Utils");
 
 /**
  * @type {import('@structures/Command')}
  */
 module.exports = {
     name: "shift",
-    description: "shift system",
+    description: "Shift system",
     category: "STAFF",
     command: {
         enabled: false,
@@ -22,13 +20,13 @@ module.exports = {
         options: [
             {
                 name: "start",
-                description: "start a shift",
+                description: "Start a new shift",
                 type: ApplicationCommandOptionType.Subcommand,
             },
             {
                 name: "end",
-                description: "start a shift",
-                type: ApplicationCommandOptionType.Subcommand
+                description: "End the current shift",
+                type: ApplicationCommandOptionType.Subcommand,
             },
         ],
     },
@@ -59,43 +57,41 @@ async function startShift(member, settings) {
         return { embeds: [embed] };
     }
 
-    const userDb = await getUser(member);
+    const staffDb = await getUser(member);
 
-    if (userDb.currentShift) {
+    const start = new Date();
+
+    if (staffDb.shifts.current) {
         const embed = new EmbedBuilder()
             .setTitle("Error")
-            .setDescription("You are already on a shift.")
+            .setDescription("You're already on a shift.")
             .setColor(EMBED_COLORS.ERROR)
 
         return { embeds: [embed] };
     }
 
-    const start = new Date();
-    const startDate = moment(start).format('LLLL');
-
     const embed = new EmbedBuilder()
         .setTitle(member.user.username)
-        .setDescription(`**${member}** has started a shift.`)
-        .setThumbnail(member.displayAvatarURL())
+        .setDescription(`**${member}** has started a new shift.`)
         .addFields(
             {
                 name: "Type",
-                value: "Clocking in",
+                value: "Clocking In",
                 inline: false,
             },
             {
-                name: "Started At",
-                value: startDate,
+                name: "Start Date",
+                value: moment(start).format('LLLL'),
                 inline: false,
-            }
+            },
         )
+        .setThumbnail(member.displayAvatarURL())
         .setColor(EMBED_COLORS.SUCCESS)
 
-    userDb.shifts.shiftStartDate = start;
-    userDb.shifts.startDate = startDate;
-    userDb.shifts.currentShift = true;
-    await userDb.save();
+    staffDb.shifts.current = true;
+    staffDb.shifts.startDate = start;
 
+    await staffDb.save();
     return { embeds: [embed] };
 }
 
@@ -109,62 +105,58 @@ async function endShift(member, settings) {
         return { embeds: [embed] };
     }
 
-    const userDb = await getUser(member);
+    const staffDb = await getUser(member);
 
-    if (!userDb.shifts.currentShift) {
+    if (!staffDb.shifts.current) {
         const embed = new EmbedBuilder()
             .setTitle("Error")
-            .setDescription("You are not on any shift.")
+            .setDescription("You're not on a shift.")
             .setColor(EMBED_COLORS.ERROR)
 
         return { embeds: [embed] };
     }
 
-    const startDate = userDb.shifts.shiftStartDate;
-    const startd = moment(startDate).format('LLLL');
+    const startDate = staffDb.shifts.startDate;
+    const endDate = new Date();
 
-    const end = new Date();
-    const endDate = moment(end).format('LLLL');
-
-    const result = datetimeDifference(startDate, end);
-
-    const elapsedTime = Object.keys(result)
-        .filter(k => !!result[k])
-        .map(k => `${ result[k] } ${ k }`)
+    const difference = datetimeDifference(startDate, endDate);
+    const elapsedTime = Object.keys(difference)
+        .filter(k => !!difference[k])
+        .map(k => `${ difference[k] } ${ k }`)
         .join(", ");
 
     const embed = new EmbedBuilder()
         .setTitle(member.user.username)
-        .setDescription(`**${member}** has ended a shift.`)
+        .setDescription(`**${member}** has ended his shift.`)
         .setThumbnail(member.displayAvatarURL())
         .addFields(
             {
                 name: "Type",
-                value: "Clocking out",
+                value: "Clocking Out",
                 inline: false,
             },
             {
-                name: "Started At",
-                value: startd,
+                name: "Started",
+                value: moment(startDate).format('LLLL'),
                 inline: false,
             },
             {
-                name: "Ended At",
-                value: endDate,
+                name: "Ended",
+                value: moment(endDate).format('LLLL'),
                 inline: false,
             },
             {
                 name: "Elapsed Time",
-                value: `${elapsedTime}`,
+                value: elapsedTime,
                 inline: false,
             }
         )
         .setColor(EMBED_COLORS.ERROR)
 
-    userDb.shifts.currentShift = false;
-    userDb.shifts.endDate = endDate;
+    staffDb.shifts.current = false;
+    staffDb.shifts.endDate = endDate;
+    staffDb.shifts.total += 1;
 
-    await userDb.save();
-
+    await staffDb.save();
     return { embeds: [embed] };
 }
