@@ -12,7 +12,6 @@ const { getUser } = require("../database/schemas/User");
 
 const hasPerms = (member, settings) => {
     return (
-        member.permissions.has("ManageGuild") ||
         member.roles.cache.find((r) => settings.moderations.staff_roles.includes(r.id))
     );
 };
@@ -121,9 +120,13 @@ async function deleteModeration(member, channel, messageId, reason) {
     const { guild } = member;
     const settings = await getSettings(guild);
 
-    const userDb = await getUser(member);
+    const doc = await findModeration(guild.id, messageId);
 
-    if (!OWNER_IDS.includes(member.id) || !hasPerms(member, settings)) return "You can't delete moderation logs."
+    const user = await channel.client.users.fetch(doc.user_id, { cache: false }).catch(() => {});
+
+    const userDb = await getUser(user);
+
+    if (!hasPerms(member, settings)) return "You can't delete moderation logs."
 
     try {
         const message = await channel.messages.fetch({ message: messageId });

@@ -448,7 +448,7 @@ async function setModerationRole(settings, roleadd) {
 }
 
 async function setModerationStaff(settings, staffadd) {
-    if (settings.moderations.role.includes(staffadd.id)) {
+    if (settings.moderations.staff_roles.includes(staffadd.id)) {
         const embed = new EmbedBuilder()
             .setTitle("Error")
             .setDescription(`${staffadd.name} is already a role that can delete moderation logs.`)
