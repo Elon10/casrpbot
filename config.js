@@ -26,7 +26,7 @@ module.exports = {
         enabled: true, 
         baseURL: "https://panel.casrp.ml", 
         failureURL: "https://panel.casrp.ml", 
-        port: "8080", 
+        port: "25998", 
     },
 
     CACHE_SIZE: {
