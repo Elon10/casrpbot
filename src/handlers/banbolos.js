@@ -131,12 +131,11 @@ async function endBolo(member, channel, messageId, reason) {
 async function deleteBanBolo(member, channel, messageId, reason) {
     const { guild } = member;
     const settings = await getSettings(guild);
+    const doc = await findBanBolo(guild.id, messageId);
 
     const user = await channel.client.users.fetch(doc.user_id, { cache: false }).catch(() => {});
 
     const userDb = await getUser(user);
-
-    const doc = await findBanBolo(guild.id, messageId);
 
     if (!OWNER_IDS.includes(member.id) || !hasPerms(member, settings)) return "You can't delete ban-bolos.";
 
