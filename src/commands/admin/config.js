@@ -286,7 +286,7 @@ module.exports = {
             const roleremove = interaction.options.getRole("role-remove");
             if (channel) response = await setShiftsChannel(data.settings, channel);
             if (role) response = await setShiftRole(data.settings, role);
-            if (roleremove) response = removeShiftRole(data.settings, roleremove);
+            if (roleremove) response = await removeShiftRole(data.settings, roleremove);
         }
 
         else if (sub === "rank") {
@@ -690,7 +690,7 @@ async function removeShiftRole(settings, roleremove) {
     if (!settings.shifts.role_add.includes(roleremove.id)) {
         const embed = new EmbedBuilder()
             .setTitle("Error")
-            .setDescription(`${role.name} is not a given role.`)
+            .setDescription(`${roleremove.name} is not a given role.`)
             .setColor(EMBED_COLORS.ERROR)
 
         return { embeds: [embed] };
