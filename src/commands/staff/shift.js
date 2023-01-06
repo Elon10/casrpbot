@@ -37,10 +37,12 @@ module.exports = {
 
         if (sub === "start") {
             response = await startShift(interaction.member, data.settings);
+            if (typeof response === "boolean") return interaction.followUp("Shift successfully started.");
         }
 
         else if (sub === "end") {
             response = await endShift(interaction.member, data.settings);
+            if (typeof response === "boolean") return interaction.followUp("Shift successfully ended.");
         }
 
         await interaction.followUp(response);
@@ -59,7 +61,15 @@ async function startShift(member, settings) {
 
     const staffDb = await getUser(member);
 
-    const channel = await member.guilds.channels.cache.get(settings.shifts.channel_id);
+    const channel = member.guild.channels.cache.get(settings.shifts.channel_id);
+    if (!channel) {
+        const embed = new EmbedBuilder()
+            .setTitle("Error")
+            .setDescription("Shifts channel not configured.")
+            .setColor(EMBED_COLORS.ERROR)
+
+        return { embeds: [embed] };
+    }
 
     const start = new Date();
 
@@ -95,6 +105,7 @@ async function startShift(member, settings) {
 
     await staffDb.save();
     await channel.send({ embeds: [embed] });
+    return true;
 }
 
 async function endShift(member, settings) {
@@ -109,7 +120,15 @@ async function endShift(member, settings) {
 
     const staffDb = await getUser(member);
 
-    const channel = await member.guilds.channels.cache.get(settings.shifts.channel_id);
+    const channel = member.guild.channels.cache.get(settings.shifts.channel_id);
+    if (!channel) {
+        const embed = new EmbedBuilder()
+            .setTitle("Error")
+            .setDescription("Shifts channel not configured.")
+            .setColor(EMBED_COLORS.ERROR)
+
+        return { embeds: [embed] };
+    }
 
     if (!staffDb.shifts.current) {
         const embed = new EmbedBuilder()
@@ -163,4 +182,5 @@ async function endShift(member, settings) {
 
     await staffDb.save();
     await channel.send({ embeds: [embed] });
+    return true;
 }
