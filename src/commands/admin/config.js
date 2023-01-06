@@ -190,6 +190,18 @@ module.exports = {
                         channelTypes: [ChannelType.GuildText],
                         required: false,
                     },
+                    {
+                        name: "role-add",
+                        description: "Role to give when staff start a shift",
+                        type: ApplicationCommandOptionType.Role,
+                        required: false,
+                    },
+                    {
+                        name: "role-remove",
+                        description: "Remove the role to give when staff start a shift",
+                        type: ApplicationCommandOptionType.Role,
+                        required: false,
+                    }
                 ],
             },
             {
@@ -270,7 +282,11 @@ module.exports = {
 
         else if (sub === "shifts") {
             const channel = interaction.options.getChannel("channel");
+            const role = interaction.options.getRole("role-add");
+            const roleremove = interaction.options.getRole("role-remove");
             if (channel) response = await setShiftsChannel(data.settings, channel);
+            if (role) response = await setShiftRole(data.settings, role);
+            if (roleremove) response = removeShiftRole(data.settings, roleremove);
         }
 
         else if (sub === "rank") {
@@ -644,6 +660,48 @@ async function setShiftsChannel(settings, channel) {
     const embed = new EmbedBuilder()
         .setTitle("Success")
         .setDescription(`Shift System system **updated**.`)
+        .setColor(EMBED_COLORS.SUCCESS)
+
+    return { embeds: [embed] };
+}
+
+async function setShiftRole(settings, role) {
+    if (settings.shifts.role_add.includes(role.id)) {
+        const embed = new EmbedBuilder()
+            .setTitle("Error")
+            .setDescription(`${role.name} is already a staff role.`)
+            .setColor(EMBED_COLORS.ERROR)
+
+        return { embeds: [embed] };
+    }
+
+    settings.shifts.role_add.push(role.id);
+    await settings.save();
+
+    const embed = new EmbedBuilder()
+        .setTitle("Success")
+        .setDescription(`Shift system **updated**.`)
+        .setColor(EMBED_COLORS.SUCCESS)
+
+    return { embeds: [embed] };
+}
+
+async function removeShiftRole(settings, roleremove) {
+    if (!settings.shifts.role_add.includes(roleremove.id)) {
+        const embed = new EmbedBuilder()
+            .setTitle("Error")
+            .setDescription(`${role.name} is not a given role.`)
+            .setColor(EMBED_COLORS.ERROR)
+
+        return { embeds: [embed] };
+    }
+
+    settings.shifts.role_add.splice(settings.shifts.role_add.indexOf(roleremove.id), 1);
+    await settings.save();
+
+    const embed = new EmbedBuilder()
+        .setTitle("Success")
+        .setDescription(`Shift system **updated**.`)
         .setColor(EMBED_COLORS.SUCCESS)
 
     return { embeds: [embed] };

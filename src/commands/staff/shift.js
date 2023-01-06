@@ -59,6 +59,8 @@ async function startShift(member, settings) {
         return { embeds: [embed] };
     }
 
+    if (settings.shifts.role_add) member.roles.add(settings.shifts.role_add);
+
     const staffDb = await getUser(member);
 
     const channel = member.guild.channels.cache.get(settings.shifts.channel_id);
@@ -119,6 +121,8 @@ async function endShift(member, settings) {
     }
 
     const staffDb = await getUser(member);
+
+    member.roles.remove(settings.shifts.role_add);
 
     const channel = member.guild.channels.cache.get(settings.shifts.channel_id);
     if (!channel) {

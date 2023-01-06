@@ -47,6 +47,7 @@ const Schema = new mongoose.Schema({
     },
     shifts: {
         channel_id: String,
+        role_add: [String],
     }
 });
 

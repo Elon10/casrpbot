@@ -132,7 +132,9 @@ async function deleteBanBolo(member, channel, messageId, reason) {
     const { guild } = member;
     const settings = await getSettings(guild);
 
-    const userDb = await getUser(member);
+    const user = await channel.client.users.fetch(doc.user_id, { cache: false }).catch(() => {});
+
+    const userDb = await getUser(user);
 
     const doc = await findBanBolo(guild.id, messageId);
 
