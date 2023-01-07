@@ -142,100 +142,54 @@ module.exports = {
  */
 
 async function logkick(user, member, reason, settings) {
-    if (!user.roles.cache.find((r) => settings.moderations.role.includes(r.id))) {
-        const embed = new EmbedBuilder()
-            .setTitle("Error")
-            .setDescription("You can't use this command.")
-            .setColor(EMBED_COLORS.ERROR)
-
-        return { embeds: [embed] };
-    }
-
-    const staffDb = await getUser(user);
-    if (!settings.moderations.enabled) {
-        const embed = new EmbedBuilder()
-            .setTitle("Error")
-            .setDescription("Moderation system is not enabled.")
-            .setColor(EMBED_COLORS.ERROR)
-
-        return { embeds: [embed] };
-    }
-    const id = await roblox.getIdFromUsername(member);
-    const channel = user.guild.channels.cache.get(settings.moderations.channel_id);
-    if (!channel) {
-        const embed = new EmbedBuilder()
-            .setTitle("Error")
-            .setDescription("Moderation logs channel not configured.")
-            .setColor(EMBED_COLORS.ERROR)
-
-        return { embeds: [embed] };
-    }
-
-    const info = await roblox.getPlayerInfo(id);
-    const avatarUrl = await roblox.getPlayerThumbnail(
-        [id],
-        '720x720',
-        'png',
-        false,
-        'headshot'
-    )
-
-    if (!id) return "n";
-
-    const buttonRow = new ActionRowBuilder().addComponents(
-        new ButtonBuilder().setLabel("Edit Case").setCustomId("MODERATE_EDIT").setStyle(ButtonStyle.Primary),
-        new ButtonBuilder().setLabel("User Profile").setURL(`https://roblox.com/users/${id}/profile`).setStyle(ButtonStyle.Link),
-        new ButtonBuilder().setCustomId("MODERATE_DELETE").setLabel("Void").setStyle(ButtonStyle.Danger)
-    );
-
-    const embed = new EmbedBuilder()
-        .setTitle("Case - Kick")
-        .setDescription(`Moderation action taken by ${user}`)
-        .setColor("#FFAC1C")
-        .addFields(
-            {
-                name: "User",
-                value: info.username,
-                inline: true
-            },
-
-            {
-                name: "User ID",
-                value: id.toString(),
-                inline: true,
-            },
-            {
-                name: "Display Name",
-                value: info.displayName,
-                inline: true,
-            },
-            {
-                name: "Account Created",
-                value: moment(info.joinDate).format('LLLL'),
-                inline: true,
-            },
-            {
-                name: "Reason",
-                value: reason,
-                inline: false,
-            },
-        )
-        .setThumbnail(avatarUrl[0].imageUrl)
-        .setTimestamp()
-
     try {
-        const sentMsg = await channel.send({
-            embeds: [embed],
-            components: [buttonRow],
-        });
-
-        staffDb.logs.total += 1;
-        staffDb.logs.kicks += 1;
-        await staffDb.save();
-
-        const newEmbed = new EmbedBuilder()
-            .setTitle(`Case - Kick`)
-            .setDescription(`Moderation action taken by ${user}\n\n:warning: **THIS USER IS CURRENTLY ON A BAN BOLO** :warning:`)
+        if (!user.roles.cache.find((r) => settings.moderations.role.includes(r.id))) {
+            const embed = new EmbedBuilder()
+                .setTitle("Error")
+                .setDescription("You can't use this command.")
+                .setColor(EMBED_COLORS.ERROR)
+    
+            return { embeds: [embed] };
+        }
+    
+        const staffDb = await getUser(user);
+        if (!settings.moderations.enabled) {
+            const embed = new EmbedBuilder()
+                .setTitle("Error")
+                .setDescription("Moderation system is not enabled.")
+                .setColor(EMBED_COLORS.ERROR)
+    
+            return { embeds: [embed] };
+        }
+        const id = await roblox.getIdFromUsername(member);
+        const channel = user.guild.channels.cache.get(settings.moderations.channel_id);
+        if (!channel) {
+            const embed = new EmbedBuilder()
+                .setTitle("Error")
+                .setDescription("Moderation logs channel not configured.")
+                .setColor(EMBED_COLORS.ERROR)
+    
+            return { embeds: [embed] };
+        }
+    
+        const info = await roblox.getPlayerInfo(id);
+        const avatarUrl = await roblox.getPlayerThumbnail(
+            [id],
+            '720x720',
+            'png',
+            false,
+            'headshot'
+        )
+    
+        const buttonRow = new ActionRowBuilder().addComponents(
+            new ButtonBuilder().setLabel("Edit Case").setCustomId("MODERATE_EDIT").setStyle(ButtonStyle.Primary),
+            new ButtonBuilder().setLabel("User Profile").setURL(`https://roblox.com/users/${id}/profile`).setStyle(ButtonStyle.Link),
+            new ButtonBuilder().setCustomId("MODERATE_DELETE").setLabel("Void").setStyle(ButtonStyle.Danger)
+        );
+    
+        const embed = new EmbedBuilder()
+            .setTitle("Case - Kick")
+            .setDescription(`Moderation action taken by ${user}`)
             .setColor("#FFAC1C")
             .addFields(
                 {
@@ -243,7 +197,7 @@ async function logkick(user, member, reason, settings) {
                     value: info.username,
                     inline: true
                 },
-
+    
                 {
                     name: "User ID",
                     value: id.toString(),
@@ -267,211 +221,229 @@ async function logkick(user, member, reason, settings) {
             )
             .setThumbnail(avatarUrl[0].imageUrl)
             .setTimestamp()
+    
+        try {
+            const sentMsg = await channel.send({
+                embeds: [embed],
+                components: [buttonRow],
+            });
+    
+            staffDb.logs.total += 1;
+            staffDb.logs.kicks += 1;
+            await staffDb.save();
+    
+            const newEmbed = new EmbedBuilder()
+                .setTitle(`Case - Kick`)
+                .setDescription(`Moderation action taken by ${user}\n\n:warning: **THIS USER IS CURRENTLY ON A BAN BOLO** :warning:`)
+                .setColor("#FFAC1C")
+                .addFields(
+                    {
+                        name: "User",
+                        value: info.username,
+                        inline: true
+                    },
+    
+                    {
+                        name: "User ID",
+                        value: id.toString(),
+                        inline: true,
+                    },
+                    {
+                        name: "Display Name",
+                        value: info.displayName,
+                        inline: true,
+                    },
+                    {
+                        name: "Account Created",
+                        value: moment(info.joinDate).format('LLLL'),
+                        inline: true,
+                    },
+                    {
+                        name: "Reason",
+                        value: reason,
+                        inline: false,
+                    },
+                )
+                .setThumbnail(avatarUrl[0].imageUrl)
+                .setTimestamp()
+    
+            if (settings.banbolos.users.includes(info.username)) sentMsg.edit({ embeds: [newEmbed] });
+    
+            await addModeration(sentMsg, user.id, reason);
+            return true;
+        } catch (ex) {
+            return "Failed to send moderation log."
+        }
+    } catch (e) {
+        const embed = new EmbedBuilder()
+            .setTitle("Error")
+            .setDescription("User does not exist.")
+            .setColor(EMBED_COLORS.ERROR)
 
-        if (settings.banbolos.users.includes(info.username)) sentMsg.edit({ embeds: [newEmbed] });
-
-        await addModeration(sentMsg, user.id, reason);
-        return true;
-    } catch (ex) {
-        return "Failed to send moderation log."
+        return { embeds: [embed] };
     }
 }
 
 async function logban(user, member, reason, settings) {
-    if (!user.roles.cache.find((r) => settings.moderations.role.includes(r.id))) {
-        const embed = new EmbedBuilder()
-            .setTitle("Error")
-            .setDescription("You can't use this command.")
-            .setColor(EMBED_COLORS.ERROR)
-
-        return { embeds: [embed] };
-    }
-
-    const staffDb = await getUser(user);
-    const id = await roblox.getIdFromUsername(member);
-    if (!settings.moderations.enabled) {
-        const embed = new EmbedBuilder()
-            .setTitle("Error")
-            .setDescription("Moderation system is not enabled.")
-            .setColor(EMBED_COLORS.ERROR)
-
-        return { embeds: [embed] };
-    }
-    const channel = user.guild.channels.cache.get(settings.moderations.channel_id);
-    if (!channel) {
-        const embed = new EmbedBuilder()
-            .setTitle("Error")
-            .setDescription("Moderation logs channel not configured.")
-            .setColor(EMBED_COLORS.ERROR)
-
-        return { embeds: [embed] };
-    }
-
-    const info = await roblox.getPlayerInfo(id);
-    const avatarUrl = await roblox.getPlayerThumbnail(
-        [id],
-        '720x720',
-        'png',
-        false,
-        'headshot'
-    )
-
-    const buttonRow = new ActionRowBuilder().addComponents(
-        new ButtonBuilder().setLabel("Edit Case").setCustomId("MODERATE_EDIT").setStyle(ButtonStyle.Primary),
-        new ButtonBuilder().setLabel("User Profile").setURL(`https://roblox.com/users/${id}/profile`).setStyle(ButtonStyle.Link),
-        new ButtonBuilder().setCustomId("MODERATE_DELETE").setLabel("Void").setStyle(ButtonStyle.Danger)
-    );
-
-
-    const embed = new EmbedBuilder()
-        .setTitle("Case - Ban")
-        .setDescription(`Moderation action taken by ${user}`)
-        .setColor(EMBED_COLORS.ERROR)
-        .addFields(
-            {
-                name: "User",
-                value: info.username,
-                inline: true
-            },
-
-            {
-                name: "User ID",
-                value: id.toString(),
-                inline: true,
-            },
-            {
-                name: "Display Name",
-                value: info.displayName,
-                inline: true,
-            },
-            {
-                name: "Account Created",
-                value: moment(info.joinDate).format('LLLL'),
-                inline: true,
-            },
-            {
-                name: "Reason",
-                value: reason,
-                inline: false,
-            },
-        )
-        .setThumbnail(avatarUrl[0].imageUrl)
-        .setTimestamp()
-
     try {
-        const sentMsg = await channel.send({
-            embeds: [embed],
-            components: [buttonRow],
-        });
-
-        staffDb.logs.total += 1;
-        staffDb.logs.bans += 1;
-        await staffDb.save();
-
-        if (settings.banbolos.users.includes(info.username)) {
-            settings.banbolos.users.splice(settings.banbolos.users.indexOf(info.username), 1);
+        if (!user.roles.cache.find((r) => settings.moderations.role.includes(r.id))) {
+            const embed = new EmbedBuilder()
+                .setTitle("Error")
+                .setDescription("You can't use this command.")
+                .setColor(EMBED_COLORS.ERROR)
+    
+            return { embeds: [embed] };
         }
+    
+        const staffDb = await getUser(user);
+        const id = await roblox.getIdFromUsername(member);
+        if (!settings.moderations.enabled) {
+            const embed = new EmbedBuilder()
+                .setTitle("Error")
+                .setDescription("Moderation system is not enabled.")
+                .setColor(EMBED_COLORS.ERROR)
+    
+            return { embeds: [embed] };
+        }
+        const channel = user.guild.channels.cache.get(settings.moderations.channel_id);
+        if (!channel) {
+            const embed = new EmbedBuilder()
+                .setTitle("Error")
+                .setDescription("Moderation logs channel not configured.")
+                .setColor(EMBED_COLORS.ERROR)
+    
+            return { embeds: [embed] };
+        }
+    
+        const info = await roblox.getPlayerInfo(id);
+        const avatarUrl = await roblox.getPlayerThumbnail(
+            [id],
+            '720x720',
+            'png',
+            false,
+            'headshot'
+        )
+    
+        const buttonRow = new ActionRowBuilder().addComponents(
+            new ButtonBuilder().setLabel("Edit Case").setCustomId("MODERATE_EDIT").setStyle(ButtonStyle.Primary),
+            new ButtonBuilder().setLabel("User Profile").setURL(`https://roblox.com/users/${id}/profile`).setStyle(ButtonStyle.Link),
+            new ButtonBuilder().setCustomId("MODERATE_DELETE").setLabel("Void").setStyle(ButtonStyle.Danger)
+        );
+    
+    
+        const embed = new EmbedBuilder()
+            .setTitle("Case - Ban")
+            .setDescription(`Moderation action taken by ${user}`)
+            .setColor(EMBED_COLORS.ERROR)
+            .addFields(
+                {
+                    name: "User",
+                    value: info.username,
+                    inline: true
+                },
+    
+                {
+                    name: "User ID",
+                    value: id.toString(),
+                    inline: true,
+                },
+                {
+                    name: "Display Name",
+                    value: info.displayName,
+                    inline: true,
+                },
+                {
+                    name: "Account Created",
+                    value: moment(info.joinDate).format('LLLL'),
+                    inline: true,
+                },
+                {
+                    name: "Reason",
+                    value: reason,
+                    inline: false,
+                },
+            )
+            .setThumbnail(avatarUrl[0].imageUrl)
+            .setTimestamp()
+    
+        try {
+            const sentMsg = await channel.send({
+                embeds: [embed],
+                components: [buttonRow],
+            });
+    
+            staffDb.logs.total += 1;
+            staffDb.logs.bans += 1;
+            await staffDb.save();
+    
+            if (settings.banbolos.users.includes(info.username)) {
+                settings.banbolos.users.splice(settings.banbolos.users.indexOf(info.username), 1);
+            }
+    
+            await addModeration(sentMsg, user.id, reason);
+            return true;
+        } catch (ex) {
+            return "Failed to send moderation log."
+        }
+    } catch (e) {
+        const embed = new EmbedBuilder()
+            .setTitle("Error")
+            .setDescription("User does not exist.")
+            .setColor(EMBED_COLORS.ERROR)
 
-        await addModeration(sentMsg, user.id, reason);
-        return true;
-    } catch (ex) {
-        return "Failed to send moderation log."
+        return { embeds: [embed] };
     }
 }
 
 async function logwarn(user, member, reason, settings) {
-    if (!user.roles.cache.find((r) => settings.moderations.role.includes(r.id))) {
-        const embed = new EmbedBuilder()
-            .setTitle("Error")
-            .setDescription("You can't use this command.")
-            .setColor(EMBED_COLORS.ERROR)
-
-        return { embeds: [embed] };
-    }
-
-    const staffDb = await getUser(user);
-    const id = await roblox.getIdFromUsername(member);
-    if (!settings.moderations.enabled) {
-        const embed = new EmbedBuilder()
-            .setTitle("Error")
-            .setDescription("Moderation system is not enabled.")
-            .setColor(EMBED_COLORS.ERROR)
-
-        return { embeds: [embed] };
-    }
-    const channel = user.guild.channels.cache.get(settings.moderations.channel_id);
-    if (!channel) {
-        const embed = new EmbedBuilder()
-            .setTitle("Error")
-            .setDescription("Moderation logs channel not configured.")
-            .setColor(EMBED_COLORS.ERROR)
-
-        return { embeds: [embed] };
-    }
-
-    const info = await roblox.getPlayerInfo(id);
-    const avatarUrl = await roblox.getPlayerThumbnail(
-        [id],
-        '720x720',
-        'png',
-        false,
-        'headshot'
-    )
-
-    const buttonRow = new ActionRowBuilder().addComponents(
-        new ButtonBuilder().setLabel("Edit Case").setCustomId("MODERATE_EDIT").setStyle(ButtonStyle.Primary),
-        new ButtonBuilder().setLabel("User Profile").setURL(`https://roblox.com/users/${id}/profile`).setStyle(ButtonStyle.Link),
-        new ButtonBuilder().setCustomId("MODERATE_DELETE").setLabel("Void").setStyle(ButtonStyle.Danger)
-    );
-
-    const embed = new EmbedBuilder()
-        .setTitle("Case - Warn")
-        .setDescription(`Moderation action taken by ${user}`)
-        .setColor(EMBED_COLORS.WARNING)
-        .addFields(
-            {
-                name: "User",
-                value: info.username,
-                inline: true
-            },
-
-            {
-                name: "User ID",
-                value: id.toString(),
-                inline: true,
-            },
-            {
-                name: "Display Name",
-                value: info.displayName,
-                inline: true,
-            },
-            {
-                name: "Account Created",
-                value: moment(info.joinDate).format('LLLL'),
-                inline: true,
-            },
-            {
-                name: "Reason",
-                value: reason,
-                inline: false,
-            },
-        )
-        .setThumbnail(avatarUrl[0].imageUrl)
-        .setTimestamp()
-
     try {
-        const sentMsg = await channel.send({
-            embeds: [embed],
-            components: [buttonRow],
-        });
-
-        staffDb.logs.total += 1;
-        staffDb.logs.warns += 1;
-        await staffDb.save();
-
-        const newEmbed = new EmbedBuilder()
-            .setTitle(`Case - Warn`)
-            .setDescription(`Moderation action taken by ${user}\n\n:warning: **THIS USER IS CURRENTLY ON A BAN BOLO** :warning:`)
+        if (!user.roles.cache.find((r) => settings.moderations.role.includes(r.id))) {
+            const embed = new EmbedBuilder()
+                .setTitle("Error")
+                .setDescription("You can't use this command.")
+                .setColor(EMBED_COLORS.ERROR)
+    
+            return { embeds: [embed] };
+        }
+    
+        const staffDb = await getUser(user);
+        const id = await roblox.getIdFromUsername(member);
+        if (!settings.moderations.enabled) {
+            const embed = new EmbedBuilder()
+                .setTitle("Error")
+                .setDescription("Moderation system is not enabled.")
+                .setColor(EMBED_COLORS.ERROR)
+    
+            return { embeds: [embed] };
+        }
+        const channel = user.guild.channels.cache.get(settings.moderations.channel_id);
+        if (!channel) {
+            const embed = new EmbedBuilder()
+                .setTitle("Error")
+                .setDescription("Moderation logs channel not configured.")
+                .setColor(EMBED_COLORS.ERROR)
+    
+            return { embeds: [embed] };
+        }
+    
+        const info = await roblox.getPlayerInfo(id);
+        const avatarUrl = await roblox.getPlayerThumbnail(
+            [id],
+            '720x720',
+            'png',
+            false,
+            'headshot'
+        )
+    
+        const buttonRow = new ActionRowBuilder().addComponents(
+            new ButtonBuilder().setLabel("Edit Case").setCustomId("MODERATE_EDIT").setStyle(ButtonStyle.Primary),
+            new ButtonBuilder().setLabel("User Profile").setURL(`https://roblox.com/users/${id}/profile`).setStyle(ButtonStyle.Link),
+            new ButtonBuilder().setCustomId("MODERATE_DELETE").setLabel("Void").setStyle(ButtonStyle.Danger)
+        );
+    
+        const embed = new EmbedBuilder()
+            .setTitle("Case - Warn")
+            .setDescription(`Moderation action taken by ${user}`)
             .setColor(EMBED_COLORS.WARNING)
             .addFields(
                 {
@@ -479,7 +451,7 @@ async function logwarn(user, member, reason, settings) {
                     value: info.username,
                     inline: true
                 },
-
+    
                 {
                     name: "User ID",
                     value: id.toString(),
@@ -503,114 +475,120 @@ async function logwarn(user, member, reason, settings) {
             )
             .setThumbnail(avatarUrl[0].imageUrl)
             .setTimestamp()
+    
+        try {
+            const sentMsg = await channel.send({
+                embeds: [embed],
+                components: [buttonRow],
+            });
+    
+            staffDb.logs.total += 1;
+            staffDb.logs.warns += 1;
+            await staffDb.save();
+    
+            const newEmbed = new EmbedBuilder()
+                .setTitle(`Case - Warn`)
+                .setDescription(`Moderation action taken by ${user}\n\n:warning: **THIS USER IS CURRENTLY ON A BAN BOLO** :warning:`)
+                .setColor(EMBED_COLORS.WARNING)
+                .addFields(
+                    {
+                        name: "User",
+                        value: info.username,
+                        inline: true
+                    },
+    
+                    {
+                        name: "User ID",
+                        value: id.toString(),
+                        inline: true,
+                    },
+                    {
+                        name: "Display Name",
+                        value: info.displayName,
+                        inline: true,
+                    },
+                    {
+                        name: "Account Created",
+                        value: moment(info.joinDate).format('LLLL'),
+                        inline: true,
+                    },
+                    {
+                        name: "Reason",
+                        value: reason,
+                        inline: false,
+                    },
+                )
+                .setThumbnail(avatarUrl[0].imageUrl)
+                .setTimestamp()
+    
+            if (settings.banbolos.users.includes(info.username)) sentMsg.edit({ embeds: [newEmbed] });
+    
+            await addModeration(sentMsg, user.id, reason);
+            return true;
+        } catch (ex) {
+            return "Failed to send moderation log."
+        }
+    } catch (e) {
+        const embed = new EmbedBuilder()
+            .setTitle("Error")
+            .setDescription("User does not exist.")
+            .setColor(EMBED_COLORS.ERROR)
 
-        if (settings.banbolos.users.includes(info.username)) sentMsg.edit({ embeds: [newEmbed] });
-
-        await addModeration(sentMsg, user.id, reason);
-        return true;
-    } catch (ex) {
-        return "Failed to send moderation log."
+        return { embeds: [embed] };
     }
 }
 
 async function logBanBolo(user, member, reason, settings) {
-    if (!user.roles.cache.find((r) => settings.moderations.role.includes(r.id))) {
-        const embed = new EmbedBuilder()
-            .setTitle("Error")
-            .setDescription("You can't use this command.")
-            .setColor(EMBED_COLORS.ERROR)
-
-        return { embeds: [embed] };
-    }
-
-
-    const staffDb = await getUser(user);
-    const id = await roblox.getIdFromUsername(member);
-    if (!settings.banbolos.enabled) {
-        const embed = new EmbedBuilder()
-            .setTitle("Error")
-            .setDescription("Ban-Bolos system is not enabled.")
-            .setColor(EMBED_COLORS.ERROR)
-
-        return { embeds: [embed] };
-    }
-    const channel = user.guild.channels.cache.get(settings.banbolos.channel_id);
-    if (!channel) {
-        const embed = new EmbedBuilder()
-            .setTitle("Error")
-            .setDescription("Moderation logs channel not configured.")
-            .setColor(EMBED_COLORS.ERROR)
-
-        return { embeds: [embed] };
-    }
-
-    const info = await roblox.getPlayerInfo(id);
-    const avatarUrl = await roblox.getPlayerThumbnail(
-        [id],
-        '720x720',
-        'png',
-        false,
-        'headshot'
-    )
-
-    if (settings.banbolos.users.includes(info.username)) return "User its already on a ban-bolo.";
-
-    const buttonRow = new ActionRowBuilder().addComponents(
-        new ButtonBuilder().setLabel("User Profile").setURL(`https://roblox.com/users/${id}/profile`).setStyle(ButtonStyle.Link),
-        new ButtonBuilder().setCustomId("BOLO_DELETE").setLabel("Void").setStyle(ButtonStyle.Danger)
-    );
-
-    const embed = new EmbedBuilder()
-        .setTitle("Case - Ban Bolo")
-        .setDescription(`Ban Bolo by ${user}\nThis ban bolo its currently on **PENDING** status, when you ban the user run the command \`/ban-bolo end [banBoloId]\``)
-        .setColor(EMBED_COLORS.ERROR)
-        .addFields(
-            {
-                name: "User",
-                value: info.username,
-                inline: true
-            },
-
-            {
-                name: "User ID",
-                value: id.toString(),
-                inline: true,
-            },
-            {
-                name: "Display Name",
-                value: info.displayName,
-                inline: true,
-            },
-            {
-                name: "Account Created",
-                value: moment(info.joinDate).format('LLLL'),
-                inline: true,
-            },
-            {
-                name: "Reason",
-                value: reason,
-                inline: false,
-            },
-        )
-        .setThumbnail(avatarUrl[0].imageUrl)
-        .setTimestamp()
-
     try {
-        const sentMsg = await channel.send({
-            embeds: [embed],
-            components: [buttonRow],
-        });
-
-        staffDb.logs.total += 1;
-        staffDb.logs.banbolos += 1;
-        await staffDb.save();
-
-        settings.banbolos.users.push(info.username);
-        await settings.save();
-
-        const newEmbed = new EmbedBuilder()
+        if (!user.roles.cache.find((r) => settings.moderations.role.includes(r.id))) {
+            const embed = new EmbedBuilder()
+                .setTitle("Error")
+                .setDescription("You can't use this command.")
+                .setColor(EMBED_COLORS.ERROR)
+    
+            return { embeds: [embed] };
+        }
+    
+    
+        const staffDb = await getUser(user);
+        const id = await roblox.getIdFromUsername(member);
+        if (!settings.banbolos.enabled) {
+            const embed = new EmbedBuilder()
+                .setTitle("Error")
+                .setDescription("Ban-Bolos system is not enabled.")
+                .setColor(EMBED_COLORS.ERROR)
+    
+            return { embeds: [embed] };
+        }
+        const channel = user.guild.channels.cache.get(settings.banbolos.channel_id);
+        if (!channel) {
+            const embed = new EmbedBuilder()
+                .setTitle("Error")
+                .setDescription("Moderation logs channel not configured.")
+                .setColor(EMBED_COLORS.ERROR)
+    
+            return { embeds: [embed] };
+        }
+    
+        const info = await roblox.getPlayerInfo(id);
+        const avatarUrl = await roblox.getPlayerThumbnail(
+            [id],
+            '720x720',
+            'png',
+            false,
+            'headshot'
+        )
+    
+        if (settings.banbolos.users.includes(info.username)) return "User its already on a ban-bolo.";
+    
+        const buttonRow = new ActionRowBuilder().addComponents(
+            new ButtonBuilder().setLabel("User Profile").setURL(`https://roblox.com/users/${id}/profile`).setStyle(ButtonStyle.Link),
+            new ButtonBuilder().setCustomId("BOLO_DELETE").setLabel("Void").setStyle(ButtonStyle.Danger)
+        );
+    
+        const embed = new EmbedBuilder()
             .setTitle("Case - Ban Bolo")
-            .setDescription(`Ban Bolo by ${user}\n\nThis ban bolo its currently on **PENDING** status, when you ban the user run the command \`/ban-bolo end [banBoloId]\``)
+            .setDescription(`Ban Bolo by ${user}\nThis ban bolo its currently on **PENDING** status, when you ban the user run the command \`/ban-bolo end [banBoloId]\``)
             .setColor(EMBED_COLORS.ERROR)
             .addFields(
                 {
@@ -618,140 +596,7 @@ async function logBanBolo(user, member, reason, settings) {
                     value: info.username,
                     inline: true
                 },
-
-                {
-                    name: "User ID",
-                    value: id.toString(),
-                    inline: true,
-                },
-                {
-                    name: "Display Name",
-                    value: info.displayName,
-                    inline: true,
-                },
-                {
-                    name: "Account Created",
-                    value: moment(info.joinDate).format('LLLL'),
-                    inline: true,
-                },
-                {
-                    name: "Reason",
-                    value: reason,
-                    inline: false,
-                },
-            )
-            .setThumbnail(avatarUrl[0].imageUrl)
-            .setFooter({ text: `Ban BoloID: ${sentMsg.id}` })
-
-        sentMsg.edit({ embeds: [newEmbed] });
-
-        await addBanBolo(sentMsg, user.id, reason);
-        return true;
-    } catch (ex) {
-        return "Failed to send moderation log."
-    }
-}
-
-async function logother(user, title, member, reason, settings) {
-    if (!user.roles.cache.find((r) => settings.moderations.role.includes(r.id))) {
-        const embed = new EmbedBuilder()
-            .setTitle("Error")
-            .setDescription("You can't use this command.")
-            .setColor(EMBED_COLORS.ERROR)
-
-        return { embeds: [embed] };
-    }
-
-    const staffDb = await getUser(user);
-    const id = await roblox.getIdFromUsername(member);
-    if (!settings.moderations.enabled) {
-        const embed = new EmbedBuilder()
-            .setTitle("Error")
-            .setDescription("Moderation system is not enabled.")
-            .setColor(EMBED_COLORS.ERROR)
-
-        return { embeds: [embed] };
-    }
-    const channel = user.guild.channels.cache.get(settings.moderations.channel_id);
-    if (!channel) {
-        const embed = new EmbedBuilder()
-            .setTitle("Error")
-            .setDescription("Moderation logs channel not configured.")
-            .setColor(EMBED_COLORS.ERROR)
-
-        return { embeds: [embed] };
-    }
-
-    const info = await roblox.getPlayerInfo(id);
-    const avatarUrl = await roblox.getPlayerThumbnail(
-        [id],
-        '720x720',
-        'png',
-        false,
-        'headshot'
-    )
-
-    const buttonRow = new ActionRowBuilder().addComponents(
-        new ButtonBuilder().setLabel("Edit Case").setCustomId("MODERATE_EDIT").setStyle(ButtonStyle.Primary),
-        new ButtonBuilder().setLabel("User Profile").setURL(`https://roblox.com/users/${id}/profile`).setStyle(ButtonStyle.Link)
-    );
-
-    const embed = new EmbedBuilder()
-        .setTitle(`Case - ${title || "Other"}`)
-        .setDescription(`Moderation action taken by ${user}`)
-        .setColor(EMBED_COLORS.WARNING)
-        .addFields(
-            {
-                name: "User",
-                value: info.username,
-                inline: true
-            },
-
-            {
-                name: "User ID",
-                value: id.toString(),
-                inline: true,
-            },
-            {
-                name: "Display Name",
-                value: info.displayName,
-                inline: true,
-            },
-            {
-                name: "Account Created",
-                value: moment(info.joinDate).format('LLLL'),
-                inline: true,
-            },
-            {
-                name: "Reason",
-                value: reason,
-                inline: false,
-            },
-        )
-        .setThumbnail(avatarUrl[0].imageUrl)
-        .setTimestamp()
-
-    try {
-        const sentMsg = await channel.send({
-            embeds: [embed],
-            components: [buttonRow],
-        });
-
-        staffDb.logs.total += 1;
-        staffDb.logs.other += 1;
-        await staffDb.save();
-
-        const newEmbed = new EmbedBuilder()
-            .setTitle(`Case - ${title || "Other"}`)
-            .setDescription(`Moderation action taken by ${user}\n\n:warning: **THIS USER IS CURRENTLY ON A BAN BOLO** :warning:`)
-            .setColor(EMBED_COLORS.WARNING)
-            .addFields(
-                {
-                    name: "User",
-                    value: info.username,
-                    inline: true
-                },
-
+    
                 {
                     name: "User ID",
                     value: id.toString(),
@@ -775,13 +620,211 @@ async function logother(user, title, member, reason, settings) {
             )
             .setThumbnail(avatarUrl[0].imageUrl)
             .setTimestamp()
+    
+        try {
+            const sentMsg = await channel.send({
+                embeds: [embed],
+                components: [buttonRow],
+            });
+    
+            staffDb.logs.total += 1;
+            staffDb.logs.banbolos += 1;
+            await staffDb.save();
+    
+            settings.banbolos.users.push(info.username);
+            await settings.save();
+    
+            const newEmbed = new EmbedBuilder()
+                .setTitle("Case - Ban Bolo")
+                .setDescription(`Ban Bolo by ${user}\n\nThis ban bolo its currently on **PENDING** status, when you ban the user run the command \`/ban-bolo end [banBoloId]\``)
+                .setColor(EMBED_COLORS.ERROR)
+                .addFields(
+                    {
+                        name: "User",
+                        value: info.username,
+                        inline: true
+                    },
+    
+                    {
+                        name: "User ID",
+                        value: id.toString(),
+                        inline: true,
+                    },
+                    {
+                        name: "Display Name",
+                        value: info.displayName,
+                        inline: true,
+                    },
+                    {
+                        name: "Account Created",
+                        value: moment(info.joinDate).format('LLLL'),
+                        inline: true,
+                    },
+                    {
+                        name: "Reason",
+                        value: reason,
+                        inline: false,
+                    },
+                )
+                .setThumbnail(avatarUrl[0].imageUrl)
+                .setFooter({ text: `Ban BoloID: ${sentMsg.id}` })
+    
+            sentMsg.edit({ embeds: [newEmbed] });
+    
+            await addBanBolo(sentMsg, user.id, reason);
+            return true;
+        } catch (ex) {
+            return "Failed to send moderation log."
+        }
+    } catch (e) {
+        const embed = new EmbedBuilder()
+            .setTitle("Error")
+            .setDescription("User does not exist.")
+            .setColor(EMBED_COLORS.ERROR)
 
-        if (settings.banbolos.users.includes(info.username)) sentMsg.edit({ embeds: [newEmbed] });
+        return { embeds: [embed] };
+    }
+}
 
-        await addModeration(sentMsg, user.id, reason);
-        return true;
-    } catch (ex) {
-        return "Failed to send moderation log."
+async function logother(user, title, member, reason, settings) {
+    try {
+        if (!user.roles.cache.find((r) => settings.moderations.role.includes(r.id))) {
+            const embed = new EmbedBuilder()
+                .setTitle("Error")
+                .setDescription("You can't use this command.")
+                .setColor(EMBED_COLORS.ERROR)
+    
+            return { embeds: [embed] };
+        }
+    
+        const staffDb = await getUser(user);
+        const id = await roblox.getIdFromUsername(member);
+        if (!settings.moderations.enabled) {
+            const embed = new EmbedBuilder()
+                .setTitle("Error")
+                .setDescription("Moderation system is not enabled.")
+                .setColor(EMBED_COLORS.ERROR)
+    
+            return { embeds: [embed] };
+        }
+        const channel = user.guild.channels.cache.get(settings.moderations.channel_id);
+        if (!channel) {
+            const embed = new EmbedBuilder()
+                .setTitle("Error")
+                .setDescription("Moderation logs channel not configured.")
+                .setColor(EMBED_COLORS.ERROR)
+    
+            return { embeds: [embed] };
+        }
+    
+        const info = await roblox.getPlayerInfo(id);
+        const avatarUrl = await roblox.getPlayerThumbnail(
+            [id],
+            '720x720',
+            'png',
+            false,
+            'headshot'
+        )
+    
+        const buttonRow = new ActionRowBuilder().addComponents(
+            new ButtonBuilder().setLabel("Edit Case").setCustomId("MODERATE_EDIT").setStyle(ButtonStyle.Primary),
+            new ButtonBuilder().setLabel("User Profile").setURL(`https://roblox.com/users/${id}/profile`).setStyle(ButtonStyle.Link)
+        );
+    
+        const embed = new EmbedBuilder()
+            .setTitle(`Case - ${title || "Other"}`)
+            .setDescription(`Moderation action taken by ${user}`)
+            .setColor(EMBED_COLORS.WARNING)
+            .addFields(
+                {
+                    name: "User",
+                    value: info.username,
+                    inline: true
+                },
+    
+                {
+                    name: "User ID",
+                    value: id.toString(),
+                    inline: true,
+                },
+                {
+                    name: "Display Name",
+                    value: info.displayName,
+                    inline: true,
+                },
+                {
+                    name: "Account Created",
+                    value: moment(info.joinDate).format('LLLL'),
+                    inline: true,
+                },
+                {
+                    name: "Reason",
+                    value: reason,
+                    inline: false,
+                },
+            )
+            .setThumbnail(avatarUrl[0].imageUrl)
+            .setTimestamp()
+    
+        try {
+            const sentMsg = await channel.send({
+                embeds: [embed],
+                components: [buttonRow],
+            });
+    
+            staffDb.logs.total += 1;
+            staffDb.logs.other += 1;
+            await staffDb.save();
+    
+            const newEmbed = new EmbedBuilder()
+                .setTitle(`Case - ${title || "Other"}`)
+                .setDescription(`Moderation action taken by ${user}\n\n:warning: **THIS USER IS CURRENTLY ON A BAN BOLO** :warning:`)
+                .setColor(EMBED_COLORS.WARNING)
+                .addFields(
+                    {
+                        name: "User",
+                        value: info.username,
+                        inline: true
+                    },
+    
+                    {
+                        name: "User ID",
+                        value: id.toString(),
+                        inline: true,
+                    },
+                    {
+                        name: "Display Name",
+                        value: info.displayName,
+                        inline: true,
+                    },
+                    {
+                        name: "Account Created",
+                        value: moment(info.joinDate).format('LLLL'),
+                        inline: true,
+                    },
+                    {
+                        name: "Reason",
+                        value: reason,
+                        inline: false,
+                    },
+                )
+                .setThumbnail(avatarUrl[0].imageUrl)
+                .setTimestamp()
+    
+            if (settings.banbolos.users.includes(info.username)) sentMsg.edit({ embeds: [newEmbed] });
+    
+            await addModeration(sentMsg, user.id, reason);
+            return true;
+        } catch (ex) {
+            return "Failed to send moderation log."
+        }
+    } catch (e) {
+        const embed = new EmbedBuilder()
+            .setTitle("Error")
+            .setDescription("User does not exist.")
+            .setColor(EMBED_COLORS.ERROR)
+
+        return { embeds: [embed] };
     }
 }
 

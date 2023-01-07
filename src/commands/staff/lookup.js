@@ -36,23 +36,31 @@ module.exports = {
 }
 
 async function lookupUser(user, robloxUser) {
-    const id = await roblox.getIdFromUsername(robloxUser);
-    const info = await roblox.getPlayerInfo(id);
-    const groups = await roblox.getGroups(id);
-    const avatarUrl = await roblox.getPlayerThumbnail(
-        [id],
-        '720x720',
-        'png',
-        false,
-        'headshot'
-    )
+    try {
+        const id = await roblox.getIdFromUsername(robloxUser);
+        const info = await roblox.getPlayerInfo(id);
+        const avatarUrl = await roblox.getPlayerThumbnail(
+            [id],
+            '720x720',
+            'png',
+            false,
+            'headshot'
+        )
+    
+        const embed = new EmbedBuilder()
+            .setTitle(info.username)
+            .setURL(`https://roblox.com/users/${id}/profile`)
+            .setDescription(`**ID**: ${id}\n**Display Name**: ${info.displayName}\n**Created**: <t:${Math.round(info.joinDate / 1000)}:d>\n**Friends**: ${info.friendCount}\n**Followers**: ${info.followerCount}\n**Following**: ${info.followingCount}`)
+            .setThumbnail(avatarUrl[0].imageUrl)
+            .setColor(EMBED_COLORS.BOT_EMBED)
+    
+        return { embeds: [embed] };
+    } catch (e) {
+        const embed = new EmbedBuilder()
+            .setTitle("Error")
+            .setDescription("User does not exist.")
+            .setColor(EMBED_COLORS.ERROR)
 
-    const embed = new EmbedBuilder()
-        .setTitle(info.username)
-        .setURL(`https://roblox.com/users/${id}/profile`)
-        .setDescription(`**ID**: ${id}\n**Display Name**: ${info.displayName}\n**Created**: <t:${Math.round(info.joinDate / 1000)}:d>\n**Friends**: ${info.friendCount}\n**Followers**: ${info.followerCount}\n**Following**: ${info.followingCount}`)
-        .setThumbnail(avatarUrl[0].imageUrl)
-        .setColor(EMBED_COLORS.BOT_EMBED)
-
-    return { embeds: [embed] };
+        return { embeds: [embed] };
+    }
 }
