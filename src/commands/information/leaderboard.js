@@ -60,7 +60,7 @@ module.exports = {
             .setDescription("Invalid leaderboard type.")
             .setColor(EMBED_COLORS.ERROR)
 
-        if (type === "Total") response = await getTotalLeaderboard(interaction.user);
+        if (type === "Total") response = await getTotalLeaderboard(interaction.member);
         else if (type === "Bans") response = await getBansLeaderboard(interaction.user);
         else if (type === "Ban-Bolos") response = await getBanBolosLeaderboard(interaction.user);
         else if (type === "Kicks") response = await getKicksLeaderboard(interaction.user);
@@ -72,7 +72,11 @@ module.exports = {
     }
 }
 
-async function getTotalLeaderboard(author) {
+/**
+ * @param {import('@structures/BotClient')} client
+ */
+
+async function getTotalLeaderboard(member, client) {
     const lb = await getLogsLb(10);
 
     if (lb.length === 0) {
@@ -84,15 +88,17 @@ async function getTotalLeaderboard(author) {
         return { embeds: [embed] };
     }
 
+    const guild = member.guild;
+
     const collector = lb
-        .map((user, i) => `**#${(i + 1).toString()}** - ${escapeInlineCode(user.username)} [\`${user.logs?.total.toString()}\`]`)
+        .map((user, i) => `**#${(i + 1).toString()}** - ${guild.members.cache.get(user._id)}  [\`${user.logs?.total.toString()}\`]`)
         .join("\n");
 
     const embed = new EmbedBuilder()
         .setTitle("Total Logs Leaderboard")
         .setDescription(collector)
         .setColor(EMBED_COLORS.BOT_EMBED)
-        .setFooter({ text: `Requested by ${author.tag}` });
+        .setFooter({ text: `Requested by ${member.tag}` });
 
     return { embeds: [embed] };
 }

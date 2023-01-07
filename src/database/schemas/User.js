@@ -68,7 +68,7 @@ module.exports = {
         return Model.find({ "logs.total": { $gt: 0 }})
             .limit(limit)
             .lean();
-    },
+    },  
 
     getKicksLb: async (limit = 10) => {
         return Model.find({ "logs.kicks": { $gt: 0 }})
