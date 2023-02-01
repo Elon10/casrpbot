@@ -35,7 +35,9 @@ async function fetchUser(userData, client, query) {
     const user = await client.users.fetch(userData.id);
     user.displayAvatar = user.displayAvatarURL();
     const userDb = await getUser(user);
-    const userInfos = { ...user, ...userDb, ...userData, ...user.presence };
+    const casrp = await client.guilds.fetch("999354364193951815");
+    const member = casrp.members.cache.get(userData.id);
+    const userInfos = { ...user, ...userDb,  ...userData,  ...user.presence, member, };
     return userInfos;
 }
 

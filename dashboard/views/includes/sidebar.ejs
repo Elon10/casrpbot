@@ -1,52 +1,99 @@
+<link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+<script src="https://kit.fontawesome.com/073a7b8282.js" crossorigin="anonymous"></script>
+
 <aside class="col-span-2">
-  <section class="flex flex-col p-4 bg-darkerbggray h-full">
-    <h1 class="text-center mb-2 text-5xl font-bold"><code>CASRP</code></h1>
+    <section class="flex flex-col h-full">
+        <div class="sidebar">
+            <div class="logo-details">
+                <i class='bx bxl-c-plus-plus'></i>
+                <span class="logo_name">Panel</span>
+            </div>
+            <ul class="nav-links">
+                <li>
+                    <a href="homePage" class="<%if(currentURL.endsWith('homePage')) { %> bg-white/5 <% } else { %> bg-stone-900 <% } %>" style="margin-top: 25px;">
+                        <i class="fa-solid fa-house-user"></i>
+                        <span class="link_name">Homepage</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/staff/moderateLog" class="<%if(currentURL.endsWith('moderateLog')) { %> bg-white/5 <% } else { %> bg-stone-900 <% } %>">
+                        <i class="fa-solid fa-hammer"></i>
+                        <span class="link_name">Log Moderation</span>
+                    </a>
+                    <ul class="sub-menu blank">
+                        <li><a class="link_name" href="">Log Moderation</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="/staff/shiftManagement" class="<%if(currentURL.endsWith('shiftManagement')) { %> bg-white/5 <% } else { %> bg-stone-900 <% } %>">
+                        <i class="fa-solid fa-clock"></i>
+                        <span class="link_name">Shift Management</span>
+                    </a>
+                    <ul class="sub-menu blank">
+                        <li><a class="link_name" href="">Shift Management</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="/staff/loaRequest" class="<%if(currentURL.endsWith('loaRequest')) { %> bg-white/5 <% } else { %> bg-stone-900 <% } %>">
+                        <i class="fa-solid fa-umbrella-beach"></i>
+                        <span class="link_name">Loa Request</span>
+                    </a>
+                    <ul class="sub-menu blank">
+                        <li><a class="link_name" href="">Loa Request</a></li>
+                    </ul>
+                </li>
 
-    <a class="bg-black/20 rounded-lg flex flex-row items-center p-4 my-4 shadow rounded-full border">
-      <img src="https://cdn.discordapp.com/icons/924038453568602162/a_54c9d38e8ea22a8c3aaa603c542989d3.gif?size=512" class="rounded-full border-2 border-white" width="32" height="32"/>
-      <h3 class="text-lg font-bold ml-2">
-        California State Roleplay
-      </h3>
-    </a>
+                <hr class="custom">
+                <li style="margin-top: 20px;">
+                    <a href="/staff/banBolo" class="<%if(currentURL.endsWith('banBolo')) { %> bg-white/5 <% } else { %> bg-stone-900 <% } %>">
+                        <i class="fa-solid fa-triangle-exclamation"></i>
+                        <span class="link_name">Ban Bolo</span>
+                    </a>
+                    <ul class="sub-menu blank">
+                        <li><a class="link_name" href="">History</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="/staff/announcements" class="<%if(currentURL.endsWith('announcements')) { %> bg-white/5 <% } else { %> bg-stone-900 <% } %>">
+                        <i class="fa-solid fa-bullhorn"></i>
+                        <span class="link_name">Announcements</span>
+                    </a>
+                    <ul class="sub-menu blank">
+                        <li><a class="link_name" href="">Announcements</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <div class="profile-details">
+                        <div class="profile-content">
+                            <img src="<%= user.displayAvatar %>" alt="profileImg">
+                        </div>
+                        <div class="name-job">
+                            <div class="profile_name">
+                                <%= user.username %><b>#<%= user.discriminator %></b>
+                            </div>
+                            <div class="job"><%= user.member.roles.highest.name %></div>
+                        </div>
+                        <a href="/logout">
+                            <i class='bx bx-log-out'></i>
+                        </a>
+                    </div>
+                </li>
+            </ul>
+        </div>
 
-    <ul class="flex flex-col mt-4">
-      <li class="p-1 flex w-full">
-        <a href="homePage"
-          class="<% if(currentURL.endsWith('homepage')) { %> bg-white/5 font-semibold <% } else { %> bg-white/10 <% } %> w-full px-4 py-3 rounded-lg font-sans">
-          <i class="fa fa-home mr-1 w-6"></i> <span>Homepage</span>
-        </a>
-      </li>
-      <li class="p-1 flex w-full">
-        <a href="/staff/moderateLog"
-          class="<% if(currentURL.endsWith('moderateLog')) { %> bg-white/5 font-semibold <% } else { %> bg-white/10 <% } %> w-full px-4 py-3 rounded-lg font-sans">
-          <i class="fa fa-hammer mr-1 w-6"></i> <span>Log Moderation</span>
-        </a>
-      </li>
-      <li class="p-1 flex w-full">
-        <a href="/staff/shiftManagement"
-          class="<% if (currentURL.endsWith('shiftManagement')) { %> bg-white/5 font-semibold <% } else { %> bg-white/10 <% } %> w-full px-4 py-3 rounded-lg font-sans">
-          <i class="fa fa-clock mr-1 w-6"></i> <span>Shift Management</span>
-        </a>
-      </li>
-      <li class="p-1 flex w-full">
-        <a href="/staff/loaRequest"
-          class="<% if(currentURL.endsWith('loaRequest')) { %> bg-white/5 font-semibold <% } else { %> bg-white/10 <% } %> w-full px-4 py-3 rounded-lg font-sans">
-          <i class="fa fa-calendar mr-1 w-6"></i> <span>Loa Request</span>
-        </a>
-      </li>
-      <hr style="margin-top: 20px;">
-      <li class="p-1 flex w-full">
-        <a href="/staff/banBolo"
-          class="<% if (currentURL.endsWith('banBolo')) { %> bg-white/5 font-semibold <% } else { %> bg-white/10 <% } %> w-full px-4 py-3 rounded-lg font-sans" style="margin-top: 10px;">
-          <i class="fa fa-warning mr-1 w-6"></i> <span>Ban Bolo</span>
-        </a>
-      </li>
-      <li class="p-1 flex w-full">
-        <a href="/staff/announcements"
-        class="<% if(currentURL.endsWith('announcements')) { %> bg-white/5 font-semibold <% } else { %> bg-white/10 <% } %> w-full px-4 py-3 rounded-lg font-sans">
-        <i class="fa fa-bullhorn mr-1 w-6"></i> <span>Announcements</span>
-      </a>
-      </li>
-    </ul>
-  </section>
+        <script>
+            let arrow = document.querySelectorAll(".arrow");
+            for (var i = 0; i < arrow.length; i++) {
+                arrow[i].addEventListener("click", (e) => {
+                    let arrowParent = e.target.parentElement.parentElement;
+                    arrowParent.classList.toggle("showMenu");
+                });
+            }
+            let sidebar = document.querySelector(".sidebar");
+            let sidebarBtn = document.querySelector(".bx-menu");
+            console.log(sidebarBtn);
+            sidebarBtn.addEventListener("click", () => {
+                sidebar.classList.toggle("close");
+            });
+        </script>
 </aside>

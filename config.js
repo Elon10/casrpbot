@@ -24,9 +24,9 @@ module.exports = {
     
     DASHBOARD: {
         enabled: true, 
-        baseURL: "https://panel.casrp.ml", 
-        failureURL: "https://panel.casrp.ml", 
-        port: "25998", 
+        baseURL: "http://localhost:8080", 
+        failureURL: "http://localhost:8080", 
+        port: "8080", 
     },
 
     CACHE_SIZE: {

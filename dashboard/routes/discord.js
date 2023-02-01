@@ -45,8 +45,9 @@ router.get("/callback", async (req, res) => {
     const userData = {
         infos: null,
         guilds: null,
+        roles: null,
     };
-    while (!userData.infos || !userData.guilds) {
+    while (!userData.infos || !userData.guilds || !userData.roles) {
         if (!userData.infos) {
             response = await fetch("http://discordapp.com/api/users/@me", {
                 method: "GET",
@@ -65,11 +66,16 @@ router.get("/callback", async (req, res) => {
             if (json.retry_after) await req.client.wait(json.retry_after);
             else userData.guilds = json;
         }
+        if (!userData.roles) {
+            const guild = await req.client.guilds.cache.get("999354364193951815");
+            const user = await guild.members.cache.get(req.session.user);
+            userData.roles = user.roles;
+        }
     }
     const guilds = [];
     for (const guildPos in userData.guilds) guilds.push(userData.guilds[guildPos]);
 
-    req.session.user = { ...userData.infos, ...{ guilds } }; 
+    req.session.user = { ...userData.infos, ...{ guilds }, ...userData.roles }; 
     res.redirect(redirectURL);
 });
 

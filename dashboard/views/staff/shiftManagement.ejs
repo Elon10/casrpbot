@@ -13,12 +13,19 @@
             </span>
         </div>
 
+        <div class="alert hide" id="end">
+            <span class="fa fa-exclamation-circle"></span>
+            <span class="msg">Success! Your shift has been ended successfully.</span>
+            <span class="closes-btn">
+                <span class="fa fa-times"></span>
+            </span>
+        </div>
+
         <div class="grid grid-cols-1 md:grid-cols-8 flex-1">
             <%- include('../includes/sidebar') %>
 
             <div class="flex flex-col col-span-6 container">
-                <%- include('../includes/manageheader') %>
-                <h2 class="text-3xl font-bold mx-8 mt-6 mb-2 underline">Shift Management</h2>
+                <h2 class="text-3xl font-bold mx-8 mt-6 mb-2 underline" style="margin-top: 100px;">Shift Management</h2>
                 <section class="grid grid-cols gap-4 my-4 mx-8">
                     <div class="background-1">
                         <div class="flex flex-col rounded-lg bg-darkerbggray h-[fit-content]">
@@ -44,9 +51,9 @@
                                     </div>
                                     <div class="mt-4">
                                         <% if (staffDb.shifts.current) { %> 
-                                            <button type="submit" name="shiftEnd" class="px-4 py-1 rounded-lg bg-error transition-opacity duration-300 hover:opacity-70">End Shift</button>
+                                            <button type="submit" name="shiftEnd" class="button px-4 py-1 rounded-lg bg-error transition-opacity duration-300 hover:opacity-70">End Shift</button>
                                         <% } else { %>
-                                            <button type="submit" name="shiftStart" id="shiftStart" class="px-4 py-1 rounded-lg bg-success transition-opacity duration-300 hover:opacity-70">Start Shift</button>
+                                            <button type="submit" name="shiftStart" id="shiftStart" class="button px-4 py-1 rounded-lg bg-success transition-opacity duration-300 hover:opacity-70">Start Shift</button>
                                         <% } %>
                                     </div>
                                 </form>
