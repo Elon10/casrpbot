@@ -21,18 +21,18 @@ module.exports.launch = async (client) => {
   const db = await mongoose.initializeMongoose();
 
   app
-    .use(express.json()) 
+    .use(express.json())
     .use(express.urlencoded({ extended: true }))
-    .engine("html", require("ejs").renderFile) 
+    .engine("html", require("ejs").renderFile)
     .set("view engine", "ejs")
-    .use(express.static(path.join(__dirname, "/public"))) 
-    .set("views", path.join(__dirname, "/views")) 
-    .set("port", config.DASHBOARD.port) 
+    .use(express.static(path.join(__dirname, "/public")))
+    .set("views", path.join(__dirname, "/views"))
+    .set("port", config.DASHBOARD.port)
     .use(
       session({
         secret: process.env.SESSION_PASSWORD,
         cookie: { maxAge: 336 * 60 * 60 * 1000 },
-        name: "lightning_connection_cookie",
+        name: "casrp_connection_cookie",
         saveUninitialized: false,
         resave: true,
         saveUninitialized: false,
