@@ -23,13 +23,6 @@ router.get("/login", async function (req, res) {
 
 router.get("/callback", async (req, res) => {
   if (!req.query.code) return res.redirect(req.client.config.DASHBOARD.failureURL);
-  if (req.query.state && req.query.state.startsWith("invite")) {
-    if (req.query.code) {
-      const guildID = req.query.state.substr("invite".length, req.query.state.length);
-      req.client.knownGuilds.push({ id: guildID, user: req.user.id });
-      return res.redirect("/manage/" + guildID);
-    }
-  }
   const redirectURL = req.client.states[req.query.state] || "/staff/homePage";
   const params = new URLSearchParams();
   params.set("grant_type", "authorization_code");
