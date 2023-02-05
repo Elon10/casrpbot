@@ -504,7 +504,7 @@ router.post("/staff/shiftManagement", CheckAuth, async (req, res) => {
             .map(k => `${ difference[k] } ${ k }`)
             .join(", ");
 
-        if (user.roles.has(settings.shifts.role_add)) {
+        if (user.roles.cache.find((r) => settings.shifts.role_add.includes(r.id))) {
             user.roles.remove(settings.shifts.role_add);
         }
 
