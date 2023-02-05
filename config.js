@@ -24,9 +24,9 @@ module.exports = {
     
     DASHBOARD: {
         enabled: true, 
-        baseURL: "http://localhost:8080", 
-        failureURL: "http://localhost:8080", 
-        port: "8080", 
+        baseURL: "https://californiarp.xyz", 
+        failureURL: "https://californiarp.xyz", 
+        port: "25998", 
     },
 
     CACHE_SIZE: {
