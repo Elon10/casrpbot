@@ -1,0 +1,809 @@
+{"level":30,"time":1673279316140,"pid":1232,"hostname":"DESKTOP-II87B4O","msg":"Loading commands..."}
+{"level":20,"time":1673279316180,"pid":1232,"hostname":"DESKTOP-II87B4O","msg":"Skipping command announce. Disabled!"}
+{"level":20,"time":1673279316333,"pid":1232,"hostname":"DESKTOP-II87B4O","msg":"Skipping command roles-menu. Disabled!"}
+{"level":20,"time":1673279316518,"pid":1232,"hostname":"DESKTOP-II87B4O","msg":"Skipping command logging. Disabled!"}
+{"level":20,"time":1673279316534,"pid":1232,"hostname":"DESKTOP-II87B4O","msg":"Skipping command starboard. Disabled!"}
+{"level":20,"time":1673279316537,"pid":1232,"hostname":"DESKTOP-II87B4O","msg":"Skipping command verify. Disabled!"}
+{"level":20,"time":1673279316557,"pid":1232,"hostname":"DESKTOP-II87B4O","msg":"Skipping command trick-or-treat. Disabled!"}
+{"level":20,"time":1673279316558,"pid":1232,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command trick-or-treat. Disabled!"}
+{"level":20,"time":1673279318095,"pid":1232,"hostname":"DESKTOP-II87B4O","msg":"Skipping command changelog. Disabled!"}
+{"level":20,"time":1673279318119,"pid":1232,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command avatar. Disabled!"}
+{"level":20,"time":1673279318124,"pid":1232,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command botinvite. Disabled!"}
+{"level":20,"time":1673279318133,"pid":1232,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command botstats. Disabled!"}
+{"level":20,"time":1673279318137,"pid":1232,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command channelinfo. Disabled!"}
+{"level":20,"time":1673279318139,"pid":1232,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command emojiinfo. Disabled!"}
+{"level":20,"time":1673279318166,"pid":1232,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command guildinfo. Disabled!"}
+{"level":20,"time":1673279318167,"pid":1232,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command uptime. Disabled!"}
+{"level":20,"time":1673279318169,"pid":1232,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command userinfo. Disabled!"}
+{"level":20,"time":1673279318174,"pid":1232,"hostname":"DESKTOP-II87B4O","msg":"Skipping command bot. Disabled!"}
+{"level":20,"time":1673279318177,"pid":1232,"hostname":"DESKTOP-II87B4O","msg":"Skipping command info. Disabled!"}
+{"level":20,"time":1673279318202,"pid":1232,"hostname":"DESKTOP-II87B4O","msg":"Skipping command channel. Disabled!"}
+{"level":20,"time":1673279318207,"pid":1232,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command deafen. Disabled!"}
+{"level":20,"time":1673279318214,"pid":1232,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command disconnect. Disabled!"}
+{"level":20,"time":1673279318217,"pid":1232,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command move. Disabled!"}
+{"level":20,"time":1673279318219,"pid":1232,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command purge. Disabled!"}
+{"level":20,"time":1673279318220,"pid":1232,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command purgeattach. Disabled!"}
+{"level":20,"time":1673279318221,"pid":1232,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command purgebots. Disabled!"}
+{"level":20,"time":1673279318222,"pid":1232,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command purgelinks. Disabled!"}
+{"level":20,"time":1673279318223,"pid":1232,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command purgetoken. Disabled!"}
+{"level":20,"time":1673279318224,"pid":1232,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command purgeuser. Disabled!"}
+{"level":20,"time":1673279318227,"pid":1232,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command undeafen. Disabled!"}
+{"level":20,"time":1673279318231,"pid":1232,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command vmute. Disabled!"}
+{"level":20,"time":1673279318233,"pid":1232,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command vunmute. Disabled!"}
+{"level":20,"time":1673279318235,"pid":1232,"hostname":"DESKTOP-II87B4O","msg":"Skipping command role. Disabled!"}
+{"level":20,"time":1673279318238,"pid":1232,"hostname":"DESKTOP-II87B4O","msg":"Skipping command purge. Disabled!"}
+{"level":20,"time":1673279318247,"pid":1232,"hostname":"DESKTOP-II87B4O","msg":"Skipping command voice. Disabled!"}
+{"level":20,"time":1673279318262,"pid":1232,"hostname":"DESKTOP-II87B4O","msg":"Skipping command blacklist. Disabled!"}
+{"level":20,"time":1673279318264,"pid":1232,"hostname":"DESKTOP-II87B4O","msg":"Skipping command emit. Disabled!"}
+{"level":20,"time":1673279318264,"pid":1232,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command emit. Disabled!"}
+{"level":20,"time":1673279318264,"pid":1232,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command eval. Disabled!"}
+{"level":20,"time":1673279318265,"pid":1232,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command leaveserver. Disabled!"}
+{"level":20,"time":1673279318266,"pid":1232,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command listservers. Disabled!"}
+{"level":20,"time":1673279318288,"pid":1232,"hostname":"DESKTOP-II87B4O","msg":"Skipping command afk. Disabled!"}
+{"level":30,"time":1673279318317,"pid":1232,"hostname":"DESKTOP-II87B4O","msg":"Loaded 96 commands"}
+{"level":30,"time":1673279318317,"pid":1232,"hostname":"DESKTOP-II87B4O","msg":"Loaded 87 slash commands"}
+{"level":30,"time":1673279318317,"pid":1232,"hostname":"DESKTOP-II87B4O","msg":"Loading contexts..."}
+{"level":30,"time":1673279318319,"pid":1232,"hostname":"DESKTOP-II87B4O","msg":"Loaded 0 USER contexts"}
+{"level":30,"time":1673279318319,"pid":1232,"hostname":"DESKTOP-II87B4O","msg":"Loaded 0 MESSAGE contexts"}
+{"level":30,"time":1673279318320,"pid":1232,"hostname":"DESKTOP-II87B4O","msg":"Loading events..."}
+{"level":30,"time":1673279318435,"pid":1232,"hostname":"DESKTOP-II87B4O","msg":"Loaded 25 events. Success (25) Failed (0)"}
+{"level":30,"time":1673279318435,"pid":1232,"hostname":"DESKTOP-II87B4O","msg":"Connecting to MongoDb..."}
+{"level":30,"time":1673279318457,"pid":1232,"hostname":"DESKTOP-II87B4O","msg":"Downtime alerts started on 25999"}
+{"level":30,"time":1673279319752,"pid":1232,"hostname":"DESKTOP-II87B4O","msg":"Mongoose: Database connection established"}
+{"level":30,"time":1673279319753,"pid":1232,"hostname":"DESKTOP-II87B4O","msg":"Launching dashboard"}
+{"level":30,"time":1673279319849,"pid":1232,"hostname":"DESKTOP-II87B4O","msg":"Lightning dashboard is listening on port 8080"}
+{"level":30,"time":1673279325604,"pid":1232,"hostname":"DESKTOP-II87B4O","msg":"Logged in as Elon's Testing Bot#6842! (1024458057188659293)"}
+{"level":30,"time":1673279325605,"pid":1232,"hostname":"DESKTOP-II87B4O","msg":"Initializing giveaways manager..."}
+{"level":30,"time":1673279325711,"pid":1232,"hostname":"DESKTOP-II87B4O","msg":"Giveaway Manager initialized"}
+{"level":30,"time":1673279326117,"pid":1232,"hostname":"DESKTOP-II87B4O","msg":"Successfully registered interactions"}
+{"level":30,"time":1673279326272,"pid":1232,"hostname":"DESKTOP-II87B4O","msg":"Total Clusters: 1"}
+{"level":30,"time":1673279326273,"pid":1232,"hostname":"DESKTOP-II87B4O","msg":"Connected to cluster 0"}
+{"level":30,"time":1673279326273,"pid":1232,"hostname":"DESKTOP-II87B4O","msg":"Total Shards: 2"}
+{"level":30,"time":1673279326279,"pid":1232,"hostname":"DESKTOP-II87B4O","msg":"2 total guilds"}
+{"level":30,"time":1673283280967,"pid":16948,"hostname":"DESKTOP-II87B4O","msg":"Loading commands..."}
+{"level":20,"time":1673283280994,"pid":16948,"hostname":"DESKTOP-II87B4O","msg":"Skipping command announce. Disabled!"}
+{"level":20,"time":1673283281129,"pid":16948,"hostname":"DESKTOP-II87B4O","msg":"Skipping command roles-menu. Disabled!"}
+{"level":20,"time":1673283281316,"pid":16948,"hostname":"DESKTOP-II87B4O","msg":"Skipping command logging. Disabled!"}
+{"level":20,"time":1673283281338,"pid":16948,"hostname":"DESKTOP-II87B4O","msg":"Skipping command starboard. Disabled!"}
+{"level":20,"time":1673283281344,"pid":16948,"hostname":"DESKTOP-II87B4O","msg":"Skipping command verify. Disabled!"}
+{"level":20,"time":1673283281372,"pid":16948,"hostname":"DESKTOP-II87B4O","msg":"Skipping command trick-or-treat. Disabled!"}
+{"level":20,"time":1673283281372,"pid":16948,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command trick-or-treat. Disabled!"}
+{"level":20,"time":1673283282523,"pid":16948,"hostname":"DESKTOP-II87B4O","msg":"Skipping command changelog. Disabled!"}
+{"level":20,"time":1673283282534,"pid":16948,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command avatar. Disabled!"}
+{"level":20,"time":1673283282537,"pid":16948,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command botinvite. Disabled!"}
+{"level":20,"time":1673283282542,"pid":16948,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command botstats. Disabled!"}
+{"level":20,"time":1673283282547,"pid":16948,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command channelinfo. Disabled!"}
+{"level":20,"time":1673283282549,"pid":16948,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command emojiinfo. Disabled!"}
+{"level":20,"time":1673283282565,"pid":16948,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command guildinfo. Disabled!"}
+{"level":20,"time":1673283282566,"pid":16948,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command uptime. Disabled!"}
+{"level":20,"time":1673283282569,"pid":16948,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command userinfo. Disabled!"}
+{"level":20,"time":1673283282574,"pid":16948,"hostname":"DESKTOP-II87B4O","msg":"Skipping command bot. Disabled!"}
+{"level":20,"time":1673283282576,"pid":16948,"hostname":"DESKTOP-II87B4O","msg":"Skipping command info. Disabled!"}
+{"level":20,"time":1673283282602,"pid":16948,"hostname":"DESKTOP-II87B4O","msg":"Skipping command channel. Disabled!"}
+{"level":20,"time":1673283282609,"pid":16948,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command deafen. Disabled!"}
+{"level":20,"time":1673283282612,"pid":16948,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command disconnect. Disabled!"}
+{"level":20,"time":1673283282617,"pid":16948,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command move. Disabled!"}
+{"level":20,"time":1673283282619,"pid":16948,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command purge. Disabled!"}
+{"level":20,"time":1673283282621,"pid":16948,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command purgeattach. Disabled!"}
+{"level":20,"time":1673283282623,"pid":16948,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command purgebots. Disabled!"}
+{"level":20,"time":1673283282626,"pid":16948,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command purgelinks. Disabled!"}
+{"level":20,"time":1673283282628,"pid":16948,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command purgetoken. Disabled!"}
+{"level":20,"time":1673283282630,"pid":16948,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command purgeuser. Disabled!"}
+{"level":20,"time":1673283282633,"pid":16948,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command undeafen. Disabled!"}
+{"level":20,"time":1673283282638,"pid":16948,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command vmute. Disabled!"}
+{"level":20,"time":1673283282641,"pid":16948,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command vunmute. Disabled!"}
+{"level":20,"time":1673283282645,"pid":16948,"hostname":"DESKTOP-II87B4O","msg":"Skipping command role. Disabled!"}
+{"level":20,"time":1673283282648,"pid":16948,"hostname":"DESKTOP-II87B4O","msg":"Skipping command purge. Disabled!"}
+{"level":20,"time":1673283282650,"pid":16948,"hostname":"DESKTOP-II87B4O","msg":"Skipping command voice. Disabled!"}
+{"level":20,"time":1673283282672,"pid":16948,"hostname":"DESKTOP-II87B4O","msg":"Skipping command blacklist. Disabled!"}
+{"level":20,"time":1673283282674,"pid":16948,"hostname":"DESKTOP-II87B4O","msg":"Skipping command emit. Disabled!"}
+{"level":20,"time":1673283282674,"pid":16948,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command emit. Disabled!"}
+{"level":20,"time":1673283282675,"pid":16948,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command eval. Disabled!"}
+{"level":20,"time":1673283282677,"pid":16948,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command leaveserver. Disabled!"}
+{"level":20,"time":1673283282678,"pid":16948,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command listservers. Disabled!"}
+{"level":20,"time":1673283282712,"pid":16948,"hostname":"DESKTOP-II87B4O","msg":"Skipping command afk. Disabled!"}
+{"level":30,"time":1673283282744,"pid":16948,"hostname":"DESKTOP-II87B4O","msg":"Loaded 96 commands"}
+{"level":30,"time":1673283282744,"pid":16948,"hostname":"DESKTOP-II87B4O","msg":"Loaded 87 slash commands"}
+{"level":30,"time":1673283282744,"pid":16948,"hostname":"DESKTOP-II87B4O","msg":"Loading contexts..."}
+{"level":30,"time":1673283282747,"pid":16948,"hostname":"DESKTOP-II87B4O","msg":"Loaded 0 USER contexts"}
+{"level":30,"time":1673283282748,"pid":16948,"hostname":"DESKTOP-II87B4O","msg":"Loaded 0 MESSAGE contexts"}
+{"level":30,"time":1673283282748,"pid":16948,"hostname":"DESKTOP-II87B4O","msg":"Loading events..."}
+{"level":30,"time":1673283282886,"pid":16948,"hostname":"DESKTOP-II87B4O","msg":"Loaded 25 events. Success (25) Failed (0)"}
+{"level":30,"time":1673283282886,"pid":16948,"hostname":"DESKTOP-II87B4O","msg":"Connecting to MongoDb..."}
+{"level":30,"time":1673283282917,"pid":16948,"hostname":"DESKTOP-II87B4O","msg":"Downtime alerts started on 25999"}
+{"level":30,"time":1673283284326,"pid":16948,"hostname":"DESKTOP-II87B4O","msg":"Mongoose: Database connection established"}
+{"level":30,"time":1673283284326,"pid":16948,"hostname":"DESKTOP-II87B4O","msg":"Launching dashboard"}
+{"level":30,"time":1673283284432,"pid":16948,"hostname":"DESKTOP-II87B4O","msg":"Lightning dashboard is listening on port 8080"}
+{"level":30,"time":1673283290317,"pid":16948,"hostname":"DESKTOP-II87B4O","msg":"Logged in as Elon's Testing Bot#6842! (1024458057188659293)"}
+{"level":30,"time":1673283290318,"pid":16948,"hostname":"DESKTOP-II87B4O","msg":"Initializing giveaways manager..."}
+{"level":30,"time":1673283290499,"pid":16948,"hostname":"DESKTOP-II87B4O","msg":"Giveaway Manager initialized"}
+{"level":30,"time":1673283291287,"pid":16948,"hostname":"DESKTOP-II87B4O","msg":"Successfully registered interactions"}
+{"level":30,"time":1673283291421,"pid":16948,"hostname":"DESKTOP-II87B4O","msg":"Total Clusters: 1"}
+{"level":30,"time":1673283291421,"pid":16948,"hostname":"DESKTOP-II87B4O","msg":"Connected to cluster 0"}
+{"level":30,"time":1673283291421,"pid":16948,"hostname":"DESKTOP-II87B4O","msg":"Total Shards: 2"}
+{"level":30,"time":1673283291429,"pid":16948,"hostname":"DESKTOP-II87B4O","msg":"2 total guilds"}
+{"level":50,"time":1673283292248,"pid":16948,"hostname":"DESKTOP-II87B4O","err":{"type":"TypeError","message":"Cannot read properties of undefined (reading 'get')","stack":"TypeError: Cannot read properties of undefined (reading 'get')\n    at D:\\Escritorio\\idk\\Code Stuff\\lightning\\dashboard\\routes\\guild-manager.js:319:42\n    at Layer.handle [as handle_request] (D:\\Escritorio\\idk\\Code Stuff\\lightning\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (D:\\Escritorio\\idk\\Code Stuff\\lightning\\node_modules\\express\\lib\\router\\route.js:144:13)\n    at module.exports (D:\\Escritorio\\idk\\Code Stuff\\lightning\\dashboard\\auth\\CheckAuth.js:8:10)\n    at Layer.handle [as handle_request] (D:\\Escritorio\\idk\\Code Stuff\\lightning\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (D:\\Escritorio\\idk\\Code Stuff\\lightning\\node_modules\\express\\lib\\router\\route.js:144:13)\n    at Route.dispatch (D:\\Escritorio\\idk\\Code Stuff\\lightning\\node_modules\\express\\lib\\router\\route.js:114:3)\n    at Layer.handle [as handle_request] (D:\\Escritorio\\idk\\Code Stuff\\lightning\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at D:\\Escritorio\\idk\\Code Stuff\\lightning\\node_modules\\express\\lib\\router\\index.js:284:15\n    at param (D:\\Escritorio\\idk\\Code Stuff\\lightning\\node_modules\\express\\lib\\router\\index.js:365:14)"},"msg":"Unhandled exception: Cannot read properties of undefined (reading 'get')"}
+{"level":30,"time":1673283318216,"pid":14688,"hostname":"DESKTOP-II87B4O","msg":"Loading commands..."}
+{"level":20,"time":1673283318239,"pid":14688,"hostname":"DESKTOP-II87B4O","msg":"Skipping command announce. Disabled!"}
+{"level":20,"time":1673283318328,"pid":14688,"hostname":"DESKTOP-II87B4O","msg":"Skipping command roles-menu. Disabled!"}
+{"level":20,"time":1673283318441,"pid":14688,"hostname":"DESKTOP-II87B4O","msg":"Skipping command logging. Disabled!"}
+{"level":20,"time":1673283318455,"pid":14688,"hostname":"DESKTOP-II87B4O","msg":"Skipping command starboard. Disabled!"}
+{"level":20,"time":1673283318459,"pid":14688,"hostname":"DESKTOP-II87B4O","msg":"Skipping command verify. Disabled!"}
+{"level":20,"time":1673283318474,"pid":14688,"hostname":"DESKTOP-II87B4O","msg":"Skipping command trick-or-treat. Disabled!"}
+{"level":20,"time":1673283318474,"pid":14688,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command trick-or-treat. Disabled!"}
+{"level":20,"time":1673283319071,"pid":14688,"hostname":"DESKTOP-II87B4O","msg":"Skipping command changelog. Disabled!"}
+{"level":20,"time":1673283319102,"pid":14688,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command avatar. Disabled!"}
+{"level":20,"time":1673283319105,"pid":14688,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command botinvite. Disabled!"}
+{"level":20,"time":1673283319108,"pid":14688,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command botstats. Disabled!"}
+{"level":20,"time":1673283319112,"pid":14688,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command channelinfo. Disabled!"}
+{"level":20,"time":1673283319114,"pid":14688,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command emojiinfo. Disabled!"}
+{"level":20,"time":1673283319127,"pid":14688,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command guildinfo. Disabled!"}
+{"level":20,"time":1673283319128,"pid":14688,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command uptime. Disabled!"}
+{"level":20,"time":1673283319129,"pid":14688,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command userinfo. Disabled!"}
+{"level":20,"time":1673283319133,"pid":14688,"hostname":"DESKTOP-II87B4O","msg":"Skipping command bot. Disabled!"}
+{"level":20,"time":1673283319134,"pid":14688,"hostname":"DESKTOP-II87B4O","msg":"Skipping command info. Disabled!"}
+{"level":20,"time":1673283319153,"pid":14688,"hostname":"DESKTOP-II87B4O","msg":"Skipping command channel. Disabled!"}
+{"level":20,"time":1673283319159,"pid":14688,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command deafen. Disabled!"}
+{"level":20,"time":1673283319163,"pid":14688,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command disconnect. Disabled!"}
+{"level":20,"time":1673283319166,"pid":14688,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command move. Disabled!"}
+{"level":20,"time":1673283319168,"pid":14688,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command purge. Disabled!"}
+{"level":20,"time":1673283319169,"pid":14688,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command purgeattach. Disabled!"}
+{"level":20,"time":1673283319171,"pid":14688,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command purgebots. Disabled!"}
+{"level":20,"time":1673283319172,"pid":14688,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command purgelinks. Disabled!"}
+{"level":20,"time":1673283319174,"pid":14688,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command purgetoken. Disabled!"}
+{"level":20,"time":1673283319175,"pid":14688,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command purgeuser. Disabled!"}
+{"level":20,"time":1673283319177,"pid":14688,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command undeafen. Disabled!"}
+{"level":20,"time":1673283319180,"pid":14688,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command vmute. Disabled!"}
+{"level":20,"time":1673283319183,"pid":14688,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command vunmute. Disabled!"}
+{"level":20,"time":1673283319186,"pid":14688,"hostname":"DESKTOP-II87B4O","msg":"Skipping command role. Disabled!"}
+{"level":20,"time":1673283319189,"pid":14688,"hostname":"DESKTOP-II87B4O","msg":"Skipping command purge. Disabled!"}
+{"level":20,"time":1673283319191,"pid":14688,"hostname":"DESKTOP-II87B4O","msg":"Skipping command voice. Disabled!"}
+{"level":20,"time":1673283319213,"pid":14688,"hostname":"DESKTOP-II87B4O","msg":"Skipping command blacklist. Disabled!"}
+{"level":20,"time":1673283319215,"pid":14688,"hostname":"DESKTOP-II87B4O","msg":"Skipping command emit. Disabled!"}
+{"level":20,"time":1673283319215,"pid":14688,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command emit. Disabled!"}
+{"level":20,"time":1673283319216,"pid":14688,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command eval. Disabled!"}
+{"level":20,"time":1673283319217,"pid":14688,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command leaveserver. Disabled!"}
+{"level":20,"time":1673283319218,"pid":14688,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command listservers. Disabled!"}
+{"level":20,"time":1673283319240,"pid":14688,"hostname":"DESKTOP-II87B4O","msg":"Skipping command afk. Disabled!"}
+{"level":30,"time":1673283319257,"pid":14688,"hostname":"DESKTOP-II87B4O","msg":"Loaded 96 commands"}
+{"level":30,"time":1673283319257,"pid":14688,"hostname":"DESKTOP-II87B4O","msg":"Loaded 87 slash commands"}
+{"level":30,"time":1673283319258,"pid":14688,"hostname":"DESKTOP-II87B4O","msg":"Loading contexts..."}
+{"level":30,"time":1673283319260,"pid":14688,"hostname":"DESKTOP-II87B4O","msg":"Loaded 0 USER contexts"}
+{"level":30,"time":1673283319260,"pid":14688,"hostname":"DESKTOP-II87B4O","msg":"Loaded 0 MESSAGE contexts"}
+{"level":30,"time":1673283319260,"pid":14688,"hostname":"DESKTOP-II87B4O","msg":"Loading events..."}
+{"level":30,"time":1673283319350,"pid":14688,"hostname":"DESKTOP-II87B4O","msg":"Loaded 25 events. Success (25) Failed (0)"}
+{"level":30,"time":1673283319351,"pid":14688,"hostname":"DESKTOP-II87B4O","msg":"Connecting to MongoDb..."}
+{"level":30,"time":1673283319381,"pid":14688,"hostname":"DESKTOP-II87B4O","msg":"Downtime alerts started on 25999"}
+{"level":30,"time":1673283320516,"pid":14688,"hostname":"DESKTOP-II87B4O","msg":"Mongoose: Database connection established"}
+{"level":30,"time":1673283320517,"pid":14688,"hostname":"DESKTOP-II87B4O","msg":"Launching dashboard"}
+{"level":30,"time":1673283320625,"pid":14688,"hostname":"DESKTOP-II87B4O","msg":"Lightning dashboard is listening on port 8080"}
+{"level":30,"time":1673283326457,"pid":14688,"hostname":"DESKTOP-II87B4O","msg":"Logged in as Elon's Testing Bot#6842! (1024458057188659293)"}
+{"level":30,"time":1673283326458,"pid":14688,"hostname":"DESKTOP-II87B4O","msg":"Initializing giveaways manager..."}
+{"level":30,"time":1673283326570,"pid":14688,"hostname":"DESKTOP-II87B4O","msg":"Giveaway Manager initialized"}
+{"level":30,"time":1673283326878,"pid":14688,"hostname":"DESKTOP-II87B4O","msg":"Successfully registered interactions"}
+{"level":30,"time":1673283326971,"pid":14688,"hostname":"DESKTOP-II87B4O","msg":"Total Clusters: 1"}
+{"level":30,"time":1673283326971,"pid":14688,"hostname":"DESKTOP-II87B4O","msg":"Connected to cluster 0"}
+{"level":30,"time":1673283326971,"pid":14688,"hostname":"DESKTOP-II87B4O","msg":"Total Shards: 2"}
+{"level":30,"time":1673283326979,"pid":14688,"hostname":"DESKTOP-II87B4O","msg":"2 total guilds"}
+{"level":30,"time":1673285876200,"pid":5340,"hostname":"DESKTOP-II87B4O","msg":"Loading commands..."}
+{"level":20,"time":1673285876223,"pid":5340,"hostname":"DESKTOP-II87B4O","msg":"Skipping command announce. Disabled!"}
+{"level":20,"time":1673285876299,"pid":5340,"hostname":"DESKTOP-II87B4O","msg":"Skipping command roles-menu. Disabled!"}
+{"level":20,"time":1673285876395,"pid":5340,"hostname":"DESKTOP-II87B4O","msg":"Skipping command logging. Disabled!"}
+{"level":20,"time":1673285876411,"pid":5340,"hostname":"DESKTOP-II87B4O","msg":"Skipping command starboard. Disabled!"}
+{"level":20,"time":1673285876414,"pid":5340,"hostname":"DESKTOP-II87B4O","msg":"Skipping command verify. Disabled!"}
+{"level":20,"time":1673285876436,"pid":5340,"hostname":"DESKTOP-II87B4O","msg":"Skipping command trick-or-treat. Disabled!"}
+{"level":20,"time":1673285876437,"pid":5340,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command trick-or-treat. Disabled!"}
+{"level":20,"time":1673285877043,"pid":5340,"hostname":"DESKTOP-II87B4O","msg":"Skipping command changelog. Disabled!"}
+{"level":20,"time":1673285877053,"pid":5340,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command avatar. Disabled!"}
+{"level":20,"time":1673285877055,"pid":5340,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command botinvite. Disabled!"}
+{"level":20,"time":1673285877057,"pid":5340,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command botstats. Disabled!"}
+{"level":20,"time":1673285877060,"pid":5340,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command channelinfo. Disabled!"}
+{"level":20,"time":1673285877061,"pid":5340,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command emojiinfo. Disabled!"}
+{"level":20,"time":1673285877073,"pid":5340,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command guildinfo. Disabled!"}
+{"level":20,"time":1673285877074,"pid":5340,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command uptime. Disabled!"}
+{"level":20,"time":1673285877076,"pid":5340,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command userinfo. Disabled!"}
+{"level":20,"time":1673285877078,"pid":5340,"hostname":"DESKTOP-II87B4O","msg":"Skipping command bot. Disabled!"}
+{"level":20,"time":1673285877080,"pid":5340,"hostname":"DESKTOP-II87B4O","msg":"Skipping command info. Disabled!"}
+{"level":20,"time":1673285877094,"pid":5340,"hostname":"DESKTOP-II87B4O","msg":"Skipping command channel. Disabled!"}
+{"level":20,"time":1673285877097,"pid":5340,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command deafen. Disabled!"}
+{"level":20,"time":1673285877099,"pid":5340,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command disconnect. Disabled!"}
+{"level":20,"time":1673285877101,"pid":5340,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command move. Disabled!"}
+{"level":20,"time":1673285877101,"pid":5340,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command purge. Disabled!"}
+{"level":20,"time":1673285877102,"pid":5340,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command purgeattach. Disabled!"}
+{"level":20,"time":1673285877103,"pid":5340,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command purgebots. Disabled!"}
+{"level":20,"time":1673285877104,"pid":5340,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command purgelinks. Disabled!"}
+{"level":20,"time":1673285877106,"pid":5340,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command purgetoken. Disabled!"}
+{"level":20,"time":1673285877107,"pid":5340,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command purgeuser. Disabled!"}
+{"level":20,"time":1673285877109,"pid":5340,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command undeafen. Disabled!"}
+{"level":20,"time":1673285877111,"pid":5340,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command vmute. Disabled!"}
+{"level":20,"time":1673285877113,"pid":5340,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command vunmute. Disabled!"}
+{"level":20,"time":1673285877115,"pid":5340,"hostname":"DESKTOP-II87B4O","msg":"Skipping command role. Disabled!"}
+{"level":20,"time":1673285877117,"pid":5340,"hostname":"DESKTOP-II87B4O","msg":"Skipping command purge. Disabled!"}
+{"level":20,"time":1673285877119,"pid":5340,"hostname":"DESKTOP-II87B4O","msg":"Skipping command voice. Disabled!"}
+{"level":20,"time":1673285877134,"pid":5340,"hostname":"DESKTOP-II87B4O","msg":"Skipping command blacklist. Disabled!"}
+{"level":20,"time":1673285877135,"pid":5340,"hostname":"DESKTOP-II87B4O","msg":"Skipping command emit. Disabled!"}
+{"level":20,"time":1673285877135,"pid":5340,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command emit. Disabled!"}
+{"level":20,"time":1673285877136,"pid":5340,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command eval. Disabled!"}
+{"level":20,"time":1673285877137,"pid":5340,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command leaveserver. Disabled!"}
+{"level":20,"time":1673285877137,"pid":5340,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command listservers. Disabled!"}
+{"level":20,"time":1673285877156,"pid":5340,"hostname":"DESKTOP-II87B4O","msg":"Skipping command afk. Disabled!"}
+{"level":30,"time":1673285877174,"pid":5340,"hostname":"DESKTOP-II87B4O","msg":"Loaded 96 commands"}
+{"level":30,"time":1673285877174,"pid":5340,"hostname":"DESKTOP-II87B4O","msg":"Loaded 87 slash commands"}
+{"level":30,"time":1673285877175,"pid":5340,"hostname":"DESKTOP-II87B4O","msg":"Loading contexts..."}
+{"level":30,"time":1673285877176,"pid":5340,"hostname":"DESKTOP-II87B4O","msg":"Loaded 0 USER contexts"}
+{"level":30,"time":1673285877176,"pid":5340,"hostname":"DESKTOP-II87B4O","msg":"Loaded 0 MESSAGE contexts"}
+{"level":30,"time":1673285877177,"pid":5340,"hostname":"DESKTOP-II87B4O","msg":"Loading events..."}
+{"level":30,"time":1673285877263,"pid":5340,"hostname":"DESKTOP-II87B4O","msg":"Loaded 25 events. Success (25) Failed (0)"}
+{"level":30,"time":1673285877264,"pid":5340,"hostname":"DESKTOP-II87B4O","msg":"Connecting to MongoDb..."}
+{"level":30,"time":1673285877290,"pid":5340,"hostname":"DESKTOP-II87B4O","msg":"Downtime alerts started on 25999"}
+{"level":30,"time":1673285878692,"pid":5340,"hostname":"DESKTOP-II87B4O","msg":"Mongoose: Database connection established"}
+{"level":30,"time":1673285878692,"pid":5340,"hostname":"DESKTOP-II87B4O","msg":"Launching dashboard"}
+{"level":30,"time":1673285878773,"pid":5340,"hostname":"DESKTOP-II87B4O","msg":"Lightning dashboard is listening on port 8080"}
+{"level":30,"time":1673285884484,"pid":5340,"hostname":"DESKTOP-II87B4O","msg":"Logged in as Elon's Testing Bot#6842! (1024458057188659293)"}
+{"level":30,"time":1673285884485,"pid":5340,"hostname":"DESKTOP-II87B4O","msg":"Initializing giveaways manager..."}
+{"level":30,"time":1673285884588,"pid":5340,"hostname":"DESKTOP-II87B4O","msg":"Giveaway Manager initialized"}
+{"level":30,"time":1673285884876,"pid":5340,"hostname":"DESKTOP-II87B4O","msg":"Successfully registered interactions"}
+{"level":30,"time":1673285884962,"pid":5340,"hostname":"DESKTOP-II87B4O","msg":"Total Clusters: 1"}
+{"level":30,"time":1673285884962,"pid":5340,"hostname":"DESKTOP-II87B4O","msg":"Connected to cluster 0"}
+{"level":30,"time":1673285884962,"pid":5340,"hostname":"DESKTOP-II87B4O","msg":"Total Shards: 2"}
+{"level":30,"time":1673285884970,"pid":5340,"hostname":"DESKTOP-II87B4O","msg":"2 total guilds"}
+{"level":50,"time":1673285934048,"pid":5340,"hostname":"DESKTOP-II87B4O","err":{"type":"TypeError","message":"Cannot read properties of null (reading 'toString')","stack":"TypeError: Cannot read properties of null (reading 'toString')\n    at getStatus (D:\\Escritorio\\idk\\Code Stuff\\lightning\\src\\commands\\admin\\automod\\automod.js:295:32)\n    at Object.interactionRun (D:\\Escritorio\\idk\\Code Stuff\\lightning\\src\\commands\\admin\\automod\\automod.js:246:44)\n    at Object.handleSlashCommand (D:\\Escritorio\\idk\\Code Stuff\\lightning\\src\\handlers\\command.js:208:17)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async module.exports (D:\\Escritorio\\idk\\Code Stuff\\lightning\\src\\events\\interactions\\interactionCreate.js:26:5)"},"msg":"interactionRun: Cannot read properties of null (reading 'toString')"}
+{"level":30,"time":1673285959995,"pid":8032,"hostname":"DESKTOP-II87B4O","msg":"Loading commands..."}
+{"level":20,"time":1673285960017,"pid":8032,"hostname":"DESKTOP-II87B4O","msg":"Skipping command announce. Disabled!"}
+{"level":20,"time":1673285960099,"pid":8032,"hostname":"DESKTOP-II87B4O","msg":"Skipping command roles-menu. Disabled!"}
+{"level":20,"time":1673285960203,"pid":8032,"hostname":"DESKTOP-II87B4O","msg":"Skipping command logging. Disabled!"}
+{"level":20,"time":1673285960220,"pid":8032,"hostname":"DESKTOP-II87B4O","msg":"Skipping command starboard. Disabled!"}
+{"level":20,"time":1673285960222,"pid":8032,"hostname":"DESKTOP-II87B4O","msg":"Skipping command verify. Disabled!"}
+{"level":20,"time":1673285960239,"pid":8032,"hostname":"DESKTOP-II87B4O","msg":"Skipping command trick-or-treat. Disabled!"}
+{"level":20,"time":1673285960239,"pid":8032,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command trick-or-treat. Disabled!"}
+{"level":20,"time":1673285960870,"pid":8032,"hostname":"DESKTOP-II87B4O","msg":"Skipping command changelog. Disabled!"}
+{"level":20,"time":1673285960878,"pid":8032,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command avatar. Disabled!"}
+{"level":20,"time":1673285960880,"pid":8032,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command botinvite. Disabled!"}
+{"level":20,"time":1673285960883,"pid":8032,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command botstats. Disabled!"}
+{"level":20,"time":1673285960886,"pid":8032,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command channelinfo. Disabled!"}
+{"level":20,"time":1673285960888,"pid":8032,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command emojiinfo. Disabled!"}
+{"level":20,"time":1673285960901,"pid":8032,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command guildinfo. Disabled!"}
+{"level":20,"time":1673285960902,"pid":8032,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command uptime. Disabled!"}
+{"level":20,"time":1673285960904,"pid":8032,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command userinfo. Disabled!"}
+{"level":20,"time":1673285960906,"pid":8032,"hostname":"DESKTOP-II87B4O","msg":"Skipping command bot. Disabled!"}
+{"level":20,"time":1673285960908,"pid":8032,"hostname":"DESKTOP-II87B4O","msg":"Skipping command info. Disabled!"}
+{"level":20,"time":1673285960922,"pid":8032,"hostname":"DESKTOP-II87B4O","msg":"Skipping command channel. Disabled!"}
+{"level":20,"time":1673285960926,"pid":8032,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command deafen. Disabled!"}
+{"level":20,"time":1673285960928,"pid":8032,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command disconnect. Disabled!"}
+{"level":20,"time":1673285960929,"pid":8032,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command move. Disabled!"}
+{"level":20,"time":1673285960930,"pid":8032,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command purge. Disabled!"}
+{"level":20,"time":1673285960931,"pid":8032,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command purgeattach. Disabled!"}
+{"level":20,"time":1673285960933,"pid":8032,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command purgebots. Disabled!"}
+{"level":20,"time":1673285960934,"pid":8032,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command purgelinks. Disabled!"}
+{"level":20,"time":1673285960935,"pid":8032,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command purgetoken. Disabled!"}
+{"level":20,"time":1673285960935,"pid":8032,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command purgeuser. Disabled!"}
+{"level":20,"time":1673285960937,"pid":8032,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command undeafen. Disabled!"}
+{"level":20,"time":1673285960938,"pid":8032,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command vmute. Disabled!"}
+{"level":20,"time":1673285960940,"pid":8032,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command vunmute. Disabled!"}
+{"level":20,"time":1673285960942,"pid":8032,"hostname":"DESKTOP-II87B4O","msg":"Skipping command role. Disabled!"}
+{"level":20,"time":1673285960944,"pid":8032,"hostname":"DESKTOP-II87B4O","msg":"Skipping command purge. Disabled!"}
+{"level":20,"time":1673285960945,"pid":8032,"hostname":"DESKTOP-II87B4O","msg":"Skipping command voice. Disabled!"}
+{"level":20,"time":1673285960961,"pid":8032,"hostname":"DESKTOP-II87B4O","msg":"Skipping command blacklist. Disabled!"}
+{"level":20,"time":1673285960962,"pid":8032,"hostname":"DESKTOP-II87B4O","msg":"Skipping command emit. Disabled!"}
+{"level":20,"time":1673285960962,"pid":8032,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command emit. Disabled!"}
+{"level":20,"time":1673285960963,"pid":8032,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command eval. Disabled!"}
+{"level":20,"time":1673285960964,"pid":8032,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command leaveserver. Disabled!"}
+{"level":20,"time":1673285960965,"pid":8032,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command listservers. Disabled!"}
+{"level":20,"time":1673285960985,"pid":8032,"hostname":"DESKTOP-II87B4O","msg":"Skipping command afk. Disabled!"}
+{"level":30,"time":1673285961004,"pid":8032,"hostname":"DESKTOP-II87B4O","msg":"Loaded 96 commands"}
+{"level":30,"time":1673285961004,"pid":8032,"hostname":"DESKTOP-II87B4O","msg":"Loaded 87 slash commands"}
+{"level":30,"time":1673285961004,"pid":8032,"hostname":"DESKTOP-II87B4O","msg":"Loading contexts..."}
+{"level":30,"time":1673285961006,"pid":8032,"hostname":"DESKTOP-II87B4O","msg":"Loaded 0 USER contexts"}
+{"level":30,"time":1673285961006,"pid":8032,"hostname":"DESKTOP-II87B4O","msg":"Loaded 0 MESSAGE contexts"}
+{"level":30,"time":1673285961006,"pid":8032,"hostname":"DESKTOP-II87B4O","msg":"Loading events..."}
+{"level":30,"time":1673285961090,"pid":8032,"hostname":"DESKTOP-II87B4O","msg":"Loaded 25 events. Success (25) Failed (0)"}
+{"level":30,"time":1673285961090,"pid":8032,"hostname":"DESKTOP-II87B4O","msg":"Connecting to MongoDb..."}
+{"level":30,"time":1673285961119,"pid":8032,"hostname":"DESKTOP-II87B4O","msg":"Downtime alerts started on 25999"}
+{"level":30,"time":1673285962387,"pid":8032,"hostname":"DESKTOP-II87B4O","msg":"Mongoose: Database connection established"}
+{"level":30,"time":1673285962387,"pid":8032,"hostname":"DESKTOP-II87B4O","msg":"Launching dashboard"}
+{"level":30,"time":1673285962460,"pid":8032,"hostname":"DESKTOP-II87B4O","msg":"Lightning dashboard is listening on port 8080"}
+{"level":30,"time":1673285968251,"pid":8032,"hostname":"DESKTOP-II87B4O","msg":"Logged in as Elon's Testing Bot#6842! (1024458057188659293)"}
+{"level":30,"time":1673285968251,"pid":8032,"hostname":"DESKTOP-II87B4O","msg":"Initializing giveaways manager..."}
+{"level":30,"time":1673285968359,"pid":8032,"hostname":"DESKTOP-II87B4O","msg":"Giveaway Manager initialized"}
+{"level":30,"time":1673285968912,"pid":8032,"hostname":"DESKTOP-II87B4O","msg":"Successfully registered interactions"}
+{"level":30,"time":1673285969008,"pid":8032,"hostname":"DESKTOP-II87B4O","msg":"Total Clusters: 1"}
+{"level":30,"time":1673285969008,"pid":8032,"hostname":"DESKTOP-II87B4O","msg":"Connected to cluster 0"}
+{"level":30,"time":1673285969008,"pid":8032,"hostname":"DESKTOP-II87B4O","msg":"Total Shards: 2"}
+{"level":30,"time":1673285969014,"pid":8032,"hostname":"DESKTOP-II87B4O","msg":"2 total guilds"}
+{"level":50,"time":1673285973390,"pid":8032,"hostname":"DESKTOP-II87B4O","err":{"type":"TypeError","message":"Cannot read properties of null (reading 'toString')","stack":"TypeError: Cannot read properties of null (reading 'toString')\n    at getStatus (D:\\Escritorio\\idk\\Code Stuff\\lightning\\src\\commands\\admin\\automod\\automod.js:295:32)\n    at Object.interactionRun (D:\\Escritorio\\idk\\Code Stuff\\lightning\\src\\commands\\admin\\automod\\automod.js:246:44)\n    at Object.handleSlashCommand (D:\\Escritorio\\idk\\Code Stuff\\lightning\\src\\handlers\\command.js:208:17)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async module.exports (D:\\Escritorio\\idk\\Code Stuff\\lightning\\src\\events\\interactions\\interactionCreate.js:26:5)"},"msg":"interactionRun: Cannot read properties of null (reading 'toString')"}
+{"level":30,"time":1673286047495,"pid":3328,"hostname":"DESKTOP-II87B4O","msg":"Loading commands..."}
+{"level":20,"time":1673286047517,"pid":3328,"hostname":"DESKTOP-II87B4O","msg":"Skipping command announce. Disabled!"}
+{"level":20,"time":1673286047597,"pid":3328,"hostname":"DESKTOP-II87B4O","msg":"Skipping command roles-menu. Disabled!"}
+{"level":20,"time":1673286047698,"pid":3328,"hostname":"DESKTOP-II87B4O","msg":"Skipping command logging. Disabled!"}
+{"level":20,"time":1673286047713,"pid":3328,"hostname":"DESKTOP-II87B4O","msg":"Skipping command starboard. Disabled!"}
+{"level":20,"time":1673286047716,"pid":3328,"hostname":"DESKTOP-II87B4O","msg":"Skipping command verify. Disabled!"}
+{"level":20,"time":1673286047733,"pid":3328,"hostname":"DESKTOP-II87B4O","msg":"Skipping command trick-or-treat. Disabled!"}
+{"level":20,"time":1673286047733,"pid":3328,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command trick-or-treat. Disabled!"}
+{"level":20,"time":1673286048372,"pid":3328,"hostname":"DESKTOP-II87B4O","msg":"Skipping command changelog. Disabled!"}
+{"level":20,"time":1673286048380,"pid":3328,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command avatar. Disabled!"}
+{"level":20,"time":1673286048382,"pid":3328,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command botinvite. Disabled!"}
+{"level":20,"time":1673286048384,"pid":3328,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command botstats. Disabled!"}
+{"level":20,"time":1673286048387,"pid":3328,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command channelinfo. Disabled!"}
+{"level":20,"time":1673286048388,"pid":3328,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command emojiinfo. Disabled!"}
+{"level":20,"time":1673286048400,"pid":3328,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command guildinfo. Disabled!"}
+{"level":20,"time":1673286048401,"pid":3328,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command uptime. Disabled!"}
+{"level":20,"time":1673286048403,"pid":3328,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command userinfo. Disabled!"}
+{"level":20,"time":1673286048405,"pid":3328,"hostname":"DESKTOP-II87B4O","msg":"Skipping command bot. Disabled!"}
+{"level":20,"time":1673286048407,"pid":3328,"hostname":"DESKTOP-II87B4O","msg":"Skipping command info. Disabled!"}
+{"level":20,"time":1673286048421,"pid":3328,"hostname":"DESKTOP-II87B4O","msg":"Skipping command channel. Disabled!"}
+{"level":20,"time":1673286048424,"pid":3328,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command deafen. Disabled!"}
+{"level":20,"time":1673286048426,"pid":3328,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command disconnect. Disabled!"}
+{"level":20,"time":1673286048429,"pid":3328,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command move. Disabled!"}
+{"level":20,"time":1673286048430,"pid":3328,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command purge. Disabled!"}
+{"level":20,"time":1673286048431,"pid":3328,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command purgeattach. Disabled!"}
+{"level":20,"time":1673286048432,"pid":3328,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command purgebots. Disabled!"}
+{"level":20,"time":1673286048433,"pid":3328,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command purgelinks. Disabled!"}
+{"level":20,"time":1673286048433,"pid":3328,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command purgetoken. Disabled!"}
+{"level":20,"time":1673286048434,"pid":3328,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command purgeuser. Disabled!"}
+{"level":20,"time":1673286048436,"pid":3328,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command undeafen. Disabled!"}
+{"level":20,"time":1673286048437,"pid":3328,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command vmute. Disabled!"}
+{"level":20,"time":1673286048439,"pid":3328,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command vunmute. Disabled!"}
+{"level":20,"time":1673286048441,"pid":3328,"hostname":"DESKTOP-II87B4O","msg":"Skipping command role. Disabled!"}
+{"level":20,"time":1673286048443,"pid":3328,"hostname":"DESKTOP-II87B4O","msg":"Skipping command purge. Disabled!"}
+{"level":20,"time":1673286048445,"pid":3328,"hostname":"DESKTOP-II87B4O","msg":"Skipping command voice. Disabled!"}
+{"level":20,"time":1673286048460,"pid":3328,"hostname":"DESKTOP-II87B4O","msg":"Skipping command blacklist. Disabled!"}
+{"level":20,"time":1673286048461,"pid":3328,"hostname":"DESKTOP-II87B4O","msg":"Skipping command emit. Disabled!"}
+{"level":20,"time":1673286048461,"pid":3328,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command emit. Disabled!"}
+{"level":20,"time":1673286048463,"pid":3328,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command eval. Disabled!"}
+{"level":20,"time":1673286048463,"pid":3328,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command leaveserver. Disabled!"}
+{"level":20,"time":1673286048464,"pid":3328,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command listservers. Disabled!"}
+{"level":20,"time":1673286048482,"pid":3328,"hostname":"DESKTOP-II87B4O","msg":"Skipping command afk. Disabled!"}
+{"level":30,"time":1673286048500,"pid":3328,"hostname":"DESKTOP-II87B4O","msg":"Loaded 96 commands"}
+{"level":30,"time":1673286048500,"pid":3328,"hostname":"DESKTOP-II87B4O","msg":"Loaded 87 slash commands"}
+{"level":30,"time":1673286048500,"pid":3328,"hostname":"DESKTOP-II87B4O","msg":"Loading contexts..."}
+{"level":30,"time":1673286048502,"pid":3328,"hostname":"DESKTOP-II87B4O","msg":"Loaded 0 USER contexts"}
+{"level":30,"time":1673286048502,"pid":3328,"hostname":"DESKTOP-II87B4O","msg":"Loaded 0 MESSAGE contexts"}
+{"level":30,"time":1673286048502,"pid":3328,"hostname":"DESKTOP-II87B4O","msg":"Loading events..."}
+{"level":30,"time":1673286048583,"pid":3328,"hostname":"DESKTOP-II87B4O","msg":"Loaded 25 events. Success (25) Failed (0)"}
+{"level":30,"time":1673286048583,"pid":3328,"hostname":"DESKTOP-II87B4O","msg":"Connecting to MongoDb..."}
+{"level":30,"time":1673286048609,"pid":3328,"hostname":"DESKTOP-II87B4O","msg":"Downtime alerts started on 25999"}
+{"level":30,"time":1673286050034,"pid":3328,"hostname":"DESKTOP-II87B4O","msg":"Mongoose: Database connection established"}
+{"level":30,"time":1673286050035,"pid":3328,"hostname":"DESKTOP-II87B4O","msg":"Launching dashboard"}
+{"level":30,"time":1673286050113,"pid":3328,"hostname":"DESKTOP-II87B4O","msg":"Lightning dashboard is listening on port 8080"}
+{"level":30,"time":1673286055918,"pid":3328,"hostname":"DESKTOP-II87B4O","msg":"Logged in as Elon's Testing Bot#6842! (1024458057188659293)"}
+{"level":30,"time":1673286055918,"pid":3328,"hostname":"DESKTOP-II87B4O","msg":"Initializing giveaways manager..."}
+{"level":30,"time":1673286056020,"pid":3328,"hostname":"DESKTOP-II87B4O","msg":"Giveaway Manager initialized"}
+{"level":30,"time":1673286056344,"pid":3328,"hostname":"DESKTOP-II87B4O","msg":"Successfully registered interactions"}
+{"level":30,"time":1673286056428,"pid":3328,"hostname":"DESKTOP-II87B4O","msg":"Total Clusters: 1"}
+{"level":30,"time":1673286056428,"pid":3328,"hostname":"DESKTOP-II87B4O","msg":"Connected to cluster 0"}
+{"level":30,"time":1673286056428,"pid":3328,"hostname":"DESKTOP-II87B4O","msg":"Total Shards: 2"}
+{"level":30,"time":1673286056437,"pid":3328,"hostname":"DESKTOP-II87B4O","msg":"2 total guilds"}
+{"level":30,"time":1673288528847,"pid":1952,"hostname":"DESKTOP-II87B4O","msg":"Loading commands..."}
+{"level":20,"time":1673288528872,"pid":1952,"hostname":"DESKTOP-II87B4O","msg":"Skipping command announce. Disabled!"}
+{"level":20,"time":1673288528985,"pid":1952,"hostname":"DESKTOP-II87B4O","msg":"Skipping command roles-menu. Disabled!"}
+{"level":20,"time":1673288529145,"pid":1952,"hostname":"DESKTOP-II87B4O","msg":"Skipping command logging. Disabled!"}
+{"level":20,"time":1673288529160,"pid":1952,"hostname":"DESKTOP-II87B4O","msg":"Skipping command starboard. Disabled!"}
+{"level":20,"time":1673288529171,"pid":1952,"hostname":"DESKTOP-II87B4O","msg":"Skipping command verify. Disabled!"}
+{"level":20,"time":1673288529199,"pid":1952,"hostname":"DESKTOP-II87B4O","msg":"Skipping command trick-or-treat. Disabled!"}
+{"level":20,"time":1673288529199,"pid":1952,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command trick-or-treat. Disabled!"}
+{"level":20,"time":1673288530777,"pid":1952,"hostname":"DESKTOP-II87B4O","msg":"Skipping command changelog. Disabled!"}
+{"level":20,"time":1673288530793,"pid":1952,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command avatar. Disabled!"}
+{"level":20,"time":1673288530797,"pid":1952,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command botinvite. Disabled!"}
+{"level":20,"time":1673288530801,"pid":1952,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command botstats. Disabled!"}
+{"level":20,"time":1673288530808,"pid":1952,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command channelinfo. Disabled!"}
+{"level":20,"time":1673288530811,"pid":1952,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command emojiinfo. Disabled!"}
+{"level":20,"time":1673288530849,"pid":1952,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command guildinfo. Disabled!"}
+{"level":20,"time":1673288530851,"pid":1952,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command uptime. Disabled!"}
+{"level":20,"time":1673288530854,"pid":1952,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command userinfo. Disabled!"}
+{"level":20,"time":1673288530862,"pid":1952,"hostname":"DESKTOP-II87B4O","msg":"Skipping command bot. Disabled!"}
+{"level":20,"time":1673288530865,"pid":1952,"hostname":"DESKTOP-II87B4O","msg":"Skipping command info. Disabled!"}
+{"level":20,"time":1673288530903,"pid":1952,"hostname":"DESKTOP-II87B4O","msg":"Skipping command channel. Disabled!"}
+{"level":20,"time":1673288530910,"pid":1952,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command deafen. Disabled!"}
+{"level":20,"time":1673288530913,"pid":1952,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command disconnect. Disabled!"}
+{"level":20,"time":1673288530916,"pid":1952,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command move. Disabled!"}
+{"level":20,"time":1673288530918,"pid":1952,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command purge. Disabled!"}
+{"level":20,"time":1673288530920,"pid":1952,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command purgeattach. Disabled!"}
+{"level":20,"time":1673288530975,"pid":1952,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command purgebots. Disabled!"}
+{"level":20,"time":1673288530977,"pid":1952,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command purgelinks. Disabled!"}
+{"level":20,"time":1673288530979,"pid":1952,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command purgetoken. Disabled!"}
+{"level":20,"time":1673288530981,"pid":1952,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command purgeuser. Disabled!"}
+{"level":20,"time":1673288530984,"pid":1952,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command undeafen. Disabled!"}
+{"level":20,"time":1673288530989,"pid":1952,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command vmute. Disabled!"}
+{"level":20,"time":1673288530993,"pid":1952,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command vunmute. Disabled!"}
+{"level":20,"time":1673288530997,"pid":1952,"hostname":"DESKTOP-II87B4O","msg":"Skipping command role. Disabled!"}
+{"level":20,"time":1673288531002,"pid":1952,"hostname":"DESKTOP-II87B4O","msg":"Skipping command purge. Disabled!"}
+{"level":20,"time":1673288531007,"pid":1952,"hostname":"DESKTOP-II87B4O","msg":"Skipping command voice. Disabled!"}
+{"level":20,"time":1673288531040,"pid":1952,"hostname":"DESKTOP-II87B4O","msg":"Skipping command blacklist. Disabled!"}
+{"level":20,"time":1673288531042,"pid":1952,"hostname":"DESKTOP-II87B4O","msg":"Skipping command emit. Disabled!"}
+{"level":20,"time":1673288531042,"pid":1952,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command emit. Disabled!"}
+{"level":20,"time":1673288531044,"pid":1952,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command eval. Disabled!"}
+{"level":20,"time":1673288531046,"pid":1952,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command leaveserver. Disabled!"}
+{"level":20,"time":1673288531048,"pid":1952,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command listservers. Disabled!"}
+{"level":20,"time":1673288531120,"pid":1952,"hostname":"DESKTOP-II87B4O","msg":"Skipping command afk. Disabled!"}
+{"level":30,"time":1673288531156,"pid":1952,"hostname":"DESKTOP-II87B4O","msg":"Loaded 96 commands"}
+{"level":30,"time":1673288531157,"pid":1952,"hostname":"DESKTOP-II87B4O","msg":"Loaded 87 slash commands"}
+{"level":30,"time":1673288531157,"pid":1952,"hostname":"DESKTOP-II87B4O","msg":"Loading contexts..."}
+{"level":30,"time":1673288531201,"pid":1952,"hostname":"DESKTOP-II87B4O","msg":"Loaded 0 USER contexts"}
+{"level":30,"time":1673288531201,"pid":1952,"hostname":"DESKTOP-II87B4O","msg":"Loaded 0 MESSAGE contexts"}
+{"level":30,"time":1673288531201,"pid":1952,"hostname":"DESKTOP-II87B4O","msg":"Loading events..."}
+{"level":30,"time":1673288531400,"pid":1952,"hostname":"DESKTOP-II87B4O","msg":"Loaded 25 events. Success (25) Failed (0)"}
+{"level":30,"time":1673288531400,"pid":1952,"hostname":"DESKTOP-II87B4O","msg":"Connecting to MongoDb..."}
+{"level":30,"time":1673288531453,"pid":1952,"hostname":"DESKTOP-II87B4O","msg":"Downtime alerts started on 25999"}
+{"level":30,"time":1673288532970,"pid":1952,"hostname":"DESKTOP-II87B4O","msg":"Mongoose: Database connection established"}
+{"level":30,"time":1673288532970,"pid":1952,"hostname":"DESKTOP-II87B4O","msg":"Launching dashboard"}
+{"level":30,"time":1673288533091,"pid":1952,"hostname":"DESKTOP-II87B4O","msg":"Lightning dashboard is listening on port 8080"}
+{"level":30,"time":1673288538932,"pid":1952,"hostname":"DESKTOP-II87B4O","msg":"Logged in as Elon's Testing Bot#6842! (1024458057188659293)"}
+{"level":30,"time":1673288538932,"pid":1952,"hostname":"DESKTOP-II87B4O","msg":"Initializing giveaways manager..."}
+{"level":30,"time":1673288539042,"pid":1952,"hostname":"DESKTOP-II87B4O","msg":"Giveaway Manager initialized"}
+{"level":30,"time":1673288539372,"pid":1952,"hostname":"DESKTOP-II87B4O","msg":"Successfully registered interactions"}
+{"level":30,"time":1673288539472,"pid":1952,"hostname":"DESKTOP-II87B4O","msg":"Total Clusters: 1"}
+{"level":30,"time":1673288539472,"pid":1952,"hostname":"DESKTOP-II87B4O","msg":"Connected to cluster 0"}
+{"level":30,"time":1673288539472,"pid":1952,"hostname":"DESKTOP-II87B4O","msg":"Total Shards: 2"}
+{"level":30,"time":1673288539482,"pid":1952,"hostname":"DESKTOP-II87B4O","msg":"2 total guilds"}
+{"level":30,"time":1673297033861,"pid":856,"hostname":"DESKTOP-II87B4O","msg":"Loading commands..."}
+{"level":20,"time":1673297033896,"pid":856,"hostname":"DESKTOP-II87B4O","msg":"Skipping command announce. Disabled!"}
+{"level":20,"time":1673297034077,"pid":856,"hostname":"DESKTOP-II87B4O","msg":"Skipping command roles-menu. Disabled!"}
+{"level":20,"time":1673297034233,"pid":856,"hostname":"DESKTOP-II87B4O","msg":"Skipping command logging. Disabled!"}
+{"level":20,"time":1673297034252,"pid":856,"hostname":"DESKTOP-II87B4O","msg":"Skipping command starboard. Disabled!"}
+{"level":20,"time":1673297034257,"pid":856,"hostname":"DESKTOP-II87B4O","msg":"Skipping command verify. Disabled!"}
+{"level":20,"time":1673297034282,"pid":856,"hostname":"DESKTOP-II87B4O","msg":"Skipping command trick-or-treat. Disabled!"}
+{"level":20,"time":1673297034282,"pid":856,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command trick-or-treat. Disabled!"}
+{"level":20,"time":1673297035253,"pid":856,"hostname":"DESKTOP-II87B4O","msg":"Skipping command changelog. Disabled!"}
+{"level":20,"time":1673297035266,"pid":856,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command avatar. Disabled!"}
+{"level":20,"time":1673297035269,"pid":856,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command botinvite. Disabled!"}
+{"level":20,"time":1673297035273,"pid":856,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command botstats. Disabled!"}
+{"level":20,"time":1673297035279,"pid":856,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command channelinfo. Disabled!"}
+{"level":20,"time":1673297035282,"pid":856,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command emojiinfo. Disabled!"}
+{"level":20,"time":1673297035300,"pid":856,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command guildinfo. Disabled!"}
+{"level":20,"time":1673297035301,"pid":856,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command uptime. Disabled!"}
+{"level":20,"time":1673297035305,"pid":856,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command userinfo. Disabled!"}
+{"level":20,"time":1673297035309,"pid":856,"hostname":"DESKTOP-II87B4O","msg":"Skipping command bot. Disabled!"}
+{"level":20,"time":1673297035311,"pid":856,"hostname":"DESKTOP-II87B4O","msg":"Skipping command info. Disabled!"}
+{"level":20,"time":1673297035337,"pid":856,"hostname":"DESKTOP-II87B4O","msg":"Skipping command channel. Disabled!"}
+{"level":20,"time":1673297035343,"pid":856,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command deafen. Disabled!"}
+{"level":20,"time":1673297035346,"pid":856,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command disconnect. Disabled!"}
+{"level":20,"time":1673297035349,"pid":856,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command move. Disabled!"}
+{"level":20,"time":1673297035351,"pid":856,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command purge. Disabled!"}
+{"level":20,"time":1673297035353,"pid":856,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command purgeattach. Disabled!"}
+{"level":20,"time":1673297035354,"pid":856,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command purgebots. Disabled!"}
+{"level":20,"time":1673297035355,"pid":856,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command purgelinks. Disabled!"}
+{"level":20,"time":1673297035357,"pid":856,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command purgetoken. Disabled!"}
+{"level":20,"time":1673297035359,"pid":856,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command purgeuser. Disabled!"}
+{"level":20,"time":1673297035362,"pid":856,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command undeafen. Disabled!"}
+{"level":20,"time":1673297035365,"pid":856,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command vmute. Disabled!"}
+{"level":20,"time":1673297035368,"pid":856,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command vunmute. Disabled!"}
+{"level":20,"time":1673297035372,"pid":856,"hostname":"DESKTOP-II87B4O","msg":"Skipping command role. Disabled!"}
+{"level":20,"time":1673297035376,"pid":856,"hostname":"DESKTOP-II87B4O","msg":"Skipping command purge. Disabled!"}
+{"level":20,"time":1673297035385,"pid":856,"hostname":"DESKTOP-II87B4O","msg":"Skipping command voice. Disabled!"}
+{"level":20,"time":1673297035435,"pid":856,"hostname":"DESKTOP-II87B4O","msg":"Skipping command blacklist. Disabled!"}
+{"level":20,"time":1673297035437,"pid":856,"hostname":"DESKTOP-II87B4O","msg":"Skipping command emit. Disabled!"}
+{"level":20,"time":1673297035437,"pid":856,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command emit. Disabled!"}
+{"level":20,"time":1673297035439,"pid":856,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command eval. Disabled!"}
+{"level":20,"time":1673297035440,"pid":856,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command leaveserver. Disabled!"}
+{"level":20,"time":1673297035441,"pid":856,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command listservers. Disabled!"}
+{"level":20,"time":1673297035471,"pid":856,"hostname":"DESKTOP-II87B4O","msg":"Skipping command afk. Disabled!"}
+{"level":30,"time":1673297035505,"pid":856,"hostname":"DESKTOP-II87B4O","msg":"Loaded 96 commands"}
+{"level":30,"time":1673297035505,"pid":856,"hostname":"DESKTOP-II87B4O","msg":"Loaded 87 slash commands"}
+{"level":30,"time":1673297035506,"pid":856,"hostname":"DESKTOP-II87B4O","msg":"Loading contexts..."}
+{"level":30,"time":1673297035509,"pid":856,"hostname":"DESKTOP-II87B4O","msg":"Loaded 0 USER contexts"}
+{"level":30,"time":1673297035509,"pid":856,"hostname":"DESKTOP-II87B4O","msg":"Loaded 0 MESSAGE contexts"}
+{"level":30,"time":1673297035510,"pid":856,"hostname":"DESKTOP-II87B4O","msg":"Loading events..."}
+{"level":30,"time":1673297035640,"pid":856,"hostname":"DESKTOP-II87B4O","msg":"Loaded 25 events. Success (25) Failed (0)"}
+{"level":30,"time":1673297035640,"pid":856,"hostname":"DESKTOP-II87B4O","msg":"Connecting to MongoDb..."}
+{"level":30,"time":1673297035671,"pid":856,"hostname":"DESKTOP-II87B4O","msg":"Downtime alerts started on 25999"}
+{"level":30,"time":1673297037106,"pid":856,"hostname":"DESKTOP-II87B4O","msg":"Mongoose: Database connection established"}
+{"level":30,"time":1673297037106,"pid":856,"hostname":"DESKTOP-II87B4O","msg":"Launching dashboard"}
+{"level":30,"time":1673297037206,"pid":856,"hostname":"DESKTOP-II87B4O","msg":"Lightning dashboard is listening on port 8080"}
+{"level":30,"time":1673297043053,"pid":856,"hostname":"DESKTOP-II87B4O","msg":"Logged in as Elon's Testing Bot#6842! (1024458057188659293)"}
+{"level":30,"time":1673297043053,"pid":856,"hostname":"DESKTOP-II87B4O","msg":"Initializing giveaways manager..."}
+{"level":30,"time":1673297043158,"pid":856,"hostname":"DESKTOP-II87B4O","msg":"Giveaway Manager initialized"}
+{"level":30,"time":1673297043685,"pid":856,"hostname":"DESKTOP-II87B4O","msg":"Successfully registered interactions"}
+{"level":30,"time":1673297043779,"pid":856,"hostname":"DESKTOP-II87B4O","msg":"Total Clusters: 1"}
+{"level":30,"time":1673297043779,"pid":856,"hostname":"DESKTOP-II87B4O","msg":"Connected to cluster 0"}
+{"level":30,"time":1673297043779,"pid":856,"hostname":"DESKTOP-II87B4O","msg":"Total Shards: 2"}
+{"level":30,"time":1673297043786,"pid":856,"hostname":"DESKTOP-II87B4O","msg":"2 total guilds"}
+{"level":30,"time":1673297160097,"pid":10388,"hostname":"DESKTOP-II87B4O","msg":"Loading commands..."}
+{"level":20,"time":1673297160135,"pid":10388,"hostname":"DESKTOP-II87B4O","msg":"Skipping command announce. Disabled!"}
+{"level":20,"time":1673297160284,"pid":10388,"hostname":"DESKTOP-II87B4O","msg":"Skipping command roles-menu. Disabled!"}
+{"level":20,"time":1673297160425,"pid":10388,"hostname":"DESKTOP-II87B4O","msg":"Skipping command logging. Disabled!"}
+{"level":20,"time":1673297160454,"pid":10388,"hostname":"DESKTOP-II87B4O","msg":"Skipping command starboard. Disabled!"}
+{"level":20,"time":1673297160459,"pid":10388,"hostname":"DESKTOP-II87B4O","msg":"Skipping command verify. Disabled!"}
+{"level":20,"time":1673297160489,"pid":10388,"hostname":"DESKTOP-II87B4O","msg":"Skipping command trick-or-treat. Disabled!"}
+{"level":20,"time":1673297160489,"pid":10388,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command trick-or-treat. Disabled!"}
+{"level":20,"time":1673297161427,"pid":10388,"hostname":"DESKTOP-II87B4O","msg":"Skipping command changelog. Disabled!"}
+{"level":20,"time":1673297161438,"pid":10388,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command avatar. Disabled!"}
+{"level":20,"time":1673297161440,"pid":10388,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command botinvite. Disabled!"}
+{"level":20,"time":1673297161443,"pid":10388,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command botstats. Disabled!"}
+{"level":20,"time":1673297161448,"pid":10388,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command channelinfo. Disabled!"}
+{"level":20,"time":1673297161450,"pid":10388,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command emojiinfo. Disabled!"}
+{"level":20,"time":1673297161493,"pid":10388,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command guildinfo. Disabled!"}
+{"level":20,"time":1673297161496,"pid":10388,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command uptime. Disabled!"}
+{"level":20,"time":1673297161499,"pid":10388,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command userinfo. Disabled!"}
+{"level":20,"time":1673297161504,"pid":10388,"hostname":"DESKTOP-II87B4O","msg":"Skipping command bot. Disabled!"}
+{"level":20,"time":1673297161506,"pid":10388,"hostname":"DESKTOP-II87B4O","msg":"Skipping command info. Disabled!"}
+{"level":20,"time":1673297161559,"pid":10388,"hostname":"DESKTOP-II87B4O","msg":"Skipping command channel. Disabled!"}
+{"level":20,"time":1673297161566,"pid":10388,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command deafen. Disabled!"}
+{"level":20,"time":1673297161569,"pid":10388,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command disconnect. Disabled!"}
+{"level":20,"time":1673297161572,"pid":10388,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command move. Disabled!"}
+{"level":20,"time":1673297161574,"pid":10388,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command purge. Disabled!"}
+{"level":20,"time":1673297161587,"pid":10388,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command purgeattach. Disabled!"}
+{"level":20,"time":1673297161593,"pid":10388,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command purgebots. Disabled!"}
+{"level":20,"time":1673297161597,"pid":10388,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command purgelinks. Disabled!"}
+{"level":20,"time":1673297161599,"pid":10388,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command purgetoken. Disabled!"}
+{"level":20,"time":1673297161600,"pid":10388,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command purgeuser. Disabled!"}
+{"level":20,"time":1673297161603,"pid":10388,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command undeafen. Disabled!"}
+{"level":20,"time":1673297161607,"pid":10388,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command vmute. Disabled!"}
+{"level":20,"time":1673297161609,"pid":10388,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command vunmute. Disabled!"}
+{"level":20,"time":1673297161611,"pid":10388,"hostname":"DESKTOP-II87B4O","msg":"Skipping command role. Disabled!"}
+{"level":20,"time":1673297161614,"pid":10388,"hostname":"DESKTOP-II87B4O","msg":"Skipping command purge. Disabled!"}
+{"level":20,"time":1673297161617,"pid":10388,"hostname":"DESKTOP-II87B4O","msg":"Skipping command voice. Disabled!"}
+{"level":20,"time":1673297161643,"pid":10388,"hostname":"DESKTOP-II87B4O","msg":"Skipping command blacklist. Disabled!"}
+{"level":20,"time":1673297161645,"pid":10388,"hostname":"DESKTOP-II87B4O","msg":"Skipping command emit. Disabled!"}
+{"level":20,"time":1673297161645,"pid":10388,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command emit. Disabled!"}
+{"level":20,"time":1673297161647,"pid":10388,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command eval. Disabled!"}
+{"level":20,"time":1673297161648,"pid":10388,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command leaveserver. Disabled!"}
+{"level":20,"time":1673297161650,"pid":10388,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command listservers. Disabled!"}
+{"level":20,"time":1673297161685,"pid":10388,"hostname":"DESKTOP-II87B4O","msg":"Skipping command afk. Disabled!"}
+{"level":30,"time":1673297161735,"pid":10388,"hostname":"DESKTOP-II87B4O","msg":"Loaded 96 commands"}
+{"level":30,"time":1673297161735,"pid":10388,"hostname":"DESKTOP-II87B4O","msg":"Loaded 87 slash commands"}
+{"level":30,"time":1673297161735,"pid":10388,"hostname":"DESKTOP-II87B4O","msg":"Loading contexts..."}
+{"level":30,"time":1673297161741,"pid":10388,"hostname":"DESKTOP-II87B4O","msg":"Loaded 0 USER contexts"}
+{"level":30,"time":1673297161741,"pid":10388,"hostname":"DESKTOP-II87B4O","msg":"Loaded 0 MESSAGE contexts"}
+{"level":30,"time":1673297161741,"pid":10388,"hostname":"DESKTOP-II87B4O","msg":"Loading events..."}
+{"level":30,"time":1673297161905,"pid":10388,"hostname":"DESKTOP-II87B4O","msg":"Loaded 25 events. Success (25) Failed (0)"}
+{"level":30,"time":1673297161906,"pid":10388,"hostname":"DESKTOP-II87B4O","msg":"Connecting to MongoDb..."}
+{"level":30,"time":1673297161944,"pid":10388,"hostname":"DESKTOP-II87B4O","msg":"Downtime alerts started on 25999"}
+{"level":30,"time":1673297163237,"pid":10388,"hostname":"DESKTOP-II87B4O","msg":"Mongoose: Database connection established"}
+{"level":30,"time":1673297163237,"pid":10388,"hostname":"DESKTOP-II87B4O","msg":"Launching dashboard"}
+{"level":30,"time":1673297163336,"pid":10388,"hostname":"DESKTOP-II87B4O","msg":"Lightning dashboard is listening on port 8080"}
+{"level":30,"time":1673297169169,"pid":10388,"hostname":"DESKTOP-II87B4O","msg":"Logged in as Elon's Testing Bot#6842! (1024458057188659293)"}
+{"level":30,"time":1673297169169,"pid":10388,"hostname":"DESKTOP-II87B4O","msg":"Initializing giveaways manager..."}
+{"level":30,"time":1673297169281,"pid":10388,"hostname":"DESKTOP-II87B4O","msg":"Giveaway Manager initialized"}
+{"level":30,"time":1673297169580,"pid":10388,"hostname":"DESKTOP-II87B4O","msg":"Successfully registered interactions"}
+{"level":30,"time":1673297169674,"pid":10388,"hostname":"DESKTOP-II87B4O","msg":"Total Clusters: 1"}
+{"level":30,"time":1673297169674,"pid":10388,"hostname":"DESKTOP-II87B4O","msg":"Connected to cluster 0"}
+{"level":30,"time":1673297169674,"pid":10388,"hostname":"DESKTOP-II87B4O","msg":"Total Shards: 2"}
+{"level":30,"time":1673297169680,"pid":10388,"hostname":"DESKTOP-II87B4O","msg":"2 total guilds"}
+{"level":30,"time":1673297335859,"pid":9248,"hostname":"DESKTOP-II87B4O","msg":"Loading commands..."}
+{"level":20,"time":1673297335886,"pid":9248,"hostname":"DESKTOP-II87B4O","msg":"Skipping command announce. Disabled!"}
+{"level":20,"time":1673297335967,"pid":9248,"hostname":"DESKTOP-II87B4O","msg":"Skipping command roles-menu. Disabled!"}
+{"level":20,"time":1673297336073,"pid":9248,"hostname":"DESKTOP-II87B4O","msg":"Skipping command logging. Disabled!"}
+{"level":20,"time":1673297336089,"pid":9248,"hostname":"DESKTOP-II87B4O","msg":"Skipping command starboard. Disabled!"}
+{"level":20,"time":1673297336093,"pid":9248,"hostname":"DESKTOP-II87B4O","msg":"Skipping command verify. Disabled!"}
+{"level":20,"time":1673297336108,"pid":9248,"hostname":"DESKTOP-II87B4O","msg":"Skipping command trick-or-treat. Disabled!"}
+{"level":20,"time":1673297336108,"pid":9248,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command trick-or-treat. Disabled!"}
+{"level":20,"time":1673297336784,"pid":9248,"hostname":"DESKTOP-II87B4O","msg":"Skipping command changelog. Disabled!"}
+{"level":20,"time":1673297336794,"pid":9248,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command avatar. Disabled!"}
+{"level":20,"time":1673297336796,"pid":9248,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command botinvite. Disabled!"}
+{"level":20,"time":1673297336798,"pid":9248,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command botstats. Disabled!"}
+{"level":20,"time":1673297336801,"pid":9248,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command channelinfo. Disabled!"}
+{"level":20,"time":1673297336803,"pid":9248,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command emojiinfo. Disabled!"}
+{"level":20,"time":1673297336816,"pid":9248,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command guildinfo. Disabled!"}
+{"level":20,"time":1673297336817,"pid":9248,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command uptime. Disabled!"}
+{"level":20,"time":1673297336819,"pid":9248,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command userinfo. Disabled!"}
+{"level":20,"time":1673297336824,"pid":9248,"hostname":"DESKTOP-II87B4O","msg":"Skipping command bot. Disabled!"}
+{"level":20,"time":1673297336825,"pid":9248,"hostname":"DESKTOP-II87B4O","msg":"Skipping command info. Disabled!"}
+{"level":20,"time":1673297336840,"pid":9248,"hostname":"DESKTOP-II87B4O","msg":"Skipping command channel. Disabled!"}
+{"level":20,"time":1673297336844,"pid":9248,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command deafen. Disabled!"}
+{"level":20,"time":1673297336846,"pid":9248,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command disconnect. Disabled!"}
+{"level":20,"time":1673297336848,"pid":9248,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command move. Disabled!"}
+{"level":20,"time":1673297336849,"pid":9248,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command purge. Disabled!"}
+{"level":20,"time":1673297336849,"pid":9248,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command purgeattach. Disabled!"}
+{"level":20,"time":1673297336850,"pid":9248,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command purgebots. Disabled!"}
+{"level":20,"time":1673297336851,"pid":9248,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command purgelinks. Disabled!"}
+{"level":20,"time":1673297336852,"pid":9248,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command purgetoken. Disabled!"}
+{"level":20,"time":1673297336853,"pid":9248,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command purgeuser. Disabled!"}
+{"level":20,"time":1673297336855,"pid":9248,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command undeafen. Disabled!"}
+{"level":20,"time":1673297336858,"pid":9248,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command vmute. Disabled!"}
+{"level":20,"time":1673297336860,"pid":9248,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command vunmute. Disabled!"}
+{"level":20,"time":1673297336862,"pid":9248,"hostname":"DESKTOP-II87B4O","msg":"Skipping command role. Disabled!"}
+{"level":20,"time":1673297336864,"pid":9248,"hostname":"DESKTOP-II87B4O","msg":"Skipping command purge. Disabled!"}
+{"level":20,"time":1673297336866,"pid":9248,"hostname":"DESKTOP-II87B4O","msg":"Skipping command voice. Disabled!"}
+{"level":20,"time":1673297336882,"pid":9248,"hostname":"DESKTOP-II87B4O","msg":"Skipping command blacklist. Disabled!"}
+{"level":20,"time":1673297336883,"pid":9248,"hostname":"DESKTOP-II87B4O","msg":"Skipping command emit. Disabled!"}
+{"level":20,"time":1673297336883,"pid":9248,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command emit. Disabled!"}
+{"level":20,"time":1673297336884,"pid":9248,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command eval. Disabled!"}
+{"level":20,"time":1673297336885,"pid":9248,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command leaveserver. Disabled!"}
+{"level":20,"time":1673297336886,"pid":9248,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command listservers. Disabled!"}
+{"level":20,"time":1673297336908,"pid":9248,"hostname":"DESKTOP-II87B4O","msg":"Skipping command afk. Disabled!"}
+{"level":30,"time":1673297336929,"pid":9248,"hostname":"DESKTOP-II87B4O","msg":"Loaded 96 commands"}
+{"level":30,"time":1673297336929,"pid":9248,"hostname":"DESKTOP-II87B4O","msg":"Loaded 87 slash commands"}
+{"level":30,"time":1673297336930,"pid":9248,"hostname":"DESKTOP-II87B4O","msg":"Loading contexts..."}
+{"level":30,"time":1673297336931,"pid":9248,"hostname":"DESKTOP-II87B4O","msg":"Loaded 0 USER contexts"}
+{"level":30,"time":1673297336931,"pid":9248,"hostname":"DESKTOP-II87B4O","msg":"Loaded 0 MESSAGE contexts"}
+{"level":30,"time":1673297336932,"pid":9248,"hostname":"DESKTOP-II87B4O","msg":"Loading events..."}
+{"level":30,"time":1673297337021,"pid":9248,"hostname":"DESKTOP-II87B4O","msg":"Loaded 25 events. Success (25) Failed (0)"}
+{"level":30,"time":1673297337021,"pid":9248,"hostname":"DESKTOP-II87B4O","msg":"Connecting to MongoDb..."}
+{"level":30,"time":1673297337049,"pid":9248,"hostname":"DESKTOP-II87B4O","msg":"Downtime alerts started on 25999"}
+{"level":30,"time":1673297338375,"pid":9248,"hostname":"DESKTOP-II87B4O","msg":"Mongoose: Database connection established"}
+{"level":30,"time":1673297338375,"pid":9248,"hostname":"DESKTOP-II87B4O","msg":"Launching dashboard"}
+{"level":30,"time":1673297338452,"pid":9248,"hostname":"DESKTOP-II87B4O","msg":"Lightning dashboard is listening on port 8080"}
+{"level":30,"time":1673297344212,"pid":9248,"hostname":"DESKTOP-II87B4O","msg":"Logged in as Elon's Testing Bot#6842! (1024458057188659293)"}
+{"level":30,"time":1673297344212,"pid":9248,"hostname":"DESKTOP-II87B4O","msg":"Initializing giveaways manager..."}
+{"level":30,"time":1673297344309,"pid":9248,"hostname":"DESKTOP-II87B4O","msg":"Giveaway Manager initialized"}
+{"level":30,"time":1673297344650,"pid":9248,"hostname":"DESKTOP-II87B4O","msg":"Successfully registered interactions"}
+{"level":30,"time":1673297344741,"pid":9248,"hostname":"DESKTOP-II87B4O","msg":"Total Clusters: 1"}
+{"level":30,"time":1673297344741,"pid":9248,"hostname":"DESKTOP-II87B4O","msg":"Connected to cluster 0"}
+{"level":30,"time":1673297344742,"pid":9248,"hostname":"DESKTOP-II87B4O","msg":"Total Shards: 2"}
+{"level":30,"time":1673297344750,"pid":9248,"hostname":"DESKTOP-II87B4O","msg":"2 total guilds"}
+{"level":30,"time":1673297367118,"pid":14076,"hostname":"DESKTOP-II87B4O","msg":"Loading commands..."}
+{"level":20,"time":1673297367139,"pid":14076,"hostname":"DESKTOP-II87B4O","msg":"Skipping command announce. Disabled!"}
+{"level":20,"time":1673297367212,"pid":14076,"hostname":"DESKTOP-II87B4O","msg":"Skipping command roles-menu. Disabled!"}
+{"level":20,"time":1673297367310,"pid":14076,"hostname":"DESKTOP-II87B4O","msg":"Skipping command logging. Disabled!"}
+{"level":20,"time":1673297367324,"pid":14076,"hostname":"DESKTOP-II87B4O","msg":"Skipping command starboard. Disabled!"}
+{"level":20,"time":1673297367327,"pid":14076,"hostname":"DESKTOP-II87B4O","msg":"Skipping command verify. Disabled!"}
+{"level":20,"time":1673297367341,"pid":14076,"hostname":"DESKTOP-II87B4O","msg":"Skipping command trick-or-treat. Disabled!"}
+{"level":20,"time":1673297367341,"pid":14076,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command trick-or-treat. Disabled!"}
+{"level":20,"time":1673297367945,"pid":14076,"hostname":"DESKTOP-II87B4O","msg":"Skipping command changelog. Disabled!"}
+{"level":20,"time":1673297367952,"pid":14076,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command avatar. Disabled!"}
+{"level":20,"time":1673297367954,"pid":14076,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command botinvite. Disabled!"}
+{"level":20,"time":1673297367957,"pid":14076,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command botstats. Disabled!"}
+{"level":20,"time":1673297367960,"pid":14076,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command channelinfo. Disabled!"}
+{"level":20,"time":1673297367961,"pid":14076,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command emojiinfo. Disabled!"}
+{"level":20,"time":1673297367973,"pid":14076,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command guildinfo. Disabled!"}
+{"level":20,"time":1673297367974,"pid":14076,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command uptime. Disabled!"}
+{"level":20,"time":1673297367975,"pid":14076,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command userinfo. Disabled!"}
+{"level":20,"time":1673297367978,"pid":14076,"hostname":"DESKTOP-II87B4O","msg":"Skipping command bot. Disabled!"}
+{"level":20,"time":1673297367979,"pid":14076,"hostname":"DESKTOP-II87B4O","msg":"Skipping command info. Disabled!"}
+{"level":20,"time":1673297367992,"pid":14076,"hostname":"DESKTOP-II87B4O","msg":"Skipping command channel. Disabled!"}
+{"level":20,"time":1673297367996,"pid":14076,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command deafen. Disabled!"}
+{"level":20,"time":1673297367997,"pid":14076,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command disconnect. Disabled!"}
+{"level":20,"time":1673297367999,"pid":14076,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command move. Disabled!"}
+{"level":20,"time":1673297368000,"pid":14076,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command purge. Disabled!"}
+{"level":20,"time":1673297368000,"pid":14076,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command purgeattach. Disabled!"}
+{"level":20,"time":1673297368001,"pid":14076,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command purgebots. Disabled!"}
+{"level":20,"time":1673297368002,"pid":14076,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command purgelinks. Disabled!"}
+{"level":20,"time":1673297368003,"pid":14076,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command purgetoken. Disabled!"}
+{"level":20,"time":1673297368004,"pid":14076,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command purgeuser. Disabled!"}
+{"level":20,"time":1673297368009,"pid":14076,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command undeafen. Disabled!"}
+{"level":20,"time":1673297368010,"pid":14076,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command vmute. Disabled!"}
+{"level":20,"time":1673297368012,"pid":14076,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command vunmute. Disabled!"}
+{"level":20,"time":1673297368014,"pid":14076,"hostname":"DESKTOP-II87B4O","msg":"Skipping command role. Disabled!"}
+{"level":20,"time":1673297368015,"pid":14076,"hostname":"DESKTOP-II87B4O","msg":"Skipping command purge. Disabled!"}
+{"level":20,"time":1673297368017,"pid":14076,"hostname":"DESKTOP-II87B4O","msg":"Skipping command voice. Disabled!"}
+{"level":20,"time":1673297368028,"pid":14076,"hostname":"DESKTOP-II87B4O","msg":"Skipping command blacklist. Disabled!"}
+{"level":20,"time":1673297368029,"pid":14076,"hostname":"DESKTOP-II87B4O","msg":"Skipping command emit. Disabled!"}
+{"level":20,"time":1673297368029,"pid":14076,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command emit. Disabled!"}
+{"level":20,"time":1673297368030,"pid":14076,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command eval. Disabled!"}
+{"level":20,"time":1673297368030,"pid":14076,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command leaveserver. Disabled!"}
+{"level":20,"time":1673297368031,"pid":14076,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command listservers. Disabled!"}
+{"level":20,"time":1673297368050,"pid":14076,"hostname":"DESKTOP-II87B4O","msg":"Skipping command afk. Disabled!"}
+{"level":30,"time":1673297368067,"pid":14076,"hostname":"DESKTOP-II87B4O","msg":"Loaded 96 commands"}
+{"level":30,"time":1673297368067,"pid":14076,"hostname":"DESKTOP-II87B4O","msg":"Loaded 87 slash commands"}
+{"level":30,"time":1673297368067,"pid":14076,"hostname":"DESKTOP-II87B4O","msg":"Loading contexts..."}
+{"level":30,"time":1673297368069,"pid":14076,"hostname":"DESKTOP-II87B4O","msg":"Loaded 0 USER contexts"}
+{"level":30,"time":1673297368069,"pid":14076,"hostname":"DESKTOP-II87B4O","msg":"Loaded 0 MESSAGE contexts"}
+{"level":30,"time":1673297368069,"pid":14076,"hostname":"DESKTOP-II87B4O","msg":"Loading events..."}
+{"level":30,"time":1673297368152,"pid":14076,"hostname":"DESKTOP-II87B4O","msg":"Loaded 25 events. Success (25) Failed (0)"}
+{"level":30,"time":1673297368153,"pid":14076,"hostname":"DESKTOP-II87B4O","msg":"Connecting to MongoDb..."}
+{"level":30,"time":1673297368176,"pid":14076,"hostname":"DESKTOP-II87B4O","msg":"Downtime alerts started on 25999"}
+{"level":30,"time":1673297369171,"pid":14076,"hostname":"DESKTOP-II87B4O","msg":"Mongoose: Database connection established"}
+{"level":30,"time":1673297369172,"pid":14076,"hostname":"DESKTOP-II87B4O","msg":"Launching dashboard"}
+{"level":30,"time":1673297369245,"pid":14076,"hostname":"DESKTOP-II87B4O","msg":"Lightning dashboard is listening on port 8080"}
+{"level":30,"time":1673297374944,"pid":14076,"hostname":"DESKTOP-II87B4O","msg":"Logged in as Elon's Testing Bot#6842! (1024458057188659293)"}
+{"level":30,"time":1673297374945,"pid":14076,"hostname":"DESKTOP-II87B4O","msg":"Initializing giveaways manager..."}
+{"level":30,"time":1673297375040,"pid":14076,"hostname":"DESKTOP-II87B4O","msg":"Giveaway Manager initialized"}
+{"level":30,"time":1673297375407,"pid":14076,"hostname":"DESKTOP-II87B4O","msg":"Successfully registered interactions"}
+{"level":30,"time":1673297375489,"pid":14076,"hostname":"DESKTOP-II87B4O","msg":"Total Clusters: 1"}
+{"level":30,"time":1673297375489,"pid":14076,"hostname":"DESKTOP-II87B4O","msg":"Connected to cluster 0"}
+{"level":30,"time":1673297375489,"pid":14076,"hostname":"DESKTOP-II87B4O","msg":"Total Shards: 2"}
+{"level":30,"time":1673297375501,"pid":14076,"hostname":"DESKTOP-II87B4O","msg":"2 total guilds"}
+{"level":30,"time":1673297427098,"pid":4292,"hostname":"DESKTOP-II87B4O","msg":"Loading commands..."}
+{"level":20,"time":1673297427122,"pid":4292,"hostname":"DESKTOP-II87B4O","msg":"Skipping command announce. Disabled!"}
+{"level":20,"time":1673297427207,"pid":4292,"hostname":"DESKTOP-II87B4O","msg":"Skipping command roles-menu. Disabled!"}
+{"level":20,"time":1673297427369,"pid":4292,"hostname":"DESKTOP-II87B4O","msg":"Skipping command logging. Disabled!"}
+{"level":20,"time":1673297427395,"pid":4292,"hostname":"DESKTOP-II87B4O","msg":"Skipping command starboard. Disabled!"}
+{"level":20,"time":1673297427400,"pid":4292,"hostname":"DESKTOP-II87B4O","msg":"Skipping command verify. Disabled!"}
+{"level":20,"time":1673297427420,"pid":4292,"hostname":"DESKTOP-II87B4O","msg":"Skipping command trick-or-treat. Disabled!"}
+{"level":20,"time":1673297427420,"pid":4292,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command trick-or-treat. Disabled!"}
+{"level":20,"time":1673297428146,"pid":4292,"hostname":"DESKTOP-II87B4O","msg":"Skipping command changelog. Disabled!"}
+{"level":20,"time":1673297428153,"pid":4292,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command avatar. Disabled!"}
+{"level":20,"time":1673297428155,"pid":4292,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command botinvite. Disabled!"}
+{"level":20,"time":1673297428158,"pid":4292,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command botstats. Disabled!"}
+{"level":20,"time":1673297428161,"pid":4292,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command channelinfo. Disabled!"}
+{"level":20,"time":1673297428162,"pid":4292,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command emojiinfo. Disabled!"}
+{"level":20,"time":1673297428173,"pid":4292,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command guildinfo. Disabled!"}
+{"level":20,"time":1673297428174,"pid":4292,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command uptime. Disabled!"}
+{"level":20,"time":1673297428176,"pid":4292,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command userinfo. Disabled!"}
+{"level":20,"time":1673297428179,"pid":4292,"hostname":"DESKTOP-II87B4O","msg":"Skipping command bot. Disabled!"}
+{"level":20,"time":1673297428180,"pid":4292,"hostname":"DESKTOP-II87B4O","msg":"Skipping command info. Disabled!"}
+{"level":20,"time":1673297428194,"pid":4292,"hostname":"DESKTOP-II87B4O","msg":"Skipping command channel. Disabled!"}
+{"level":20,"time":1673297428197,"pid":4292,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command deafen. Disabled!"}
+{"level":20,"time":1673297428198,"pid":4292,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command disconnect. Disabled!"}
+{"level":20,"time":1673297428201,"pid":4292,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command move. Disabled!"}
+{"level":20,"time":1673297428202,"pid":4292,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command purge. Disabled!"}
+{"level":20,"time":1673297428202,"pid":4292,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command purgeattach. Disabled!"}
+{"level":20,"time":1673297428203,"pid":4292,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command purgebots. Disabled!"}
+{"level":20,"time":1673297428204,"pid":4292,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command purgelinks. Disabled!"}
+{"level":20,"time":1673297428205,"pid":4292,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command purgetoken. Disabled!"}
+{"level":20,"time":1673297428206,"pid":4292,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command purgeuser. Disabled!"}
+{"level":20,"time":1673297428207,"pid":4292,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command undeafen. Disabled!"}
+{"level":20,"time":1673297428209,"pid":4292,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command vmute. Disabled!"}
+{"level":20,"time":1673297428210,"pid":4292,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command vunmute. Disabled!"}
+{"level":20,"time":1673297428212,"pid":4292,"hostname":"DESKTOP-II87B4O","msg":"Skipping command role. Disabled!"}
+{"level":20,"time":1673297428217,"pid":4292,"hostname":"DESKTOP-II87B4O","msg":"Skipping command purge. Disabled!"}
+{"level":20,"time":1673297428219,"pid":4292,"hostname":"DESKTOP-II87B4O","msg":"Skipping command voice. Disabled!"}
+{"level":20,"time":1673297428229,"pid":4292,"hostname":"DESKTOP-II87B4O","msg":"Skipping command blacklist. Disabled!"}
+{"level":20,"time":1673297428231,"pid":4292,"hostname":"DESKTOP-II87B4O","msg":"Skipping command emit. Disabled!"}
+{"level":20,"time":1673297428231,"pid":4292,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command emit. Disabled!"}
+{"level":20,"time":1673297428232,"pid":4292,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command eval. Disabled!"}
+{"level":20,"time":1673297428232,"pid":4292,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command leaveserver. Disabled!"}
+{"level":20,"time":1673297428233,"pid":4292,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command listservers. Disabled!"}
+{"level":20,"time":1673297428252,"pid":4292,"hostname":"DESKTOP-II87B4O","msg":"Skipping command afk. Disabled!"}
+{"level":30,"time":1673297428275,"pid":4292,"hostname":"DESKTOP-II87B4O","msg":"Loaded 96 commands"}
+{"level":30,"time":1673297428275,"pid":4292,"hostname":"DESKTOP-II87B4O","msg":"Loaded 87 slash commands"}
+{"level":30,"time":1673297428275,"pid":4292,"hostname":"DESKTOP-II87B4O","msg":"Loading contexts..."}
+{"level":30,"time":1673297428278,"pid":4292,"hostname":"DESKTOP-II87B4O","msg":"Loaded 0 USER contexts"}
+{"level":30,"time":1673297428278,"pid":4292,"hostname":"DESKTOP-II87B4O","msg":"Loaded 0 MESSAGE contexts"}
+{"level":30,"time":1673297428278,"pid":4292,"hostname":"DESKTOP-II87B4O","msg":"Loading events..."}
+{"level":30,"time":1673297428373,"pid":4292,"hostname":"DESKTOP-II87B4O","msg":"Loaded 25 events. Success (25) Failed (0)"}
+{"level":30,"time":1673297428373,"pid":4292,"hostname":"DESKTOP-II87B4O","msg":"Connecting to MongoDb..."}
+{"level":30,"time":1673297428403,"pid":4292,"hostname":"DESKTOP-II87B4O","msg":"Downtime alerts started on 25999"}
+{"level":30,"time":1673297429808,"pid":4292,"hostname":"DESKTOP-II87B4O","msg":"Mongoose: Database connection established"}
+{"level":30,"time":1673297429808,"pid":4292,"hostname":"DESKTOP-II87B4O","msg":"Launching dashboard"}
+{"level":30,"time":1673297429882,"pid":4292,"hostname":"DESKTOP-II87B4O","msg":"Lightning dashboard is listening on port 8080"}
+{"level":30,"time":1673297435578,"pid":4292,"hostname":"DESKTOP-II87B4O","msg":"Logged in as Elon's Testing Bot#6842! (1024458057188659293)"}
+{"level":30,"time":1673297435578,"pid":4292,"hostname":"DESKTOP-II87B4O","msg":"Initializing giveaways manager..."}
+{"level":30,"time":1673297435686,"pid":4292,"hostname":"DESKTOP-II87B4O","msg":"Giveaway Manager initialized"}
+{"level":30,"time":1673297436122,"pid":4292,"hostname":"DESKTOP-II87B4O","msg":"Successfully registered interactions"}
+{"level":30,"time":1673297436214,"pid":4292,"hostname":"DESKTOP-II87B4O","msg":"Total Clusters: 1"}
+{"level":30,"time":1673297436214,"pid":4292,"hostname":"DESKTOP-II87B4O","msg":"Connected to cluster 0"}
+{"level":30,"time":1673297436214,"pid":4292,"hostname":"DESKTOP-II87B4O","msg":"Total Shards: 2"}
+{"level":30,"time":1673297436221,"pid":4292,"hostname":"DESKTOP-II87B4O","msg":"2 total guilds"}
+{"level":30,"time":1673297481759,"pid":10684,"hostname":"DESKTOP-II87B4O","msg":"Loading commands..."}
+{"level":20,"time":1673297481782,"pid":10684,"hostname":"DESKTOP-II87B4O","msg":"Skipping command announce. Disabled!"}
+{"level":20,"time":1673297481874,"pid":10684,"hostname":"DESKTOP-II87B4O","msg":"Skipping command roles-menu. Disabled!"}
+{"level":20,"time":1673297481982,"pid":10684,"hostname":"DESKTOP-II87B4O","msg":"Skipping command logging. Disabled!"}
+{"level":20,"time":1673297482006,"pid":10684,"hostname":"DESKTOP-II87B4O","msg":"Skipping command starboard. Disabled!"}
+{"level":20,"time":1673297482010,"pid":10684,"hostname":"DESKTOP-II87B4O","msg":"Skipping command verify. Disabled!"}
+{"level":20,"time":1673297482031,"pid":10684,"hostname":"DESKTOP-II87B4O","msg":"Skipping command trick-or-treat. Disabled!"}
+{"level":20,"time":1673297482031,"pid":10684,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command trick-or-treat. Disabled!"}
+{"level":20,"time":1673297482850,"pid":10684,"hostname":"DESKTOP-II87B4O","msg":"Skipping command changelog. Disabled!"}
+{"level":20,"time":1673297482860,"pid":10684,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command avatar. Disabled!"}
+{"level":20,"time":1673297482862,"pid":10684,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command botinvite. Disabled!"}
+{"level":20,"time":1673297482864,"pid":10684,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command botstats. Disabled!"}
+{"level":20,"time":1673297482866,"pid":10684,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command channelinfo. Disabled!"}
+{"level":20,"time":1673297482868,"pid":10684,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command emojiinfo. Disabled!"}
+{"level":20,"time":1673297482879,"pid":10684,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command guildinfo. Disabled!"}
+{"level":20,"time":1673297482880,"pid":10684,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command uptime. Disabled!"}
+{"level":20,"time":1673297482882,"pid":10684,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command userinfo. Disabled!"}
+{"level":20,"time":1673297482884,"pid":10684,"hostname":"DESKTOP-II87B4O","msg":"Skipping command bot. Disabled!"}
+{"level":20,"time":1673297482886,"pid":10684,"hostname":"DESKTOP-II87B4O","msg":"Skipping command info. Disabled!"}
+{"level":20,"time":1673297482901,"pid":10684,"hostname":"DESKTOP-II87B4O","msg":"Skipping command channel. Disabled!"}
+{"level":20,"time":1673297482905,"pid":10684,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command deafen. Disabled!"}
+{"level":20,"time":1673297482907,"pid":10684,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command disconnect. Disabled!"}
+{"level":20,"time":1673297482909,"pid":10684,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command move. Disabled!"}
+{"level":20,"time":1673297482909,"pid":10684,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command purge. Disabled!"}
+{"level":20,"time":1673297482910,"pid":10684,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command purgeattach. Disabled!"}
+{"level":20,"time":1673297482911,"pid":10684,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command purgebots. Disabled!"}
+{"level":20,"time":1673297482912,"pid":10684,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command purgelinks. Disabled!"}
+{"level":20,"time":1673297482913,"pid":10684,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command purgetoken. Disabled!"}
+{"level":20,"time":1673297482913,"pid":10684,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command purgeuser. Disabled!"}
+{"level":20,"time":1673297482915,"pid":10684,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command undeafen. Disabled!"}
+{"level":20,"time":1673297482916,"pid":10684,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command vmute. Disabled!"}
+{"level":20,"time":1673297482918,"pid":10684,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command vunmute. Disabled!"}
+{"level":20,"time":1673297482919,"pid":10684,"hostname":"DESKTOP-II87B4O","msg":"Skipping command role. Disabled!"}
+{"level":20,"time":1673297482921,"pid":10684,"hostname":"DESKTOP-II87B4O","msg":"Skipping command purge. Disabled!"}
+{"level":20,"time":1673297482923,"pid":10684,"hostname":"DESKTOP-II87B4O","msg":"Skipping command voice. Disabled!"}
+{"level":20,"time":1673297482937,"pid":10684,"hostname":"DESKTOP-II87B4O","msg":"Skipping command blacklist. Disabled!"}
+{"level":20,"time":1673297482938,"pid":10684,"hostname":"DESKTOP-II87B4O","msg":"Skipping command emit. Disabled!"}
+{"level":20,"time":1673297482938,"pid":10684,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command emit. Disabled!"}
+{"level":20,"time":1673297482938,"pid":10684,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command eval. Disabled!"}
+{"level":20,"time":1673297482939,"pid":10684,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command leaveserver. Disabled!"}
+{"level":20,"time":1673297482940,"pid":10684,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command listservers. Disabled!"}
+{"level":20,"time":1673297482958,"pid":10684,"hostname":"DESKTOP-II87B4O","msg":"Skipping command afk. Disabled!"}
+{"level":30,"time":1673297482976,"pid":10684,"hostname":"DESKTOP-II87B4O","msg":"Loaded 96 commands"}
+{"level":30,"time":1673297482976,"pid":10684,"hostname":"DESKTOP-II87B4O","msg":"Loaded 87 slash commands"}
+{"level":30,"time":1673297482976,"pid":10684,"hostname":"DESKTOP-II87B4O","msg":"Loading contexts..."}
+{"level":30,"time":1673297482978,"pid":10684,"hostname":"DESKTOP-II87B4O","msg":"Loaded 0 USER contexts"}
+{"level":30,"time":1673297482978,"pid":10684,"hostname":"DESKTOP-II87B4O","msg":"Loaded 0 MESSAGE contexts"}
+{"level":30,"time":1673297482978,"pid":10684,"hostname":"DESKTOP-II87B4O","msg":"Loading events..."}
+{"level":30,"time":1673297483088,"pid":10684,"hostname":"DESKTOP-II87B4O","msg":"Loaded 25 events. Success (25) Failed (0)"}
+{"level":30,"time":1673297483089,"pid":10684,"hostname":"DESKTOP-II87B4O","msg":"Connecting to MongoDb..."}
+{"level":30,"time":1673297483139,"pid":10684,"hostname":"DESKTOP-II87B4O","msg":"Downtime alerts started on 25999"}
+{"level":30,"time":1673297484508,"pid":10684,"hostname":"DESKTOP-II87B4O","msg":"Mongoose: Database connection established"}
+{"level":30,"time":1673297484508,"pid":10684,"hostname":"DESKTOP-II87B4O","msg":"Launching dashboard"}
+{"level":30,"time":1673297484600,"pid":10684,"hostname":"DESKTOP-II87B4O","msg":"Lightning dashboard is listening on port 8080"}
+{"level":30,"time":1673297490593,"pid":10684,"hostname":"DESKTOP-II87B4O","msg":"Logged in as Elon's Testing Bot#6842! (1024458057188659293)"}
+{"level":30,"time":1673297490593,"pid":10684,"hostname":"DESKTOP-II87B4O","msg":"Initializing giveaways manager..."}
+{"level":30,"time":1673297490683,"pid":10684,"hostname":"DESKTOP-II87B4O","msg":"Giveaway Manager initialized"}
+{"level":30,"time":1673297490988,"pid":10684,"hostname":"DESKTOP-II87B4O","msg":"Successfully registered interactions"}
+{"level":30,"time":1673297491074,"pid":10684,"hostname":"DESKTOP-II87B4O","msg":"Total Clusters: 1"}
+{"level":30,"time":1673297491074,"pid":10684,"hostname":"DESKTOP-II87B4O","msg":"Connected to cluster 0"}
+{"level":30,"time":1673297491074,"pid":10684,"hostname":"DESKTOP-II87B4O","msg":"Total Shards: 2"}
+{"level":30,"time":1673297491081,"pid":10684,"hostname":"DESKTOP-II87B4O","msg":"2 total guilds"}

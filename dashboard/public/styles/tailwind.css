@@ -452,6 +452,13 @@ h6 {
   animation: growDown 500ms ease-in-out forwards;
 }
 
+.warning {
+  background-color: #dfdb15;
+  height: 130px;
+  border-radius: 5px;
+  padding: 10px 10px 10px;
+}
+
 @keyframes growDown {
   0% {
       transform: scaleY(0)

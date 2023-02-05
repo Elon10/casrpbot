@@ -1,0 +1,773 @@
+{"level":30,"time":1674591479851,"pid":9748,"hostname":"DESKTOP-II87B4O","msg":"Loading commands..."}
+{"level":20,"time":1674591479887,"pid":9748,"hostname":"DESKTOP-II87B4O","msg":"Skipping command announce. Disabled!"}
+{"level":20,"time":1674591480051,"pid":9748,"hostname":"DESKTOP-II87B4O","msg":"Skipping command roles-menu. Disabled!"}
+{"level":20,"time":1674591480253,"pid":9748,"hostname":"DESKTOP-II87B4O","msg":"Skipping command trick-or-treat. Disabled!"}
+{"level":20,"time":1674591480253,"pid":9748,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command trick-or-treat. Disabled!"}
+{"level":20,"time":1674591481171,"pid":9748,"hostname":"DESKTOP-II87B4O","msg":"Skipping command changelog. Disabled!"}
+{"level":20,"time":1674591481184,"pid":9748,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command avatar. Disabled!"}
+{"level":20,"time":1674591481187,"pid":9748,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command botinvite. Disabled!"}
+{"level":20,"time":1674591481190,"pid":9748,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command botstats. Disabled!"}
+{"level":20,"time":1674591481195,"pid":9748,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command channelinfo. Disabled!"}
+{"level":20,"time":1674591481198,"pid":9748,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command emojiinfo. Disabled!"}
+{"level":20,"time":1674591481221,"pid":9748,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command guildinfo. Disabled!"}
+{"level":20,"time":1674591481222,"pid":9748,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command uptime. Disabled!"}
+{"level":20,"time":1674591481224,"pid":9748,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command userinfo. Disabled!"}
+{"level":20,"time":1674591481230,"pid":9748,"hostname":"DESKTOP-II87B4O","msg":"Skipping command bot. Disabled!"}
+{"level":20,"time":1674591481232,"pid":9748,"hostname":"DESKTOP-II87B4O","msg":"Skipping command info. Disabled!"}
+{"level":20,"time":1674591481260,"pid":9748,"hostname":"DESKTOP-II87B4O","msg":"Skipping command channel. Disabled!"}
+{"level":20,"time":1674591481265,"pid":9748,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command deafen. Disabled!"}
+{"level":20,"time":1674591481268,"pid":9748,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command disconnect. Disabled!"}
+{"level":20,"time":1674591481271,"pid":9748,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command move. Disabled!"}
+{"level":20,"time":1674591481272,"pid":9748,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command purge. Disabled!"}
+{"level":20,"time":1674591481274,"pid":9748,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command purgeattach. Disabled!"}
+{"level":20,"time":1674591481276,"pid":9748,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command purgebots. Disabled!"}
+{"level":20,"time":1674591481278,"pid":9748,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command purgelinks. Disabled!"}
+{"level":20,"time":1674591481279,"pid":9748,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command purgetoken. Disabled!"}
+{"level":20,"time":1674591481281,"pid":9748,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command purgeuser. Disabled!"}
+{"level":20,"time":1674591481284,"pid":9748,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command undeafen. Disabled!"}
+{"level":20,"time":1674591481287,"pid":9748,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command vmute. Disabled!"}
+{"level":20,"time":1674591481289,"pid":9748,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command vunmute. Disabled!"}
+{"level":20,"time":1674591481296,"pid":9748,"hostname":"DESKTOP-II87B4O","msg":"Skipping command role. Disabled!"}
+{"level":20,"time":1674591481300,"pid":9748,"hostname":"DESKTOP-II87B4O","msg":"Skipping command purge. Disabled!"}
+{"level":20,"time":1674591481303,"pid":9748,"hostname":"DESKTOP-II87B4O","msg":"Skipping command voice. Disabled!"}
+{"level":20,"time":1674591481360,"pid":9748,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command blacklist. Disabled!"}
+{"level":20,"time":1674591481362,"pid":9748,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command emit. Disabled!"}
+{"level":20,"time":1674591481363,"pid":9748,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command eval. Disabled!"}
+{"level":20,"time":1674591481364,"pid":9748,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command leaveserver. Disabled!"}
+{"level":20,"time":1674591481367,"pid":9748,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command listservers. Disabled!"}
+{"level":30,"time":1674591481426,"pid":9748,"hostname":"DESKTOP-II87B4O","msg":"Loaded 115 commands"}
+{"level":30,"time":1674591481427,"pid":9748,"hostname":"DESKTOP-II87B4O","msg":"Loaded 99 slash commands"}
+{"level":30,"time":1674591481427,"pid":9748,"hostname":"DESKTOP-II87B4O","msg":"Loading contexts..."}
+{"level":30,"time":1674591481431,"pid":9748,"hostname":"DESKTOP-II87B4O","msg":"Loaded 0 USER contexts"}
+{"level":30,"time":1674591481431,"pid":9748,"hostname":"DESKTOP-II87B4O","msg":"Loaded 0 MESSAGE contexts"}
+{"level":30,"time":1674591481431,"pid":9748,"hostname":"DESKTOP-II87B4O","msg":"Loading events..."}
+{"level":30,"time":1674591481679,"pid":9748,"hostname":"DESKTOP-II87B4O","msg":"Loaded 26 events. Success (26) Failed (0)"}
+{"level":30,"time":1674591481679,"pid":9748,"hostname":"DESKTOP-II87B4O","msg":"Connecting to MongoDb..."}
+{"level":30,"time":1674591481707,"pid":9748,"hostname":"DESKTOP-II87B4O","msg":"Downtime alerts started on 25999"}
+{"level":30,"time":1674591483186,"pid":9748,"hostname":"DESKTOP-II87B4O","msg":"Mongoose: Database connection established"}
+{"level":30,"time":1674591483187,"pid":9748,"hostname":"DESKTOP-II87B4O","msg":"Launching dashboard"}
+{"level":30,"time":1674591483259,"pid":9748,"hostname":"DESKTOP-II87B4O","msg":"Connecting to MongoDb..."}
+{"level":30,"time":1674591483259,"pid":9748,"hostname":"DESKTOP-II87B4O","msg":"Mongoose: Database connection established"}
+{"level":30,"time":1674591483285,"pid":9748,"hostname":"DESKTOP-II87B4O","msg":"Lightning dashboard is listening on port 8080"}
+{"level":30,"time":1674591489357,"pid":9748,"hostname":"DESKTOP-II87B4O","msg":"Logged in as Elon's Testing Bot#6842! (1024458057188659293)"}
+{"level":20,"time":1674591489358,"pid":9748,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lunecloud Lavalink\" debug: connection: creating websocket..."}
+{"level":30,"time":1674591489360,"pid":9748,"hostname":"DESKTOP-II87B4O","msg":"Music Manager initialized"}
+{"level":30,"time":1674591489360,"pid":9748,"hostname":"DESKTOP-II87B4O","msg":"Initializing giveaways manager..."}
+{"level":30,"time":1674591489474,"pid":9748,"hostname":"DESKTOP-II87B4O","msg":"Giveaway Manager initialized"}
+{"level":20,"time":1674591489806,"pid":9748,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lunecloud Lavalink\" connected"}
+{"level":20,"time":1674591489806,"pid":9748,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lunecloud Lavalink\" debug: connection: connected in 446ms"}
+{"level":20,"time":1674591489810,"pid":9748,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lunecloud Lavalink\" debug: connection: lavaclient <<< stats: {\"playingPlayers\":0,\"op\":\"stats\",\"memory\":{\"reservable\":502792192,\"used\":115688816,\"free\":21297808,\"allocated\":136986624},\"players\":0,\"cpu\":{\"cores\":1,\"systemLoad\":0,\"lavalinkLoad\":1.2625388814036989},\"uptime\":1919780312}"}
+{"level":30,"time":1674591489834,"pid":9748,"hostname":"DESKTOP-II87B4O","msg":"Successfully registered interactions"}
+{"level":30,"time":1674591489931,"pid":9748,"hostname":"DESKTOP-II87B4O","msg":"Total Clusters: 1"}
+{"level":30,"time":1674591489932,"pid":9748,"hostname":"DESKTOP-II87B4O","msg":"Connected to cluster 0"}
+{"level":30,"time":1674591489932,"pid":9748,"hostname":"DESKTOP-II87B4O","msg":"Total Shards: 2"}
+{"level":30,"time":1674591489939,"pid":9748,"hostname":"DESKTOP-II87B4O","msg":"3 total guilds"}
+{"level":20,"time":1674591549821,"pid":9748,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lunecloud Lavalink\" debug: connection: lavaclient <<< stats: {\"playingPlayers\":0,\"op\":\"stats\",\"memory\":{\"reservable\":502792192,\"used\":80574712,\"free\":56411912,\"allocated\":136986624},\"players\":0,\"cpu\":{\"cores\":1,\"systemLoad\":0.017898962863834057,\"lavalinkLoad\":0.002333527793982832},\"uptime\":1919840311}"}
+{"level":20,"time":1674591609814,"pid":9748,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lunecloud Lavalink\" debug: connection: lavaclient <<< stats: {\"playingPlayers\":0,\"op\":\"stats\",\"memory\":{\"reservable\":502792192,\"used\":83423672,\"free\":53562952,\"allocated\":136986624},\"players\":0,\"cpu\":{\"cores\":1,\"systemLoad\":0.015060240963855422,\"lavalinkLoad\":0.0025},\"uptime\":1919900311}"}
+{"level":20,"time":1674591669811,"pid":9748,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lunecloud Lavalink\" debug: connection: lavaclient <<< stats: {\"playingPlayers\":0,\"op\":\"stats\",\"memory\":{\"reservable\":502792192,\"used\":86299896,\"free\":50686728,\"allocated\":136986624},\"players\":0,\"cpu\":{\"cores\":1,\"systemLoad\":0.014560669456066946,\"lavalinkLoad\":0.0023333333333333335},\"uptime\":1919960311}"}
+{"level":20,"time":1674591729813,"pid":9748,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lunecloud Lavalink\" debug: connection: lavaclient <<< stats: {\"playingPlayers\":0,\"op\":\"stats\",\"memory\":{\"reservable\":502792192,\"used\":89099432,\"free\":47887192,\"allocated\":136986624},\"players\":0,\"cpu\":{\"cores\":1,\"systemLoad\":0.01405152224824356,\"lavalinkLoad\":0.002},\"uptime\":1920020311}"}
+{"level":20,"time":1674591789819,"pid":9748,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lunecloud Lavalink\" debug: connection: lavaclient <<< stats: {\"playingPlayers\":0,\"op\":\"stats\",\"memory\":{\"reservable\":502792192,\"used\":91735736,\"free\":45250888,\"allocated\":136986624},\"players\":0,\"cpu\":{\"cores\":1,\"systemLoad\":0.014563106796116505,\"lavalinkLoad\":0.0026666666666666666},\"uptime\":1920080311}"}
+{"level":20,"time":1674591849820,"pid":9748,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lunecloud Lavalink\" debug: connection: lavaclient <<< stats: {\"playingPlayers\":0,\"op\":\"stats\",\"memory\":{\"reservable\":502792192,\"used\":94474944,\"free\":42511680,\"allocated\":136986624},\"players\":0,\"cpu\":{\"cores\":1,\"systemLoad\":0.017907949790794978,\"lavalinkLoad\":0.0021666666666666666},\"uptime\":1920140311}"}
+{"level":20,"time":1674591909816,"pid":9748,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lunecloud Lavalink\" debug: connection: lavaclient <<< stats: {\"playingPlayers\":0,\"op\":\"stats\",\"memory\":{\"reservable\":502792192,\"used\":107682032,\"free\":29304592,\"allocated\":136986624},\"players\":0,\"cpu\":{\"cores\":1,\"systemLoad\":0.04348550483172276,\"lavalinkLoad\":0.0245},\"uptime\":1920200311}"}
+{"level":20,"time":1674591969828,"pid":9748,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lunecloud Lavalink\" debug: connection: lavaclient <<< stats: {\"playingPlayers\":1,\"op\":\"stats\",\"memory\":{\"reservable\":502792192,\"used\":118302360,\"free\":18684264,\"allocated\":136986624},\"players\":1,\"cpu\":{\"cores\":1,\"systemLoad\":0.0189419795221843,\"lavalinkLoad\":0.02599566738876854},\"uptime\":1920260311}"}
+{"level":20,"time":1674592029820,"pid":9748,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lunecloud Lavalink\" debug: connection: lavaclient <<< stats: {\"playingPlayers\":0,\"op\":\"stats\",\"memory\":{\"reservable\":502792192,\"used\":86661632,\"free\":50324992,\"allocated\":136986624},\"players\":0,\"cpu\":{\"cores\":1,\"systemLoad\":0.012717536813922356,\"lavalinkLoad\":0.0031671945324220703},\"uptime\":1920320311}"}
+{"level":20,"time":1674592089844,"pid":9748,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lunecloud Lavalink\" debug: connection: lavaclient <<< stats: {\"playingPlayers\":0,\"op\":\"stats\",\"memory\":{\"reservable\":502792192,\"used\":89294144,\"free\":47692480,\"allocated\":136986624},\"players\":0,\"cpu\":{\"cores\":1,\"systemLoad\":0.014897890860395046,\"lavalinkLoad\":0.0023333333333333335},\"uptime\":1920380311}"}
+{"level":20,"time":1674592149822,"pid":9748,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lunecloud Lavalink\" debug: connection: lavaclient <<< stats: {\"playingPlayers\":0,\"op\":\"stats\",\"memory\":{\"reservable\":502792192,\"used\":92061096,\"free\":44925528,\"allocated\":136986624},\"players\":0,\"cpu\":{\"cores\":1,\"systemLoad\":0.01672800267648043,\"lavalinkLoad\":0.0025},\"uptime\":1920440311}"}
+{"level":20,"time":1674592209824,"pid":9748,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lunecloud Lavalink\" debug: connection: lavaclient <<< stats: {\"playingPlayers\":0,\"op\":\"stats\",\"memory\":{\"reservable\":502792192,\"used\":94683432,\"free\":42303192,\"allocated\":136986624},\"players\":0,\"cpu\":{\"cores\":1,\"systemLoad\":0.016574585635359115,\"lavalinkLoad\":0.0023333333333333335},\"uptime\":1920500311}"}
+{"level":20,"time":1674592269825,"pid":9748,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lunecloud Lavalink\" debug: connection: lavaclient <<< stats: {\"playingPlayers\":0,\"op\":\"stats\",\"memory\":{\"reservable\":502792192,\"used\":97443896,\"free\":39542728,\"allocated\":136986624},\"players\":0,\"cpu\":{\"cores\":1,\"systemLoad\":0.01573748535074502,\"lavalinkLoad\":0.0023333333333333335},\"uptime\":1920560311}"}
+{"level":20,"time":1674592329832,"pid":9748,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lunecloud Lavalink\" debug: connection: lavaclient <<< stats: {\"playingPlayers\":0,\"op\":\"stats\",\"memory\":{\"reservable\":502792192,\"used\":100138664,\"free\":36847960,\"allocated\":136986624},\"players\":0,\"cpu\":{\"cores\":1,\"systemLoad\":0.013893538667559425,\"lavalinkLoad\":0.0023333333333333335},\"uptime\":1920620311}"}
+{"level":20,"time":1674592389827,"pid":9748,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lunecloud Lavalink\" debug: connection: lavaclient <<< stats: {\"playingPlayers\":0,\"op\":\"stats\",\"memory\":{\"reservable\":502792192,\"used\":102898688,\"free\":34087936,\"allocated\":136986624},\"players\":0,\"cpu\":{\"cores\":1,\"systemLoad\":0.012042147516307075,\"lavalinkLoad\":0.0023333333333333335},\"uptime\":1920680311}"}
+{"level":20,"time":1674592449828,"pid":9748,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lunecloud Lavalink\" debug: connection: lavaclient <<< stats: {\"playingPlayers\":0,\"op\":\"stats\",\"memory\":{\"reservable\":502792192,\"used\":105540816,\"free\":31445808,\"allocated\":136986624},\"players\":0,\"cpu\":{\"cores\":1,\"systemLoad\":0.012389084212288633,\"lavalinkLoad\":0.0023333333333333335},\"uptime\":1920740311}"}
+{"level":20,"time":1674592509829,"pid":9748,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lunecloud Lavalink\" debug: connection: lavaclient <<< stats: {\"playingPlayers\":0,\"op\":\"stats\",\"memory\":{\"reservable\":502792192,\"used\":108247024,\"free\":28739600,\"allocated\":136986624},\"players\":0,\"cpu\":{\"cores\":1,\"systemLoad\":0.01289134438305709,\"lavalinkLoad\":0.0023333333333333335},\"uptime\":1920800311}"}
+{"level":20,"time":1674592569831,"pid":9748,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lunecloud Lavalink\" debug: connection: lavaclient <<< stats: {\"playingPlayers\":0,\"op\":\"stats\",\"memory\":{\"reservable\":502792192,\"used\":110943480,\"free\":26043144,\"allocated\":136986624},\"players\":0,\"cpu\":{\"cores\":1,\"systemLoad\":0.012539709078749373,\"lavalinkLoad\":0.0023333333333333335},\"uptime\":1920860311}"}
+{"level":20,"time":1674592629833,"pid":9748,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lunecloud Lavalink\" debug: connection: lavaclient <<< stats: {\"playingPlayers\":0,\"op\":\"stats\",\"memory\":{\"reservable\":502792192,\"used\":113753960,\"free\":23232664,\"allocated\":136986624},\"players\":0,\"cpu\":{\"cores\":1,\"systemLoad\":0.016223448737247032,\"lavalinkLoad\":0.0026666222229629506},\"uptime\":1920920311}"}
+{"level":20,"time":1674592689834,"pid":9748,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lunecloud Lavalink\" debug: connection: lavaclient <<< stats: {\"playingPlayers\":0,\"op\":\"stats\",\"memory\":{\"reservable\":502792192,\"used\":116466128,\"free\":20520496,\"allocated\":136986624},\"players\":0,\"cpu\":{\"cores\":1,\"systemLoad\":0.011888814467515071,\"lavalinkLoad\":0.0023333722228703812},\"uptime\":1920980311}"}
+{"level":20,"time":1674592749839,"pid":9748,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lunecloud Lavalink\" debug: connection: lavaclient <<< stats: {\"playingPlayers\":0,\"op\":\"stats\",\"memory\":{\"reservable\":502792192,\"used\":81089032,\"free\":55897592,\"allocated\":136986624},\"players\":0,\"cpu\":{\"cores\":1,\"systemLoad\":0.011715481171548118,\"lavalinkLoad\":0.0021666666666666666},\"uptime\":1921040311}"}
+{"level":20,"time":1674592809840,"pid":9748,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lunecloud Lavalink\" debug: connection: lavaclient <<< stats: {\"playingPlayers\":0,\"op\":\"stats\",\"memory\":{\"reservable\":502792192,\"used\":83863912,\"free\":53122712,\"allocated\":136986624},\"players\":0,\"cpu\":{\"cores\":1,\"systemLoad\":0.015567458988952126,\"lavalinkLoad\":0.002499958334027766},\"uptime\":1921100311}"}
+{"level":20,"time":1674592869838,"pid":9748,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lunecloud Lavalink\" debug: connection: lavaclient <<< stats: {\"playingPlayers\":0,\"op\":\"stats\",\"memory\":{\"reservable\":502792192,\"used\":86592808,\"free\":50393816,\"allocated\":136986624},\"players\":0,\"cpu\":{\"cores\":1,\"systemLoad\":0.014560669456066946,\"lavalinkLoad\":0.0021667027783796398},\"uptime\":1921160311}"}
+{"level":20,"time":1674592929845,"pid":9748,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lunecloud Lavalink\" debug: connection: lavaclient <<< stats: {\"playingPlayers\":0,\"op\":\"stats\",\"memory\":{\"reservable\":502792192,\"used\":89318784,\"free\":47667840,\"allocated\":136986624},\"players\":0,\"cpu\":{\"cores\":1,\"systemLoad\":0.01390284757118928,\"lavalinkLoad\":0.0025},\"uptime\":1921220311}"}
+{"level":20,"time":1674592989845,"pid":9748,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lunecloud Lavalink\" debug: connection: lavaclient <<< stats: {\"playingPlayers\":0,\"op\":\"stats\",\"memory\":{\"reservable\":502792192,\"used\":91995472,\"free\":44991152,\"allocated\":136986624},\"players\":0,\"cpu\":{\"cores\":1,\"systemLoad\":0.017567341475656684,\"lavalinkLoad\":0.0023333333333333335},\"uptime\":1921280311}"}
+{"level":20,"time":1674593049842,"pid":9748,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lunecloud Lavalink\" debug: connection: lavaclient <<< stats: {\"playingPlayers\":0,\"op\":\"stats\",\"memory\":{\"reservable\":502792192,\"used\":94708296,\"free\":42278328,\"allocated\":136986624},\"players\":0,\"cpu\":{\"cores\":1,\"systemLoad\":0.014402947579969854,\"lavalinkLoad\":0.0023333333333333335},\"uptime\":1921340311}"}
+{"level":20,"time":1674593109844,"pid":9748,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lunecloud Lavalink\" debug: connection: lavaclient <<< stats: {\"playingPlayers\":0,\"op\":\"stats\",\"memory\":{\"reservable\":502792192,\"used\":97537432,\"free\":39449192,\"allocated\":136986624},\"players\":0,\"cpu\":{\"cores\":1,\"systemLoad\":0.013050025096202109,\"lavalinkLoad\":0.0023333333333333335},\"uptime\":1921400311}"}
+{"level":20,"time":1674593169845,"pid":9748,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lunecloud Lavalink\" debug: connection: lavaclient <<< stats: {\"playingPlayers\":0,\"op\":\"stats\",\"memory\":{\"reservable\":502792192,\"used\":100183384,\"free\":36803240,\"allocated\":136986624},\"players\":0,\"cpu\":{\"cores\":1,\"systemLoad\":0.012376651613982272,\"lavalinkLoad\":0.002333294445092582},\"uptime\":1921460311}"}
+{"level":20,"time":1674593229850,"pid":9748,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lunecloud Lavalink\" debug: connection: lavaclient <<< stats: {\"playingPlayers\":0,\"op\":\"stats\",\"memory\":{\"reservable\":502792192,\"used\":102873656,\"free\":34112968,\"allocated\":136986624},\"players\":0,\"cpu\":{\"cores\":1,\"systemLoad\":0.016226162596186016,\"lavalinkLoad\":0.0025000416673611227},\"uptime\":1921520311}"}
+{"level":20,"time":1674593289852,"pid":9748,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lunecloud Lavalink\" debug: connection: lavaclient <<< stats: {\"playingPlayers\":0,\"op\":\"stats\",\"memory\":{\"reservable\":502792192,\"used\":105557800,\"free\":31428824,\"allocated\":136986624},\"players\":0,\"cpu\":{\"cores\":1,\"systemLoad\":0.017076845806127575,\"lavalinkLoad\":0.0023333333333333335},\"uptime\":1921580311}"}
+{"level":20,"time":1674593349849,"pid":9748,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lunecloud Lavalink\" debug: connection: lavaclient <<< stats: {\"playingPlayers\":0,\"op\":\"stats\",\"memory\":{\"reservable\":502792192,\"used\":108276528,\"free\":28710096,\"allocated\":136986624},\"players\":0,\"cpu\":{\"cores\":1,\"systemLoad\":0.015910232791827166,\"lavalinkLoad\":0.0023333333333333335},\"uptime\":1921640311}"}
+{"level":20,"time":1674593409851,"pid":9748,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lunecloud Lavalink\" debug: connection: lavaclient <<< stats: {\"playingPlayers\":0,\"op\":\"stats\",\"memory\":{\"reservable\":502792192,\"used\":111058568,\"free\":25928056,\"allocated\":136986624},\"players\":0,\"cpu\":{\"cores\":1,\"systemLoad\":0.01390284757118928,\"lavalinkLoad\":0.0023333333333333335},\"uptime\":1921700311}"}
+{"level":20,"time":1674593469852,"pid":9748,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lunecloud Lavalink\" debug: connection: lavaclient <<< stats: {\"playingPlayers\":0,\"op\":\"stats\",\"memory\":{\"reservable\":502792192,\"used\":113789744,\"free\":23196880,\"allocated\":136986624},\"players\":0,\"cpu\":{\"cores\":1,\"systemLoad\":0.014546062531349272,\"lavalinkLoad\":0.0023333333333333335},\"uptime\":1921760311}"}
+{"level":20,"time":1674593529853,"pid":9748,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lunecloud Lavalink\" debug: connection: lavaclient <<< stats: {\"playingPlayers\":0,\"op\":\"stats\",\"memory\":{\"reservable\":502792192,\"used\":116438192,\"free\":20548432,\"allocated\":136986624},\"players\":0,\"cpu\":{\"cores\":1,\"systemLoad\":0.01322618449690273,\"lavalinkLoad\":0.0023333333333333335},\"uptime\":1921820311}"}
+{"level":20,"time":1674593589855,"pid":9748,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lunecloud Lavalink\" debug: connection: lavaclient <<< stats: {\"playingPlayers\":0,\"op\":\"stats\",\"memory\":{\"reservable\":502792192,\"used\":81256472,\"free\":55730152,\"allocated\":136986624},\"players\":0,\"cpu\":{\"cores\":1,\"systemLoad\":0.012048192771084338,\"lavalinkLoad\":0.0023333333333333335},\"uptime\":1921880311}"}
+{"level":20,"time":1674593649856,"pid":9748,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lunecloud Lavalink\" debug: connection: lavaclient <<< stats: {\"playingPlayers\":0,\"op\":\"stats\",\"memory\":{\"reservable\":502792192,\"used\":84047456,\"free\":52939168,\"allocated\":136986624},\"players\":0,\"cpu\":{\"cores\":1,\"systemLoad\":0.01572958500669344,\"lavalinkLoad\":0.0021666666666666666},\"uptime\":1921940311}"}
+{"level":20,"time":1674593709857,"pid":9748,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lunecloud Lavalink\" debug: connection: lavaclient <<< stats: {\"playingPlayers\":0,\"op\":\"stats\",\"memory\":{\"reservable\":502792192,\"used\":86818776,\"free\":50167848,\"allocated\":136986624},\"players\":0,\"cpu\":{\"cores\":1,\"systemLoad\":0.014730498828255775,\"lavalinkLoad\":0.0023333333333333335},\"uptime\":1922000311}"}
+{"level":20,"time":1674593769858,"pid":9748,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lunecloud Lavalink\" debug: connection: lavaclient <<< stats: {\"playingPlayers\":0,\"op\":\"stats\",\"memory\":{\"reservable\":502792192,\"used\":89639864,\"free\":47346760,\"allocated\":136986624},\"players\":0,\"cpu\":{\"cores\":1,\"systemLoad\":0.014225941422594143,\"lavalinkLoad\":0.0021666666666666666},\"uptime\":1922060311}"}
+{"level":20,"time":1674593829864,"pid":9748,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lunecloud Lavalink\" debug: connection: lavaclient <<< stats: {\"playingPlayers\":0,\"op\":\"stats\",\"memory\":{\"reservable\":502792192,\"used\":92457144,\"free\":44529480,\"allocated\":136986624},\"players\":0,\"cpu\":{\"cores\":1,\"systemLoad\":0.014555797222686967,\"lavalinkLoad\":0.0023333333333333335},\"uptime\":1922120311}"}
+{"level":20,"time":1674593889875,"pid":9748,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lunecloud Lavalink\" debug: connection: lavaclient <<< stats: {\"playingPlayers\":0,\"op\":\"stats\",\"memory\":{\"reservable\":502792192,\"used\":95062552,\"free\":41924072,\"allocated\":136986624},\"players\":0,\"cpu\":{\"cores\":1,\"systemLoad\":0.013050025096202109,\"lavalinkLoad\":0.0021666666666666666},\"uptime\":1922180311}"}
+{"level":20,"time":1674593949862,"pid":9748,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lunecloud Lavalink\" debug: connection: lavaclient <<< stats: {\"playingPlayers\":0,\"op\":\"stats\",\"memory\":{\"reservable\":502792192,\"used\":97886256,\"free\":39100368,\"allocated\":136986624},\"players\":0,\"cpu\":{\"cores\":1,\"systemLoad\":0.012734584450402145,\"lavalinkLoad\":0.0021666666666666666},\"uptime\":1922240311}"}
+{"level":20,"time":1674594009875,"pid":9748,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lunecloud Lavalink\" debug: connection: lavaclient <<< stats: {\"playingPlayers\":0,\"op\":\"stats\",\"memory\":{\"reservable\":502792192,\"used\":100476808,\"free\":36509816,\"allocated\":136986624},\"players\":0,\"cpu\":{\"cores\":1,\"systemLoad\":0.014390896921017403,\"lavalinkLoad\":0.0024997083673571415},\"uptime\":1922300318}"}
+{"level":20,"time":1674594069865,"pid":9748,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lunecloud Lavalink\" debug: connection: lavaclient <<< stats: {\"playingPlayers\":1,\"op\":\"stats\",\"memory\":{\"reservable\":502792192,\"used\":117062688,\"free\":19923936,\"allocated\":136986624},\"players\":1,\"cpu\":{\"cores\":1,\"systemLoad\":0.02455319859696008,\"lavalinkLoad\":0.007667561215475138},\"uptime\":1922360311}"}
+{"level":20,"time":1674594129866,"pid":9748,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lunecloud Lavalink\" debug: connection: lavaclient <<< stats: {\"playingPlayers\":1,\"op\":\"stats\",\"memory\":{\"reservable\":502792192,\"used\":86810200,\"free\":50176424,\"allocated\":136986624},\"players\":1,\"cpu\":{\"cores\":1,\"systemLoad\":0.040449067194981016,\"lavalinkLoad\":0.014666666666666666},\"uptime\":1922420311}"}
+{"level":20,"time":1674594189867,"pid":9748,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lunecloud Lavalink\" debug: connection: lavaclient <<< stats: {\"playingPlayers\":1,\"op\":\"stats\",\"memory\":{\"reservable\":502792192,\"used\":93579304,\"free\":43407320,\"allocated\":136986624},\"players\":1,\"cpu\":{\"cores\":1,\"systemLoad\":0.039966969446738235,\"lavalinkLoad\":0.014666666666666666},\"uptime\":1922480311}"}
+{"level":20,"time":1674594249868,"pid":9748,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lunecloud Lavalink\" debug: connection: lavaclient <<< stats: {\"playingPlayers\":0,\"op\":\"stats\",\"memory\":{\"reservable\":502792192,\"used\":96932320,\"free\":40054304,\"allocated\":136986624},\"players\":1,\"cpu\":{\"cores\":1,\"systemLoad\":0.02524916943521595,\"lavalinkLoad\":0.0065},\"uptime\":1922540311}"}
+{"level":20,"time":1674594309870,"pid":9748,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lunecloud Lavalink\" debug: connection: lavaclient <<< stats: {\"playingPlayers\":0,\"op\":\"stats\",\"memory\":{\"reservable\":502792192,\"used\":99785968,\"free\":37200656,\"allocated\":136986624},\"players\":1,\"cpu\":{\"cores\":1,\"systemLoad\":0.022466300549176237,\"lavalinkLoad\":0.004833333333333334},\"uptime\":1922600311}"}
+{"level":20,"time":1674594369872,"pid":9748,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lunecloud Lavalink\" debug: connection: lavaclient <<< stats: {\"playingPlayers\":0,\"op\":\"stats\",\"memory\":{\"reservable\":502792192,\"used\":102677424,\"free\":34309200,\"allocated\":136986624},\"players\":1,\"cpu\":{\"cores\":1,\"systemLoad\":0.02262142381902861,\"lavalinkLoad\":0.005},\"uptime\":1922660311}"}
+{"level":20,"time":1674594429873,"pid":9748,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lunecloud Lavalink\" debug: connection: lavaclient <<< stats: {\"playingPlayers\":0,\"op\":\"stats\",\"memory\":{\"reservable\":502792192,\"used\":105600512,\"free\":31386112,\"allocated\":136986624},\"players\":1,\"cpu\":{\"cores\":1,\"systemLoad\":0.024800266311584555,\"lavalinkLoad\":0.005},\"uptime\":1922720311}"}
+{"level":20,"time":1674594489875,"pid":9748,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lunecloud Lavalink\" debug: connection: lavaclient <<< stats: {\"playingPlayers\":0,\"op\":\"stats\",\"memory\":{\"reservable\":502792192,\"used\":108300656,\"free\":28685968,\"allocated\":136986624},\"players\":1,\"cpu\":{\"cores\":1,\"systemLoad\":0.023984010659560292,\"lavalinkLoad\":0.0045},\"uptime\":1922780311}"}
+{"level":20,"time":1674594549876,"pid":9748,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lunecloud Lavalink\" debug: connection: lavaclient <<< stats: {\"playingPlayers\":0,\"op\":\"stats\",\"memory\":{\"reservable\":502792192,\"used\":111253936,\"free\":25732688,\"allocated\":136986624},\"players\":1,\"cpu\":{\"cores\":1,\"systemLoad\":0.02214820982514571,\"lavalinkLoad\":0.004833333333333334},\"uptime\":1922840311}"}
+{"level":20,"time":1674594609877,"pid":9748,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lunecloud Lavalink\" debug: connection: lavaclient <<< stats: {\"playingPlayers\":0,\"op\":\"stats\",\"memory\":{\"reservable\":502792192,\"used\":113998680,\"free\":22987944,\"allocated\":136986624},\"players\":1,\"cpu\":{\"cores\":1,\"systemLoad\":0.022458825486607884,\"lavalinkLoad\":0.004666666666666667},\"uptime\":1922900311}"}
+{"level":20,"time":1674594669888,"pid":9748,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lunecloud Lavalink\" debug: connection: lavaclient <<< stats: {\"playingPlayers\":0,\"op\":\"stats\",\"memory\":{\"reservable\":502792192,\"used\":116715128,\"free\":20271496,\"allocated\":136986624},\"players\":1,\"cpu\":{\"cores\":1,\"systemLoad\":0.020123066688840844,\"lavalinkLoad\":0.004666666666666667},\"uptime\":1922960311}"}
+{"level":20,"time":1674594729879,"pid":9748,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lunecloud Lavalink\" debug: connection: lavaclient <<< stats: {\"playingPlayers\":0,\"op\":\"stats\",\"memory\":{\"reservable\":502792192,\"used\":81772696,\"free\":55213928,\"allocated\":136986624},\"players\":1,\"cpu\":{\"cores\":1,\"systemLoad\":0.020136461973706107,\"lavalinkLoad\":0.004666666666666667},\"uptime\":1923020311}"}
+{"level":20,"time":1674594789882,"pid":9748,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lunecloud Lavalink\" debug: connection: lavaclient <<< stats: {\"playingPlayers\":0,\"op\":\"stats\",\"memory\":{\"reservable\":502792192,\"used\":84784816,\"free\":52237184,\"allocated\":136986624},\"players\":1,\"cpu\":{\"cores\":1,\"systemLoad\":0.020621985697655082,\"lavalinkLoad\":0.004666666666666667},\"uptime\":1923080311}"}
+{"level":20,"time":1674594849886,"pid":9748,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lunecloud Lavalink\" debug: connection: lavaclient <<< stats: {\"playingPlayers\":0,\"op\":\"stats\",\"memory\":{\"reservable\":502792192,\"used\":87498368,\"free\":49488256,\"allocated\":136986624},\"players\":1,\"cpu\":{\"cores\":1,\"systemLoad\":0.021826057980673108,\"lavalinkLoad\":0.004833252779120348},\"uptime\":1923140311}"}
+{"level":20,"time":1674594909884,"pid":9748,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lunecloud Lavalink\" debug: connection: lavaclient <<< stats: {\"playingPlayers\":0,\"op\":\"stats\",\"memory\":{\"reservable\":502792192,\"used\":90447008,\"free\":46539616,\"allocated\":136986624},\"players\":1,\"cpu\":{\"cores\":1,\"systemLoad\":0.024150566289140574,\"lavalinkLoad\":0.0045},\"uptime\":1923200311}"}
+{"level":20,"time":1674594969885,"pid":9748,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lunecloud Lavalink\" debug: connection: lavaclient <<< stats: {\"playingPlayers\":0,\"op\":\"stats\",\"memory\":{\"reservable\":502792192,\"used\":93213944,\"free\":43772680,\"allocated\":136986624},\"players\":1,\"cpu\":{\"cores\":1,\"systemLoad\":0.022325891369543487,\"lavalinkLoad\":0.004833413890231504},\"uptime\":1923260311}"}
+{"level":20,"time":1674595029887,"pid":9748,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lunecloud Lavalink\" debug: connection: lavaclient <<< stats: {\"playingPlayers\":0,\"op\":\"stats\",\"memory\":{\"reservable\":502792192,\"used\":96059160,\"free\":40927464,\"allocated\":136986624},\"players\":1,\"cpu\":{\"cores\":1,\"systemLoad\":0.02163421534365119,\"lavalinkLoad\":0.004833333333333334},\"uptime\":1923320311}"}
+{"level":20,"time":1674595089890,"pid":9748,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lunecloud Lavalink\" debug: connection: lavaclient <<< stats: {\"playingPlayers\":0,\"op\":\"stats\",\"memory\":{\"reservable\":502792192,\"used\":98927344,\"free\":38059280,\"allocated\":136986624},\"players\":1,\"cpu\":{\"cores\":1,\"systemLoad\":0.019330111648058656,\"lavalinkLoad\":0.004833333333333334},\"uptime\":1923380311}"}
+{"level":20,"time":1674595149889,"pid":9748,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lunecloud Lavalink\" debug: connection: lavaclient <<< stats: {\"playingPlayers\":0,\"op\":\"stats\",\"memory\":{\"reservable\":502792192,\"used\":101852448,\"free\":35134176,\"allocated\":136986624},\"players\":1,\"cpu\":{\"cores\":1,\"systemLoad\":0.022140835691693023,\"lavalinkLoad\":0.004666666666666667},\"uptime\":1923440311}"}
+{"level":20,"time":1674595209890,"pid":9748,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lunecloud Lavalink\" debug: connection: lavaclient <<< stats: {\"playingPlayers\":0,\"op\":\"stats\",\"memory\":{\"reservable\":502792192,\"used\":105189192,\"free\":31797432,\"allocated\":136986624},\"players\":1,\"cpu\":{\"cores\":1,\"systemLoad\":0.022783968069183435,\"lavalinkLoad\":0.005},\"uptime\":1923500311}"}
+{"level":20,"time":1674595269892,"pid":9748,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lunecloud Lavalink\" debug: connection: lavaclient <<< stats: {\"playingPlayers\":0,\"op\":\"stats\",\"memory\":{\"reservable\":502792192,\"used\":108619416,\"free\":28367208,\"allocated\":136986624},\"players\":1,\"cpu\":{\"cores\":1,\"systemLoad\":0.0236312198369113,\"lavalinkLoad\":0.005},\"uptime\":1923560311}"}
+{"level":20,"time":1674595329892,"pid":9748,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lunecloud Lavalink\" debug: connection: lavaclient <<< stats: {\"playingPlayers\":0,\"op\":\"stats\",\"memory\":{\"reservable\":502792192,\"used\":117857808,\"free\":19128816,\"allocated\":136986624},\"players\":1,\"cpu\":{\"cores\":1,\"systemLoad\":0.022810522810522812,\"lavalinkLoad\":0.005333333333333333},\"uptime\":1923620311}"}
+{"level":20,"time":1674595389894,"pid":9748,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lunecloud Lavalink\" debug: connection: lavaclient <<< stats: {\"playingPlayers\":0,\"op\":\"stats\",\"memory\":{\"reservable\":502792192,\"used\":83476544,\"free\":53510080,\"allocated\":136986624},\"players\":1,\"cpu\":{\"cores\":1,\"systemLoad\":0.019314019314019316,\"lavalinkLoad\":0.005166666666666667},\"uptime\":1923680311}"}
+{"level":20,"time":1674595449896,"pid":9748,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lunecloud Lavalink\" debug: connection: lavaclient <<< stats: {\"playingPlayers\":1,\"op\":\"stats\",\"memory\":{\"reservable\":502792192,\"used\":101435728,\"free\":35550896,\"allocated\":136986624},\"players\":2,\"cpu\":{\"cores\":1,\"systemLoad\":0.024402558061258836,\"lavalinkLoad\":0.014666666666666666},\"uptime\":1923740311}"}
+{"level":20,"time":1674595509897,"pid":9748,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lunecloud Lavalink\" debug: connection: lavaclient <<< stats: {\"playingPlayers\":1,\"op\":\"stats\",\"memory\":{\"reservable\":502792192,\"used\":108647744,\"free\":28338880,\"allocated\":136986624},\"players\":2,\"cpu\":{\"cores\":1,\"systemLoad\":0.017799627055433125,\"lavalinkLoad\":0.017},\"uptime\":1923800311}"}
+{"level":20,"time":1674595569898,"pid":9748,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lunecloud Lavalink\" debug: connection: lavaclient <<< stats: {\"playingPlayers\":1,\"op\":\"stats\",\"memory\":{\"reservable\":502792192,\"used\":115944680,\"free\":21041944,\"allocated\":136986624},\"players\":2,\"cpu\":{\"cores\":1,\"systemLoad\":0.019299136617572373,\"lavalinkLoad\":0.01633333333333333},\"uptime\":1923860311}"}
+{"level":20,"time":1674595629903,"pid":9748,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lunecloud Lavalink\" debug: connection: lavaclient <<< stats: {\"playingPlayers\":1,\"op\":\"stats\",\"memory\":{\"reservable\":502792192,\"used\":88638864,\"free\":48347760,\"allocated\":136986624},\"players\":2,\"cpu\":{\"cores\":1,\"systemLoad\":0.020784048665089556,\"lavalinkLoad\":0.017333333333333333},\"uptime\":1923920311}"}
+{"level":20,"time":1674595689903,"pid":9748,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lunecloud Lavalink\" debug: connection: lavaclient <<< stats: {\"playingPlayers\":1,\"op\":\"stats\",\"memory\":{\"reservable\":502792192,\"used\":95935512,\"free\":41051112,\"allocated\":136986624},\"players\":2,\"cpu\":{\"cores\":1,\"systemLoad\":0.020294266869609334,\"lavalinkLoad\":0.01633333333333333},\"uptime\":1923980311}"}
+{"level":20,"time":1674595749902,"pid":9748,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lunecloud Lavalink\" debug: connection: lavaclient <<< stats: {\"playingPlayers\":1,\"op\":\"stats\",\"memory\":{\"reservable\":502792192,\"used\":103265376,\"free\":33721248,\"allocated\":136986624},\"players\":2,\"cpu\":{\"cores\":1,\"systemLoad\":0.019103972950126797,\"lavalinkLoad\":0.016},\"uptime\":1924040311}"}
+{"level":20,"time":1674595809903,"pid":9748,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lunecloud Lavalink\" debug: connection: lavaclient <<< stats: {\"playingPlayers\":0,\"op\":\"stats\",\"memory\":{\"reservable\":502792192,\"used\":110796496,\"free\":26190128,\"allocated\":136986624},\"players\":1,\"cpu\":{\"cores\":1,\"systemLoad\":0.018362533692722373,\"lavalinkLoad\":0.013833333333333333},\"uptime\":1924100311}"}
+{"level":20,"time":1674595869904,"pid":9748,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lunecloud Lavalink\" debug: connection: lavaclient <<< stats: {\"playingPlayers\":0,\"op\":\"stats\",\"memory\":{\"reservable\":502792192,\"used\":113702896,\"free\":23283728,\"allocated\":136986624},\"players\":1,\"cpu\":{\"cores\":1,\"systemLoad\":0.0199700449326011,\"lavalinkLoad\":0.004833333333333334},\"uptime\":1924160311}"}
+{"level":20,"time":1674595929906,"pid":9748,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lunecloud Lavalink\" debug: connection: lavaclient <<< stats: {\"playingPlayers\":0,\"op\":\"stats\",\"memory\":{\"reservable\":502792192,\"used\":116857168,\"free\":20129456,\"allocated\":136986624},\"players\":1,\"cpu\":{\"cores\":1,\"systemLoad\":0.02432522492502499,\"lavalinkLoad\":0.008333333333333333},\"uptime\":1924220311}"}
+{"level":20,"time":1674595989908,"pid":9748,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lunecloud Lavalink\" debug: connection: lavaclient <<< stats: {\"playingPlayers\":0,\"op\":\"stats\",\"memory\":{\"reservable\":502792192,\"used\":81870736,\"free\":55115888,\"allocated\":136986624},\"players\":1,\"cpu\":{\"cores\":1,\"systemLoad\":0.024958402662229616,\"lavalinkLoad\":0.004833333333333334},\"uptime\":1924280311}"}
+{"level":20,"time":1674596049909,"pid":9748,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lunecloud Lavalink\" debug: connection: lavaclient <<< stats: {\"playingPlayers\":0,\"op\":\"stats\",\"memory\":{\"reservable\":502792192,\"used\":85117512,\"free\":51869112,\"allocated\":136986624},\"players\":1,\"cpu\":{\"cores\":1,\"systemLoad\":0.022973197935741634,\"lavalinkLoad\":0.005},\"uptime\":1924340311}"}
+{"level":20,"time":1674596109914,"pid":9748,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lunecloud Lavalink\" debug: connection: lavaclient <<< stats: {\"playingPlayers\":0,\"op\":\"stats\",\"memory\":{\"reservable\":502792192,\"used\":88063808,\"free\":48922816,\"allocated\":136986624},\"players\":1,\"cpu\":{\"cores\":1,\"systemLoad\":0.019983347210657785,\"lavalinkLoad\":0.004666666666666667},\"uptime\":1924400311}"}
+{"level":20,"time":1674596169911,"pid":9748,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lunecloud Lavalink\" debug: connection: lavaclient <<< stats: {\"playingPlayers\":0,\"op\":\"stats\",\"memory\":{\"reservable\":502792192,\"used\":91152528,\"free\":45834096,\"allocated\":136986624},\"players\":1,\"cpu\":{\"cores\":1,\"systemLoad\":0.021319120586275817,\"lavalinkLoad\":0.004666666666666667},\"uptime\":1924460311}"}
+{"level":20,"time":1674596229925,"pid":9748,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lunecloud Lavalink\" debug: connection: lavaclient <<< stats: {\"playingPlayers\":0,\"op\":\"stats\",\"memory\":{\"reservable\":502792192,\"used\":94026192,\"free\":42960432,\"allocated\":136986624},\"players\":1,\"cpu\":{\"cores\":1,\"systemLoad\":0.02430497752621941,\"lavalinkLoad\":0.004666666666666667},\"uptime\":1924520311}"}
+{"level":20,"time":1674596289914,"pid":9748,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lunecloud Lavalink\" debug: connection: lavaclient <<< stats: {\"playingPlayers\":0,\"op\":\"stats\",\"memory\":{\"reservable\":502792192,\"used\":97012520,\"free\":39974104,\"allocated\":136986624},\"players\":1,\"cpu\":{\"cores\":1,\"systemLoad\":0.021474945896454135,\"lavalinkLoad\":0.004833333333333334},\"uptime\":1924580311}"}
+{"level":20,"time":1674596349916,"pid":9748,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lunecloud Lavalink\" debug: connection: lavaclient <<< stats: {\"playingPlayers\":0,\"op\":\"stats\",\"memory\":{\"reservable\":502792192,\"used\":99967920,\"free\":37018704,\"allocated\":136986624},\"players\":1,\"cpu\":{\"cores\":1,\"systemLoad\":0.02163421534365119,\"lavalinkLoad\":0.005},\"uptime\":1924640311}"}
+{"level":20,"time":1674596409917,"pid":9748,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lunecloud Lavalink\" debug: connection: lavaclient <<< stats: {\"playingPlayers\":0,\"op\":\"stats\",\"memory\":{\"reservable\":502792192,\"used\":102800792,\"free\":34185832,\"allocated\":136986624},\"players\":1,\"cpu\":{\"cores\":1,\"systemLoad\":0.025790349417637273,\"lavalinkLoad\":0.0045},\"uptime\":1924700311}"}
+{"level":20,"time":1674596469919,"pid":9748,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lunecloud Lavalink\" debug: connection: lavaclient <<< stats: {\"playingPlayers\":0,\"op\":\"stats\",\"memory\":{\"reservable\":502792192,\"used\":105669920,\"free\":31316704,\"allocated\":136986624},\"players\":1,\"cpu\":{\"cores\":1,\"systemLoad\":0.024983344437041973,\"lavalinkLoad\":0.004833333333333334},\"uptime\":1924760311}"}
+{"level":20,"time":1674596529920,"pid":9748,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lunecloud Lavalink\" debug: connection: lavaclient <<< stats: {\"playingPlayers\":0,\"op\":\"stats\",\"memory\":{\"reservable\":502792192,\"used\":108514664,\"free\":28471960,\"allocated\":136986624},\"players\":1,\"cpu\":{\"cores\":1,\"systemLoad\":0.02599566738876854,\"lavalinkLoad\":0.0045},\"uptime\":1924820311}"}
+{"level":20,"time":1674596589922,"pid":9748,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lunecloud Lavalink\" debug: connection: lavaclient <<< stats: {\"playingPlayers\":0,\"op\":\"stats\",\"memory\":{\"reservable\":502792192,\"used\":111386888,\"free\":25599736,\"allocated\":136986624},\"players\":1,\"cpu\":{\"cores\":1,\"systemLoad\":0.02816197300449925,\"lavalinkLoad\":0.004666666666666667},\"uptime\":1924880311}"}
+{"level":20,"time":1674596649922,"pid":9748,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lunecloud Lavalink\" debug: connection: lavaclient <<< stats: {\"playingPlayers\":0,\"op\":\"stats\",\"memory\":{\"reservable\":502792192,\"used\":114265680,\"free\":22720944,\"allocated\":136986624},\"players\":1,\"cpu\":{\"cores\":1,\"systemLoad\":0.02681545636242505,\"lavalinkLoad\":0.004666666666666667},\"uptime\":1924940311}"}
+{"level":20,"time":1674596709926,"pid":9748,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lunecloud Lavalink\" debug: connection: lavaclient <<< stats: {\"playingPlayers\":0,\"op\":\"stats\",\"memory\":{\"reservable\":502792192,\"used\":117122672,\"free\":19863952,\"allocated\":136986624},\"players\":1,\"cpu\":{\"cores\":1,\"systemLoad\":0.02794876060555648,\"lavalinkLoad\":0.004666666666666667},\"uptime\":1925000311}"}
+{"level":20,"time":1674596769924,"pid":9748,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lunecloud Lavalink\" debug: connection: lavaclient <<< stats: {\"playingPlayers\":0,\"op\":\"stats\",\"memory\":{\"reservable\":502792192,\"used\":82231384,\"free\":54755240,\"allocated\":136986624},\"players\":1,\"cpu\":{\"cores\":1,\"systemLoad\":0.03197335553705245,\"lavalinkLoad\":0.004666666666666667},\"uptime\":1925060311}"}
+{"level":20,"time":1674596829928,"pid":9748,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lunecloud Lavalink\" debug: connection: lavaclient <<< stats: {\"playingPlayers\":0,\"op\":\"stats\",\"memory\":{\"reservable\":502792192,\"used\":85237504,\"free\":51749120,\"allocated\":136986624},\"players\":1,\"cpu\":{\"cores\":1,\"systemLoad\":0.030459387483355527,\"lavalinkLoad\":0.004833333333333334},\"uptime\":1925120311}"}
+{"level":20,"time":1674596889927,"pid":9748,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lunecloud Lavalink\" debug: connection: lavaclient <<< stats: {\"playingPlayers\":0,\"op\":\"stats\",\"memory\":{\"reservable\":502792192,\"used\":87986432,\"free\":49000192,\"allocated\":136986624},\"players\":1,\"cpu\":{\"cores\":1,\"systemLoad\":0.025807525807525808,\"lavalinkLoad\":0.004666666666666667},\"uptime\":1925180311}"}
+{"level":20,"time":1674596949929,"pid":9748,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lunecloud Lavalink\" debug: connection: lavaclient <<< stats: {\"playingPlayers\":0,\"op\":\"stats\",\"memory\":{\"reservable\":502792192,\"used\":90935832,\"free\":46050792,\"allocated\":136986624},\"players\":1,\"cpu\":{\"cores\":1,\"systemLoad\":0.027777777777777776,\"lavalinkLoad\":0.004833333333333334},\"uptime\":1925240311}"}
+{"level":20,"time":1674597009930,"pid":9748,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lunecloud Lavalink\" debug: connection: lavaclient <<< stats: {\"playingPlayers\":0,\"op\":\"stats\",\"memory\":{\"reservable\":502792192,\"used\":93811464,\"free\":43175160,\"allocated\":136986624},\"players\":1,\"cpu\":{\"cores\":1,\"systemLoad\":0.02431307243963364,\"lavalinkLoad\":0.004666666666666667},\"uptime\":1925300311}"}
+{"level":20,"time":1674597069932,"pid":9748,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lunecloud Lavalink\" debug: connection: lavaclient <<< stats: {\"playingPlayers\":0,\"op\":\"stats\",\"memory\":{\"reservable\":502792192,\"used\":96564008,\"free\":40422616,\"allocated\":136986624},\"players\":1,\"cpu\":{\"cores\":1,\"systemLoad\":0.028323892035988004,\"lavalinkLoad\":0.004666666666666667},\"uptime\":1925360311}"}
+{"level":20,"time":1674597129934,"pid":9748,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lunecloud Lavalink\" debug: connection: lavaclient <<< stats: {\"playingPlayers\":0,\"op\":\"stats\",\"memory\":{\"reservable\":502792192,\"used\":99430664,\"free\":37555960,\"allocated\":136986624},\"players\":1,\"cpu\":{\"cores\":1,\"systemLoad\":0.02944111776447106,\"lavalinkLoad\":0.004833333333333334},\"uptime\":1925420311}"}
+{"level":20,"time":1674597189934,"pid":9748,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lunecloud Lavalink\" debug: connection: lavaclient <<< stats: {\"playingPlayers\":0,\"op\":\"stats\",\"memory\":{\"reservable\":502792192,\"used\":102330360,\"free\":34656264,\"allocated\":136986624},\"players\":1,\"cpu\":{\"cores\":1,\"systemLoad\":0.031135531135531136,\"lavalinkLoad\":0.004666666666666667},\"uptime\":1925480311}"}
+{"level":20,"time":1674597249936,"pid":9748,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lunecloud Lavalink\" debug: connection: lavaclient <<< stats: {\"playingPlayers\":0,\"op\":\"stats\",\"memory\":{\"reservable\":502792192,\"used\":105147848,\"free\":31838776,\"allocated\":136986624},\"players\":1,\"cpu\":{\"cores\":1,\"systemLoad\":0.02997502081598668,\"lavalinkLoad\":0.005},\"uptime\":1925540311}"}
+{"level":20,"time":1674597309938,"pid":9748,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lunecloud Lavalink\" debug: connection: lavaclient <<< stats: {\"playingPlayers\":0,\"op\":\"stats\",\"memory\":{\"reservable\":502792192,\"used\":108091464,\"free\":28895160,\"allocated\":136986624},\"players\":1,\"cpu\":{\"cores\":1,\"systemLoad\":0.02844784561636999,\"lavalinkLoad\":0.0045},\"uptime\":1925600311}"}
+{"level":20,"time":1674597369938,"pid":9748,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lunecloud Lavalink\" debug: connection: lavaclient <<< stats: {\"playingPlayers\":0,\"op\":\"stats\",\"memory\":{\"reservable\":502792192,\"used\":110823272,\"free\":26163352,\"allocated\":136986624},\"players\":1,\"cpu\":{\"cores\":1,\"systemLoad\":0.026968536707174962,\"lavalinkLoad\":0.004833333333333334},\"uptime\":1925660311}"}
+{"level":20,"time":1674597429939,"pid":9748,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lunecloud Lavalink\" debug: connection: lavaclient <<< stats: {\"playingPlayers\":0,\"op\":\"stats\",\"memory\":{\"reservable\":502792192,\"used\":113767064,\"free\":23219560,\"allocated\":136986624},\"players\":1,\"cpu\":{\"cores\":1,\"systemLoad\":0.0262982689747004,\"lavalinkLoad\":0.004666666666666667},\"uptime\":1925720311}"}
+{"level":20,"time":1674597489941,"pid":9748,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lunecloud Lavalink\" debug: connection: lavaclient <<< stats: {\"playingPlayers\":0,\"op\":\"stats\",\"memory\":{\"reservable\":502792192,\"used\":116479328,\"free\":20507296,\"allocated\":136986624},\"players\":1,\"cpu\":{\"cores\":1,\"systemLoad\":0.028490503165611462,\"lavalinkLoad\":0.004666666666666667},\"uptime\":1925780311}"}
+{"level":20,"time":1674597549942,"pid":9748,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lunecloud Lavalink\" debug: connection: lavaclient <<< stats: {\"playingPlayers\":0,\"op\":\"stats\",\"memory\":{\"reservable\":502792192,\"used\":81546168,\"free\":55440456,\"allocated\":136986624},\"players\":1,\"cpu\":{\"cores\":1,\"systemLoad\":0.02965184074629352,\"lavalinkLoad\":0.005},\"uptime\":1925840311}"}
+{"level":20,"time":1674597609943,"pid":9748,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lunecloud Lavalink\" debug: connection: lavaclient <<< stats: {\"playingPlayers\":0,\"op\":\"stats\",\"memory\":{\"reservable\":502792192,\"used\":84522128,\"free\":52464496,\"allocated\":136986624},\"players\":1,\"cpu\":{\"cores\":1,\"systemLoad\":0.0262982689747004,\"lavalinkLoad\":0.004666666666666667},\"uptime\":1925900311}"}
+{"level":20,"time":1674597669945,"pid":9748,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lunecloud Lavalink\" debug: connection: lavaclient <<< stats: {\"playingPlayers\":0,\"op\":\"stats\",\"memory\":{\"reservable\":502792192,\"used\":87328064,\"free\":49658560,\"allocated\":136986624},\"players\":1,\"cpu\":{\"cores\":1,\"systemLoad\":0.03146853146853147,\"lavalinkLoad\":0.004666666666666667},\"uptime\":1925960311}"}
+{"level":20,"time":1674597729946,"pid":9748,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lunecloud Lavalink\" debug: connection: lavaclient <<< stats: {\"playingPlayers\":0,\"op\":\"stats\",\"memory\":{\"reservable\":502792192,\"used\":90284160,\"free\":46702464,\"allocated\":136986624},\"players\":1,\"cpu\":{\"cores\":1,\"systemLoad\":0.02731512325116589,\"lavalinkLoad\":0.004833333333333334},\"uptime\":1926020311}"}
+{"level":20,"time":1674597789956,"pid":9748,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lunecloud Lavalink\" debug: connection: lavaclient <<< stats: {\"playingPlayers\":0,\"op\":\"stats\",\"memory\":{\"reservable\":502792192,\"used\":93088968,\"free\":43897656,\"allocated\":136986624},\"players\":1,\"cpu\":{\"cores\":1,\"systemLoad\":0.02531645569620253,\"lavalinkLoad\":0.0045},\"uptime\":1926080311}"}
+{"level":20,"time":1674597849948,"pid":9748,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lunecloud Lavalink\" debug: connection: lavaclient <<< stats: {\"playingPlayers\":0,\"op\":\"stats\",\"memory\":{\"reservable\":502792192,\"used\":95946944,\"free\":41039680,\"allocated\":136986624},\"players\":1,\"cpu\":{\"cores\":1,\"systemLoad\":0.024975024975024976,\"lavalinkLoad\":0.005},\"uptime\":1926140311}"}
+{"level":20,"time":1674597909957,"pid":9748,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lunecloud Lavalink\" debug: connection: lavaclient <<< stats: {\"playingPlayers\":0,\"op\":\"stats\",\"memory\":{\"reservable\":502792192,\"used\":99123032,\"free\":37863592,\"allocated\":136986624},\"players\":1,\"cpu\":{\"cores\":1,\"systemLoad\":0.02940687821897325,\"lavalinkLoad\":0.004833333333333334},\"uptime\":1926200311}"}
+{"level":20,"time":1674597969963,"pid":9748,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lunecloud Lavalink\" debug: connection: lavaclient <<< stats: {\"playingPlayers\":0,\"op\":\"stats\",\"memory\":{\"reservable\":502792192,\"used\":102156504,\"free\":34830120,\"allocated\":136986624},\"players\":1,\"cpu\":{\"cores\":1,\"systemLoad\":0.031094113734619223,\"lavalinkLoad\":0.005},\"uptime\":1926260311}"}
+{"level":20,"time":1674598029956,"pid":9748,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lunecloud Lavalink\" debug: connection: lavaclient <<< stats: {\"playingPlayers\":0,\"op\":\"stats\",\"memory\":{\"reservable\":502792192,\"used\":105062200,\"free\":31924424,\"allocated\":136986624},\"players\":1,\"cpu\":{\"cores\":1,\"systemLoad\":0.0264427074671545,\"lavalinkLoad\":0.004833333333333334},\"uptime\":1926320311}"}
+{"level":30,"time":1674603336200,"pid":14248,"hostname":"DESKTOP-II87B4O","msg":"Loading commands..."}
+{"level":20,"time":1674603336226,"pid":14248,"hostname":"DESKTOP-II87B4O","msg":"Skipping command announce. Disabled!"}
+{"level":20,"time":1674603336363,"pid":14248,"hostname":"DESKTOP-II87B4O","msg":"Skipping command roles-menu. Disabled!"}
+{"level":20,"time":1674603336608,"pid":14248,"hostname":"DESKTOP-II87B4O","msg":"Skipping command trick-or-treat. Disabled!"}
+{"level":20,"time":1674603336608,"pid":14248,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command trick-or-treat. Disabled!"}
+{"level":20,"time":1674603338035,"pid":14248,"hostname":"DESKTOP-II87B4O","msg":"Skipping command changelog. Disabled!"}
+{"level":20,"time":1674603338043,"pid":14248,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command avatar. Disabled!"}
+{"level":20,"time":1674603338044,"pid":14248,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command botinvite. Disabled!"}
+{"level":20,"time":1674603338048,"pid":14248,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command botstats. Disabled!"}
+{"level":20,"time":1674603338051,"pid":14248,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command channelinfo. Disabled!"}
+{"level":20,"time":1674603338052,"pid":14248,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command emojiinfo. Disabled!"}
+{"level":20,"time":1674603338070,"pid":14248,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command guildinfo. Disabled!"}
+{"level":20,"time":1674603338071,"pid":14248,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command uptime. Disabled!"}
+{"level":20,"time":1674603338074,"pid":14248,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command userinfo. Disabled!"}
+{"level":20,"time":1674603338082,"pid":14248,"hostname":"DESKTOP-II87B4O","msg":"Skipping command bot. Disabled!"}
+{"level":20,"time":1674603338083,"pid":14248,"hostname":"DESKTOP-II87B4O","msg":"Skipping command info. Disabled!"}
+{"level":20,"time":1674603338100,"pid":14248,"hostname":"DESKTOP-II87B4O","msg":"Skipping command channel. Disabled!"}
+{"level":20,"time":1674603338103,"pid":14248,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command deafen. Disabled!"}
+{"level":20,"time":1674603338105,"pid":14248,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command disconnect. Disabled!"}
+{"level":20,"time":1674603338107,"pid":14248,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command move. Disabled!"}
+{"level":20,"time":1674603338108,"pid":14248,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command purge. Disabled!"}
+{"level":20,"time":1674603338109,"pid":14248,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command purgeattach. Disabled!"}
+{"level":20,"time":1674603338110,"pid":14248,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command purgebots. Disabled!"}
+{"level":20,"time":1674603338111,"pid":14248,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command purgelinks. Disabled!"}
+{"level":20,"time":1674603338112,"pid":14248,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command purgetoken. Disabled!"}
+{"level":20,"time":1674603338113,"pid":14248,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command purgeuser. Disabled!"}
+{"level":20,"time":1674603338115,"pid":14248,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command undeafen. Disabled!"}
+{"level":20,"time":1674603338117,"pid":14248,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command vmute. Disabled!"}
+{"level":20,"time":1674603338118,"pid":14248,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command vunmute. Disabled!"}
+{"level":20,"time":1674603338120,"pid":14248,"hostname":"DESKTOP-II87B4O","msg":"Skipping command role. Disabled!"}
+{"level":20,"time":1674603338121,"pid":14248,"hostname":"DESKTOP-II87B4O","msg":"Skipping command purge. Disabled!"}
+{"level":20,"time":1674603338123,"pid":14248,"hostname":"DESKTOP-II87B4O","msg":"Skipping command voice. Disabled!"}
+{"level":20,"time":1674603338154,"pid":14248,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command blacklist. Disabled!"}
+{"level":20,"time":1674603338155,"pid":14248,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command emit. Disabled!"}
+{"level":20,"time":1674603338156,"pid":14248,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command eval. Disabled!"}
+{"level":20,"time":1674603338157,"pid":14248,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command leaveserver. Disabled!"}
+{"level":20,"time":1674603338158,"pid":14248,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command listservers. Disabled!"}
+{"level":30,"time":1674603338195,"pid":14248,"hostname":"DESKTOP-II87B4O","msg":"Loaded 115 commands"}
+{"level":30,"time":1674603338195,"pid":14248,"hostname":"DESKTOP-II87B4O","msg":"Loaded 99 slash commands"}
+{"level":30,"time":1674603338195,"pid":14248,"hostname":"DESKTOP-II87B4O","msg":"Loading contexts..."}
+{"level":30,"time":1674603338197,"pid":14248,"hostname":"DESKTOP-II87B4O","msg":"Loaded 0 USER contexts"}
+{"level":30,"time":1674603338197,"pid":14248,"hostname":"DESKTOP-II87B4O","msg":"Loaded 0 MESSAGE contexts"}
+{"level":30,"time":1674603338197,"pid":14248,"hostname":"DESKTOP-II87B4O","msg":"Loading events..."}
+{"level":30,"time":1674603338435,"pid":14248,"hostname":"DESKTOP-II87B4O","msg":"Loaded 26 events. Success (26) Failed (0)"}
+{"level":30,"time":1674603338436,"pid":14248,"hostname":"DESKTOP-II87B4O","msg":"Connecting to MongoDb..."}
+{"level":30,"time":1674603338468,"pid":14248,"hostname":"DESKTOP-II87B4O","msg":"Downtime alerts started on 25999"}
+{"level":30,"time":1674603339776,"pid":14248,"hostname":"DESKTOP-II87B4O","msg":"Mongoose: Database connection established"}
+{"level":30,"time":1674603339777,"pid":14248,"hostname":"DESKTOP-II87B4O","msg":"Launching dashboard"}
+{"level":30,"time":1674603339840,"pid":14248,"hostname":"DESKTOP-II87B4O","msg":"Connecting to MongoDb..."}
+{"level":30,"time":1674603339840,"pid":14248,"hostname":"DESKTOP-II87B4O","msg":"Mongoose: Database connection established"}
+{"level":30,"time":1674603339862,"pid":14248,"hostname":"DESKTOP-II87B4O","msg":"Lightning dashboard is listening on port 8080"}
+{"level":30,"time":1674603345701,"pid":14248,"hostname":"DESKTOP-II87B4O","msg":"Logged in as Elon's Testing Bot#6842! (1024458057188659293)"}
+{"level":20,"time":1674603345702,"pid":14248,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lunecloud Lavalink\" debug: connection: creating websocket..."}
+{"level":30,"time":1674603345705,"pid":14248,"hostname":"DESKTOP-II87B4O","msg":"Music Manager initialized"}
+{"level":30,"time":1674603345705,"pid":14248,"hostname":"DESKTOP-II87B4O","msg":"Initializing giveaways manager..."}
+{"level":30,"time":1674603345818,"pid":14248,"hostname":"DESKTOP-II87B4O","msg":"Giveaway Manager initialized"}
+{"level":30,"time":1674603346136,"pid":14248,"hostname":"DESKTOP-II87B4O","msg":"Successfully registered interactions"}
+{"level":20,"time":1674603346149,"pid":14248,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lunecloud Lavalink\" connected"}
+{"level":20,"time":1674603346149,"pid":14248,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lunecloud Lavalink\" debug: connection: connected in 444ms"}
+{"level":20,"time":1674603346162,"pid":14248,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lunecloud Lavalink\" debug: connection: lavaclient <<< stats: {\"playingPlayers\":0,\"op\":\"stats\",\"memory\":{\"reservable\":502792192,\"used\":87954472,\"free\":49032152,\"allocated\":136986624},\"players\":1,\"cpu\":{\"cores\":1,\"systemLoad\":0,\"lavalinkLoad\":1.2644071436792725},\"uptime\":1931636401}"}
+{"level":30,"time":1674603346224,"pid":14248,"hostname":"DESKTOP-II87B4O","msg":"Total Clusters: 1"}
+{"level":30,"time":1674603346225,"pid":14248,"hostname":"DESKTOP-II87B4O","msg":"Connected to cluster 0"}
+{"level":30,"time":1674603346225,"pid":14248,"hostname":"DESKTOP-II87B4O","msg":"Total Shards: 2"}
+{"level":30,"time":1674603346233,"pid":14248,"hostname":"DESKTOP-II87B4O","msg":"3 total guilds"}
+{"level":20,"time":1674603406155,"pid":14248,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lunecloud Lavalink\" debug: connection: lavaclient <<< stats: {\"playingPlayers\":0,\"op\":\"stats\",\"memory\":{\"reservable\":502792192,\"used\":91141224,\"free\":45845400,\"allocated\":136986624},\"players\":1,\"cpu\":{\"cores\":1,\"systemLoad\":0.021159613462179275,\"lavalinkLoad\":0.004667288971862915},\"uptime\":1931696400}"}
+{"level":20,"time":1674603466154,"pid":14248,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lunecloud Lavalink\" debug: connection: lavaclient <<< stats: {\"playingPlayers\":0,\"op\":\"stats\",\"memory\":{\"reservable\":502792192,\"used\":93975024,\"free\":43011600,\"allocated\":136986624},\"players\":1,\"cpu\":{\"cores\":1,\"systemLoad\":0.017321785476349102,\"lavalinkLoad\":0.004666666666666667},\"uptime\":1931756400}"}
+{"level":20,"time":1674603526156,"pid":14248,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lunecloud Lavalink\" debug: connection: lavaclient <<< stats: {\"playingPlayers\":0,\"op\":\"stats\",\"memory\":{\"reservable\":502792192,\"used\":96918544,\"free\":40068080,\"allocated\":136986624},\"players\":1,\"cpu\":{\"cores\":1,\"systemLoad\":0.022640253038122192,\"lavalinkLoad\":0.004833333333333334},\"uptime\":1931816400}"}
+{"level":20,"time":1674603586157,"pid":14248,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lunecloud Lavalink\" debug: connection: lavaclient <<< stats: {\"playingPlayers\":0,\"op\":\"stats\",\"memory\":{\"reservable\":502792192,\"used\":99677520,\"free\":37309104,\"allocated\":136986624},\"players\":1,\"cpu\":{\"cores\":1,\"systemLoad\":0.02062884711362502,\"lavalinkLoad\":0.004666588890185164},\"uptime\":1931876400}"}
+{"level":20,"time":1674603646158,"pid":14248,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lunecloud Lavalink\" debug: connection: lavaclient <<< stats: {\"playingPlayers\":0,\"op\":\"stats\",\"memory\":{\"reservable\":502792192,\"used\":102577288,\"free\":34409336,\"allocated\":136986624},\"players\":1,\"cpu\":{\"cores\":1,\"systemLoad\":0.02342581824223293,\"lavalinkLoad\":0.0046667444457407625},\"uptime\":1931936400}"}
+{"level":20,"time":1674603706159,"pid":14248,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lunecloud Lavalink\" debug: connection: lavaclient <<< stats: {\"playingPlayers\":0,\"op\":\"stats\",\"memory\":{\"reservable\":502792192,\"used\":105421704,\"free\":31564920,\"allocated\":136986624},\"players\":1,\"cpu\":{\"cores\":1,\"systemLoad\":0.02230359520639148,\"lavalinkLoad\":0.0045},\"uptime\":1931996400}"}
+{"level":20,"time":1674603766161,"pid":14248,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lunecloud Lavalink\" debug: connection: lavaclient <<< stats: {\"playingPlayers\":0,\"op\":\"stats\",\"memory\":{\"reservable\":502792192,\"used\":108189040,\"free\":28797584,\"allocated\":136986624},\"players\":1,\"cpu\":{\"cores\":1,\"systemLoad\":0.021637816245006658,\"lavalinkLoad\":0.004833333333333334},\"uptime\":1932056400}"}
+{"level":20,"time":1674603826162,"pid":14248,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lunecloud Lavalink\" debug: connection: lavaclient <<< stats: {\"playingPlayers\":0,\"op\":\"stats\",\"memory\":{\"reservable\":502792192,\"used\":111215784,\"free\":25770840,\"allocated\":136986624},\"players\":1,\"cpu\":{\"cores\":1,\"systemLoad\":0.020146520146520148,\"lavalinkLoad\":0.0045},\"uptime\":1932116400}"}
+{"level":20,"time":1674603886170,"pid":14248,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lunecloud Lavalink\" debug: connection: lavaclient <<< stats: {\"playingPlayers\":0,\"op\":\"stats\",\"memory\":{\"reservable\":502792192,\"used\":113863352,\"free\":23123272,\"allocated\":136986624},\"players\":1,\"cpu\":{\"cores\":1,\"systemLoad\":0.01997669385716664,\"lavalinkLoad\":0.004833252779120348},\"uptime\":1932176400}"}
+{"level":20,"time":1674603946164,"pid":14248,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lunecloud Lavalink\" debug: connection: lavaclient <<< stats: {\"playingPlayers\":0,\"op\":\"stats\",\"memory\":{\"reservable\":502792192,\"used\":116820704,\"free\":20165920,\"allocated\":136986624},\"players\":1,\"cpu\":{\"cores\":1,\"systemLoad\":0.019963400432540343,\"lavalinkLoad\":0.0046667444457407625},\"uptime\":1932236400}"}
+{"level":20,"time":1674604006166,"pid":14248,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lunecloud Lavalink\" debug: connection: lavaclient <<< stats: {\"playingPlayers\":0,\"op\":\"stats\",\"memory\":{\"reservable\":502792192,\"used\":81793192,\"free\":55193432,\"allocated\":136986624},\"players\":1,\"cpu\":{\"cores\":1,\"systemLoad\":0.022837139523253877,\"lavalinkLoad\":0.004666588890185164},\"uptime\":1932296400}"}
+{"level":20,"time":1674604066176,"pid":14248,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lunecloud Lavalink\" debug: connection: lavaclient <<< stats: {\"playingPlayers\":0,\"op\":\"stats\",\"memory\":{\"reservable\":502792192,\"used\":84797248,\"free\":52189376,\"allocated\":136986624},\"players\":1,\"cpu\":{\"cores\":1,\"systemLoad\":0.02463382157123835,\"lavalinkLoad\":0.0046667444457407625},\"uptime\":1932356400}"}
+{"level":20,"time":1674604126168,"pid":14248,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lunecloud Lavalink\" debug: connection: lavaclient <<< stats: {\"playingPlayers\":0,\"op\":\"stats\",\"memory\":{\"reservable\":502792192,\"used\":87860264,\"free\":49126360,\"allocated\":136986624},\"players\":1,\"cpu\":{\"cores\":1,\"systemLoad\":0.023801597869507325,\"lavalinkLoad\":0.004833333333333334},\"uptime\":1932416400}"}
+{"level":20,"time":1674604186175,"pid":14248,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lunecloud Lavalink\" debug: connection: lavaclient <<< stats: {\"playingPlayers\":0,\"op\":\"stats\",\"memory\":{\"reservable\":502792192,\"used\":90609184,\"free\":46377440,\"allocated\":136986624},\"players\":1,\"cpu\":{\"cores\":1,\"systemLoad\":0.0198069241011984,\"lavalinkLoad\":0.005},\"uptime\":1932476400}"}
+{"level":20,"time":1674604246171,"pid":14248,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lunecloud Lavalink\" debug: connection: lavaclient <<< stats: {\"playingPlayers\":0,\"op\":\"stats\",\"memory\":{\"reservable\":502792192,\"used\":93472040,\"free\":43514584,\"allocated\":136986624},\"players\":1,\"cpu\":{\"cores\":1,\"systemLoad\":0.019464315421726833,\"lavalinkLoad\":0.004666588890185164},\"uptime\":1932536400}"}
+{"level":20,"time":1674604306175,"pid":14248,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lunecloud Lavalink\" debug: connection: lavaclient <<< stats: {\"playingPlayers\":0,\"op\":\"stats\",\"memory\":{\"reservable\":502792192,\"used\":96320008,\"free\":40666616,\"allocated\":136986624},\"players\":1,\"cpu\":{\"cores\":1,\"systemLoad\":0.018130405854956753,\"lavalinkLoad\":0.004833413890231504},\"uptime\":1932596400}"}
+{"level":20,"time":1674604366173,"pid":14248,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lunecloud Lavalink\" debug: connection: lavaclient <<< stats: {\"playingPlayers\":0,\"op\":\"stats\",\"memory\":{\"reservable\":502792192,\"used\":99317488,\"free\":37669136,\"allocated\":136986624},\"players\":1,\"cpu\":{\"cores\":1,\"systemLoad\":0.020972037283621837,\"lavalinkLoad\":0.004666666666666667},\"uptime\":1932656400}"}
+{"level":20,"time":1674604426175,"pid":14248,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lunecloud Lavalink\" debug: connection: lavaclient <<< stats: {\"playingPlayers\":0,\"op\":\"stats\",\"memory\":{\"reservable\":502792192,\"used\":101925376,\"free\":35061248,\"allocated\":136986624},\"players\":1,\"cpu\":{\"cores\":1,\"systemLoad\":0.016429170159262364,\"lavalinkLoad\":0.0045},\"uptime\":1932716400}"}
+{"level":30,"time":1674604478745,"pid":15084,"hostname":"DESKTOP-II87B4O","msg":"Loading commands..."}
+{"level":20,"time":1674604478778,"pid":15084,"hostname":"DESKTOP-II87B4O","msg":"Skipping command announce. Disabled!"}
+{"level":20,"time":1674604478922,"pid":15084,"hostname":"DESKTOP-II87B4O","msg":"Skipping command roles-menu. Disabled!"}
+{"level":20,"time":1674604479054,"pid":15084,"hostname":"DESKTOP-II87B4O","msg":"Skipping command trick-or-treat. Disabled!"}
+{"level":20,"time":1674604479054,"pid":15084,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command trick-or-treat. Disabled!"}
+{"level":20,"time":1674604479919,"pid":15084,"hostname":"DESKTOP-II87B4O","msg":"Skipping command changelog. Disabled!"}
+{"level":20,"time":1674604479928,"pid":15084,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command avatar. Disabled!"}
+{"level":20,"time":1674604479930,"pid":15084,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command botinvite. Disabled!"}
+{"level":20,"time":1674604479932,"pid":15084,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command botstats. Disabled!"}
+{"level":20,"time":1674604479935,"pid":15084,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command channelinfo. Disabled!"}
+{"level":20,"time":1674604479937,"pid":15084,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command emojiinfo. Disabled!"}
+{"level":20,"time":1674604479948,"pid":15084,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command guildinfo. Disabled!"}
+{"level":20,"time":1674604479952,"pid":15084,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command uptime. Disabled!"}
+{"level":20,"time":1674604479954,"pid":15084,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command userinfo. Disabled!"}
+{"level":20,"time":1674604479957,"pid":15084,"hostname":"DESKTOP-II87B4O","msg":"Skipping command bot. Disabled!"}
+{"level":20,"time":1674604479959,"pid":15084,"hostname":"DESKTOP-II87B4O","msg":"Skipping command info. Disabled!"}
+{"level":20,"time":1674604479974,"pid":15084,"hostname":"DESKTOP-II87B4O","msg":"Skipping command channel. Disabled!"}
+{"level":20,"time":1674604479978,"pid":15084,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command deafen. Disabled!"}
+{"level":20,"time":1674604479979,"pid":15084,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command disconnect. Disabled!"}
+{"level":20,"time":1674604479981,"pid":15084,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command move. Disabled!"}
+{"level":20,"time":1674604479982,"pid":15084,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command purge. Disabled!"}
+{"level":20,"time":1674604479983,"pid":15084,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command purgeattach. Disabled!"}
+{"level":20,"time":1674604479984,"pid":15084,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command purgebots. Disabled!"}
+{"level":20,"time":1674604479985,"pid":15084,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command purgelinks. Disabled!"}
+{"level":20,"time":1674604479985,"pid":15084,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command purgetoken. Disabled!"}
+{"level":20,"time":1674604479986,"pid":15084,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command purgeuser. Disabled!"}
+{"level":20,"time":1674604479988,"pid":15084,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command undeafen. Disabled!"}
+{"level":20,"time":1674604479990,"pid":15084,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command vmute. Disabled!"}
+{"level":20,"time":1674604479991,"pid":15084,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command vunmute. Disabled!"}
+{"level":20,"time":1674604479993,"pid":15084,"hostname":"DESKTOP-II87B4O","msg":"Skipping command role. Disabled!"}
+{"level":20,"time":1674604479995,"pid":15084,"hostname":"DESKTOP-II87B4O","msg":"Skipping command purge. Disabled!"}
+{"level":20,"time":1674604479996,"pid":15084,"hostname":"DESKTOP-II87B4O","msg":"Skipping command voice. Disabled!"}
+{"level":20,"time":1674604480024,"pid":15084,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command blacklist. Disabled!"}
+{"level":20,"time":1674604480025,"pid":15084,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command emit. Disabled!"}
+{"level":20,"time":1674604480026,"pid":15084,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command eval. Disabled!"}
+{"level":20,"time":1674604480027,"pid":15084,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command leaveserver. Disabled!"}
+{"level":20,"time":1674604480028,"pid":15084,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command listservers. Disabled!"}
+{"level":30,"time":1674604480063,"pid":15084,"hostname":"DESKTOP-II87B4O","msg":"Loaded 115 commands"}
+{"level":30,"time":1674604480063,"pid":15084,"hostname":"DESKTOP-II87B4O","msg":"Loaded 99 slash commands"}
+{"level":30,"time":1674604480063,"pid":15084,"hostname":"DESKTOP-II87B4O","msg":"Loading contexts..."}
+{"level":30,"time":1674604480065,"pid":15084,"hostname":"DESKTOP-II87B4O","msg":"Loaded 0 USER contexts"}
+{"level":30,"time":1674604480065,"pid":15084,"hostname":"DESKTOP-II87B4O","msg":"Loaded 0 MESSAGE contexts"}
+{"level":30,"time":1674604480065,"pid":15084,"hostname":"DESKTOP-II87B4O","msg":"Loading events..."}
+{"level":30,"time":1674604480237,"pid":15084,"hostname":"DESKTOP-II87B4O","msg":"Loaded 26 events. Success (26) Failed (0)"}
+{"level":30,"time":1674604480238,"pid":15084,"hostname":"DESKTOP-II87B4O","msg":"Connecting to MongoDb..."}
+{"level":30,"time":1674604480278,"pid":15084,"hostname":"DESKTOP-II87B4O","msg":"Downtime alerts started on 25999"}
+{"level":30,"time":1674604481570,"pid":15084,"hostname":"DESKTOP-II87B4O","msg":"Mongoose: Database connection established"}
+{"level":30,"time":1674604481571,"pid":15084,"hostname":"DESKTOP-II87B4O","msg":"Launching dashboard"}
+{"level":30,"time":1674604481628,"pid":15084,"hostname":"DESKTOP-II87B4O","msg":"Connecting to MongoDb..."}
+{"level":30,"time":1674604481628,"pid":15084,"hostname":"DESKTOP-II87B4O","msg":"Mongoose: Database connection established"}
+{"level":30,"time":1674604481650,"pid":15084,"hostname":"DESKTOP-II87B4O","msg":"Lightning dashboard is listening on port 8080"}
+{"level":30,"time":1674604487663,"pid":15084,"hostname":"DESKTOP-II87B4O","msg":"Logged in as Elon's Testing Bot#6842! (1024458057188659293)"}
+{"level":20,"time":1674604487664,"pid":15084,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lunecloud Lavalink\" debug: connection: creating websocket..."}
+{"level":30,"time":1674604487667,"pid":15084,"hostname":"DESKTOP-II87B4O","msg":"Music Manager initialized"}
+{"level":30,"time":1674604487667,"pid":15084,"hostname":"DESKTOP-II87B4O","msg":"Initializing giveaways manager..."}
+{"level":30,"time":1674604487775,"pid":15084,"hostname":"DESKTOP-II87B4O","msg":"Giveaway Manager initialized"}
+{"level":20,"time":1674604487987,"pid":15084,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lunecloud Lavalink\" connected"}
+{"level":20,"time":1674604487987,"pid":15084,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lunecloud Lavalink\" debug: connection: connected in 320ms"}
+{"level":20,"time":1674604487994,"pid":15084,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lunecloud Lavalink\" debug: connection: lavaclient <<< stats: {\"playingPlayers\":0,\"op\":\"stats\",\"memory\":{\"reservable\":502792192,\"used\":105332592,\"free\":31654032,\"allocated\":136986624},\"players\":1,\"cpu\":{\"cores\":1,\"systemLoad\":0,\"lavalinkLoad\":1.2646166349778871},\"uptime\":1932778207}"}
+{"level":30,"time":1674604488105,"pid":15084,"hostname":"DESKTOP-II87B4O","msg":"Successfully registered interactions"}
+{"level":30,"time":1674604488200,"pid":15084,"hostname":"DESKTOP-II87B4O","msg":"Total Clusters: 1"}
+{"level":30,"time":1674604488200,"pid":15084,"hostname":"DESKTOP-II87B4O","msg":"Connected to cluster 0"}
+{"level":30,"time":1674604488200,"pid":15084,"hostname":"DESKTOP-II87B4O","msg":"Total Shards: 2"}
+{"level":30,"time":1674604488208,"pid":15084,"hostname":"DESKTOP-II87B4O","msg":"3 total guilds"}
+{"level":30,"time":1674604546234,"pid":6664,"hostname":"DESKTOP-II87B4O","msg":"Loading commands..."}
+{"level":20,"time":1674604546264,"pid":6664,"hostname":"DESKTOP-II87B4O","msg":"Skipping command announce. Disabled!"}
+{"level":20,"time":1674604546363,"pid":6664,"hostname":"DESKTOP-II87B4O","msg":"Skipping command roles-menu. Disabled!"}
+{"level":20,"time":1674604546506,"pid":6664,"hostname":"DESKTOP-II87B4O","msg":"Skipping command trick-or-treat. Disabled!"}
+{"level":20,"time":1674604546506,"pid":6664,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command trick-or-treat. Disabled!"}
+{"level":20,"time":1674604547282,"pid":6664,"hostname":"DESKTOP-II87B4O","msg":"Skipping command changelog. Disabled!"}
+{"level":20,"time":1674604547291,"pid":6664,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command avatar. Disabled!"}
+{"level":20,"time":1674604547292,"pid":6664,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command botinvite. Disabled!"}
+{"level":20,"time":1674604547295,"pid":6664,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command botstats. Disabled!"}
+{"level":20,"time":1674604547299,"pid":6664,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command channelinfo. Disabled!"}
+{"level":20,"time":1674604547301,"pid":6664,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command emojiinfo. Disabled!"}
+{"level":20,"time":1674604547314,"pid":6664,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command guildinfo. Disabled!"}
+{"level":20,"time":1674604547315,"pid":6664,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command uptime. Disabled!"}
+{"level":20,"time":1674604547316,"pid":6664,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command userinfo. Disabled!"}
+{"level":20,"time":1674604547320,"pid":6664,"hostname":"DESKTOP-II87B4O","msg":"Skipping command bot. Disabled!"}
+{"level":20,"time":1674604547324,"pid":6664,"hostname":"DESKTOP-II87B4O","msg":"Skipping command info. Disabled!"}
+{"level":20,"time":1674604547341,"pid":6664,"hostname":"DESKTOP-II87B4O","msg":"Skipping command channel. Disabled!"}
+{"level":20,"time":1674604547344,"pid":6664,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command deafen. Disabled!"}
+{"level":20,"time":1674604547346,"pid":6664,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command disconnect. Disabled!"}
+{"level":20,"time":1674604547348,"pid":6664,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command move. Disabled!"}
+{"level":20,"time":1674604547348,"pid":6664,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command purge. Disabled!"}
+{"level":20,"time":1674604547349,"pid":6664,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command purgeattach. Disabled!"}
+{"level":20,"time":1674604547350,"pid":6664,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command purgebots. Disabled!"}
+{"level":20,"time":1674604547351,"pid":6664,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command purgelinks. Disabled!"}
+{"level":20,"time":1674604547352,"pid":6664,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command purgetoken. Disabled!"}
+{"level":20,"time":1674604547353,"pid":6664,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command purgeuser. Disabled!"}
+{"level":20,"time":1674604547355,"pid":6664,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command undeafen. Disabled!"}
+{"level":20,"time":1674604547356,"pid":6664,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command vmute. Disabled!"}
+{"level":20,"time":1674604547358,"pid":6664,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command vunmute. Disabled!"}
+{"level":20,"time":1674604547360,"pid":6664,"hostname":"DESKTOP-II87B4O","msg":"Skipping command role. Disabled!"}
+{"level":20,"time":1674604547362,"pid":6664,"hostname":"DESKTOP-II87B4O","msg":"Skipping command purge. Disabled!"}
+{"level":20,"time":1674604547364,"pid":6664,"hostname":"DESKTOP-II87B4O","msg":"Skipping command voice. Disabled!"}
+{"level":20,"time":1674604547392,"pid":6664,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command blacklist. Disabled!"}
+{"level":20,"time":1674604547393,"pid":6664,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command emit. Disabled!"}
+{"level":20,"time":1674604547394,"pid":6664,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command eval. Disabled!"}
+{"level":20,"time":1674604547395,"pid":6664,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command leaveserver. Disabled!"}
+{"level":20,"time":1674604547396,"pid":6664,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command listservers. Disabled!"}
+{"level":30,"time":1674604547429,"pid":6664,"hostname":"DESKTOP-II87B4O","msg":"Loaded 115 commands"}
+{"level":30,"time":1674604547429,"pid":6664,"hostname":"DESKTOP-II87B4O","msg":"Loaded 99 slash commands"}
+{"level":30,"time":1674604547429,"pid":6664,"hostname":"DESKTOP-II87B4O","msg":"Loading contexts..."}
+{"level":30,"time":1674604547432,"pid":6664,"hostname":"DESKTOP-II87B4O","msg":"Loaded 0 USER contexts"}
+{"level":30,"time":1674604547432,"pid":6664,"hostname":"DESKTOP-II87B4O","msg":"Loaded 0 MESSAGE contexts"}
+{"level":30,"time":1674604547432,"pid":6664,"hostname":"DESKTOP-II87B4O","msg":"Loading events..."}
+{"level":30,"time":1674604547568,"pid":6664,"hostname":"DESKTOP-II87B4O","msg":"Loaded 26 events. Success (26) Failed (0)"}
+{"level":30,"time":1674604547568,"pid":6664,"hostname":"DESKTOP-II87B4O","msg":"Connecting to MongoDb..."}
+{"level":30,"time":1674604547600,"pid":6664,"hostname":"DESKTOP-II87B4O","msg":"Downtime alerts started on 25999"}
+{"level":30,"time":1674604549040,"pid":6664,"hostname":"DESKTOP-II87B4O","msg":"Mongoose: Database connection established"}
+{"level":30,"time":1674604549040,"pid":6664,"hostname":"DESKTOP-II87B4O","msg":"Launching dashboard"}
+{"level":30,"time":1674604549085,"pid":6664,"hostname":"DESKTOP-II87B4O","msg":"Connecting to MongoDb..."}
+{"level":30,"time":1674604549085,"pid":6664,"hostname":"DESKTOP-II87B4O","msg":"Mongoose: Database connection established"}
+{"level":30,"time":1674604549113,"pid":6664,"hostname":"DESKTOP-II87B4O","msg":"Lightning dashboard is listening on port 8080"}
+{"level":30,"time":1674604554957,"pid":6664,"hostname":"DESKTOP-II87B4O","msg":"Logged in as Elon's Testing Bot#6842! (1024458057188659293)"}
+{"level":20,"time":1674604554958,"pid":6664,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lunecloud Lavalink\" debug: connection: creating websocket..."}
+{"level":30,"time":1674604554960,"pid":6664,"hostname":"DESKTOP-II87B4O","msg":"Music Manager initialized"}
+{"level":30,"time":1674604554960,"pid":6664,"hostname":"DESKTOP-II87B4O","msg":"Initializing giveaways manager..."}
+{"level":30,"time":1674604555068,"pid":6664,"hostname":"DESKTOP-II87B4O","msg":"Giveaway Manager initialized"}
+{"level":20,"time":1674604555243,"pid":6664,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lunecloud Lavalink\" connected"}
+{"level":20,"time":1674604555243,"pid":6664,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lunecloud Lavalink\" debug: connection: connected in 283ms"}
+{"level":20,"time":1674604555254,"pid":6664,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lunecloud Lavalink\" debug: connection: lavaclient <<< stats: {\"playingPlayers\":0,\"op\":\"stats\",\"memory\":{\"reservable\":502792192,\"used\":108767608,\"free\":28219016,\"allocated\":136986624},\"players\":1,\"cpu\":{\"cores\":1,\"systemLoad\":0,\"lavalinkLoad\":1.264618206561234},\"uptime\":1932845468}"}
+{"level":30,"time":1674604555448,"pid":6664,"hostname":"DESKTOP-II87B4O","msg":"Successfully registered interactions"}
+{"level":30,"time":1674604555542,"pid":6664,"hostname":"DESKTOP-II87B4O","msg":"Total Clusters: 1"}
+{"level":30,"time":1674604555542,"pid":6664,"hostname":"DESKTOP-II87B4O","msg":"Connected to cluster 0"}
+{"level":30,"time":1674604555542,"pid":6664,"hostname":"DESKTOP-II87B4O","msg":"Total Shards: 2"}
+{"level":30,"time":1674604555549,"pid":6664,"hostname":"DESKTOP-II87B4O","msg":"3 total guilds"}
+{"level":20,"time":1674604615246,"pid":6664,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lunecloud Lavalink\" debug: connection: lavaclient <<< stats: {\"playingPlayers\":0,\"op\":\"stats\",\"memory\":{\"reservable\":502792192,\"used\":111793904,\"free\":25192720,\"allocated\":136986624},\"players\":1,\"cpu\":{\"cores\":1,\"systemLoad\":0.01411053250461952,\"lavalinkLoad\":0.004833897288016935},\"uptime\":1932905467}"}
+{"level":20,"time":1674604675246,"pid":6664,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lunecloud Lavalink\" debug: connection: lavaclient <<< stats: {\"playingPlayers\":0,\"op\":\"stats\",\"memory\":{\"reservable\":502792192,\"used\":114685008,\"free\":22301616,\"allocated\":136986624},\"players\":1,\"cpu\":{\"cores\":1,\"systemLoad\":0.010904210702902198,\"lavalinkLoad\":0.004833333333333334},\"uptime\":1932965467}"}
+{"level":20,"time":1674604735248,"pid":6664,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lunecloud Lavalink\" debug: connection: lavaclient <<< stats: {\"playingPlayers\":0,\"op\":\"stats\",\"memory\":{\"reservable\":502792192,\"used\":117479232,\"free\":19507392,\"allocated\":136986624},\"players\":1,\"cpu\":{\"cores\":1,\"systemLoad\":0.015095605501509561,\"lavalinkLoad\":0.004666666666666667},\"uptime\":1933025467}"}
+{"level":20,"time":1674604795250,"pid":6664,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lunecloud Lavalink\" debug: connection: lavaclient <<< stats: {\"playingPlayers\":0,\"op\":\"stats\",\"memory\":{\"reservable\":502792192,\"used\":82602080,\"free\":54384544,\"allocated\":136986624},\"players\":1,\"cpu\":{\"cores\":1,\"systemLoad\":0.019308260577568837,\"lavalinkLoad\":0.004999916668055532},\"uptime\":1933085467}"}
+{"level":20,"time":1674604855251,"pid":6664,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lunecloud Lavalink\" debug: connection: lavaclient <<< stats: {\"playingPlayers\":0,\"op\":\"stats\",\"memory\":{\"reservable\":502792192,\"used\":85696472,\"free\":51290152,\"allocated\":136986624},\"players\":1,\"cpu\":{\"cores\":1,\"systemLoad\":0.021775544388609715,\"lavalinkLoad\":0.004833333333333334},\"uptime\":1933145467}"}
+{"level":30,"time":1674604897084,"pid":704,"hostname":"DESKTOP-II87B4O","msg":"Loading commands..."}
+{"level":20,"time":1674604897120,"pid":704,"hostname":"DESKTOP-II87B4O","msg":"Skipping command announce. Disabled!"}
+{"level":20,"time":1674604897236,"pid":704,"hostname":"DESKTOP-II87B4O","msg":"Skipping command roles-menu. Disabled!"}
+{"level":20,"time":1674604897541,"pid":704,"hostname":"DESKTOP-II87B4O","msg":"Skipping command trick-or-treat. Disabled!"}
+{"level":20,"time":1674604897541,"pid":704,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command trick-or-treat. Disabled!"}
+{"level":20,"time":1674604898355,"pid":704,"hostname":"DESKTOP-II87B4O","msg":"Skipping command changelog. Disabled!"}
+{"level":20,"time":1674604898364,"pid":704,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command avatar. Disabled!"}
+{"level":20,"time":1674604898366,"pid":704,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command botinvite. Disabled!"}
+{"level":20,"time":1674604898368,"pid":704,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command botstats. Disabled!"}
+{"level":20,"time":1674604898371,"pid":704,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command channelinfo. Disabled!"}
+{"level":20,"time":1674604898374,"pid":704,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command emojiinfo. Disabled!"}
+{"level":20,"time":1674604898389,"pid":704,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command guildinfo. Disabled!"}
+{"level":20,"time":1674604898390,"pid":704,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command uptime. Disabled!"}
+{"level":20,"time":1674604898392,"pid":704,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command userinfo. Disabled!"}
+{"level":20,"time":1674604898397,"pid":704,"hostname":"DESKTOP-II87B4O","msg":"Skipping command bot. Disabled!"}
+{"level":20,"time":1674604898399,"pid":704,"hostname":"DESKTOP-II87B4O","msg":"Skipping command info. Disabled!"}
+{"level":20,"time":1674604898419,"pid":704,"hostname":"DESKTOP-II87B4O","msg":"Skipping command channel. Disabled!"}
+{"level":20,"time":1674604898423,"pid":704,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command deafen. Disabled!"}
+{"level":20,"time":1674604898424,"pid":704,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command disconnect. Disabled!"}
+{"level":20,"time":1674604898426,"pid":704,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command move. Disabled!"}
+{"level":20,"time":1674604898427,"pid":704,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command purge. Disabled!"}
+{"level":20,"time":1674604898428,"pid":704,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command purgeattach. Disabled!"}
+{"level":20,"time":1674604898429,"pid":704,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command purgebots. Disabled!"}
+{"level":20,"time":1674604898430,"pid":704,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command purgelinks. Disabled!"}
+{"level":20,"time":1674604898431,"pid":704,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command purgetoken. Disabled!"}
+{"level":20,"time":1674604898432,"pid":704,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command purgeuser. Disabled!"}
+{"level":20,"time":1674604898434,"pid":704,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command undeafen. Disabled!"}
+{"level":20,"time":1674604898435,"pid":704,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command vmute. Disabled!"}
+{"level":20,"time":1674604898437,"pid":704,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command vunmute. Disabled!"}
+{"level":20,"time":1674604898438,"pid":704,"hostname":"DESKTOP-II87B4O","msg":"Skipping command role. Disabled!"}
+{"level":20,"time":1674604898440,"pid":704,"hostname":"DESKTOP-II87B4O","msg":"Skipping command purge. Disabled!"}
+{"level":20,"time":1674604898442,"pid":704,"hostname":"DESKTOP-II87B4O","msg":"Skipping command voice. Disabled!"}
+{"level":20,"time":1674604898471,"pid":704,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command blacklist. Disabled!"}
+{"level":20,"time":1674604898472,"pid":704,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command emit. Disabled!"}
+{"level":20,"time":1674604898473,"pid":704,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command eval. Disabled!"}
+{"level":20,"time":1674604898473,"pid":704,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command leaveserver. Disabled!"}
+{"level":20,"time":1674604898475,"pid":704,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command listservers. Disabled!"}
+{"level":30,"time":1674604898510,"pid":704,"hostname":"DESKTOP-II87B4O","msg":"Loaded 115 commands"}
+{"level":30,"time":1674604898510,"pid":704,"hostname":"DESKTOP-II87B4O","msg":"Loaded 99 slash commands"}
+{"level":30,"time":1674604898510,"pid":704,"hostname":"DESKTOP-II87B4O","msg":"Loading contexts..."}
+{"level":30,"time":1674604898513,"pid":704,"hostname":"DESKTOP-II87B4O","msg":"Loaded 0 USER contexts"}
+{"level":30,"time":1674604898513,"pid":704,"hostname":"DESKTOP-II87B4O","msg":"Loaded 0 MESSAGE contexts"}
+{"level":30,"time":1674604898513,"pid":704,"hostname":"DESKTOP-II87B4O","msg":"Loading events..."}
+{"level":30,"time":1674604898742,"pid":704,"hostname":"DESKTOP-II87B4O","msg":"Loaded 26 events. Success (26) Failed (0)"}
+{"level":30,"time":1674604898743,"pid":704,"hostname":"DESKTOP-II87B4O","msg":"Connecting to MongoDb..."}
+{"level":30,"time":1674604898778,"pid":704,"hostname":"DESKTOP-II87B4O","msg":"Downtime alerts started on 25999"}
+{"level":30,"time":1674604900185,"pid":704,"hostname":"DESKTOP-II87B4O","msg":"Mongoose: Database connection established"}
+{"level":30,"time":1674604900185,"pid":704,"hostname":"DESKTOP-II87B4O","msg":"Launching dashboard"}
+{"level":30,"time":1674604900241,"pid":704,"hostname":"DESKTOP-II87B4O","msg":"Connecting to MongoDb..."}
+{"level":30,"time":1674604900241,"pid":704,"hostname":"DESKTOP-II87B4O","msg":"Mongoose: Database connection established"}
+{"level":30,"time":1674604900268,"pid":704,"hostname":"DESKTOP-II87B4O","msg":"Lightning dashboard is listening on port 8080"}
+{"level":30,"time":1674604906080,"pid":704,"hostname":"DESKTOP-II87B4O","msg":"Logged in as Elon's Testing Bot#6842! (1024458057188659293)"}
+{"level":20,"time":1674604906081,"pid":704,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lunecloud Lavalink\" debug: connection: creating websocket..."}
+{"level":30,"time":1674604906084,"pid":704,"hostname":"DESKTOP-II87B4O","msg":"Music Manager initialized"}
+{"level":30,"time":1674604906084,"pid":704,"hostname":"DESKTOP-II87B4O","msg":"Initializing giveaways manager..."}
+{"level":30,"time":1674604906196,"pid":704,"hostname":"DESKTOP-II87B4O","msg":"Giveaway Manager initialized"}
+{"level":20,"time":1674604906551,"pid":704,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lunecloud Lavalink\" connected"}
+{"level":20,"time":1674604906551,"pid":704,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lunecloud Lavalink\" debug: connection: connected in 467ms"}
+{"level":20,"time":1674604906570,"pid":704,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lunecloud Lavalink\" debug: connection: lavaclient <<< stats: {\"playingPlayers\":0,\"op\":\"stats\",\"memory\":{\"reservable\":502792192,\"used\":88263360,\"free\":48723264,\"allocated\":136986624},\"players\":1,\"cpu\":{\"cores\":1,\"systemLoad\":0,\"lavalinkLoad\":1.2646214934782596},\"uptime\":1933196768}"}
+{"level":30,"time":1674604906647,"pid":704,"hostname":"DESKTOP-II87B4O","msg":"Successfully registered interactions"}
+{"level":30,"time":1674604906743,"pid":704,"hostname":"DESKTOP-II87B4O","msg":"Total Clusters: 1"}
+{"level":30,"time":1674604906743,"pid":704,"hostname":"DESKTOP-II87B4O","msg":"Connected to cluster 0"}
+{"level":30,"time":1674604906743,"pid":704,"hostname":"DESKTOP-II87B4O","msg":"Total Shards: 2"}
+{"level":30,"time":1674604906754,"pid":704,"hostname":"DESKTOP-II87B4O","msg":"3 total guilds"}
+{"level":20,"time":1674604966554,"pid":704,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lunecloud Lavalink\" debug: connection: lavaclient <<< stats: {\"playingPlayers\":0,\"op\":\"stats\",\"memory\":{\"reservable\":502792192,\"used\":91119384,\"free\":45867240,\"allocated\":136986624},\"players\":1,\"cpu\":{\"cores\":1,\"systemLoad\":0.010566923851056693,\"lavalinkLoad\":0.004667989263624693},\"uptime\":1933256760}"}
+{"level":20,"time":1674605026555,"pid":704,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lunecloud Lavalink\" debug: connection: lavaclient <<< stats: {\"playingPlayers\":0,\"op\":\"stats\",\"memory\":{\"reservable\":502792192,\"used\":93976224,\"free\":43010400,\"allocated\":136986624},\"players\":1,\"cpu\":{\"cores\":1,\"systemLoad\":0.011235955056179775,\"lavalinkLoad\":0.004666666666666667},\"uptime\":1933316760}"}
+{"level":20,"time":1674605086556,"pid":704,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lunecloud Lavalink\" debug: connection: lavaclient <<< stats: {\"playingPlayers\":0,\"op\":\"stats\",\"memory\":{\"reservable\":502792192,\"used\":97029416,\"free\":39957208,\"allocated\":136986624},\"players\":1,\"cpu\":{\"cores\":1,\"systemLoad\":0.014575305746356173,\"lavalinkLoad\":0.005},\"uptime\":1933376760}"}
+{"level":20,"time":1674605146558,"pid":704,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lunecloud Lavalink\" debug: connection: lavaclient <<< stats: {\"playingPlayers\":0,\"op\":\"stats\",\"memory\":{\"reservable\":502792192,\"used\":99599000,\"free\":37387624,\"allocated\":136986624},\"players\":1,\"cpu\":{\"cores\":1,\"systemLoad\":0.012248322147651007,\"lavalinkLoad\":0.004833333333333334},\"uptime\":1933436760}"}
+{"level":20,"time":1674605206560,"pid":704,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lunecloud Lavalink\" debug: connection: lavaclient <<< stats: {\"playingPlayers\":0,\"op\":\"stats\",\"memory\":{\"reservable\":502792192,\"used\":102473944,\"free\":34512680,\"allocated\":136986624},\"players\":1,\"cpu\":{\"cores\":1,\"systemLoad\":0.014762623720852207,\"lavalinkLoad\":0.004666588890185164},\"uptime\":1933496760}"}
+{"level":20,"time":1674605266560,"pid":704,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lunecloud Lavalink\" debug: connection: lavaclient <<< stats: {\"playingPlayers\":0,\"op\":\"stats\",\"memory\":{\"reservable\":502792192,\"used\":105472304,\"free\":31514320,\"allocated\":136986624},\"players\":1,\"cpu\":{\"cores\":1,\"systemLoad\":0.01476510067114094,\"lavalinkLoad\":0.005000083334722245},\"uptime\":1933556760}"}
+{"level":20,"time":1674605326562,"pid":704,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lunecloud Lavalink\" debug: connection: lavaclient <<< stats: {\"playingPlayers\":0,\"op\":\"stats\",\"memory\":{\"reservable\":502792192,\"used\":108102808,\"free\":28883816,\"allocated\":136986624},\"players\":1,\"cpu\":{\"cores\":1,\"systemLoad\":0.011071967790639155,\"lavalinkLoad\":0.004833333333333334},\"uptime\":1933616760}"}
+{"level":20,"time":1674605386564,"pid":704,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lunecloud Lavalink\" debug: connection: lavaclient <<< stats: {\"playingPlayers\":0,\"op\":\"stats\",\"memory\":{\"reservable\":502792192,\"used\":111012128,\"free\":25974496,\"allocated\":136986624},\"players\":1,\"cpu\":{\"cores\":1,\"systemLoad\":0.010067114093959731,\"lavalinkLoad\":0.004833333333333334},\"uptime\":1933676760}"}
+{"level":20,"time":1674605446565,"pid":704,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lunecloud Lavalink\" debug: connection: lavaclient <<< stats: {\"playingPlayers\":0,\"op\":\"stats\",\"memory\":{\"reservable\":502792192,\"used\":113876456,\"free\":23110168,\"allocated\":136986624},\"players\":1,\"cpu\":{\"cores\":1,\"systemLoad\":0.01073645361516524,\"lavalinkLoad\":0.004833333333333334},\"uptime\":1933736760}"}
+{"level":20,"time":1674605506566,"pid":704,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lunecloud Lavalink\" debug: connection: lavaclient <<< stats: {\"playingPlayers\":0,\"op\":\"stats\",\"memory\":{\"reservable\":502792192,\"used\":116700760,\"free\":20285864,\"allocated\":136986624},\"players\":1,\"cpu\":{\"cores\":1,\"systemLoad\":0.011571356699647829,\"lavalinkLoad\":0.004666666666666667},\"uptime\":1933796760}"}
+{"level":20,"time":1674605566566,"pid":704,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lunecloud Lavalink\" debug: connection: lavaclient <<< stats: {\"playingPlayers\":0,\"op\":\"stats\",\"memory\":{\"reservable\":502792192,\"used\":81792896,\"free\":55193728,\"allocated\":136986624},\"players\":1,\"cpu\":{\"cores\":1,\"systemLoad\":0.0154233025984912,\"lavalinkLoad\":0.0046667444457407625},\"uptime\":1933856760}"}
+{"level":20,"time":1674605626568,"pid":704,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lunecloud Lavalink\" debug: connection: lavaclient <<< stats: {\"playingPlayers\":0,\"op\":\"stats\",\"memory\":{\"reservable\":502792192,\"used\":84766296,\"free\":52220328,\"allocated\":136986624},\"players\":1,\"cpu\":{\"cores\":1,\"systemLoad\":0.015774458801812385,\"lavalinkLoad\":0.004833252779120348},\"uptime\":1933916760}"}
+{"level":20,"time":1674605686569,"pid":704,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lunecloud Lavalink\" debug: connection: lavaclient <<< stats: {\"playingPlayers\":0,\"op\":\"stats\",\"memory\":{\"reservable\":502792192,\"used\":87853296,\"free\":49133328,\"allocated\":136986624},\"players\":1,\"cpu\":{\"cores\":1,\"systemLoad\":0.012068387529332886,\"lavalinkLoad\":0.0046667444457407625},\"uptime\":1933976760}"}
+{"level":20,"time":1674605746570,"pid":704,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lunecloud Lavalink\" debug: connection: lavaclient <<< stats: {\"playingPlayers\":0,\"op\":\"stats\",\"memory\":{\"reservable\":502792192,\"used\":90539744,\"free\":46446880,\"allocated\":136986624},\"players\":1,\"cpu\":{\"cores\":1,\"systemLoad\":0.010904210702902198,\"lavalinkLoad\":0.004666588890185164},\"uptime\":1934036760}"}
+{"level":20,"time":1674605806571,"pid":704,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lunecloud Lavalink\" debug: connection: lavaclient <<< stats: {\"playingPlayers\":0,\"op\":\"stats\",\"memory\":{\"reservable\":502792192,\"used\":93566008,\"free\":43420616,\"allocated\":136986624},\"players\":1,\"cpu\":{\"cores\":1,\"systemLoad\":0.01191075322932394,\"lavalinkLoad\":0.0046667444457407625},\"uptime\":1934096760}"}
+{"level":30,"time":1674605838601,"pid":14472,"hostname":"DESKTOP-II87B4O","msg":"Loading commands..."}
+{"level":20,"time":1674605838627,"pid":14472,"hostname":"DESKTOP-II87B4O","msg":"Skipping command announce. Disabled!"}
+{"level":20,"time":1674605838713,"pid":14472,"hostname":"DESKTOP-II87B4O","msg":"Skipping command roles-menu. Disabled!"}
+{"level":20,"time":1674605838850,"pid":14472,"hostname":"DESKTOP-II87B4O","msg":"Skipping command trick-or-treat. Disabled!"}
+{"level":20,"time":1674605838850,"pid":14472,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command trick-or-treat. Disabled!"}
+{"level":20,"time":1674605839521,"pid":14472,"hostname":"DESKTOP-II87B4O","msg":"Skipping command changelog. Disabled!"}
+{"level":20,"time":1674605839531,"pid":14472,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command avatar. Disabled!"}
+{"level":20,"time":1674605839533,"pid":14472,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command botinvite. Disabled!"}
+{"level":20,"time":1674605839535,"pid":14472,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command botstats. Disabled!"}
+{"level":20,"time":1674605839538,"pid":14472,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command channelinfo. Disabled!"}
+{"level":20,"time":1674605839540,"pid":14472,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command emojiinfo. Disabled!"}
+{"level":20,"time":1674605839560,"pid":14472,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command guildinfo. Disabled!"}
+{"level":20,"time":1674605839561,"pid":14472,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command uptime. Disabled!"}
+{"level":20,"time":1674605839562,"pid":14472,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command userinfo. Disabled!"}
+{"level":20,"time":1674605839565,"pid":14472,"hostname":"DESKTOP-II87B4O","msg":"Skipping command bot. Disabled!"}
+{"level":20,"time":1674605839567,"pid":14472,"hostname":"DESKTOP-II87B4O","msg":"Skipping command info. Disabled!"}
+{"level":20,"time":1674605839582,"pid":14472,"hostname":"DESKTOP-II87B4O","msg":"Skipping command channel. Disabled!"}
+{"level":20,"time":1674605839588,"pid":14472,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command deafen. Disabled!"}
+{"level":20,"time":1674605839590,"pid":14472,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command disconnect. Disabled!"}
+{"level":20,"time":1674605839591,"pid":14472,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command move. Disabled!"}
+{"level":20,"time":1674605839593,"pid":14472,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command purge. Disabled!"}
+{"level":20,"time":1674605839594,"pid":14472,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command purgeattach. Disabled!"}
+{"level":20,"time":1674605839595,"pid":14472,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command purgebots. Disabled!"}
+{"level":20,"time":1674605839595,"pid":14472,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command purgelinks. Disabled!"}
+{"level":20,"time":1674605839596,"pid":14472,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command purgetoken. Disabled!"}
+{"level":20,"time":1674605839597,"pid":14472,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command purgeuser. Disabled!"}
+{"level":20,"time":1674605839600,"pid":14472,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command undeafen. Disabled!"}
+{"level":20,"time":1674605839603,"pid":14472,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command vmute. Disabled!"}
+{"level":20,"time":1674605839604,"pid":14472,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command vunmute. Disabled!"}
+{"level":20,"time":1674605839606,"pid":14472,"hostname":"DESKTOP-II87B4O","msg":"Skipping command role. Disabled!"}
+{"level":20,"time":1674605839608,"pid":14472,"hostname":"DESKTOP-II87B4O","msg":"Skipping command purge. Disabled!"}
+{"level":20,"time":1674605839610,"pid":14472,"hostname":"DESKTOP-II87B4O","msg":"Skipping command voice. Disabled!"}
+{"level":20,"time":1674605839639,"pid":14472,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command blacklist. Disabled!"}
+{"level":20,"time":1674605839640,"pid":14472,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command emit. Disabled!"}
+{"level":20,"time":1674605839641,"pid":14472,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command eval. Disabled!"}
+{"level":20,"time":1674605839642,"pid":14472,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command leaveserver. Disabled!"}
+{"level":20,"time":1674605839643,"pid":14472,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command listservers. Disabled!"}
+{"level":30,"time":1674605839675,"pid":14472,"hostname":"DESKTOP-II87B4O","msg":"Loaded 115 commands"}
+{"level":30,"time":1674605839675,"pid":14472,"hostname":"DESKTOP-II87B4O","msg":"Loaded 99 slash commands"}
+{"level":30,"time":1674605839676,"pid":14472,"hostname":"DESKTOP-II87B4O","msg":"Loading contexts..."}
+{"level":30,"time":1674605839677,"pid":14472,"hostname":"DESKTOP-II87B4O","msg":"Loaded 0 USER contexts"}
+{"level":30,"time":1674605839677,"pid":14472,"hostname":"DESKTOP-II87B4O","msg":"Loaded 0 MESSAGE contexts"}
+{"level":30,"time":1674605839677,"pid":14472,"hostname":"DESKTOP-II87B4O","msg":"Loading events..."}
+{"level":30,"time":1674605839815,"pid":14472,"hostname":"DESKTOP-II87B4O","msg":"Loaded 26 events. Success (26) Failed (0)"}
+{"level":30,"time":1674605839815,"pid":14472,"hostname":"DESKTOP-II87B4O","msg":"Connecting to MongoDb..."}
+{"level":30,"time":1674605839870,"pid":14472,"hostname":"DESKTOP-II87B4O","msg":"Downtime alerts started on 25999"}
+{"level":30,"time":1674605841207,"pid":14472,"hostname":"DESKTOP-II87B4O","msg":"Mongoose: Database connection established"}
+{"level":30,"time":1674605841207,"pid":14472,"hostname":"DESKTOP-II87B4O","msg":"Launching dashboard"}
+{"level":30,"time":1674605841255,"pid":14472,"hostname":"DESKTOP-II87B4O","msg":"Connecting to MongoDb..."}
+{"level":30,"time":1674605841255,"pid":14472,"hostname":"DESKTOP-II87B4O","msg":"Mongoose: Database connection established"}
+{"level":30,"time":1674605841276,"pid":14472,"hostname":"DESKTOP-II87B4O","msg":"Lightning dashboard is listening on port 8080"}
+{"level":30,"time":1674605847284,"pid":14472,"hostname":"DESKTOP-II87B4O","msg":"Logged in as Elon's Testing Bot#6842! (1024458057188659293)"}
+{"level":20,"time":1674605847285,"pid":14472,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lunecloud Lavalink\" debug: connection: creating websocket..."}
+{"level":30,"time":1674605847288,"pid":14472,"hostname":"DESKTOP-II87B4O","msg":"Music Manager initialized"}
+{"level":30,"time":1674605847288,"pid":14472,"hostname":"DESKTOP-II87B4O","msg":"Initializing giveaways manager..."}
+{"level":30,"time":1674605847392,"pid":14472,"hostname":"DESKTOP-II87B4O","msg":"Giveaway Manager initialized"}
+{"level":20,"time":1674605847603,"pid":14472,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lunecloud Lavalink\" connected"}
+{"level":20,"time":1674605847603,"pid":14472,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lunecloud Lavalink\" debug: connection: connected in 316ms"}
+{"level":20,"time":1674605847611,"pid":14472,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lunecloud Lavalink\" debug: connection: lavaclient <<< stats: {\"playingPlayers\":0,\"op\":\"stats\",\"memory\":{\"reservable\":502792192,\"used\":96211120,\"free\":40775504,\"allocated\":136986624},\"players\":1,\"cpu\":{\"cores\":1,\"systemLoad\":0,\"lavalinkLoad\":1.2646333717440128},\"uptime\":1934137792}"}
+{"level":50,"time":1674605847996,"pid":14472,"hostname":"DESKTOP-II87B4O","err":{"type":"ReferenceError","message":"guild is not defined","stack":"ReferenceError: guild is not defined\n    at D:\\Escritorio\\idk\\Code Stuff\\lightning\\dashboard\\routes\\guild-manager.js:563:3\n    at Layer.handle [as handle_request] (D:\\Escritorio\\idk\\Code Stuff\\lightning\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (D:\\Escritorio\\idk\\Code Stuff\\lightning\\node_modules\\express\\lib\\router\\route.js:144:13)\n    at module.exports (D:\\Escritorio\\idk\\Code Stuff\\lightning\\dashboard\\auth\\CheckAuth.js:8:10)\n    at Layer.handle [as handle_request] (D:\\Escritorio\\idk\\Code Stuff\\lightning\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (D:\\Escritorio\\idk\\Code Stuff\\lightning\\node_modules\\express\\lib\\router\\route.js:144:13)\n    at Route.dispatch (D:\\Escritorio\\idk\\Code Stuff\\lightning\\node_modules\\express\\lib\\router\\route.js:114:3)\n    at Layer.handle [as handle_request] (D:\\Escritorio\\idk\\Code Stuff\\lightning\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at D:\\Escritorio\\idk\\Code Stuff\\lightning\\node_modules\\express\\lib\\router\\index.js:284:15\n    at param (D:\\Escritorio\\idk\\Code Stuff\\lightning\\node_modules\\express\\lib\\router\\index.js:365:14)"},"msg":"Unhandled exception: guild is not defined"}
+{"level":30,"time":1674605848013,"pid":14472,"hostname":"DESKTOP-II87B4O","msg":"Successfully registered interactions"}
+{"level":30,"time":1674605848121,"pid":14472,"hostname":"DESKTOP-II87B4O","msg":"Total Clusters: 1"}
+{"level":30,"time":1674605848121,"pid":14472,"hostname":"DESKTOP-II87B4O","msg":"Connected to cluster 0"}
+{"level":30,"time":1674605848121,"pid":14472,"hostname":"DESKTOP-II87B4O","msg":"Total Shards: 2"}
+{"level":30,"time":1674605848128,"pid":14472,"hostname":"DESKTOP-II87B4O","msg":"3 total guilds"}
+{"level":30,"time":1674605884132,"pid":16324,"hostname":"DESKTOP-II87B4O","msg":"Loading commands..."}
+{"level":20,"time":1674605884156,"pid":16324,"hostname":"DESKTOP-II87B4O","msg":"Skipping command announce. Disabled!"}
+{"level":20,"time":1674605884241,"pid":16324,"hostname":"DESKTOP-II87B4O","msg":"Skipping command roles-menu. Disabled!"}
+{"level":20,"time":1674605884382,"pid":16324,"hostname":"DESKTOP-II87B4O","msg":"Skipping command trick-or-treat. Disabled!"}
+{"level":20,"time":1674605884382,"pid":16324,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command trick-or-treat. Disabled!"}
+{"level":20,"time":1674605885074,"pid":16324,"hostname":"DESKTOP-II87B4O","msg":"Skipping command changelog. Disabled!"}
+{"level":20,"time":1674605885082,"pid":16324,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command avatar. Disabled!"}
+{"level":20,"time":1674605885083,"pid":16324,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command botinvite. Disabled!"}
+{"level":20,"time":1674605885086,"pid":16324,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command botstats. Disabled!"}
+{"level":20,"time":1674605885090,"pid":16324,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command channelinfo. Disabled!"}
+{"level":20,"time":1674605885092,"pid":16324,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command emojiinfo. Disabled!"}
+{"level":20,"time":1674605885105,"pid":16324,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command guildinfo. Disabled!"}
+{"level":20,"time":1674605885106,"pid":16324,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command uptime. Disabled!"}
+{"level":20,"time":1674605885108,"pid":16324,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command userinfo. Disabled!"}
+{"level":20,"time":1674605885114,"pid":16324,"hostname":"DESKTOP-II87B4O","msg":"Skipping command bot. Disabled!"}
+{"level":20,"time":1674605885116,"pid":16324,"hostname":"DESKTOP-II87B4O","msg":"Skipping command info. Disabled!"}
+{"level":20,"time":1674605885141,"pid":16324,"hostname":"DESKTOP-II87B4O","msg":"Skipping command channel. Disabled!"}
+{"level":20,"time":1674605885146,"pid":16324,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command deafen. Disabled!"}
+{"level":20,"time":1674605885148,"pid":16324,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command disconnect. Disabled!"}
+{"level":20,"time":1674605885150,"pid":16324,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command move. Disabled!"}
+{"level":20,"time":1674605885152,"pid":16324,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command purge. Disabled!"}
+{"level":20,"time":1674605885153,"pid":16324,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command purgeattach. Disabled!"}
+{"level":20,"time":1674605885155,"pid":16324,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command purgebots. Disabled!"}
+{"level":20,"time":1674605885156,"pid":16324,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command purgelinks. Disabled!"}
+{"level":20,"time":1674605885158,"pid":16324,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command purgetoken. Disabled!"}
+{"level":20,"time":1674605885159,"pid":16324,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command purgeuser. Disabled!"}
+{"level":20,"time":1674605885161,"pid":16324,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command undeafen. Disabled!"}
+{"level":20,"time":1674605885163,"pid":16324,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command vmute. Disabled!"}
+{"level":20,"time":1674605885165,"pid":16324,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command vunmute. Disabled!"}
+{"level":20,"time":1674605885168,"pid":16324,"hostname":"DESKTOP-II87B4O","msg":"Skipping command role. Disabled!"}
+{"level":20,"time":1674605885171,"pid":16324,"hostname":"DESKTOP-II87B4O","msg":"Skipping command purge. Disabled!"}
+{"level":20,"time":1674605885174,"pid":16324,"hostname":"DESKTOP-II87B4O","msg":"Skipping command voice. Disabled!"}
+{"level":20,"time":1674605885208,"pid":16324,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command blacklist. Disabled!"}
+{"level":20,"time":1674605885209,"pid":16324,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command emit. Disabled!"}
+{"level":20,"time":1674605885210,"pid":16324,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command eval. Disabled!"}
+{"level":20,"time":1674605885211,"pid":16324,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command leaveserver. Disabled!"}
+{"level":20,"time":1674605885212,"pid":16324,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command listservers. Disabled!"}
+{"level":30,"time":1674605885245,"pid":16324,"hostname":"DESKTOP-II87B4O","msg":"Loaded 115 commands"}
+{"level":30,"time":1674605885246,"pid":16324,"hostname":"DESKTOP-II87B4O","msg":"Loaded 99 slash commands"}
+{"level":30,"time":1674605885246,"pid":16324,"hostname":"DESKTOP-II87B4O","msg":"Loading contexts..."}
+{"level":30,"time":1674605885248,"pid":16324,"hostname":"DESKTOP-II87B4O","msg":"Loaded 0 USER contexts"}
+{"level":30,"time":1674605885248,"pid":16324,"hostname":"DESKTOP-II87B4O","msg":"Loaded 0 MESSAGE contexts"}
+{"level":30,"time":1674605885248,"pid":16324,"hostname":"DESKTOP-II87B4O","msg":"Loading events..."}
+{"level":30,"time":1674605885390,"pid":16324,"hostname":"DESKTOP-II87B4O","msg":"Loaded 26 events. Success (26) Failed (0)"}
+{"level":30,"time":1674605885391,"pid":16324,"hostname":"DESKTOP-II87B4O","msg":"Connecting to MongoDb..."}
+{"level":30,"time":1674605885422,"pid":16324,"hostname":"DESKTOP-II87B4O","msg":"Downtime alerts started on 25999"}
+{"level":30,"time":1674605886502,"pid":16324,"hostname":"DESKTOP-II87B4O","msg":"Mongoose: Database connection established"}
+{"level":30,"time":1674605886502,"pid":16324,"hostname":"DESKTOP-II87B4O","msg":"Launching dashboard"}
+{"level":30,"time":1674605886561,"pid":16324,"hostname":"DESKTOP-II87B4O","msg":"Connecting to MongoDb..."}
+{"level":30,"time":1674605886561,"pid":16324,"hostname":"DESKTOP-II87B4O","msg":"Mongoose: Database connection established"}
+{"level":30,"time":1674605886584,"pid":16324,"hostname":"DESKTOP-II87B4O","msg":"Lightning dashboard is listening on port 8080"}
+{"level":30,"time":1674605892668,"pid":16324,"hostname":"DESKTOP-II87B4O","msg":"Logged in as Elon's Testing Bot#6842! (1024458057188659293)"}
+{"level":20,"time":1674605892669,"pid":16324,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lunecloud Lavalink\" debug: connection: creating websocket..."}
+{"level":30,"time":1674605892672,"pid":16324,"hostname":"DESKTOP-II87B4O","msg":"Music Manager initialized"}
+{"level":30,"time":1674605892672,"pid":16324,"hostname":"DESKTOP-II87B4O","msg":"Initializing giveaways manager..."}
+{"level":30,"time":1674605892775,"pid":16324,"hostname":"DESKTOP-II87B4O","msg":"Giveaway Manager initialized"}
+{"level":20,"time":1674605892953,"pid":16324,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lunecloud Lavalink\" connected"}
+{"level":20,"time":1674605892953,"pid":16324,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lunecloud Lavalink\" debug: connection: connected in 282ms"}
+{"level":20,"time":1674605892974,"pid":16324,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lunecloud Lavalink\" debug: connection: lavaclient <<< stats: {\"playingPlayers\":0,\"op\":\"stats\",\"memory\":{\"reservable\":502792192,\"used\":98433752,\"free\":38552872,\"allocated\":136986624},\"players\":1,\"cpu\":{\"cores\":1,\"systemLoad\":0,\"lavalinkLoad\":1.2646330759468147},\"uptime\":1934183147}"}
+{"level":30,"time":1674605893087,"pid":16324,"hostname":"DESKTOP-II87B4O","msg":"Successfully registered interactions"}
+{"level":30,"time":1674605893184,"pid":16324,"hostname":"DESKTOP-II87B4O","msg":"Total Clusters: 1"}
+{"level":30,"time":1674605893184,"pid":16324,"hostname":"DESKTOP-II87B4O","msg":"Connected to cluster 0"}
+{"level":30,"time":1674605893185,"pid":16324,"hostname":"DESKTOP-II87B4O","msg":"Total Shards: 2"}
+{"level":30,"time":1674605893195,"pid":16324,"hostname":"DESKTOP-II87B4O","msg":"3 total guilds"}
+{"level":30,"time":1674605906801,"pid":15792,"hostname":"DESKTOP-II87B4O","msg":"Loading commands..."}
+{"level":20,"time":1674605906826,"pid":15792,"hostname":"DESKTOP-II87B4O","msg":"Skipping command announce. Disabled!"}
+{"level":20,"time":1674605906909,"pid":15792,"hostname":"DESKTOP-II87B4O","msg":"Skipping command roles-menu. Disabled!"}
+{"level":20,"time":1674605907030,"pid":15792,"hostname":"DESKTOP-II87B4O","msg":"Skipping command trick-or-treat. Disabled!"}
+{"level":20,"time":1674605907030,"pid":15792,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command trick-or-treat. Disabled!"}
+{"level":20,"time":1674605907650,"pid":15792,"hostname":"DESKTOP-II87B4O","msg":"Skipping command changelog. Disabled!"}
+{"level":20,"time":1674605907658,"pid":15792,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command avatar. Disabled!"}
+{"level":20,"time":1674605907660,"pid":15792,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command botinvite. Disabled!"}
+{"level":20,"time":1674605907662,"pid":15792,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command botstats. Disabled!"}
+{"level":20,"time":1674605907665,"pid":15792,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command channelinfo. Disabled!"}
+{"level":20,"time":1674605907666,"pid":15792,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command emojiinfo. Disabled!"}
+{"level":20,"time":1674605907682,"pid":15792,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command guildinfo. Disabled!"}
+{"level":20,"time":1674605907683,"pid":15792,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command uptime. Disabled!"}
+{"level":20,"time":1674605907685,"pid":15792,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command userinfo. Disabled!"}
+{"level":20,"time":1674605907688,"pid":15792,"hostname":"DESKTOP-II87B4O","msg":"Skipping command bot. Disabled!"}
+{"level":20,"time":1674605907689,"pid":15792,"hostname":"DESKTOP-II87B4O","msg":"Skipping command info. Disabled!"}
+{"level":20,"time":1674605907704,"pid":15792,"hostname":"DESKTOP-II87B4O","msg":"Skipping command channel. Disabled!"}
+{"level":20,"time":1674605907708,"pid":15792,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command deafen. Disabled!"}
+{"level":20,"time":1674605907710,"pid":15792,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command disconnect. Disabled!"}
+{"level":20,"time":1674605907711,"pid":15792,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command move. Disabled!"}
+{"level":20,"time":1674605907712,"pid":15792,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command purge. Disabled!"}
+{"level":20,"time":1674605907713,"pid":15792,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command purgeattach. Disabled!"}
+{"level":20,"time":1674605907714,"pid":15792,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command purgebots. Disabled!"}
+{"level":20,"time":1674605907715,"pid":15792,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command purgelinks. Disabled!"}
+{"level":20,"time":1674605907715,"pid":15792,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command purgetoken. Disabled!"}
+{"level":20,"time":1674605907716,"pid":15792,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command purgeuser. Disabled!"}
+{"level":20,"time":1674605907718,"pid":15792,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command undeafen. Disabled!"}
+{"level":20,"time":1674605907719,"pid":15792,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command vmute. Disabled!"}
+{"level":20,"time":1674605907720,"pid":15792,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command vunmute. Disabled!"}
+{"level":20,"time":1674605907722,"pid":15792,"hostname":"DESKTOP-II87B4O","msg":"Skipping command role. Disabled!"}
+{"level":20,"time":1674605907724,"pid":15792,"hostname":"DESKTOP-II87B4O","msg":"Skipping command purge. Disabled!"}
+{"level":20,"time":1674605907725,"pid":15792,"hostname":"DESKTOP-II87B4O","msg":"Skipping command voice. Disabled!"}
+{"level":20,"time":1674605907754,"pid":15792,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command blacklist. Disabled!"}
+{"level":20,"time":1674605907755,"pid":15792,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command emit. Disabled!"}
+{"level":20,"time":1674605907756,"pid":15792,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command eval. Disabled!"}
+{"level":20,"time":1674605907758,"pid":15792,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command leaveserver. Disabled!"}
+{"level":20,"time":1674605907759,"pid":15792,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command listservers. Disabled!"}
+{"level":30,"time":1674605907792,"pid":15792,"hostname":"DESKTOP-II87B4O","msg":"Loaded 115 commands"}
+{"level":30,"time":1674605907792,"pid":15792,"hostname":"DESKTOP-II87B4O","msg":"Loaded 99 slash commands"}
+{"level":30,"time":1674605907793,"pid":15792,"hostname":"DESKTOP-II87B4O","msg":"Loading contexts..."}
+{"level":30,"time":1674605907794,"pid":15792,"hostname":"DESKTOP-II87B4O","msg":"Loaded 0 USER contexts"}
+{"level":30,"time":1674605907795,"pid":15792,"hostname":"DESKTOP-II87B4O","msg":"Loaded 0 MESSAGE contexts"}
+{"level":30,"time":1674605907795,"pid":15792,"hostname":"DESKTOP-II87B4O","msg":"Loading events..."}
+{"level":30,"time":1674605907933,"pid":15792,"hostname":"DESKTOP-II87B4O","msg":"Loaded 26 events. Success (26) Failed (0)"}
+{"level":30,"time":1674605907933,"pid":15792,"hostname":"DESKTOP-II87B4O","msg":"Connecting to MongoDb..."}
+{"level":30,"time":1674605907965,"pid":15792,"hostname":"DESKTOP-II87B4O","msg":"Downtime alerts started on 25999"}
+{"level":30,"time":1674605909350,"pid":15792,"hostname":"DESKTOP-II87B4O","msg":"Mongoose: Database connection established"}
+{"level":30,"time":1674605909350,"pid":15792,"hostname":"DESKTOP-II87B4O","msg":"Launching dashboard"}
+{"level":30,"time":1674605909394,"pid":15792,"hostname":"DESKTOP-II87B4O","msg":"Connecting to MongoDb..."}
+{"level":30,"time":1674605909395,"pid":15792,"hostname":"DESKTOP-II87B4O","msg":"Mongoose: Database connection established"}
+{"level":30,"time":1674605909414,"pid":15792,"hostname":"DESKTOP-II87B4O","msg":"Lightning dashboard is listening on port 8080"}
+{"level":30,"time":1674605915782,"pid":15792,"hostname":"DESKTOP-II87B4O","msg":"Logged in as Elon's Testing Bot#6842! (1024458057188659293)"}
+{"level":20,"time":1674605915783,"pid":15792,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lunecloud Lavalink\" debug: connection: creating websocket..."}
+{"level":30,"time":1674605915785,"pid":15792,"hostname":"DESKTOP-II87B4O","msg":"Music Manager initialized"}
+{"level":30,"time":1674605915785,"pid":15792,"hostname":"DESKTOP-II87B4O","msg":"Initializing giveaways manager..."}
+{"level":30,"time":1674605915881,"pid":15792,"hostname":"DESKTOP-II87B4O","msg":"Giveaway Manager initialized"}
+{"level":20,"time":1674605916102,"pid":15792,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lunecloud Lavalink\" connected"}
+{"level":20,"time":1674605916102,"pid":15792,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lunecloud Lavalink\" debug: connection: connected in 317ms"}
+{"level":20,"time":1674605916106,"pid":15792,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lunecloud Lavalink\" debug: connection: lavaclient <<< stats: {\"playingPlayers\":0,\"op\":\"stats\",\"memory\":{\"reservable\":502792192,\"used\":100105688,\"free\":36880936,\"allocated\":136986624},\"players\":1,\"cpu\":{\"cores\":1,\"systemLoad\":0,\"lavalinkLoad\":1.2646334426330619},\"uptime\":1934206290}"}
+{"level":30,"time":1674605916141,"pid":15792,"hostname":"DESKTOP-II87B4O","msg":"Successfully registered interactions"}
+{"level":30,"time":1674605916242,"pid":15792,"hostname":"DESKTOP-II87B4O","msg":"Total Clusters: 1"}
+{"level":30,"time":1674605916242,"pid":15792,"hostname":"DESKTOP-II87B4O","msg":"Connected to cluster 0"}
+{"level":30,"time":1674605916242,"pid":15792,"hostname":"DESKTOP-II87B4O","msg":"Total Shards: 2"}
+{"level":30,"time":1674605916249,"pid":15792,"hostname":"DESKTOP-II87B4O","msg":"3 total guilds"}
+{"level":20,"time":1674605976105,"pid":15792,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lunecloud Lavalink\" debug: connection: lavaclient <<< stats: {\"playingPlayers\":0,\"op\":\"stats\",\"memory\":{\"reservable\":502792192,\"used\":102930712,\"free\":34055912,\"allocated\":136986624},\"players\":1,\"cpu\":{\"cores\":1,\"systemLoad\":0.011081262592343854,\"lavalinkLoad\":0.004666977798519901},\"uptime\":1934266290}"}
+{"level":20,"time":1674606036106,"pid":15792,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lunecloud Lavalink\" debug: connection: lavaclient <<< stats: {\"playingPlayers\":0,\"op\":\"stats\",\"memory\":{\"reservable\":502792192,\"used\":105939160,\"free\":31047464,\"allocated\":136986624},\"players\":1,\"cpu\":{\"cores\":1,\"systemLoad\":0.01778523489932886,\"lavalinkLoad\":0.004833333333333334},\"uptime\":1934326290}"}
+{"level":20,"time":1674606096108,"pid":15792,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lunecloud Lavalink\" debug: connection: lavaclient <<< stats: {\"playingPlayers\":0,\"op\":\"stats\",\"memory\":{\"reservable\":502792192,\"used\":108756496,\"free\":28230128,\"allocated\":136986624},\"players\":1,\"cpu\":{\"cores\":1,\"systemLoad\":0.013091641490433032,\"lavalinkLoad\":0.004666666666666667},\"uptime\":1934386290}"}
+{"level":20,"time":1674606156108,"pid":15792,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lunecloud Lavalink\" debug: connection: lavaclient <<< stats: {\"playingPlayers\":0,\"op\":\"stats\",\"memory\":{\"reservable\":502792192,\"used\":111623936,\"free\":25362688,\"allocated\":136986624},\"players\":1,\"cpu\":{\"cores\":1,\"systemLoad\":0.011228422993128876,\"lavalinkLoad\":0.004833333333333334},\"uptime\":1934446290}"}
+{"level":30,"time":1674611161685,"pid":13736,"hostname":"DESKTOP-II87B4O","msg":"Loading commands..."}
+{"level":20,"time":1674611161711,"pid":13736,"hostname":"DESKTOP-II87B4O","msg":"Skipping command announce. Disabled!"}
+{"level":20,"time":1674611161845,"pid":13736,"hostname":"DESKTOP-II87B4O","msg":"Skipping command roles-menu. Disabled!"}
+{"level":20,"time":1674611162008,"pid":13736,"hostname":"DESKTOP-II87B4O","msg":"Skipping command trick-or-treat. Disabled!"}
+{"level":20,"time":1674611162008,"pid":13736,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command trick-or-treat. Disabled!"}
+{"level":20,"time":1674611163263,"pid":13736,"hostname":"DESKTOP-II87B4O","msg":"Skipping command giveaway. Disabled!"}
+{"level":20,"time":1674611163271,"pid":13736,"hostname":"DESKTOP-II87B4O","msg":"Skipping command changelog. Disabled!"}
+{"level":20,"time":1674611163282,"pid":13736,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command avatar. Disabled!"}
+{"level":20,"time":1674611163284,"pid":13736,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command botinvite. Disabled!"}
+{"level":20,"time":1674611163288,"pid":13736,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command botstats. Disabled!"}
+{"level":20,"time":1674611163292,"pid":13736,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command channelinfo. Disabled!"}
+{"level":20,"time":1674611163295,"pid":13736,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command emojiinfo. Disabled!"}
+{"level":20,"time":1674611163313,"pid":13736,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command guildinfo. Disabled!"}
+{"level":20,"time":1674611163315,"pid":13736,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command uptime. Disabled!"}
+{"level":20,"time":1674611163318,"pid":13736,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command userinfo. Disabled!"}
+{"level":20,"time":1674611163324,"pid":13736,"hostname":"DESKTOP-II87B4O","msg":"Skipping command bot. Disabled!"}
+{"level":20,"time":1674611163326,"pid":13736,"hostname":"DESKTOP-II87B4O","msg":"Skipping command info. Disabled!"}
+{"level":20,"time":1674611163351,"pid":13736,"hostname":"DESKTOP-II87B4O","msg":"Skipping command channel. Disabled!"}
+{"level":20,"time":1674611163357,"pid":13736,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command deafen. Disabled!"}
+{"level":20,"time":1674611163359,"pid":13736,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command disconnect. Disabled!"}
+{"level":20,"time":1674611163362,"pid":13736,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command move. Disabled!"}
+{"level":20,"time":1674611163363,"pid":13736,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command purge. Disabled!"}
+{"level":20,"time":1674611163365,"pid":13736,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command purgeattach. Disabled!"}
+{"level":20,"time":1674611163366,"pid":13736,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command purgebots. Disabled!"}
+{"level":20,"time":1674611163368,"pid":13736,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command purgelinks. Disabled!"}
+{"level":20,"time":1674611163369,"pid":13736,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command purgetoken. Disabled!"}
+{"level":20,"time":1674611163375,"pid":13736,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command purgeuser. Disabled!"}
+{"level":20,"time":1674611163378,"pid":13736,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command undeafen. Disabled!"}
+{"level":20,"time":1674611163380,"pid":13736,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command vmute. Disabled!"}
+{"level":20,"time":1674611163382,"pid":13736,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command vunmute. Disabled!"}
+{"level":20,"time":1674611163384,"pid":13736,"hostname":"DESKTOP-II87B4O","msg":"Skipping command role. Disabled!"}
+{"level":20,"time":1674611163386,"pid":13736,"hostname":"DESKTOP-II87B4O","msg":"Skipping command purge. Disabled!"}
+{"level":20,"time":1674611163388,"pid":13736,"hostname":"DESKTOP-II87B4O","msg":"Skipping command voice. Disabled!"}
+{"level":20,"time":1674611163428,"pid":13736,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command blacklist. Disabled!"}
+{"level":20,"time":1674611163429,"pid":13736,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command emit. Disabled!"}
+{"level":20,"time":1674611163431,"pid":13736,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command eval. Disabled!"}
+{"level":20,"time":1674611163432,"pid":13736,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command leaveserver. Disabled!"}
+{"level":20,"time":1674611163433,"pid":13736,"hostname":"DESKTOP-II87B4O","msg":"Skipping slash command listservers. Disabled!"}
+{"level":30,"time":1674611163477,"pid":13736,"hostname":"DESKTOP-II87B4O","msg":"Loaded 114 commands"}
+{"level":30,"time":1674611163477,"pid":13736,"hostname":"DESKTOP-II87B4O","msg":"Loaded 99 slash commands"}
+{"level":30,"time":1674611163477,"pid":13736,"hostname":"DESKTOP-II87B4O","msg":"Loading contexts..."}
+{"level":30,"time":1674611163479,"pid":13736,"hostname":"DESKTOP-II87B4O","msg":"Loaded 0 USER contexts"}
+{"level":30,"time":1674611163479,"pid":13736,"hostname":"DESKTOP-II87B4O","msg":"Loaded 0 MESSAGE contexts"}
+{"level":30,"time":1674611163480,"pid":13736,"hostname":"DESKTOP-II87B4O","msg":"Loading events..."}
+{"level":30,"time":1674611163683,"pid":13736,"hostname":"DESKTOP-II87B4O","msg":"Loaded 26 events. Success (26) Failed (0)"}
+{"level":30,"time":1674611163683,"pid":13736,"hostname":"DESKTOP-II87B4O","msg":"Connecting to MongoDb..."}
+{"level":30,"time":1674611163734,"pid":13736,"hostname":"DESKTOP-II87B4O","msg":"Downtime alerts started on 25999"}
+{"level":30,"time":1674611165168,"pid":13736,"hostname":"DESKTOP-II87B4O","msg":"Mongoose: Database connection established"}
+{"level":30,"time":1674611165168,"pid":13736,"hostname":"DESKTOP-II87B4O","msg":"Launching dashboard"}
+{"level":30,"time":1674611165249,"pid":13736,"hostname":"DESKTOP-II87B4O","msg":"Connecting to MongoDb..."}
+{"level":30,"time":1674611165250,"pid":13736,"hostname":"DESKTOP-II87B4O","msg":"Mongoose: Database connection established"}
+{"level":30,"time":1674611165288,"pid":13736,"hostname":"DESKTOP-II87B4O","msg":"Lightning dashboard is listening on port 25008"}
+{"level":30,"time":1674611171267,"pid":13736,"hostname":"DESKTOP-II87B4O","msg":"Logged in as Elon's Testing Bot#6842! (1024458057188659293)"}
+{"level":20,"time":1674611171269,"pid":13736,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lightning Node 1\" debug: connection: creating websocket..."}
+{"level":20,"time":1674611171271,"pid":13736,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lightning Node 2\" debug: connection: creating websocket..."}
+{"level":30,"time":1674611171272,"pid":13736,"hostname":"DESKTOP-II87B4O","msg":"Music Manager initialized"}
+{"level":20,"time":1674611171695,"pid":13736,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lightning Node 2\" connected"}
+{"level":20,"time":1674611171695,"pid":13736,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lightning Node 2\" debug: connection: connected in 423ms"}
+{"level":20,"time":1674611171696,"pid":13736,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lightning Node 2\" debug: connection: lavaclient <<< ready: {\"resumed\":false,\"sessionId\":\"c2ytxymq7dsu5t9n\",\"op\":\"ready\"}"}
+{"level":20,"time":1674611171697,"pid":13736,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lightning Node 2\" debug: connection: lavaclient <<< stats: {\"players\":0,\"playingPlayers\":0,\"uptime\":1038772,\"memory\":{\"free\":21759880,\"used\":24578168,\"allocated\":46338048,\"reservable\":285868032},\"cpu\":{\"cores\":2,\"systemLoad\":0.0479272181579441,\"lavalinkLoad\":1.8603266733638424E-4},\"op\":\"stats\"}"}
+{"level":20,"time":1674611171698,"pid":13736,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lightning Node 1\" connected"}
+{"level":20,"time":1674611171699,"pid":13736,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lightning Node 1\" debug: connection: connected in 428ms"}
+{"level":20,"time":1674611171699,"pid":13736,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lightning Node 1\" debug: connection: lavaclient <<< ready: {\"resumed\":false,\"sessionId\":\"3ls6jjkbyx1mt6uv\",\"op\":\"ready\"}"}
+{"level":20,"time":1674611171700,"pid":13736,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lightning Node 1\" debug: connection: lavaclient <<< stats: {\"players\":0,\"playingPlayers\":0,\"uptime\":430177,\"memory\":{\"free\":32299384,\"used\":70329992,\"allocated\":102629376,\"reservable\":139919360},\"cpu\":{\"cores\":2,\"systemLoad\":0.03792703477556737,\"lavalinkLoad\":8.675133597057395E-5},\"op\":\"stats\"}"}
+{"level":30,"time":1674611171798,"pid":13736,"hostname":"DESKTOP-II87B4O","msg":"Successfully registered interactions"}
+{"level":30,"time":1674611171892,"pid":13736,"hostname":"DESKTOP-II87B4O","msg":"Total Clusters: 1"}
+{"level":30,"time":1674611171892,"pid":13736,"hostname":"DESKTOP-II87B4O","msg":"Connected to cluster 0"}
+{"level":30,"time":1674611171892,"pid":13736,"hostname":"DESKTOP-II87B4O","msg":"Total Shards: 2"}
+{"level":30,"time":1674611171900,"pid":13736,"hostname":"DESKTOP-II87B4O","msg":"3 total guilds"}
+{"level":20,"time":1674611174012,"pid":13736,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lightning Node 1\" debug: rest: + GET /loadtracks?identifier=scsearch%3Ayo%20no%20se%20ma%C3%B1ana"}
+{"level":20,"time":1674611174015,"pid":13736,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lightning Node 1\" debug: [player 999354364193951815] voice: updating voice status in guild=999354364193951815, channel=null"}
+{"level":20,"time":1674611174016,"pid":13736,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lightning Node 1\" debug: connection: lavaclient >>> volume: {\"op\":\"volume\",\"guildId\":\"999354364193951815\",\"volume\":30}"}
+{"level":20,"time":1674611174017,"pid":13736,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lightning Node 1\" debug: connection: lavaclient >>> play: {\"op\":\"play\",\"track\":\"QAABEQIAMVlvIE5vIFNlIE1hw7FhbmEgLSBMdWlzIEVucmlxdWUgKHZlcnNpb24pIC0gc2Fsc2EACnNvbmxhY3JlbWEAAAAAAAQDVwBxTzpodHRwczovL2FwaS12Mi5zb3VuZGNsb3VkLmNvbS9tZWRpYS9zb3VuZGNsb3VkOnRyYWNrczoxMDUzNzE3NzAvMGZhODNlYjYtZTZlMy00Y2Q5LTlmNjUtYzQ3YTg5MzM5OTFiL3N0cmVhbS9obHMAAQA+aHR0cHM6Ly9zb3VuZGNsb3VkLmNvbS9zb25sYWNyZW1hL3lvLW5vLXNlLW1hLWFuYS1sdWlzLWVucmlxdWUACnNvdW5kY2xvdWQAAAAAAAAAAA==\",\"guildId\":\"999354364193951815\"}"}
+{"level":20,"time":1674611174116,"pid":13736,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lightning Node 1\" debug: [player 999354364193951815] voice: submitting voice update"}
+{"level":20,"time":1674611174116,"pid":13736,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lightning Node 1\" debug: connection: lavaclient >>> voiceUpdate: {\"op\":\"voiceUpdate\",\"guildId\":\"999354364193951815\",\"sessionId\":\"676988a1487028772c7ced5d4010bff1\",\"event\":{\"token\":\"0a2c14667bf9dc36\",\"guild_id\":\"999354364193951815\",\"endpoint\":\"atlanta9712.discord.media:443\"}}"}
+{"level":20,"time":1674611174230,"pid":13736,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lightning Node 1\" debug: connection: lavaclient <<< event: {\"encodedTrack\":\"QAABEQIAMVlvIE5vIFNlIE1hw7FhbmEgLSBMdWlzIEVucmlxdWUgKHZlcnNpb24pIC0gc2Fsc2EACnNvbmxhY3JlbWEAAAAAAAQDVwBxTzpodHRwczovL2FwaS12Mi5zb3VuZGNsb3VkLmNvbS9tZWRpYS9zb3VuZGNsb3VkOnRyYWNrczoxMDUzNzE3NzAvMGZhODNlYjYtZTZlMy00Y2Q5LTlmNjUtYzQ3YTg5MzM5OTFiL3N0cmVhbS9obHMAAQA+aHR0cHM6Ly9zb3VuZGNsb3VkLmNvbS9zb25sYWNyZW1hL3lvLW5vLXNlLW1hLWFuYS1sdWlzLWVucmlxdWUACnNvdW5kY2xvdWQAAAAAAAAAAA==\",\"track\":\"QAABEQIAMVlvIE5vIFNlIE1hw7FhbmEgLSBMdWlzIEVucmlxdWUgKHZlcnNpb24pIC0gc2Fsc2EACnNvbmxhY3JlbWEAAAAAAAQDVwBxTzpodHRwczovL2FwaS12Mi5zb3VuZGNsb3VkLmNvbS9tZWRpYS9zb3VuZGNsb3VkOnRyYWNrczoxMDUzNzE3NzAvMGZhODNlYjYtZTZlMy00Y2Q5LTlmNjUtYzQ3YTg5MzM5OTFiL3N0cmVhbS9obHMAAQA+aHR0cHM6Ly9zb3VuZGNsb3VkLmNvbS9zb25sYWNyZW1hL3lvLW5vLXNlLW1hLWFuYS1sdWlzLWVucmlxdWUACnNvdW5kY2xvdWQAAAAAAAAAAA==\",\"guildId\":\"999354364193951815\",\"op\":\"event\",\"type\":\"TrackStartEvent\"}"}
+{"level":20,"time":1674611174231,"pid":13736,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lightning Node 1\" debug: connection: lavaclient <<< playerUpdate: {\"state\":{\"time\":1674611169816,\"position\":0,\"connected\":false,\"ping\":-1},\"guildId\":\"999354364193951815\",\"op\":\"playerUpdate\"}"}
+{"level":20,"time":1674611174231,"pid":13736,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lightning Node 1\" debug: connection: lavaclient <<< playerUpdate: {\"state\":{\"time\":1674611169817,\"position\":0,\"connected\":false,\"ping\":-1},\"guildId\":\"999354364193951815\",\"op\":\"playerUpdate\"}"}
+{"level":20,"time":1674611175106,"pid":13736,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lightning Node 1\" debug: connection: lavaclient <<< playerUpdate: {\"state\":{\"time\":1674611170680,\"position\":0,\"connected\":true,\"ping\":0},\"guildId\":\"999354364193951815\",\"op\":\"playerUpdate\"}"}
+{"level":20,"time":1674611179223,"pid":13736,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lightning Node 1\" debug: connection: lavaclient <<< playerUpdate: {\"state\":{\"time\":1674611174816,\"position\":4220,\"connected\":true,\"ping\":0},\"guildId\":\"999354364193951815\",\"op\":\"playerUpdate\"}"}
+{"level":20,"time":1674611184223,"pid":13736,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lightning Node 1\" debug: connection: lavaclient <<< playerUpdate: {\"state\":{\"time\":1674611179816,\"position\":9240,\"connected\":true,\"ping\":0},\"guildId\":\"999354364193951815\",\"op\":\"playerUpdate\"}"}
+{"level":20,"time":1674611189223,"pid":13736,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lightning Node 1\" debug: connection: lavaclient <<< playerUpdate: {\"state\":{\"time\":1674611184816,\"position\":14220,\"connected\":true,\"ping\":169},\"guildId\":\"999354364193951815\",\"op\":\"playerUpdate\"}"}
+{"level":20,"time":1674611194223,"pid":13736,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lightning Node 1\" debug: connection: lavaclient <<< playerUpdate: {\"state\":{\"time\":1674611189816,\"position\":19220,\"connected\":true,\"ping\":169},\"guildId\":\"999354364193951815\",\"op\":\"playerUpdate\"}"}
+{"level":20,"time":1674611199230,"pid":13736,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lightning Node 1\" debug: connection: lavaclient <<< playerUpdate: {\"state\":{\"time\":1674611194816,\"position\":24240,\"connected\":true,\"ping\":169},\"guildId\":\"999354364193951815\",\"op\":\"playerUpdate\"}"}
+{"level":20,"time":1674611204225,"pid":13736,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lightning Node 1\" debug: connection: lavaclient <<< playerUpdate: {\"state\":{\"time\":1674611199816,\"position\":29220,\"connected\":true,\"ping\":168},\"guildId\":\"999354364193951815\",\"op\":\"playerUpdate\"}"}
+{"level":20,"time":1674611208714,"pid":13736,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lightning Node 1\" debug: rest: + GET /loadtracks?identifier=scsearch%3Amy%20life%20be%20like"}
+{"level":20,"time":1674611209224,"pid":13736,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lightning Node 1\" debug: connection: lavaclient <<< playerUpdate: {\"state\":{\"time\":1674611204816,\"position\":34220,\"connected\":true,\"ping\":168},\"guildId\":\"999354364193951815\",\"op\":\"playerUpdate\"}"}
+{"level":20,"time":1674611210342,"pid":13736,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lightning Node 1\" debug: connection: lavaclient >>> play: {\"op\":\"play\",\"track\":\"QAABAAIAKU9vaCBBaGggKE15IExpZmUgQmUgTGlrZSkgW2ZlYXQuIFRvYnltYWNdAAVHcml0cwAAAAAAA48FAHFPOmh0dHBzOi8vYXBpLXYyLnNvdW5kY2xvdWQuY29tL21lZGlhL3NvdW5kY2xvdWQ6dHJhY2tzOjM0NDI0MTk2OS9iYzU2MWMzMi0wNjIyLTQzY2MtYmUwMy01OGE3ODkxMzMyMGMvc3RyZWFtL2hscwABADpodHRwczovL3NvdW5kY2xvdWQuY29tL2dyaXRzLW9mZmljaWFsL29vaC1haGgtZmVhdC10b2J5bWFjAApzb3VuZGNsb3VkAAAAAAAAAAA=\",\"guildId\":\"999354364193951815\"}"}
+{"level":20,"time":1674611210549,"pid":13736,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lightning Node 1\" debug: connection: lavaclient <<< event: {\"encodedTrack\":\"QAABEQIAMVlvIE5vIFNlIE1hw7FhbmEgLSBMdWlzIEVucmlxdWUgKHZlcnNpb24pIC0gc2Fsc2EACnNvbmxhY3JlbWEAAAAAAAQDVwBxTzpodHRwczovL2FwaS12Mi5zb3VuZGNsb3VkLmNvbS9tZWRpYS9zb3VuZGNsb3VkOnRyYWNrczoxMDUzNzE3NzAvMGZhODNlYjYtZTZlMy00Y2Q5LTlmNjUtYzQ3YTg5MzM5OTFiL3N0cmVhbS9obHMAAQA+aHR0cHM6Ly9zb3VuZGNsb3VkLmNvbS9zb25sYWNyZW1hL3lvLW5vLXNlLW1hLWFuYS1sdWlzLWVucmlxdWUACnNvdW5kY2xvdWQAAAAAAACK6A==\",\"track\":\"QAABEQIAMVlvIE5vIFNlIE1hw7FhbmEgLSBMdWlzIEVucmlxdWUgKHZlcnNpb24pIC0gc2Fsc2EACnNvbmxhY3JlbWEAAAAAAAQDVwBxTzpodHRwczovL2FwaS12Mi5zb3VuZGNsb3VkLmNvbS9tZWRpYS9zb3VuZGNsb3VkOnRyYWNrczoxMDUzNzE3NzAvMGZhODNlYjYtZTZlMy00Y2Q5LTlmNjUtYzQ3YTg5MzM5OTFiL3N0cmVhbS9obHMAAQA+aHR0cHM6Ly9zb3VuZGNsb3VkLmNvbS9zb25sYWNyZW1hL3lvLW5vLXNlLW1hLWFuYS1sdWlzLWVucmlxdWUACnNvdW5kY2xvdWQAAAAAAACK6A==\",\"reason\":\"REPLACED\",\"guildId\":\"999354364193951815\",\"op\":\"event\",\"type\":\"TrackEndEvent\"}"}
+{"level":20,"time":1674611210549,"pid":13736,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lightning Node 1\" debug: connection: lavaclient <<< playerUpdate: {\"state\":{\"time\":1674611206141,\"position\":0,\"connected\":true,\"ping\":168},\"guildId\":\"999354364193951815\",\"op\":\"playerUpdate\"}"}
+{"level":20,"time":1674611210552,"pid":13736,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lightning Node 1\" debug: connection: lavaclient <<< event: {\"encodedTrack\":\"QAABAAIAKU9vaCBBaGggKE15IExpZmUgQmUgTGlrZSkgW2ZlYXQuIFRvYnltYWNdAAVHcml0cwAAAAAAA48FAHFPOmh0dHBzOi8vYXBpLXYyLnNvdW5kY2xvdWQuY29tL21lZGlhL3NvdW5kY2xvdWQ6dHJhY2tzOjM0NDI0MTk2OS9iYzU2MWMzMi0wNjIyLTQzY2MtYmUwMy01OGE3ODkxMzMyMGMvc3RyZWFtL2hscwABADpodHRwczovL3NvdW5kY2xvdWQuY29tL2dyaXRzLW9mZmljaWFsL29vaC1haGgtZmVhdC10b2J5bWFjAApzb3VuZGNsb3VkAAAAAAAAAAA=\",\"track\":\"QAABAAIAKU9vaCBBaGggKE15IExpZmUgQmUgTGlrZSkgW2ZlYXQuIFRvYnltYWNdAAVHcml0cwAAAAAAA48FAHFPOmh0dHBzOi8vYXBpLXYyLnNvdW5kY2xvdWQuY29tL21lZGlhL3NvdW5kY2xvdWQ6dHJhY2tzOjM0NDI0MTk2OS9iYzU2MWMzMi0wNjIyLTQzY2MtYmUwMy01OGE3ODkxMzMyMGMvc3RyZWFtL2hscwABADpodHRwczovL3NvdW5kY2xvdWQuY29tL2dyaXRzLW9mZmljaWFsL29vaC1haGgtZmVhdC10b2J5bWFjAApzb3VuZGNsb3VkAAAAAAAAAAA=\",\"guildId\":\"999354364193951815\",\"op\":\"event\",\"type\":\"TrackStartEvent\"}"}
+{"level":20,"time":1674611210552,"pid":13736,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lightning Node 1\" debug: connection: lavaclient <<< playerUpdate: {\"state\":{\"time\":1674611206142,\"position\":0,\"connected\":true,\"ping\":168},\"guildId\":\"999354364193951815\",\"op\":\"playerUpdate\"}"}
+{"level":20,"time":1674611215549,"pid":13736,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lightning Node 1\" debug: connection: lavaclient <<< playerUpdate: {\"state\":{\"time\":1674611211141,\"position\":4680,\"connected\":true,\"ping\":168},\"guildId\":\"999354364193951815\",\"op\":\"playerUpdate\"}"}
+{"level":20,"time":1674611220550,"pid":13736,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lightning Node 1\" debug: connection: lavaclient <<< playerUpdate: {\"state\":{\"time\":1674611216141,\"position\":9680,\"connected\":true,\"ping\":168},\"guildId\":\"999354364193951815\",\"op\":\"playerUpdate\"}"}
+{"level":20,"time":1674611225550,"pid":13736,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lightning Node 1\" debug: connection: lavaclient <<< playerUpdate: {\"state\":{\"time\":1674611221141,\"position\":14680,\"connected\":true,\"ping\":168},\"guildId\":\"999354364193951815\",\"op\":\"playerUpdate\"}"}
+{"level":20,"time":1674611230550,"pid":13736,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lightning Node 1\" debug: connection: lavaclient <<< playerUpdate: {\"state\":{\"time\":1674611226141,\"position\":19680,\"connected\":true,\"ping\":168},\"guildId\":\"999354364193951815\",\"op\":\"playerUpdate\"}"}
+{"level":20,"time":1674611231700,"pid":13736,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lightning Node 2\" debug: connection: lavaclient <<< stats: {\"players\":0,\"playingPlayers\":0,\"uptime\":1098772,\"memory\":{\"free\":20826480,\"used\":25511568,\"allocated\":46338048,\"reservable\":285868032},\"cpu\":{\"cores\":2,\"systemLoad\":0.04894117647058824,\"lavalinkLoad\":0.0},\"op\":\"stats\"}"}
+{"level":20,"time":1674611231705,"pid":13736,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lightning Node 1\" debug: connection: lavaclient <<< stats: {\"players\":1,\"playingPlayers\":1,\"uptime\":490177,\"memory\":{\"free\":40015840,\"used\":62613536,\"allocated\":102629376,\"reservable\":139919360},\"cpu\":{\"cores\":2,\"systemLoad\":0.042144501699375066,\"lavalinkLoad\":0.0022989702348419783},\"op\":\"stats\"}"}
+{"level":20,"time":1674611235550,"pid":13736,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lightning Node 1\" debug: connection: lavaclient <<< playerUpdate: {\"state\":{\"time\":1674611231141,\"position\":24700,\"connected\":true,\"ping\":168},\"guildId\":\"999354364193951815\",\"op\":\"playerUpdate\"}"}
+{"level":20,"time":1674611240556,"pid":13736,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lightning Node 1\" debug: connection: lavaclient <<< playerUpdate: {\"state\":{\"time\":1674611236141,\"position\":29680,\"connected\":true,\"ping\":168},\"guildId\":\"999354364193951815\",\"op\":\"playerUpdate\"}"}
+{"level":20,"time":1674611245551,"pid":13736,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lightning Node 1\" debug: connection: lavaclient <<< playerUpdate: {\"state\":{\"time\":1674611241141,\"position\":34680,\"connected\":true,\"ping\":168},\"guildId\":\"999354364193951815\",\"op\":\"playerUpdate\"}"}
+{"level":20,"time":1674611250550,"pid":13736,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lightning Node 1\" debug: connection: lavaclient <<< playerUpdate: {\"state\":{\"time\":1674611246141,\"position\":39700,\"connected\":true,\"ping\":168},\"guildId\":\"999354364193951815\",\"op\":\"playerUpdate\"}"}
+{"level":20,"time":1674611255550,"pid":13736,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lightning Node 1\" debug: connection: lavaclient <<< playerUpdate: {\"state\":{\"time\":1674611251141,\"position\":44680,\"connected\":true,\"ping\":168},\"guildId\":\"999354364193951815\",\"op\":\"playerUpdate\"}"}
+{"level":20,"time":1674611260551,"pid":13736,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lightning Node 1\" debug: connection: lavaclient <<< playerUpdate: {\"state\":{\"time\":1674611256141,\"position\":49680,\"connected\":true,\"ping\":168},\"guildId\":\"999354364193951815\",\"op\":\"playerUpdate\"}"}
+{"level":20,"time":1674611265558,"pid":13736,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lightning Node 1\" debug: connection: lavaclient <<< playerUpdate: {\"state\":{\"time\":1674611261141,\"position\":54700,\"connected\":true,\"ping\":168},\"guildId\":\"999354364193951815\",\"op\":\"playerUpdate\"}"}
+{"level":20,"time":1674611270551,"pid":13736,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lightning Node 1\" debug: connection: lavaclient <<< playerUpdate: {\"state\":{\"time\":1674611266141,\"position\":59680,\"connected\":true,\"ping\":168},\"guildId\":\"999354364193951815\",\"op\":\"playerUpdate\"}"}
+{"level":20,"time":1674611275551,"pid":13736,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lightning Node 1\" debug: connection: lavaclient <<< playerUpdate: {\"state\":{\"time\":1674611271141,\"position\":64680,\"connected\":true,\"ping\":171},\"guildId\":\"999354364193951815\",\"op\":\"playerUpdate\"}"}
+{"level":20,"time":1674611280580,"pid":13736,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lightning Node 1\" debug: connection: lavaclient <<< playerUpdate: {\"state\":{\"time\":1674611276141,\"position\":69680,\"connected\":true,\"ping\":171},\"guildId\":\"999354364193951815\",\"op\":\"playerUpdate\"}"}
+{"level":20,"time":1674611285550,"pid":13736,"hostname":"DESKTOP-II87B4O","msg":"Node \"Lightning Node 1\" debug: connection: lavaclient <<< playerUpdate: {\"state\":{\"time\":1674611281141,\"position\":74680,\"connected\":true,\"ping\":168},\"guildId\":\"999354364193951815\",\"op\":\"playerUpdate\"}"}

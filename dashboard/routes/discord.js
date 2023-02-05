@@ -67,7 +67,7 @@ router.get("/callback", async (req, res) => {
             else userData.guilds = json;
         }
         if (!userData.roles) {
-            const guild = await req.client.guilds.cache.get("999354364193951815");
+            const guild = await req.client.guilds.cache.get("1071447767584620564");
             const user = await guild.members.cache.get(req.session.user);
             userData.roles = user.roles;
         }
