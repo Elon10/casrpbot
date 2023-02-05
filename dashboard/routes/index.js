@@ -466,6 +466,8 @@ router.post("/staff/shiftManagement", CheckAuth, async (req, res) => {
     if (Object.prototype.hasOwnProperty.call(data, "shiftStart")) {
         const start = new Date();
 
+        if (settings.shifts.role_add) user.roles.add(settings.shifts.role_add);
+
         const embed = new EmbedBuilder()
             .setTitle(req.user.username)
             .setDescription(`**${user}** has started a new shift.`)
@@ -501,6 +503,10 @@ router.post("/staff/shiftManagement", CheckAuth, async (req, res) => {
             .filter(k => !!difference[k])
             .map(k => `${ difference[k] } ${ k }`)
             .join(", ");
+
+        if (user.roles.has(settings.shifts.role_add)) {
+            user.roles.remove(settings.shifts.role_add);
+        }
 
         const embed = new EmbedBuilder()
             .setTitle(req.user.username)
