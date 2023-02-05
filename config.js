@@ -26,7 +26,7 @@ module.exports = {
         enabled: true, 
         baseURL: "https://californiarp.xyz", 
         failureURL: "https://californiarp.xyz", 
-        port: "", 
+        port: "25998", 
     },
 
     CACHE_SIZE: {
