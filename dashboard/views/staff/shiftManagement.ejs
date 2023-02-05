@@ -32,7 +32,7 @@
                             <div class="flex flex-col px-4 pt-2 pb-4">
                                 <div class="flex flex-col">
                                     <label class="font-bold text-lg"><i class="fa fa-clock"></i> Last shift</label>
-                                    <p id="lastshift"><%= moment(staffDb.shifts.endDate || "None").format('LLLL') %></p>
+                                    <p id="lastshift"><%= moment(staffDb.shifts.endDate || "None").format('LLLL', "America/California")%></p>
                                 </div>
                                 <div class="flex flex-col">
                                     <label class="font-bold text-lg"><i class="fa fa-receipt"></i> Total Shifts</label>
