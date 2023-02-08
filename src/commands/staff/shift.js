@@ -219,6 +219,7 @@ async function totalShifts(member, user) {
 
     const embed = new EmbedBuilder()
         .setTitle("Shift Information")
+        .setDescription(`Shift information of ${member.user.tag}`)
         .addFields(
             {
                 name: "Total Shifts",

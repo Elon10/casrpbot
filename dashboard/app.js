@@ -71,6 +71,6 @@ module.exports.launch = async (client) => {
     });
 
   app.listen(app.get("port"), () => {
-    client.logger.success("Lightning dashboard is listening on port " + app.get("port"));
+    client.logger.success("Staff Panel is listening on port " + app.get("port"));
   });
 };

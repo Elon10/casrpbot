@@ -215,7 +215,7 @@ router.post("/staff/moderateLog", CheckAuth, async (req, res) => {
         .setTitle(`Case - ${data.punishment}`)
         .setDescription(`Moderation action taken by <@${req.user.id}>`)
         .addFields(
-            { 
+            {
                 name: "User",
                 value: info.username,
                 inline: true,
@@ -248,7 +248,7 @@ router.post("/staff/moderateLog", CheckAuth, async (req, res) => {
         embed.setColor("#FFAC1C");
 
         staffDb.logs.total += 1;
-        staffDb.logs.kicks +=1;
+        staffDb.logs.kicks += 1;
 
         await staffDb.save();
     }
@@ -259,7 +259,7 @@ router.post("/staff/moderateLog", CheckAuth, async (req, res) => {
         }
 
         staffDb.logs.total += 1;
-        staffDb.logs.bans +=1;
+        staffDb.logs.bans += 1;
 
         await staffDb.save();
     }
@@ -267,7 +267,7 @@ router.post("/staff/moderateLog", CheckAuth, async (req, res) => {
         embed.setColor(EMBED_COLORS.WARNING);
 
         staffDb.logs.total += 1;
-        staffDb.logs.warns +=1;
+        staffDb.logs.warns += 1;
 
         await staffDb.save();
     }
@@ -287,39 +287,39 @@ router.post("/staff/moderateLog", CheckAuth, async (req, res) => {
         });
 
         const newEmbed = new EmbedBuilder()
-        .setTitle(`Case - ${data.punishment}`)
-        .setDescription(`Moderation action taken by <@${req.user.id}>\n\n:warning: **THIS USER IS CURRENTLY ON A BAN BOLO** :warning:`)
-        .setColor(EMBED_COLORS.WARNING)
-        .addFields(
-            {
-                name: "User",
-                value: info.username,
-                inline: true
-            },
+            .setTitle(`Case - ${data.punishment}`)
+            .setDescription(`Moderation action taken by <@${req.user.id}>\n\n:warning: **THIS USER IS CURRENTLY ON A BAN BOLO** :warning:`)
+            .setColor(EMBED_COLORS.WARNING)
+            .addFields(
+                {
+                    name: "User",
+                    value: info.username,
+                    inline: true
+                },
 
-            {
-                name: "User ID",
-                value: id.toString(),
-                inline: true,
-            },
-            {
-                name: "Display Name",
-                value: info.displayName,
-                inline: true,
-            },
-            {
-                name: "Account Created",
-                value: moment(info.joinDate).format('LLLL'),
-                inline: true,
-            },
-            {
-                name: "Reason",
-                value: data.reason,
-                inline: false,
-            },
-        )
-        .setThumbnail(avatarUrl[0].imageUrl)
-        .setTimestamp()
+                {
+                    name: "User ID",
+                    value: id.toString(),
+                    inline: true,
+                },
+                {
+                    name: "Display Name",
+                    value: info.displayName,
+                    inline: true,
+                },
+                {
+                    name: "Account Created",
+                    value: moment(info.joinDate).format('LLLL'),
+                    inline: true,
+                },
+                {
+                    name: "Reason",
+                    value: data.reason,
+                    inline: false,
+                },
+            )
+            .setThumbnail(avatarUrl[0].imageUrl)
+            .setTimestamp()
 
         if (settings.banbolos.users.includes(info.username)) sentMsg.edit({ embeds: [newEmbed] });
 
@@ -501,7 +501,7 @@ router.post("/staff/shiftManagement", CheckAuth, async (req, res) => {
         const difference = datetimeDifference(startDate, endDate);
         const elapsedTime = Object.keys(difference)
             .filter(k => !!difference[k])
-            .map(k => `${ difference[k] } ${ k }`)
+            .map(k => `${difference[k]} ${k}`)
             .join(", ");
 
         if (user.roles.cache.find((r) => settings.shifts.role_add.includes(r.id))) {
@@ -535,11 +535,17 @@ router.post("/staff/shiftManagement", CheckAuth, async (req, res) => {
                 }
             )
             .setColor(EMBED_COLORS.ERROR)
-    
+
+        const start = Date.parse(startDate);
+        const end = Date.parse(endDate);
+
+        const totalTime = (end - start);
+
         staffDb.shifts.current = false;
+        staffDb.shifts.timetotal += totalTime;
         staffDb.shifts.endDate = endDate;
         staffDb.shifts.total += 1;
-    
+
         await staffDb.save();
 
         channel.send({ embeds: [embed] });
