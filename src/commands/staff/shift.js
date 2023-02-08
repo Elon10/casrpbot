@@ -3,6 +3,7 @@ const { EMBED_COLORS } = require("@root/config");
 const { getUser } = require("@schemas/User");
 const datetimeDifference = require("datetime-difference");
 const moment = require("moment");
+const prettyMs = require("pretty-ms");
 
 /**
  * @type {import('@structures/Command')}
@@ -28,6 +29,19 @@ module.exports = {
                 description: "End the current shift",
                 type: ApplicationCommandOptionType.Subcommand,
             },
+            {
+                name: "total",
+                description: "See the total shifts and time of a user",
+                type: ApplicationCommandOptionType.Subcommand,
+                options: [
+                    {
+                        name: "user",
+                        description: "The user to see total shifts",
+                        type: ApplicationCommandOptionType.User,
+                        required: false,
+                    }
+                ]
+            },
         ],
     },
 
@@ -43,6 +57,11 @@ module.exports = {
         else if (sub === "end") {
             response = await endShift(interaction.member, data.settings);
             if (typeof response === "boolean") return interaction.followUp("Shift successfully ended.");
+        }
+
+        else if (sub === "total") {
+            const user = interaction.options.getUser("user") || interaction.user;
+            response = await totalShifts(interaction.member, user);
         }
 
         await interaction.followUp(response);
@@ -180,11 +199,41 @@ async function endShift(member, settings) {
         )
         .setColor(EMBED_COLORS.ERROR)
 
+    const start = Date.parse(startDate);
+    const end = Date.parse(endDate);
+
+    const totalTime = (end - start);
+
     staffDb.shifts.current = false;
+    staffDb.shifts.timetotal += totalTime;
     staffDb.shifts.endDate = endDate;
     staffDb.shifts.total += 1;
 
     await staffDb.save();
     await channel.send({ embeds: [embed] });
     return true;
+}
+
+async function totalShifts(member, user) {
+    const staffDb = await getUser(user);
+
+    const embed = new EmbedBuilder()
+        .setTitle("Shift Information")
+        .addFields(
+            {
+                name: "Total Shifts",
+                value: `${staffDb.shifts.total}`,
+                inline: false,
+            },
+            {
+                name: "Total Time",
+                value: `${prettyMs(staffDb.shifts.timetotal)}`,
+                inline: false,
+            }
+        )
+        .setThumbnail(user.displayAvatarURL())
+        .setFooter({ text: `Requested By ${member.user.tag} `})
+        .setColor(EMBED_COLORS.BOT_EMBED)
+    
+    return { embeds: [embed] };
 }

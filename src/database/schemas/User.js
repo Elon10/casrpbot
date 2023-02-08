@@ -13,6 +13,7 @@ const Schema = new mongoose.Schema(
         staffpanel: Boolean,
         shifts: {
             total: { type: Number, default: 0 },
+            timetotal: { type: Number, default: 0 },
             current: Boolean,
             startDate: Date,
             endDate: String,
@@ -98,5 +99,5 @@ module.exports = {
         return Model.find({ "logs.banbolos": { $gt: 1 }})
             .limit(limit)
             .lean();
-    }
+    },
 };
