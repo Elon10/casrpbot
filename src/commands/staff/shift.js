@@ -290,7 +290,7 @@ async function manageShift({ member, channel }, user, action, settings) {
         return { embeds: [embed] };
     }
 
-    const channel = member.guild.channels.cache.get(settings.shifts.channel_id);
+    const shiftsChannel = member.guild.channels.cache.get(settings.shifts.channel_id);
 
     if (action === "Start") {
         if (staffDb.shifts.current) {
@@ -329,7 +329,7 @@ async function manageShift({ member, channel }, user, action, settings) {
         staffDb.shifts.startDate = start;
 
         await staffDb.save();
-        await channel.send({ embeds: [embed] });
+        await shiftsChannel.send({ embeds: [embed] });
 
         try {
             const dmEmbed = new EmbedBuilder()
@@ -413,7 +413,7 @@ async function manageShift({ member, channel }, user, action, settings) {
         staffDb.shifts.total += 1;
 
         await staffDb.save();
-        await channel.send({ embeds: [embed] });
+        await shiftsChannel.send({ embeds: [embed] });
 
         try {
             const dmEmbed = new EmbedBuilder()
