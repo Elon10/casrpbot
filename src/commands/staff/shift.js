@@ -296,7 +296,7 @@ async function manageShift({ member, channel }, user, action, settings) {
         if (staffDb.shifts.current) {
             const embed = new EmbedBuilder()
                 .setTitle("Error")
-                .setDescription(`${member} its already on a shift.`)
+                .setDescription(`${user} its already on a shift.`)
                 .setColor(EMBED_COLORS.ERROR)
 
             return { embeds: [embed] };
@@ -358,7 +358,7 @@ async function manageShift({ member, channel }, user, action, settings) {
         if (!staffDb.shifts.current) {
             const embed = new EmbedBuilder()
                 .setTitle("Error")
-                .setDescription(`${member} its not on any shift.`)
+                .setDescription(`${user} its not on any shift.`)
                 .setColor(EMBED_COLORS.ERROR)
 
             return { embeds: [embed] };
