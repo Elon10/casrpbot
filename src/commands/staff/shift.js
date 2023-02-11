@@ -96,7 +96,7 @@ module.exports = {
         else if (sub === "manage") {
             const user = interaction.options.getUser("user");
             const action = interaction.options.getString("action");
-            response = await manageShift(interaction.member, user, action, data.settings);
+            response = await manageShift(interaction, user, action, data.settings);
         }
 
         await interaction.followUp(response);
@@ -274,7 +274,10 @@ async function totalShifts(member, user) {
     return { embeds: [embed] };
 }
 
-async function manageShift(member, user, action, settings) {
+/**
+ * @param {import("discord.js").CommandInteraction|import("discord.js").Message} arg0
+ */
+async function manageShift({ member, channel }, user, action, settings) {
     const staffDb = await getUser(user);
     const roles = ["1071480011749589156", "1058291689053241384", "1058291688113717359", "1058291687027388446", "1058291685752315984", "1058291683495780442", "1061647806680551444", "1058291679322460200", "1058291677648912405", "1058291676600352838", "1058291674633228328"];
 
@@ -328,12 +331,20 @@ async function manageShift(member, user, action, settings) {
         await staffDb.save();
         await channel.send({ embeds: [embed] });
 
-        const dmEmbed = new EmbedBuilder()
-            .setTitle("Shift Started")
-            .setDescription(`Hey ${user}, your shift has been started by ${member}.`)
-            .setColor(EMBED_COLORS.SUCCESS)
+        try {
+            const dmEmbed = new EmbedBuilder()
+                .setTitle("Shift Started")
+                .setDescription(`Hey ${user}, your shift has been started by ${member}.`)
+                .setColor(EMBED_COLORS.SUCCESS)
 
-        await user.send({ embeds: [dmEmbed] });
+            await user.send({ embeds: [dmEmbed] });
+        } catch (ex) {
+            const embed = new EmbedBuilder()
+                .setDescription(`Success but can't dm the user.`)
+                .setColor(EMBED_COLORS.BOT_EMBED)
+
+            channel.send({ embeds: [embed] });
+        }
 
         const success = new EmbedBuilder()
             .setTitle("Success")
@@ -404,12 +415,20 @@ async function manageShift(member, user, action, settings) {
         await staffDb.save();
         await channel.send({ embeds: [embed] });
 
-        const dmEmbed = new EmbedBuilder()
-            .setTitle("Shift Ended")
-            .setDescription(`Hey ${user}, your shift has been ended by ${member}.`)
-            .setColor(EMBED_COLORS.ERROR)
+        try {
+            const dmEmbed = new EmbedBuilder()
+                .setTitle("Shift Ended")
+                .setDescription(`Hey ${user}, your shift has been ended by ${member}.`)
+                .setColor(EMBED_COLORS.ERROR)
 
-        await user.send({ embeds: [dmEmbed] });
+            await user.send({ embeds: [dmEmbed] });
+        } catch (ex) {
+            const embed = new EmbedBuilder()
+                .setDescription(`Success but can't dm the user.`)
+                .setColor(EMBED_COLORS.BOT_EMBED)
+
+            channel.send({ embeds: [embed] });
+        }
 
         const success = new EmbedBuilder()
             .setTitle("Success")
