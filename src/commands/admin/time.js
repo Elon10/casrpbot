@@ -66,21 +66,23 @@ module.exports = {
         if (sub === "add") {
             const user = interaction.options.getUser("user");
             const time = interaction.options.getString("time");
-            response = await addTime(interaction.user, user, time);
+            response = await addTime(interaction, user, time);
         }
 
         else if (sub === "remove") {
             const user = interaction.options.getUser("user");
             const time = interaction.options.getString("time");
-            response = await removeTime(interaction.user, user, time);
+            response = await removeTime(interaction, user, time);
         }
 
         await interaction.followUp(response);
     }
 }
 
-
-async function addTime(member, user, time) {
+/**
+ * @param {import("discord.js").CommandInteraction|import("discord.js").Message} arg0
+ */
+async function addTime({ member }, user, time) {
     const staffDb = await getUser(user);
     const timeadd = ems(time);
 
@@ -108,7 +110,10 @@ async function addTime(member, user, time) {
     return { embeds: [embed] };
 }
 
-async function removeTime(member, user, time) {
+/**
+ * @param {import("discord.js").CommandInteraction|import("discord.js").Message} arg0
+ */
+async function removeTime({ member }, user, time) {
     const staffDb = await getUser(user);
     const timeremove = ems(time);
 
