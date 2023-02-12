@@ -105,7 +105,7 @@ async function addTime({ member }, user, time) {
         .setDescription(`Successfully added **${prettyMs(timeadd)}** to ${user}.`)
         .setThumbnail(user.displayAvatarURL())
         .setColor(EMBED_COLORS.SUCCESS)
-        .setFooter({ text: `Added By ${member.tag}`, iconURL: member.displayAvatarURL() })
+        .setFooter({ text: `Added By ${member.user.tag}`, iconURL: member.displayAvatarURL() })
 
     return { embeds: [embed] };
 }
@@ -136,7 +136,7 @@ async function removeTime({ member }, user, time) {
         .setDescription(`Successfully removed **${prettyMs(timeremove)}** to ${user}.`)
         .setThumbnail(user.displayAvatarURL())
         .setColor(EMBED_COLORS.SUCCESS)
-        .setFooter({ text: `Removed By ${member.tag}`, iconURL: member.displayAvatarURL() })
+        .setFooter({ text: `Removed By ${member.user.tag}`, iconURL: member.displayAvatarURL() })
 
     return { embeds: [embed] };
 }
