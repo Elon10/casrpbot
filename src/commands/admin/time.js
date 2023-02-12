@@ -84,6 +84,17 @@ async function addTime(member, user, time) {
     const staffDb = await getUser(user);
     const timeadd = ems(time);
 
+    const roles = ["1058291691871813714", "1071480011749589156", "1058291689053241384", "1058291688113717359", "1058291687027388446", "1058291685752315984", "1058291683495780442", "1061647806680551444", "1058291679322460200", "1058291677648912405", "1058291676600352838", "1058291674633228328"];
+
+    if (!member.roles.cache.find((r) => roles.includes(r.id))) {
+        const embed = new EmbedBuilder()
+            .setTitle("Error")
+            .setDescription("You can't manage the time.")
+            .setColor(EMBED_COLORS.ERROR)
+
+        return { embeds: [embed] };
+    }
+
     staffDb.shifts.timetotal += timeadd;
     await staffDb.save();
 
@@ -100,6 +111,17 @@ async function addTime(member, user, time) {
 async function removeTime(member, user, time) {
     const staffDb = await getUser(user);
     const timeremove = ems(time);
+
+    const roles = ["1058291691871813714", "1071480011749589156", "1058291689053241384", "1058291688113717359", "1058291687027388446", "1058291685752315984", "1058291683495780442", "1061647806680551444", "1058291679322460200", "1058291677648912405", "1058291676600352838", "1058291674633228328"];
+
+    if (!member.roles.cache.find((r) => roles.includes(r.id))) {
+        const embed = new EmbedBuilder()
+            .setTitle("Error")
+            .setDescription("You can't manage the time.")
+            .setColor(EMBED_COLORS.ERROR)
+
+        return { embeds: [embed] };
+    }
 
     staffDb.shifts.timetotal -= timeremove;
     await staffDb.save();
