@@ -328,6 +328,8 @@ async function manageShift({ member, channel }, user, action, settings) {
         staffDb.shifts.current = true;
         staffDb.shifts.startDate = start;
 
+        if (settings.shifts.role_add) user.roles.add(settings.shifts.role_add);
+
         await staffDb.save();
         await shiftsChannel.send({ embeds: [embed] });
 
@@ -411,6 +413,8 @@ async function manageShift({ member, channel }, user, action, settings) {
         staffDb.shifts.timetotal += totalTime;
         staffDb.shifts.endDate = endDate;
         staffDb.shifts.total += 1;
+
+        user.roles.remove(settings.shifts.role_add);
 
         await staffDb.save();
         await shiftsChannel.send({ embeds: [embed] });
