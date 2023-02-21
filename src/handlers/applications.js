@@ -105,6 +105,7 @@ async function acceptApplication(member, channel, messageId, reason) {
     approvedEmbed.addFields(fields);
 
     const user = await channel.client.users.fetch(doc.user_id, { cache: false }).catch(() => { });
+    const userMember = guild.members.cache.get(doc.user_id);
 
     try {
         doc.status = "APPROVED";
@@ -117,6 +118,10 @@ async function acceptApplication(member, channel, messageId, reason) {
             .setFooter({ text: `Approved By ${member.user.tag}`, iconURL: member.displayAvatarURL() })
 
         user.send({ embeds: [dmEmbed] });
+
+        const roles = ["1058291701954924574", "1058291706790940712", "1058291711668932701"];
+        await userMember.roles.add(roles);
+
 
         let approvedChannel;
         if (settings.applications.approved_channel) {
