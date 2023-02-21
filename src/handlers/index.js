@@ -6,4 +6,5 @@ module.exports = {
     moderateHandler: require("./moderate"),
     loasHandler: require("./loas"),
     boloHandler: require("./banbolos"),
+    applicationsHandler: require("./applications"),
 };

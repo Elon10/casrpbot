@@ -48,6 +48,12 @@ const Schema = new mongoose.Schema({
     shifts: {
         channel_id: String,
         role_add: [String],
+    },
+    applications: {
+        enabled: Boolean,
+        channel_id: String,
+        approved_channel: String,
+        rejected_channel: String,
     }
 });
 

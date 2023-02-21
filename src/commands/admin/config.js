@@ -205,6 +205,50 @@ module.exports = {
                 ],
             },
             {
+                name: "applications",
+                description: "Configure the applications system",
+                type: ApplicationCommandOptionType.Subcommand,
+                options: [
+                    {
+                        name: "status",
+                        description: "Enable or disable the application system",
+                        type: ApplicationCommandOptionType.String,
+                        required: false,
+                        choices: [
+                            {
+                                name: "Enable",
+                                value: "ON",
+                            },
+                            {
+                                name: "Disable",
+                                value: "OFF",
+                            }
+                        ]
+                    },
+                    {
+                        name: "channel",
+                        description: "The channel where the applicatiosn will be sent",
+                        type: ApplicationCommandOptionType.Channel,
+                        channelTypes: [ChannelType.GuildText],
+                        required: false,
+                    },
+                    {
+                        name: "appchannel",
+                        description: "The channel where the approved applications will be sent",
+                        type: ApplicationCommandOptionType.Channel,
+                        channelTypes: [ChannelType.GuildText],
+                        required: false,
+                    },
+                    {
+                        name: "rejchannel",
+                        description: "The channel where the rejected applications will be sent",
+                        type: ApplicationCommandOptionType.Channel,
+                        channelTypes: [ChannelType.GuildText],
+                        required: false,
+                    }
+                ]
+            },
+            {
                 name: "rank",
                 description: "Rank configuration",
                 type: ApplicationCommandOptionType.Subcommand,
@@ -287,6 +331,18 @@ module.exports = {
             if (channel) response = await setShiftsChannel(data.settings, channel);
             if (role) response = await setShiftRole(data.settings, role);
             if (roleremove) response = await removeShiftRole(data.settings, roleremove);
+        }
+
+        else if (sub === "applications") {
+            const status = interaction.options.getString("status");
+            const appschannel = interaction.options.getChannel("channel");
+            const appchannel = interaction.options.getChannel("appchannel");
+            const rejchannel = interaction.options.getChannel("rejchannel");
+
+            if (status) response = await setAppStatus(data.settings, status);
+            if (appschannel) response = await setAppChannel(data.settings, appschannel);
+            if (appchannel) response = await setApprovedAppChannel(data.settings, appchannel);
+            if (rejchannel) response = await setRejectedAppChannel(data.settings, rejchannel);
         }
 
         else if (sub === "rank") {
@@ -660,6 +716,82 @@ async function setShiftsChannel(settings, channel) {
     const embed = new EmbedBuilder()
         .setTitle("Success")
         .setDescription(`Shift System system **updated**.`)
+        .setColor(EMBED_COLORS.SUCCESS)
+
+    return { embeds: [embed] };
+}
+
+async function setAppStatus(settings, status) {
+    const enabled = status.toUpperCase() === "ON" ? true : false;
+    settings.applications.enabled = enabled;
+    await settings.save();
+
+    const embed = new EmbedBuilder()
+        .setTitle("Success")
+        .setDescription(`Applications System **updated**.`)
+        .setColor(EMBED_COLORS.SUCCESS)
+
+    return { embeds: [embed] };
+}
+
+async function setAppChannel(settings, channel) {
+    if (!channel.permissionsFor(channel.guild.members.me).has(CHANNEL_PERMS)) {
+        const embed = new EmbedBuilder()
+            .setTitle("Missing Permissions")
+            .setDescription(`I need the following permissions in ${channel}\n${parsePermissions(CHANNEL_PERMS)}.`)
+            .setColor(EMBED_COLORS.ERROR)
+
+        return { embeds: [embed] };
+    }
+
+    settings.applications.channel_id = channel.id;
+    await settings.save();
+
+    const embed = new EmbedBuilder()
+        .setTitle("Success")
+        .setDescription(`Applications system **updated**.`)
+        .setColor(EMBED_COLORS.SUCCESS)
+
+    return { embeds: [embed] };
+}
+
+async function setApprovedAppChannel(settings, channel) {
+    if (!channel.permissionsFor(channel.guild.members.me).has(CHANNEL_PERMS)) {
+        const embed = new EmbedBuilder()
+            .setTitle("Missing Permissions")
+            .setDescription(`I need the following permissions in ${channel}\n${parsePermissions(CHANNEL_PERMS)}.`)
+            .setColor(EMBED_COLORS.ERROR)
+
+        return { embeds: [embed] };
+    }
+
+    settings.applications.approved_channel = channel.id;
+    await settings.save();
+
+    const embed = new EmbedBuilder()
+        .setTitle("Success")
+        .setDescription(`Applications system **updated**.`)
+        .setColor(EMBED_COLORS.SUCCESS)
+
+    return { embeds: [embed] };
+}
+
+async function setRejectedAppChannel(settings, channel) {
+    if (!channel.permissionsFor(channel.guild.members.me).has(CHANNEL_PERMS)) {
+        const embed = new EmbedBuilder()
+            .setTitle("Missing Permissions")
+            .setDescription(`I need the following permissions in ${channel}\n${parsePermissions(CHANNEL_PERMS)}.`)
+            .setColor(EMBED_COLORS.ERROR)
+
+        return { embeds: [embed] };
+    }
+
+    settings.applications.rejected_channel = channel.id;
+    await settings.save();
+
+    const embed = new EmbedBuilder()
+        .setTitle("Success")
+        .setDescription(`Applications system **updated**.`)
         .setColor(EMBED_COLORS.SUCCESS)
 
     return { embeds: [embed] };

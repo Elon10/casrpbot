@@ -18,12 +18,12 @@ router.get("/login", async function (req, res) {
       )}&state=${req.query.state || "no"}`
     );
   }
-  res.redirect("/staff/homePage");
+  res.redirect("/selector");
 });
 
 router.get("/callback", async (req, res) => {
   if (!req.query.code) return res.redirect(req.client.config.DASHBOARD.failureURL);
-  const redirectURL = req.client.states[req.query.state] || "/staff/homePage";
+  const redirectURL = req.client.states[req.query.state] || "/selector";
   const params = new URLSearchParams();
   params.set("grant_type", "authorization_code");
   params.set("code", req.query.code);
@@ -72,7 +72,7 @@ router.get("/callback", async (req, res) => {
   const guilds = [];
   for (const guildPos in userData.guilds) guilds.push(userData.guilds[guildPos]);
 
-  req.session.user = { ...userData.infos, ...{ guilds } }; 
+  req.session.user = { ...userData.infos, ...{ guilds } };
   res.redirect(redirectURL);
 });
 

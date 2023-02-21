@@ -3,6 +3,7 @@ const { EmbedBuilder, ActionRowBuilder, ButtonBuilder, ButtonStyle } = require("
 const { EMBED_COLORS } = require("@root/config");
 const { addModeration } = require("@schemas/Moderation");
 const { addLoa } = require("@schemas/Loas");
+const { addApplication } = require("@root/src/database/schemas/Apps")
 const roblox = require("noblox.js")
 const { addBanBolo } = require("@schemas/BanBolo");
 const moment = require("moment");
@@ -18,6 +19,12 @@ router.get("/", CheckAuth, async (req, res) => {
     res.redirect("/staff/homePage");
 });
 
+router.get("/selector", CheckAuth, async (req, res) => {
+    res.render("selector", {
+        user: req.userInfos,
+        currentURL: `${req.client.config.DASHBOARD.baseURL}/${req.originalUrl}`,
+    });
+})
 
 router.get("/staff/homePage", CheckAuth, async (req, res) => {
     const staffDb = await getUser(req.userInfos);
@@ -33,6 +40,39 @@ router.get("/staff/homePage", CheckAuth, async (req, res) => {
             user: req.userInfos,
             currentURL: `${req.client.config.DASHBOARD.baseURL}/${req.originalUrl}`,
         });
+    }
+})
+
+router.get("/submit", CheckAuth, async (req, res) => {
+    res.render("submit", {
+        user: req.userInfos,
+        userDb: await getUser(req.userInfos),
+        currentURL: `${req.client.config.DASHBOARD.baseURL}/${req.originalUrl}`,
+    })
+})
+
+router.get("/staff/apply", CheckAuth, async (req, res) => {
+    const guild = req.client.guilds.cache.get("924038453568602162");
+    const userDb = await getUser(req.userInfos);
+    const settings = await getSettings(guild);
+
+    if (!settings.applications.enabled) {
+        res.render("disabled", {
+            user: req.userInfos,
+            currentURL: `${req.client.config.DASHBOARD.baseURL}/${req.originalUrl}`,
+        })
+    } else if (userDb.applied) {
+        res.render("applyalready", {
+            user: req.userInfos,
+            userDb: await getUser(req.userInfos),
+            currentURL: `${req.client.config.DASHBOARD.baseURL}/${req.originalUrl}`,
+        })
+    } else {
+        res.render("apply", {
+            user: req.userInfos,
+            userDb: await getUser(req.userInfos),
+            currentURL: `${req.client.config.DASHBOARD.baseURL}/${req.originalUrl}`,
+        })
     }
 })
 
@@ -552,6 +592,225 @@ router.post("/staff/shiftManagement", CheckAuth, async (req, res) => {
     }
 
     res.redirect(303, "/staff/shiftManagement");
+})
+
+router.post("/staff/apply", CheckAuth, async (req, res) => {
+    const data = req.body;
+    const guild = req.client.guilds.cache.get("924038453568602162");
+    const settings = await getSettings(guild);
+    const userDb = await getUser(req.userInfos);
+
+    const btnRow = new ActionRowBuilder().addComponents(
+        new ButtonBuilder().setLabel("Accept").setCustomId("APPLY_ACCEPT").setStyle(ButtonStyle.Success),
+        new ButtonBuilder().setLabel("Deny").setCustomId("APPLY_DENY").setStyle(ButtonStyle.Danger),
+        new ButtonBuilder().setLabel("Delete").setCustomId("APPLY_DELETE").setStyle(ButtonStyle.Danger)
+    );
+
+    const member = guild.members.cache.get(req.user.id);
+
+    const id = await roblox.getIdFromUsername(data.roblox);
+    const info = await roblox.getPlayerInfo(id);
+    const avatarUrl = await roblox.getPlayerThumbnail(
+        [id],
+        '720x720',
+        'png',
+        false,
+        'headshot',
+    );
+
+    const embed1 = new EmbedBuilder()
+        .setTitle("Discord Information")
+        .setColor(EMBED_COLORS.BOT_EMBED)
+        .addFields(
+            {
+                name: "User Tag",
+                value: member.user.tag,
+                inline: true,
+            },
+            {
+                name: "ID",
+                value: member.id,
+                inline: true,
+            },
+            {
+                name: "Guild Joined",
+                value: `<t:${Math.round(member.joinedTimestamp / 1000)}:F>`,
+            },
+            {
+                name: "Discord Registered",
+                value: `<t:${Math.round(member.user.createdTimestamp / 1000)}:F>`,
+            },
+        )
+        .setThumbnail(member.user.displayAvatarURL())
+
+    const embed2 = new EmbedBuilder()
+        .setTitle("Roblox Information")
+        .addFields(
+            {
+                name: "User",
+                value: info.username,
+                inline: true
+            },
+
+            {
+                name: "User ID",
+                value: id.toString(),
+                inline: true,
+            },
+            {
+                name: "Display Name",
+                value: info.displayName,
+                inline: true,
+            },
+            {
+                name: "Account Created",
+                value: `<t:${Math.round(info.joinDate / 1000)}:F>`,
+                inline: true,
+            },
+        )
+        .setThumbnail(avatarUrl[0].imageUrl)
+        .setColor(EMBED_COLORS.BOT_EMBED)
+
+    const embed3 = new EmbedBuilder()
+        .setTitle("Staff Application")
+        .setDescription(`A new application by <@${req.user.id}>`)
+        .setColor(EMBED_COLORS.BOT_EMBED)
+        .addFields(
+            {
+                name: "How old are you?",
+                value: data.age,
+                inline: false
+            },
+            {
+                name: "What is your timezone?",
+                value: data.timezone,
+                inline: false,
+            },
+            {
+                name: "Tell us about yourself. (EX. Hobbies, Sports, School, Clubs, etc.)",
+                value: data.hobbies,
+                inline: false,
+            },
+            {
+                name: "What programming languages are you familiar?",
+                value: data.codelanguages,
+                inline: false,
+            },
+            {
+                name: "Have any past experience being a moderator?",
+                value: data.pastexperience,
+                inline: false,
+            },
+            {
+                name: "If you selected yes above, list the server(s) you've worked in the past. (EX. Server Name, rank, activity status, etc.)",
+                value: data.serverexperience || "Empty",
+                inline: false,
+            },
+            {
+                name: "Why do you want to be a moderator at California State Roleplay?",
+                value: data.whywantto,
+                inline: false,
+            },
+            {
+                name: "Tell us why you should be selected over other applicants. What skills do you have that can benefit the staff team?",
+                value: data.skills,
+                inline: false,
+            },
+            {
+                name: "You hear multiple weapons being shot at the same time near gun store. As you approach the situation you see a user with an unrealistic avatar killing all users at the scene. You arrive and he begins to flee, what would you do?",
+                value: data.modq1,
+                inline: false,
+            },
+            {
+                name: "You're patrolling as a red impala passes you crashing into vehicles, swerving, and unrealistically driving. You attempt to pull over the red impala but it flees, what would you do?",
+                value: data.modq2,
+                inline: false,
+            },
+            {
+                name: "You moderate a user for fail roleplaying. They become upset and want to report you for admin abuse, what would you do?",
+                value: data.modq3,
+                inline: false,
+            },
+            {
+                name: "You moderate a user for fail roleplaying. They become upset and starts to disrespect the server, what would you do?",
+                value: data.modq4,
+                inline: false,
+            },
+            {
+                name: "You respond to a !mod call and the member describes a user going around shooting his tires and making his vehicle catch fire, he says he has done nothing & has a weapon for self defense. He gives you the offenders username, what would you do?",
+                value: data.modq5,
+                inline: false,
+            },
+            {
+                name: "You respond to a !mod call and the member describes a user going around shooting his tires and making his vehicle catch fire, he says he was roleplaying and was shot randomly. The offender runs & leaves the game, what would you do?",
+                value: data.modq6,
+                inline: false,
+            },
+            {
+                name: "As you respond to a !mod call a user comes up to you with a weapon and attempts to kill you in which he succeeds. He returns to his vehicle and flees, what would you do?",
+                value: data.modq7,
+                inline: false,
+            },
+            {
+                name: "To begin, as you patrol the server as a Moderator, you notice a user using a banned weapon. You see them actively using the weapon, what would you do?",
+                value: data.modq8,
+                inline: false,
+            },
+            {
+                name: "While chatting in main chat you decide to check on off topic chat and find a few users arguing, what would you do?",
+                value: data.modq9,
+                inline: false,
+            },
+            {
+                name: "You are chatting with members when someone randomly insults someone that's chatting. What would you do?",
+                value: data.modq10,
+                inline: false,
+            },
+            {
+                name: "You just get online and you go to check main chat and its filled with welcome messages that seem like bots, what would you do?",
+                value: data.modq11,
+                inline: false,
+            },
+            {
+                name: "You are checking chats to make sure nobody is breaking the rules and while in off topic chat you see a few users ghost pinging people, what would you do?",
+                value: data.modq12,
+                inline: false,
+            },
+            {
+                name: "You are in the server and you come across people using excessive profanity, what would you do?",
+                value: data.modq13,
+                inline: false,
+            },
+            {
+                name: "Any questions, statements, or concerns for the reviewer?",
+                value: data.modq14,
+                inline: false,
+            },
+            {
+                name: "Do you agree to not ask any staff to review your application?",
+                value: data.modq15,
+                inline: false,
+            }
+        )
+
+    const channel = member.guild.channels.cache.get(settings.applications.channel_id);
+    const reason = "New app";
+
+    try {
+        const sentMsg = await channel.send({
+            embeds: [embed1, embed2, embed3],
+            components: [btnRow],
+        });
+
+        await addApplication(sentMsg, req.user.id, reason);
+    } catch (ex) {
+        console.log(ex);
+    }
+
+    userDb.applied = true;
+    await userDb.save();
+
+    res.redirect(303, "/submit")
 })
 
 module.exports = router;

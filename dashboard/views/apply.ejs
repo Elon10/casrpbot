@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      
+        <title>CASRP - Applications</title>
+      
+        <meta name="viewport" content="width=device-width">
+      
+        <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic" />
+        <link rel="stylesheet" href="/styles/tailwind.css" />
+        <script src="https://kit.fontawesome.com/76ac47ee98.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="/styles/virtual-select.min.css" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css" />
+      
+        <script src="/scripts/virtual-select.min.js"></script>
+      </head>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+
+    <body class="bg-bggray text-gray-50 min-h-screen flex flex-col">
+        <div class="alert hide" id="alert">
+            <span class="fa fa-exclamation-circle"></span>
+            <span class="msg">Success! Your application has been send successfully.</span>
+            <span class="close-btn">
+                <span class="fa fa-times"></span>
+            </span>
+        </div>
+
+        <div class="grid grid-cols-1 flex-1">
+            <div class="flex flex-col col-span-6">
+                <%- include('includes/header') %>
+                <h2 class="text-3xl font-bold mx-8 mt-6 mb-2 underline text-center" style="margin-top: 50px;">Staff Applications</h2>
+                <div class="background-1 flex flex-col px-4 pt-2 pb-4">
+                    <img src="https://cdn.discordapp.com/attachments/1071447768054386791/1076265225688461332/ELON_BANNER.png" style="margin-left: auto; margin-right: auto; margin-top: 10px;">
+                </div>
+                <section class="grid grid-cols gap-4 my-4 mx-8">
+                    <div class="flex flex-col rounded-lg bg-darkerbggray h-[fit-content]">
+                        <div id="multi-step-form-container">
+                            <ul class="form-stepper form-stepper-horizontal text-center mx-auto pl-0">
+                                <li class="form-stepper-active text-center form-stepper-list" step="1">
+                                    <a class="mx-2">
+                                        <span class="form-stepper-circle">
+                                            <span>1</span>
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="form-stepper-unfinished text-center form-stepper-list" step="2">
+                                    <a class="mx-2">
+                                        <span class="form-stepper-circle text-muted">
+                                            <span>2</span>
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="form-stepper-unfinished text-center form-stepper-list" step="3">
+                                    <a class="mx-2">
+                                        <span class="form-stepper-circle text-muted">
+                                            <span>3</span>
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="form-stepper-unfinished text-center form-stepper-list" step="4">
+                                    <a class="mx-2">
+                                        <span class="form-stepper-circle text-muted">
+                                            <span>4</span>
+                                        </span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <form role="form" action="/staff/apply" method="post" id="appSend"
+                        class="flex flex-col px-4 pt-2 pb-4">
+                        <section id="step-1" class="form-step">
+                            <div class="background-1 flex flex-col">
+                                <h2 class="text-2xl font-bold mx-8 mt-6 mb-2 underline" style="margin-top: 50px; margin-left: 110px;">Requeriments</h2>
+                                <p class="text-lg" style="margin-left: 110px;">Must be 13+ years old <br> <br>
+                                    - Ahbility to maintain maturity & professionalism <br>
+                                    - Must be able to uphold our standards <br>
+                                    - Must be willing & work in a team <br>
+                                    - Must be able to give up roleplay to moderate <br>
+                                    - Basic knowledge of moderation <br>
+                                    - Expected to know & utilize proper grammar <br>
+                                    - Meet sentence requirements <br>
+                                    - Have common sense</p>
+                            </div>
+                            <div class="flex flex-col">
+                                <label class="font-bold text-2xl" style="margin-left: 100px; margin-top: 30px;">What is your ROBLOX username?</label>
+                                <input type="text" name="roblox" class="discord px-3 py-1 rounded-lg bg-gray-50 text-gray-900" style="margin-left: 100px;"></input>
+                            </div>
+                            <div class="mt-3" style="margin-left: auto; margin-right: auto; text-align: center;">
+                                <button type="button" 
+                                    class="btn px-4 py-1 rounded-lg bg-error transition-opacity duration-300 hover:opacity-70 btn-navigate-form-step" step_number="2">
+                                    Next
+                                </button>
+                            </div>
+                        </section>
+                        <section id="step-2" class="form-step d-none">
+                            <div class="background-1 flex">
+                                <h class="text-2xl font-bold mx-8 mt-6 mb-2 underline">Tell us about yourself <br><br></h2>
+                            </div>
+                            <div class="flex flex-col">
+                                <label class="font-bold text-2xl" style="margin-left: 100px; margin-top: 30px;">How old are you?</label>
+                                <input type="number" name="age" class="discord px-3 py-1 rounded-lg bg-gray-50 text-gray-900" style="margin-left: 100px;" required></input>
+                            </div>
+                            <div class="flex flex-col" style="margin-left: 100px; margin-top: 30px;">
+                                <label class="font-bold text-2xl">Do you have safechat enabled on your account?</label>
+                                <select class="px-3 py-1 rounded-lg bg-gray-50 text-gray-900" name="safechat" required id="punishment">
+                                    <option required selected disabled>Select an option</option>
+                                    <option value="Yes">Yes</option>
+                                    <option value="No">No</option>
+                                </select>
+                            </div>
+                            <div class="flex flex-col">
+                                <label class="font-bold text-2xl" style="margin-left: 100px; margin-top: 30px;">What is your timezone?</label>
+                                <input type="text" name="timezone" class="discord px-3 py-1 rounded-lg bg-gray-50 text-gray-900" style="margin-left: 100px;" required></input>
+                            </div>
+                            <div class="flex flex-col">
+                                <label class="font-bold text-2xl" style="margin-left: 100px; margin-top: 30px;">Tell us about yourself. (EX. Hobbies, Sports, School, Clubs, etc.)</label>
+                                <textarea name="hobbies" class="discord px-3 py-1 rounded-lg bg-gray-50 text-gray-900" style="margin-left: 100px;" required maxlength="1024"></textarea>
+                            </div>
+                            <div class="flex flex-col">
+                                <label class="font-bold text-2xl" style="margin-left: 100px; margin-top: 30px;">What programming languages are you familiar?</label>
+                                <input type="text" name="codelanguages" class="discord px-3 py-1 rounded-lg bg-gray-50 text-gray-900" style="margin-left: 100px;" required maxlength="1024"></input>
+                            </div>
+                            <div class="flex flex-col" style="margin-left: 100px; margin-top: 30px;">
+                                <label class="font-bold text-2xl">Have any past experience being a moderator?</label>
+                                <select class="px-3 py-1 rounded-lg bg-gray-50 text-gray-900" name="pastexperience" required>
+                                    <option required selected disabled>Select an option</option>
+                                    <option value="Yes">Yes</option>
+                                    <option value="No">No</option>
+                                </select>
+                            </div>
+                            <div class="flex flex-col">
+                                <label class="font-bold text-2xl" style="margin-left: 100px; margin-top: 30px;">If you selected yes above, list the server(s) you've worked in the past. (EX. Server Name, rank, activity status, etc.)</label>
+                                <textarea name="serverexperience" class="discord px-3 py-1 rounded-lg bg-gray-50 text-gray-900" style="margin-left: 100px;" maxlength="1024"></textarea>
+                            </div>
+                            <div class="flex flex-col">
+                                <label class="font-bold text-2xl" style="margin-left: 100px; margin-top: 30px;">Why do you want to be a moderator at <b class="blue">California State Roleplay</b>?</label>
+                                <textarea name="whywantto" class="discord px-3 py-1 rounded-lg bg-gray-50 text-gray-900" style="margin-left: 100px;" required maxlength="1024"></textarea>
+                            </div>
+                            <div class="flex flex-col">
+                                <label class="font-bold text-2xl" style="margin-left: 100px; margin-top: 30px;">Tell us why you should be selected over other applicants. What skills do you have that can benefit the staff team?</label>
+                                <textarea name="skills" class="discord px-3 py-1 rounded-lg bg-gray-50 text-gray-900" style="margin-left: 100px;" required maxlength="1024"></textarea>
+                            </div>
+                            <div class="mt-3" style="margin-left: auto; margin-right: auto; text-align: center;">
+                                <button type="button"
+                                    class="btn px-4 py-1 rounded-lg bg-error transition-opacity duration-300 hover:opacity-70 btn-navigate-form-step" step_number="1">
+                                    Back
+                                </button>
+                                <button type="button" 
+                                    class="btn px-4 py-1 rounded-lg bg-error transition-opacity duration-300 hover:opacity-70 btn-navigate-form-step" step_number="3">
+                                    Next
+                                </button>
+                            </div>
+                        </section>
+                        <section id="step-3" class="form-step d-none">
+                            <div class="background-1 flex">
+                                <h class="text-2xl font-bold mx-8 mt-6 mb-2 underline">In-game Moderation Questions <br><br></h2>
+                            </div>
+                            <div class="flex flex-col">
+                                <label class="font-bold text-2xl" style="margin-left: 100px; margin-top: 30px;">You hear multiple weapons being shot at the same time near gun store. As you approach the situation you see a user with an unrealistic avatar killing all users at the scene. You arrive and he begins to flee, what would you do?</label>
+                                <textarea name="modq1" class="discord px-3 py-1 rounded-lg bg-gray-50 text-gray-900" style="margin-left: 100px;" required maxlength="1024"></textarea>
+                            </div>
+                            <div class="flex flex-col">
+                                <label class="font-bold text-2xl" style="margin-left: 100px; margin-top: 30px;">You're patrolling as a red impala passes you crashing into vehicles, swerving, and unrealistically driving. You attempt to pull over the red impala but it flees, what would you do?</label>
+                                <textarea name="modq2" class="discord px-3 py-1 rounded-lg bg-gray-50 text-gray-900" style="margin-left: 100px;" required maxlength="1024"></textarea>
+                            </div>
+                            <div class="flex flex-col">
+                                <label class="font-bold text-2xl" style="margin-left: 100px; margin-top: 30px;">You moderate a user for fail roleplaying. They become upset and want to report you for admin abuse, what would you do?</label>
+                                <textarea name="modq3" class="discord px-3 py-1 rounded-lg bg-gray-50 text-gray-900" style="margin-left: 100px;" required maxlength="1024"></textarea>
+                            </div>
+                            <div class="flex flex-col">
+                                <label class="font-bold text-2xl" style="margin-left: 100px; margin-top: 30px;">You moderate a user for fail roleplaying. They become upset and starts to disrespect the server, what would you do?</label>
+                                <textarea name="modq4" class="discord px-3 py-1 rounded-lg bg-gray-50 text-gray-900" style="margin-left: 100px;" required maxlength="1024"></textarea>
+                            </div>
+                            <div class="flex flex-col">
+                                <label class="font-bold text-2xl" style="margin-left: 100px; margin-top: 30px;">You respond to a !mod call and the member describes a user going around shooting his tires and making his vehicle catch fire, he says he has done nothing & has a weapon for self defense. He gives you the offenders username, what would you do?</label>
+                                <textarea name="modq5" class="discord px-3 py-1 rounded-lg bg-gray-50 text-gray-900" style="margin-left: 100px;" required maxlength="1024"></textarea>
+                            </div>
+                            <div class="flex flex-col">
+                                <label class="font-bold text-2xl" style="margin-left: 100px; margin-top: 30px;">You respond to a !mod call and the member describes a user going around shooting his tires and making his vehicle catch fire, he says he was roleplaying and was shot randomly & gives you the offender username. The offender runs & leaves the game, what would you do?</label>
+                                <textarea name="modq6" class="discord px-3 py-1 rounded-lg bg-gray-50 text-gray-900" style="margin-left: 100px;" required maxlength="1024"></textarea>
+                            </div>
+                            <div class="flex flex-col">
+                                <label class="font-bold text-2xl" style="margin-left: 100px; margin-top: 30px;">As you respond to a !mod call a user comes up to you with a weapon and attempts to kill you in which he succeeds. He returns to his vehicle and flees, what would you do?</label>
+                                <textarea name="modq7" class="discord px-3 py-1 rounded-lg bg-gray-50 text-gray-900" style="margin-left: 100px;" required maxlength="1024"></textarea>
+                            </div>
+                            <div class="flex flex-col">
+                                <label class="font-bold text-2xl" style="margin-left: 100px; margin-top: 30px;">To begin, as you patrol the server as a Moderator, you notice a user using a banned weapon. You see them actively using the weapon, what would you do?</label>
+                                <textarea name="modq8" class="discord px-3 py-1 rounded-lg bg-gray-50 text-gray-900" style="margin-left: 100px;" required maxlength="1024"></textarea>
+                            </div>
+                            <div class="mt-3" style="margin-left: auto; margin-right: auto; text-align: center;">
+                                <button type="button"
+                                    class="btn px-4 py-1 rounded-lg bg-error transition-opacity duration-300 hover:opacity-70 btn-navigate-form-step" step_number="2">
+                                    Back
+                                </button>
+                                <button type="button" 
+                                    class="btn px-4 py-1 rounded-lg bg-error transition-opacity duration-300 hover:opacity-70 btn-navigate-form-step" step_number="4">
+                                    Next
+                                </button>
+                            </div>
+                        </section>
+                        <section id="step-4" class="form-step d-none">
+                            <div class="background-1 flex">
+                                <h class="text-2xl font-bold mx-8 mt-6 mb-2 underline">In these situations you are only <b class="blue">TRIAL MODERATOR</b> <br><br></h2>
+                            </div>
+                            <div class="flex flex-col">
+                                <label class="font-bold text-2xl" style="margin-left: 100px; margin-top: 30px;">While chatting in main chat you decide to check on off topic chat and find a few users arguing, what would you do?</label>
+                                <textarea name="modq9" class="discord px-3 py-1 rounded-lg bg-gray-50 text-gray-900" style="margin-left: 100px;" required maxlength="1024"></textarea>
+                            </div>
+                            <div class="flex flex-col">
+                                <label class="font-bold text-2xl" style="margin-left: 100px; margin-top: 30px;">You are chatting with members when someone randomly insults someone that's chatting. What would you do?</label>
+                                <textarea name="modq10" class="discord px-3 py-1 rounded-lg bg-gray-50 text-gray-900" style="margin-left: 100px;" required maxlength="1024"></textarea>
+                            </div>
+                            <div class="flex flex-col">
+                                <label class="font-bold text-2xl" style="margin-left: 100px; margin-top: 30px;">You just get online and you go to check main chat and its filled with welcome messages that seem like bots, what would you do?</label>
+                                <textarea name="modq11" class="discord px-3 py-1 rounded-lg bg-gray-50 text-gray-900" style="margin-left: 100px;" required maxlength="1024"></textarea>
+                            </div>
+                            <div class="flex flex-col">
+                                <label class="font-bold text-2xl" style="margin-left: 100px; margin-top: 30px;">You are checking chats to make sure nobody is breaking the rules and while in off topic chat you see a few users ghost pinging people, what would you do?</label>
+                                <textarea name="modq12" class="discord px-3 py-1 rounded-lg bg-gray-50 text-gray-900" style="margin-left: 100px;" required maxlength="1024"></textarea>
+                            </div>
+                            <div class="flex flex-col">
+                                <label class="font-bold text-2xl" style="margin-left: 100px; margin-top: 30px;">You are in the server and you come across people using excessive profanity, what would you do?</label>
+                                <textarea name="modq13" class="discord px-3 py-1 rounded-lg bg-gray-50 text-gray-900" style="margin-left: 100px;" required maxlength="1024"></textarea>
+                            </div>
+                            <div class="flex flex-col">
+                                <label class="font-bold text-2xl" style="margin-left: 100px; margin-top: 30px;">Any questions, statements, or concerns for the reviewer?</label>
+                                <textarea name="modq14" class="discord px-3 py-1 rounded-lg bg-gray-50 text-gray-900" style="margin-left: 100px;" required maxlength="1024"></textarea>
+                            </div>
+                            <div class="flex flex-col" style="margin-left: 100px; margin-top: 30px;">
+                                <label class="font-bold text-2xl">Do you agree to not ask any staff to review your application?</label>
+                                <select class="px-3 py-1 rounded-lg bg-gray-50 text-gray-900" name="modq15" required>
+                                    <option required selected disabled>Select an option</option>
+                                    <option value="Yes, I agree to not ask any staff about the progress of my application.">Yes, I agree to not ask any staff about the progress of my application.</option>
+                                    <option value="No, I don't agree to not ask any staff about the progress of my application">No, I don't agree to not ask any staff about the progress of my application</option>
+                                </select>
+                            </div>
+                            <div class="mt-4" style="margin-left: auto; margin-right: auto; text-align: center;">
+                                <button type="button"
+                                    class="btn px-4 py-1 rounded-lg transition-opacity duration-300 hover:opacity-70 btn-navigate-form-step" step_number="3">
+                                    Back
+                                </button>
+                                <button type="submit"
+                                    class="greenBtn px-4 py-1 rounded-lg bg-success transition-opacity duration-300 hover:opacity-70">
+                                    Submit
+                                </button>
+                            </div>
+                        </section>
+                        </form>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </body>
+
+    <script>
+        $('#appSend').submit(function (e) {
+        $('.alert').removeClass("hide");
+        $('.alert').addClass("show");
+        $('.alert').addClass("showAlert");
+        setTimeout(function () {
+            $('.alert').addClass("hide");
+            $('.alert').removeClass("show");
+        }, 5000)
+    })
+    $('.close-btn').click(function () {
+        $('.alert').addClass("hide");
+        $('.alert').removeClass("show");
+    })
+  
+    /**
+ * Define a function to navigate betweens form steps.
+ * It accepts one parameter. That is - step number.
+ */
+const navigateToFormStep = (stepNumber) => {
+    /**
+     * Hide all form steps.
+     */
+    document.querySelectorAll(".form-step").forEach((formStepElement) => {
+        formStepElement.classList.add("d-none");
+    });
+    /**
+     * Mark all form steps as unfinished.
+     */
+    document.querySelectorAll(".form-stepper-list").forEach((formStepHeader) => {
+        formStepHeader.classList.add("form-stepper-unfinished");
+        formStepHeader.classList.remove("form-stepper-active", "form-stepper-completed");
+    });
+    /**
+     * Show the current form step (as passed to the function).
+     */
+    document.querySelector("#step-" + stepNumber).classList.remove("d-none");
+    /**
+     * Select the form step circle (progress bar).
+     */
+    const formStepCircle = document.querySelector('li[step="' + stepNumber + '"]');
+    /**
+     * Mark the current form step as active.
+     */
+    formStepCircle.classList.remove("form-stepper-unfinished", "form-stepper-completed");
+    formStepCircle.classList.add("form-stepper-active");
+    /**
+     * Loop through each form step circles.
+     * This loop will continue up to the current step number.
+     * Example: If the current step is 3,
+     * then the loop will perform operations for step 1 and 2.
+     */
+    for (let index = 0; index < stepNumber; index++) {
+        /**
+         * Select the form step circle (progress bar).
+         */
+        const formStepCircle = document.querySelector('li[step="' + index + '"]');
+        /**
+         * Check if the element exist. If yes, then proceed.
+         */
+        if (formStepCircle) {
+            /**
+             * Mark the form step as completed.
+             */
+            formStepCircle.classList.remove("form-stepper-unfinished", "form-stepper-active");
+            formStepCircle.classList.add("form-stepper-completed");
+        }
+    }
+};
+/**
+ * Select all form navigation buttons, and loop through them.
+ */
+document.querySelectorAll(".btn-navigate-form-step").forEach((formNavigationBtn) => {
+    /**
+     * Add a click event listener to the button.
+     */
+    formNavigationBtn.addEventListener("click", () => {
+        /**
+         * Get the value of the step.
+         */
+        const stepNumber = parseInt(formNavigationBtn.getAttribute("step_number"));
+        /**
+         * Call the function to navigate to the target form step.
+         */
+        navigateToFormStep(stepNumber);
+    });
+});
+    </script>
+</html>

@@ -1,5 +1,5 @@
 const { getSettings } = require("@schemas/Guild");
-const { commandHandler, contextHandler, statsHandler, loasHandler, moderateHandler, boloHandler } = require("@src/handlers");
+const { commandHandler, contextHandler, statsHandler, loasHandler, moderateHandler, boloHandler, applicationsHandler } = require("@src/handlers");
 const { InteractionType, EmbedBuilder } = require("discord.js");
 const { EMBED_COLORS } = require("@root/config");
 
@@ -51,6 +51,12 @@ module.exports = async (client, interaction) => {
 
             case "BOLO_DELETE":
                 return boloHandler.handleDeleteBtn(interaction);
+
+            case "APPLY_ACCEPT":
+                return applicationsHandler.handleAcceptBtn(interaction);
+
+            case "APPLY_DENY":
+                return applicationsHandler.handleDenyBtn(interaction);
         }
     }
 
@@ -70,6 +76,12 @@ module.exports = async (client, interaction) => {
 
             case "BANBOLO_DELETE_MODAL":
                 return boloHandler.handleDeleteModal(interaction);
+
+            case "APPLY_ACCEPT_MODAL":
+                return applicationsHandler.handleAcceptModal(interaction);
+
+            case "APPLY_DENY_MODAL":
+                return applicationsHandler.handleDenyModal(interaction);
         }
     }
 

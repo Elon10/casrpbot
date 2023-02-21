@@ -11,6 +11,7 @@ const Schema = new mongoose.Schema(
         discriminator: String,
         logged: Boolean,
         staffpanel: Boolean,
+        applied: Boolean,
         shifts: {
             total: { type: Number, default: 0 },
             timetotal: { type: Number, default: 0 },
