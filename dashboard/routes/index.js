@@ -52,7 +52,7 @@ router.get("/submit", CheckAuth, async (req, res) => {
 })
 
 router.get("/staff/apply", CheckAuth, async (req, res) => {
-    const guild = req.client.guilds.cache.get("924038453568602162");
+    const guild = req.client.guilds.cache.get("1115729790650036374");
     const userDb = await getUser(req.userInfos);
     const settings = await getSettings(guild);
 
@@ -94,12 +94,12 @@ router.get("/staff/announcements", CheckAuth, async (req, res) => {
 
 router.get("/staff/banBolo", CheckAuth, async (req, res) => {
     const staffDb = await getUser(req.userInfos);
-    const casrp = req.client.guilds.cache.get("924038453568602162");
+    const casrp = req.client.guilds.cache.get("1115729790650036374");
 
     if (staffDb.staffpanel) {
         res.render("staff/banBolo", {
             user: req.userInfos,
-            guild: req.client.guilds.cache.get("924038453568602162"),
+            guild: req.client.guilds.cache.get("1115729790650036374"),
             casrpDb: await getSettings(casrp),
             currentURL: `${req.client.config.DASHBOARD.baseURL}/${req.originalUrl}`,
         });
@@ -163,7 +163,7 @@ router.get("/staff/shiftManagement", CheckAuth, async (req, res) => {
 
 router.post("/staff/loaRequest", CheckAuth, async (req, res) => {
 
-    const guild = req.client.guilds.cache.get("924038453568602162");
+    const guild = req.client.guilds.cache.get("1115729790650036374");
     const data = req.body;
 
     const settings = await getSettings(guild);
@@ -230,7 +230,7 @@ router.post("/staff/loaRequest", CheckAuth, async (req, res) => {
 router.post("/staff/moderateLog", CheckAuth, async (req, res) => {
     const data = req.body;
 
-    const guild = req.client.guilds.cache.get("924038453568602162");
+    const guild = req.client.guilds.cache.get("1115729790650036374");
     const settings = await getSettings(guild);
     const channel = guild.channels.cache.get(settings.moderations.channel_id);
     const staffDb = await getUser(req.userInfos);
@@ -374,7 +374,7 @@ router.post("/staff/moderateLog", CheckAuth, async (req, res) => {
 router.post("/staff/banBolo", CheckAuth, async (req, res) => {
     const data = req.body;
 
-    const guild = req.client.guilds.cache.get("924038453568602162");
+    const guild = req.client.guilds.cache.get("1115729790650036374");
     const user = guild.members.cache.get(req.user.id);
 
     const settings = await getSettings(guild);
@@ -497,7 +497,7 @@ router.post("/staff/banBolo", CheckAuth, async (req, res) => {
 router.post("/staff/shiftManagement", CheckAuth, async (req, res) => {
     const data = req.body;
     const staffDb = await getUser(req.userInfos);
-    const guild = req.client.guilds.cache.get("924038453568602162");
+    const guild = req.client.guilds.cache.get("1115729790650036374");
     const user = guild.members.cache.get(req.user.id);
 
     const settings = await getSettings(guild);
@@ -596,7 +596,7 @@ router.post("/staff/shiftManagement", CheckAuth, async (req, res) => {
 
 router.post("/staff/apply", CheckAuth, async (req, res) => {
     const data = req.body;
-    const guild = req.client.guilds.cache.get("924038453568602162");
+    const guild = req.client.guilds.cache.get("1115729790650036374");
     const settings = await getSettings(guild);
     const userDb = await getUser(req.userInfos);
 
